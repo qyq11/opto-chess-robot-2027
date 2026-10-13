@@ -1,0 +1,29 @@
+[
+  {
+    "file": "Raspberry_Pi_5_Product_Brief.pdf",
+    "url": "https://pip.raspberrypi.com/documents/RP-008348-DS-raspberry-pi-5-product-brief.pdf",
+    "source_page": "https://www.raspberrypi.com/products/raspberry-pi-5/",
+    "retrieved": "2026-10-13",
+    "status": "downloaded",
+    "bytes": 52948347,
+    "sha256": "944fc1d70da50f0b8d5947dd4263078f698c79586f29c07f35fcd4b87077dd3f"
+  },
+  {
+    "file": "Compute_Module_5_Datasheet.pdf",
+    "url": "https://datasheets.raspberrypi.com/cm5/cm5-datasheet.pdf",
+    "source_page": "https://www.raspberrypi.com/products/compute-module-5/",
+    "retrieved": "2026-10-13",
+    "status": "downloaded",
+    "bytes": 7705648,
+    "sha256": "80070fefd8db6e8abc6e146c8b7b5fb318ba129cc1e28826936d547fde79c863"
+  },
+  {
+    "file": "Global_Shutter_Camera_Product_Brief.pdf",
+    "url": "https://datasheets.raspberrypi.com/gs-camera/gs-camera-product-brief.pdf",
+    "source_page": "https://www.raspberrypi.com/products/raspberry-pi-global-shutter-camera/",
+    "retrieved": "2026-10-13",
+    "status": "downloaded",
+    "bytes": 1232020,
+    "sha256": "c7cf595509ab555d518a4065f09ce2cd09886787f26034a44da2ec348fdc4403"
+  }
+]

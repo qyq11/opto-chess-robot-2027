@@ -1,0 +1,58 @@
+[
+  {
+    "file": "ORB_SLAM3_README.md",
+    "source_url": "https://raw.githubusercontent.com/UZ-SLAMLab/ORB_SLAM3/master/README.md",
+    "retrieved_at": "2026-10-13T17:42:35.565227+08:00",
+    "status": "downloaded",
+    "bytes": 13231,
+    "sha256": "b6dc671f967dd52e7e6ebcd6f4072692c93b0ab570aa9a9bcb6e4917cd4707f4"
+  },
+  {
+    "file": "ORB_SLAM3_LICENSE.txt",
+    "source_url": "https://raw.githubusercontent.com/UZ-SLAMLab/ORB_SLAM3/master/LICENSE",
+    "retrieved_at": "2026-10-13T17:42:36.286244+08:00",
+    "status": "downloaded",
+    "bytes": 35141,
+    "sha256": "589ed823e9a84c56feb95ac58e7cf384626b9cbf4fda2a907bc36e103de1bad2"
+  },
+  {
+    "file": "RTABMap_README.md",
+    "source_url": "https://raw.githubusercontent.com/introlab/rtabmap/master/README.md",
+    "retrieved_at": "2026-10-13T17:42:37.058783+08:00",
+    "status": "downloaded",
+    "bytes": 7806,
+    "sha256": "b1ec41a916bdb24dc537b0e0842cf75afa503024dc448353e31b83c5b930c727"
+  },
+  {
+    "file": "RTABMap_LICENSE.txt",
+    "source_url": "https://raw.githubusercontent.com/introlab/rtabmap/master/LICENSE",
+    "retrieved_at": "2026-10-13T17:42:37.810966+08:00",
+    "status": "downloaded",
+    "bytes": 1638,
+    "sha256": "4a0c68e73a1f791384606000981eb992a8d2b1110a60032b29cb96f709b2e510"
+  },
+  {
+    "file": "RoboMaster_pb2025_README.md",
+    "source_url": "https://raw.githubusercontent.com/SMBU-PolarBear-Robotics-Team/pb2025_sentry_nav/main/README.md",
+    "retrieved_at": "2026-10-13T17:42:38.459157+08:00",
+    "status": "downloaded",
+    "bytes": 11519,
+    "sha256": "8373df40bffb5c616fe579f544e2204569aba13078ecbfb7ebbb8b937069a8af"
+  },
+  {
+    "file": "RoboMaster_pb2025_LICENSE.txt",
+    "source_url": "https://raw.githubusercontent.com/SMBU-PolarBear-Robotics-Team/pb2025_sentry_nav/main/LICENSE",
+    "retrieved_at": "2026-10-13T17:42:39.061747+08:00",
+    "status": "downloaded",
+    "bytes": 11358,
+    "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+  },
+  {
+    "file": "RoboMaster_pb2025_实车参数.yaml",
+    "source_url": "https://raw.githubusercontent.com/SMBU-PolarBear-Robotics-Team/pb2025_sentry_nav/main/pb2025_nav_bringup/config/reality/nav2_params.yaml",
+    "retrieved_at": "2026-10-13T17:42:39.802149+08:00",
+    "status": "downloaded",
+    "bytes": 23463,
+    "sha256": "29d4975a01e8ba5b52ae97d48fbb9e21f54e25e9087130c0fd7ff35ddfa1219a"
+  }
+]

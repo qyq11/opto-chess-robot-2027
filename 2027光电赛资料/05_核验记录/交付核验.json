@@ -1,0 +1,144 @@
+{
+  "checked_at": "2026-10-13",
+  "pdf_count": 17,
+  "pdfs": [
+    {
+      "file": "01_官方资料\\2025-10-20_第十四十五届承办征集.pdf",
+      "bytes": 1865698,
+      "sha256": "03cd79c2cf471fbe625f8820261250a0d77daf1b982942534796fee18e6d7c1d",
+      "pages": 2,
+      "text_characters": 677,
+      "status": "readable"
+    },
+    {
+      "file": "01_官方资料\\2026-01-04_第十四十五届承办通知.pdf",
+      "bytes": 1920080,
+      "sha256": "5d7c90bf98ab3645beadcf8cf6e278b311b61364b9a14e38e01f26a2e4a30bf0",
+      "pages": 1,
+      "text_characters": 0,
+      "status": "readable"
+    },
+    {
+      "file": "01_官方资料\\2026-04-27_第十五届赛题征集.pdf",
+      "bytes": 773184,
+      "sha256": "87e54b5ba3d3d17491efd7a9c611680a25f6809b57ab295b181011f32e1369e4",
+      "pages": 3,
+      "text_characters": 1422,
+      "status": "readable"
+    },
+    {
+      "file": "01_官方资料\\2026-07-21_第十五届赛题通知.pdf",
+      "bytes": 641252,
+      "sha256": "bbed7555428130d48a47d74de85743ed55e989b92e569603613f0e53a8461b98",
+      "pages": 4,
+      "text_characters": 3450,
+      "status": "readable"
+    },
+    {
+      "file": "01_官方资料\\官网操作手册_2026-10-13.pdf",
+      "bytes": 1239,
+      "sha256": "93127caadd7c8c14036b930acad488c4155f94c56db506892e269a704bf5c278",
+      "pages": 1,
+      "text_characters": 0,
+      "status": "readable"
+    },
+    {
+      "file": "01_官方资料\\第十五届赛题附件_原始版.pdf",
+      "bytes": 640778,
+      "sha256": "d0d50dba75e1e49834b8c17aae5f0729c19b0c56d4692747a4fc056dd81103b3",
+      "pages": 3,
+      "text_characters": 2579,
+      "status": "readable"
+    },
+    {
+      "file": "02_研究参考\\定位建图官方资料\\ORB_SLAM3_2021_Paper.pdf",
+      "bytes": 5049669,
+      "sha256": "4d119517be7565c9651fbf1e36a330d605b7a534d738558858c96feca7b99156",
+      "pages": 18,
+      "text_characters": 90824,
+      "status": "readable"
+    },
+    {
+      "file": "02_研究参考\\定位建图官方资料\\ORB_SLAM3_Camera_IMU_Calibration.pdf",
+      "bytes": 416383,
+      "sha256": "0e3a0aa0ebca27e7e74960389b686bd4e4e09c37f3d7b10f92e84de1e1d8e22f",
+      "pages": 10,
+      "text_characters": 19049,
+      "status": "readable"
+    },
+    {
+      "file": "02_研究参考\\定位建图官方资料\\RTABMap_Paper.pdf",
+      "bytes": 23360699,
+      "sha256": "b6f641d5d2ed41e301940d57f1fb59a3cb6029f5ab04a21dff0c28013b19abe6",
+      "pages": 40,
+      "text_characters": 135780,
+      "status": "readable"
+    },
+    {
+      "file": "02_研究参考\\硬件官方文档\\Compute_Module_5_Datasheet.pdf",
+      "bytes": 7705648,
+      "sha256": "80070fefd8db6e8abc6e146c8b7b5fb318ba129cc1e28826936d547fde79c863",
+      "pages": 38,
+      "text_characters": 94951,
+      "status": "readable"
+    },
+    {
+      "file": "02_研究参考\\硬件官方文档\\Global_Shutter_Camera_Product_Brief.pdf",
+      "bytes": 1232020,
+      "sha256": "c7cf595509ab555d518a4065f09ce2cd09886787f26034a44da2ec348fdc4403",
+      "pages": 6,
+      "text_characters": 5330,
+      "status": "readable"
+    },
+    {
+      "file": "02_研究参考\\硬件官方文档\\Raspberry_Pi_5_Product_Brief.pdf",
+      "bytes": 52948347,
+      "sha256": "944fc1d70da50f0b8d5947dd4263078f698c79586f29c07f35fcd4b87077dd3f",
+      "pages": 7,
+      "text_characters": 4334,
+      "status": "readable"
+    },
+    {
+      "file": "02_研究参考\\论文\\Fine_Manipulation_by_Pushing_1992.pdf",
+      "bytes": 98782,
+      "sha256": "1faa6d4a25fd83805bd2134f55edab7e9a81255e127bbf9b2065f0e6c330ff97",
+      "pages": 8,
+      "text_characters": 36487,
+      "status": "readable"
+    },
+    {
+      "file": "02_研究参考\\论文\\Force_Push_2024.pdf",
+      "bytes": 3779214,
+      "sha256": "ff690d6c5c38e94280fb0ddb2b8d11a5d2fac57050e78d46472fc95475a80d07",
+      "pages": 8,
+      "text_characters": 47704,
+      "status": "readable"
+    },
+    {
+      "file": "02_研究参考\\论文\\MobileNetV3_2019.pdf",
+      "bytes": 535534,
+      "sha256": "12bd89cf0d8309bf130b77bda626c495e4bceea0acfcc4f571d0828e6f62c78f",
+      "pages": 11,
+      "text_characters": 50736,
+      "status": "readable"
+    },
+    {
+      "file": "02_研究参考\\论文\\Planar_Pushing_Dataset_2016.pdf",
+      "bytes": 3916215,
+      "sha256": "b4a40cebf5cbcf95aef082938247a07e94c5c30064db7882147287ed99111882",
+      "pages": 8,
+      "text_characters": 36127,
+      "status": "readable"
+    },
+    {
+      "file": "02_研究参考\\论文\\Visual_Pushing_and_Grasping_2018.pdf",
+      "bytes": 4351679,
+      "sha256": "2c12a0f60f9a30727d9aa4f4dcdf9a7404087787582f43f6f0e2dc79e5dc8166",
+      "pages": 9,
+      "text_characters": 49648,
+      "status": "readable"
+    }
+  ],
+  "errors": [],
+  "note": "官网操作手册空白为已确认的源文件异常；实车尚未测试。"
+}
