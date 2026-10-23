@@ -19,3 +19,8 @@ Desktop.ini
 *.tmp
 *.temp
 temp/
+
+# Documentation website generated files (normally written under temp/)
+node_modules/
+.docusaurus/
+/06_website/build/

@@ -1,0 +1,17 @@
+{
+  "annotation_method": "人工目视标注并裁剪逐项核验，分类程序不读取此文件；ink 表示红/黑方文字颜色归类，第二张照片的深绿色归入 black（黑方）。",
+  "labels": [
+    {"id": "p01", "raw_character": "帥", "character": "帅", "ink": "red"},
+    {"id": "p02", "raw_character": "將", "character": "将", "ink": "black"},
+    {"id": "p03", "raw_character": "帥", "character": "帅", "ink": "red"},
+    {"id": "p04", "raw_character": "將", "character": "将", "ink": "black"},
+    {"id": "p05", "raw_character": "車", "character": "车", "ink": "red"},
+    {"id": "p06", "raw_character": "馬", "character": "马", "ink": "black"},
+    {"id": "p07", "raw_character": "炮", "character": "炮", "ink": "red"},
+    {"id": "p08", "raw_character": "兵", "character": "兵", "ink": "red"},
+    {"id": "p09", "raw_character": "士", "character": "士", "ink": "black"},
+    {"id": "p10", "raw_character": "相", "character": "相", "ink": "red"},
+    {"id": "p11", "raw_character": "象", "character": "象", "ink": "black"},
+    {"id": "p12", "raw_character": "卒", "character": "卒", "ink": "black"}
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "generated_on": "2026-10-23",
+  "synthetic": true,
+  "purpose": "模拟车载低机位斜视象棋输入，供真实Perspective变换与OCR流程演示；非实拍或比赛验证",
+  "tool": "built-in image_gen.imagegen",
+  "mode": "generate",
+  "prompt": "Use case: photorealistic-natural.\nAsset type: synthetic input photograph for a Chinese-chess robot computer-vision experiment. Generate ONE original low-angle oblique view only, NOT a comparison and NOT a top view.\nScene: four actual-looking wooden Chinese chess discs resting flat on a plain matte light-gray horizontal floor, clean neutral indoor lighting. No chessboard, grid, measuring marks, fiducials, people, hands, furniture, captions, arrows, labels, interface or extra objects. Only the chess pieces and floor should be visible.\nGeometry: all four discs have the same approximately 40 mm diameter and 12 mm thickness. Their four top-face centers form the four corners of a 240 mm wide by 160 mm deep rectangle on a common horizontal plane. Leave clear gaps so no disc hides any part of another disc. Two are in a farther row and two are in a nearer row. The far row should naturally appear smaller and closer together in perspective than the near row.\nViewpoint: simulate the onboard forward-facing camera of a small robot. Very LOW camera viewpoint, about 18 degrees above the floor, looking slightly downward. Strong foreshortening: the visible top faces must be flattened ellipses, with their apparent height roughly one third of width. The near vertical wooden sidewalls must be prominent. This is a side-oblique view, absolutely not overhead and not a 45-degree catalog photograph. Keep the entire four pieces visible and reasonably large/sharp in a wide landscape frame, with enough image resolution to attempt OCR even though the top-face writing is foreshortened. Use rectilinear camera perspective, no fisheye.\nExact top-face Chinese text: one single correct Chinese chess character per disc, no extra words. Far-left disc: black “马”. Far-right disc: red “车”. Near-right disc: black “将”. Near-left disc: red “帅”. Use clearly formed standard simplified Chinese printed Kaiti/Song-style chess characters, with the correct complete strokes. Their reading direction should consistently face toward the camera. Do not substitute traditional variants, Roman letters, decorative pseudo-Chinese or an English translation. Each character is painted in the center of the horizontal TOP surface, not on the vertical sidewall. The sidewalls contain no text.\nMaterials: pale tan wood with subtle real grain and a thin circular engraved rim on each top face; black or deep red ink as specified, natural contact shadows. Keep the depth of field sufficient for all four character faces to be in focus.\nComposition: a single believable camera exposure, landscape around 1536 by 1024 pixels. The perspective and compressed character shapes are the important feature. No synthetic top-down inset; no retouching that makes the top-face text front-facing or floats it above the disc.",
+  "file": "05_data/01_raw/02_xiangqi/20261023_xiangqi_oblique_generated_01.png",
+  "default_generated_path": "C:/Users/52400/.codex/generated_images/01a16820-fc39-71e0-a3b3-43e8c7f73b58/exec-7e7f58e9-1c28-492d-8018-2cd7f4c7cdf8.png",
+  "sha256": "89cded3df50748d8d4d773fbeb6a2bf2278e186912cc14ba9f3033ec41e4e869",
+  "actual_camera_parameters_known": false,
+  "geometry_notice": "提示词中的尺寸、距离与角度是生成意图，不是实测或可靠标定真值。实际图像可能不严格满足投影几何。",
+  "original_preserved": true,
+  "calculation_notice": "后续俯视结果由Python getPerspectiveTransform/warpPerspective计算，非再次生成。",
+  "resolution_wh": [
+    1536,
+    1024
+  ]
+}

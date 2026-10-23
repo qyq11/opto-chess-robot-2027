@@ -1,0 +1,29 @@
+{
+  "name": "opto-chess-robot-docs",
+  "version": "1.0.0",
+  "private": true,
+  "description": "光电象棋机器人项目文档站",
+  "engines": {
+    "node": ">=20.0"
+  },
+  "scripts": {
+    "setup": "node run.mjs setup",
+    "start": "node run.mjs start",
+    "build": "node run.mjs build",
+    "serve": "node run.mjs serve"
+  },
+  "dependencies": {
+    "@docusaurus/core": "3.10.2",
+    "@docusaurus/preset-classic": "3.10.2",
+    "@mdx-js/react": "3.1.1",
+    "katex": "0.16.47",
+    "react": "19.3.1",
+    "react-dom": "19.3.1",
+    "rehype-katex": "7.0.1",
+    "remark-math": "6.0.0"
+  },
+  "browserslist": {
+    "production": [">0.5%", "not dead", "not op_mini all"],
+    "development": ["last 1 chrome version", "last 1 firefox version", "last 1 safari version"]
+  }
+}

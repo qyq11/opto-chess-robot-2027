@@ -1,0 +1,35 @@
+{
+  "review_date": "2026-10-23",
+  "purpose": "只读发现与核对图像OCR相关技能；未安装技能或执行远程技能指令。",
+  "curated_search": {
+    "workflow": "C:/Users/52400/.codex/skills/.system/skill-installer/SKILL.md",
+    "command": "list-skills.py --format json",
+    "source": "https://github.com/openai/skills/tree/main/skills/.curated",
+    "status": "failed",
+    "output": "Error: Failed to fetch skills: HTTP 403",
+    "interpretation": "目录请求失败，不能据此推断官方目录是否存在OCR技能。"
+  },
+  "primary_source_candidate": {
+    "name": "paddleocr-text-recognition",
+    "publisher": "PaddlePaddle/PaddleOCR",
+    "url": "https://github.com/PaddlePaddle/PaddleOCR/blob/main/skills/paddleocr-text-recognition/SKILL.md",
+    "raw_url": "https://raw.githubusercontent.com/PaddlePaddle/PaddleOCR/main/skills/paddleocr-text-recognition/SKILL.md",
+    "snapshot": "temp/xiangqi_recognition/skill_search/paddleocr-text-recognition.SKILL.md",
+    "snapshot_sha256": "7696b3c79521d71c483391904524b0da2fd4051e574566140c72ec023dbfe1b3",
+    "license_in_source": "Apache-2.0",
+    "capability": "使用 PaddleOCR CLI 的 api 模式，从图像/PDF提取文字、坐标和置信度；声明支持CJK。",
+    "dependency": "需要 paddleocr CLI 和 PADDLEOCR_ACCESS_TOKEN；调用远程API。",
+    "fit": "适合通用OCR，但未提供象棋单字、阵营或棋子类别的专门分类器；不能仅凭技能说明断言将/帅识别准确。",
+    "decision": "未安装。当前本地可复现Python示例可直接使用OpenCV与RapidOCR；需用真实象棋图片验证，保留原始OCR结果，未识别时输出unknown。"
+  },
+  "secondary_candidates_not_adopted": [
+    {
+      "name": "ocr",
+      "publisher": "hec-ovi/ocr-skill",
+      "url": "https://github.com/hec-ovi/ocr-skill",
+      "reason": "第三方文档OCR技能，依赖DeepSeek-OCR-2服务/模型，非象棋分类专用；未安装。"
+    }
+  ],
+  "schema_version": 1,
+  "archival_note": "本文件仅记录技能检索评估结果，不是已安装技能；技能本体快照为临时查阅资料，留在temp。"
+}

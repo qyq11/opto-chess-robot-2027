@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "archived_on": "2026-10-23",
+  "purpose": "象棋棋面单字的通用OCR识别模型；未针对象棋训练。",
+  "filename": "PP-OCRv6_rec_small.onnx",
+  "relative_path": "05_data/02_models/01_xiangqi_ocr/PP-OCRv6_rec_small.onnx",
+  "sha256": "6f327246b50388f3c176ae304bd95767ea6dc0c9ae92153ef8cbe210b3c14884",
+  "bytes": 21234383,
+  "artifact_modified_in_project": false,
+  "format": "ONNX",
+  "role": "text_recognition_only",
+  "package": {
+    "name": "rapidocr",
+    "version": "3.10.0",
+    "version_evidence": "rapidocr-3.10.0.dist-info/METADATA and rapidocr/_version.py",
+    "project_url": "https://github.com/RapidAI/RapidOCR",
+    "pypi_url": "https://pypi.org/project/rapidocr/3.10.0/",
+    "package_license": "Apache-2.0",
+    "license_file": "05_data/02_models/01_xiangqi_ocr/LICENSE"
+  },
+  "model_registry": {
+    "version": "v3.10.0",
+    "url": "https://github.com/RapidAI/RapidOCR/blob/v3.10.0/python/rapidocr/default_models.yaml",
+    "raw_url": "https://raw.githubusercontent.com/RapidAI/RapidOCR/v3.10.0/python/rapidocr/default_models.yaml",
+    "key": "onnxruntime.PP-OCRv6.rec.multi_PP-OCRv6_rec_small",
+    "modelscope_url": "https://www.modelscope.cn/models/RapidAI/RapidOCR/resolve/v3.10.0/onnx/PP-OCRv6/rec/PP-OCRv6_rec_small.onnx",
+    "registry_sha256": "6f327246b50388f3c176ae304bd95767ea6dc0c9ae92153ef8cbe210b3c14884",
+    "sha256_verified": true,
+    "local_registry_sha256": "90e0159dead16c21adbf000014a46043c981ae097f041d92d8b19a52c2f2ed9a"
+  },
+  "upstream": {
+    "model_name": "PP-OCRv6_small_rec",
+    "publisher": "PaddlePaddle / PaddleOCR",
+    "copyright": "Baidu and/or the applicable PaddleOCR rights holders (per RapidOCR MODEL_LICENSES.md)",
+    "model_card_url": "https://huggingface.co/PaddlePaddle/PP-OCRv6_small_rec_onnx",
+    "project_url": "https://github.com/PaddlePaddle/PaddleOCR",
+    "license": "Apache-2.0",
+    "license_url": "https://github.com/PaddlePaddle/PaddleOCR/blob/main/LICENSE",
+    "conversion_attribution": "Converted from an official PaddleOCR model to ONNX and packaged for use with RapidOCR. This project copies the RapidOCR artifact byte-for-byte and does not retrain or modify its weights."
+  },
+  "license_evidence": {
+    "notice_file": "05_data/02_models/01_xiangqi_ocr/MODEL_LICENSES.md",
+    "notice_sha256": "c5fd0e8603d3df743355b546121e6fe0f4ef8ff455c5a85c1681fd3ae520e153",
+    "license_sha256": "3e0af25fdd06aa9586ae97adb00ea927ebe5a3805ac77d2d3a81ce5f55693333",
+    "notice_version_note": "RapidOCR 3.10.0 包内 MODEL_LICENSES.md 的表格仍链接 ModelScope v3.9.2；该表识别权重 SHA256 与 v3.10.0 default_models.yaml 和本地权重相同。本记录以实际包3.10.0及v3.10.0注册表为准，许可证通知原样保留。"
+  },
+  "scope": "仅归档本实验使用的识别权重；检测模型、方向模型、运行库和安装缓存留在temp。"
+}

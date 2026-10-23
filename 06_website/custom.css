@@ -1,0 +1,25 @@
+:root {
+  --ifm-color-primary: #246352;
+  --ifm-color-primary-dark: #20594a;
+  --ifm-color-primary-darker: #1f5446;
+  --ifm-color-primary-darkest: #194539;
+  --ifm-color-primary-light: #286d5a;
+  --ifm-color-primary-lighter: #29725e;
+  --ifm-color-primary-lightest: #2f816b;
+  --ifm-font-family-base: system-ui, "Microsoft YaHei", "PingFang SC", sans-serif;
+  --ifm-code-font-size: 92%;
+}
+
+[data-theme='dark'] {
+  --ifm-color-primary: #70c4a7;
+  --ifm-color-primary-dark: #57b997;
+  --ifm-color-primary-darker: #4bb38f;
+  --ifm-color-primary-darkest: #3c9476;
+  --ifm-color-primary-light: #89cfb7;
+  --ifm-color-primary-lighter: #95d5bf;
+  --ifm-color-primary-lightest: #bae5d7;
+}
+
+.markdown img {height: auto; max-width: 100%;}
+.markdown table {display: block; overflow-x: auto;}
+.katex-display {overflow-x: auto; overflow-y: hidden; padding: 0.4rem 0;}

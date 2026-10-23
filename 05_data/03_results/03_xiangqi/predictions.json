@@ -1,0 +1,2385 @@
+{
+  "model_sha256": "6f327246b50388f3c176ae304bd95767ea6dc0c9ae92153ef8cbe210b3c14884",
+  "regions_file": "05_data/01_raw/02_xiangqi/regions.json",
+  "threshold": 0.7,
+  "roi_mode": "manual_bbox",
+  "ground_truth_used_for_inference": false,
+  "selection": "highest raw OCR score across all 24 variants, then exact character mapping/rejection",
+  "elapsed_seconds_including_first_model_load": 4.037532900001679,
+  "versions": {
+    "rapidocr": "3.10.0",
+    "onnxruntime": "1.31.0",
+    "opencv-python-headless": "5.0.0.93",
+    "numpy": "2.5.4",
+    "Pillow": "13.0.0"
+  },
+  "input_sha256": {
+    "05_data/01_raw/02_xiangqi/20261023_xiangqi_input_01.jpg": "3e2eda27e24880f86ab3329e5d58dc485bbb6c12c63f6017708b5f75ba012819",
+    "05_data/01_raw/02_xiangqi/20261023_xiangqi_input_02.jpg": "3b4b446968daa619d96d74bbe4c6ae225fe7bd7d61c3040ce1b416fea940e9d5"
+  },
+  "photo_credits": {
+    "05_data/01_raw/02_xiangqi/20261023_xiangqi_input_01.jpg": "Francesc Fort · CC BY-SA 4.0",
+    "05_data/01_raw/02_xiangqi/20261023_xiangqi_input_02.jpg": "Immanuel Giel · CC BY-SA 4.0"
+  },
+  "visualizations": {
+    "contact_sheet": "05_data/03_results/03_xiangqi/20261023_xiangqi_recognition_01.png",
+    "annotated": [
+      "05_data/03_results/03_xiangqi/20261023_xiangqi_annotated_01.png",
+      "05_data/03_results/03_xiangqi/20261023_xiangqi_annotated_02.png"
+    ]
+  },
+  "predictions": [
+    {
+      "id": "p01",
+      "image": "05_data/01_raw/02_xiangqi/20261023_xiangqi_input_01.jpg",
+      "bbox": [
+        1140,
+        1810,
+        1375,
+        2020
+      ],
+      "character": "帅",
+      "ink": "red",
+      "piece_class": "red_帅",
+      "raw_text": "帥",
+      "score": 0.9846,
+      "status": "accepted",
+      "selected_preprocessing": {
+        "center_fraction": 1.0,
+        "resize_to_square": true,
+        "rotation_ccw_deg": 0
+      },
+      "ink_evidence": {
+        "red_pixel_ratio": 0.3914781042440617,
+        "dark_pixel_ratio": 0.00033772374197906115
+      },
+      "attempts": [
+        {
+          "center_fraction": 1.0,
+          "resize_to_square": false,
+          "rotation_ccw_deg": 0,
+          "raw_text": "帥",
+          "score": 0.92039
+        },
+        {
+          "center_fraction": 1.0,
+          "resize_to_square": false,
+          "rotation_ccw_deg": 90,
+          "raw_text": "邮",
+          "score": 0.23215
+        },
+        {
+          "center_fraction": 1.0,
+          "resize_to_square": false,
+          "rotation_ccw_deg": 180,
+          "raw_text": "司",
+          "score": 0.25801
+        },
+        {
+          "center_fraction": 1.0,
+          "resize_to_square": false,
+          "rotation_ccw_deg": 270,
+          "raw_text": "号",
+          "score": 0.16053
+        },
+        {
+          "center_fraction": 1.0,
+          "resize_to_square": true,
+          "rotation_ccw_deg": 0,
+          "raw_text": "帥",
+          "score": 0.9846
+        },
+        {
+          "center_fraction": 1.0,
+          "resize_to_square": true,
+          "rotation_ccw_deg": 90,
+          "raw_text": "即",
+          "score": 0.30765
+        },
+        {
+          "center_fraction": 1.0,
+          "resize_to_square": true,
+          "rotation_ccw_deg": 180,
+          "raw_text": "",
+          "score": 0.0
+        },
+        {
+          "center_fraction": 1.0,
+          "resize_to_square": true,
+          "rotation_ccw_deg": 270,
+          "raw_text": "福",
+          "score": 0.25012
+        },
+        {
+          "center_fraction": 0.8,
+          "resize_to_square": false,
+          "rotation_ccw_deg": 0,
+          "raw_text": "帥",
+          "score": 0.94059
+        },
+        {
+          "center_fraction": 0.8,
+          "resize_to_square": false,
+          "rotation_ccw_deg": 90,
+          "raw_text": "中邮",
+          "score": 0.38153
+        },
+        {
+          "center_fraction": 0.8,
+          "resize_to_square": false,
+          "rotation_ccw_deg": 180,
+          "raw_text": "号",
+          "score": 0.77857
+        },
+        {
+          "center_fraction": 0.8,
+          "resize_to_square": false,
+          "rotation_ccw_deg": 270,
+          "raw_text": "丽",
+          "score": 0.30542
+        },
+        {
+          "center_fraction": 0.8,
+          "resize_to_square": true,
+          "rotation_ccw_deg": 0,
+          "raw_text": "帥",
+          "score": 0.94986
+        },
+        {
+          "center_fraction": 0.8,
+          "resize_to_square": true,
+          "rotation_ccw_deg": 90,
+          "raw_text": "即",
+          "score": 0.44072
+        },
+        {
+          "center_fraction": 0.8,
+          "resize_to_square": true,
+          "rotation_ccw_deg": 180,
+          "raw_text": "号",
+          "score": 0.28066
+        },
+        {
+          "center_fraction": 0.8,
+          "resize_to_square": true,
+          "rotation_ccw_deg": 270,
+          "raw_text": "丽",
+          "score": 0.35346
+        },
+        {
+          "center_fraction": 0.65,
+          "resize_to_square": false,
+          "rotation_ccw_deg": 0,
+          "raw_text": "帥",
+          "score": 0.96233
+        },
+        {
+          "center_fraction": 0.65,
+          "resize_to_square": false,
+          "rotation_ccw_deg": 90,
+          "raw_text": "中",
+          "score": 0.90351
+        },
+        {
+          "center_fraction": 0.65,
+          "resize_to_square": false,
+          "rotation_ccw_deg": 180,
+          "raw_text": "d号",
+          "score": 0.39278
+        },
+        {
+          "center_fraction": 0.65,
+          "resize_to_square": false,
+          "rotation_ccw_deg": 270,
+          "raw_text": "丽",
+          "score": 0.45213
+        },
+        {
+          "center_fraction": 0.65,
+          "resize_to_square": true,
+          "rotation_ccw_deg": 0,
+          "raw_text": "帥",
+          "score": 0.97242
+        },
+        {
+          "center_fraction": 0.65,
+          "resize_to_square": true,
+          "rotation_ccw_deg": 90,
+          "raw_text": "中",
+          "score": 0.84893
+        },
+        {
+          "center_fraction": 0.65,
+          "resize_to_square": true,
+          "rotation_ccw_deg": 180,
+          "raw_text": "",
+          "score": 0.0
+        },
+        {
+          "center_fraction": 0.65,
+          "resize_to_square": true,
+          "rotation_ccw_deg": 270,
+          "raw_text": "dy",
+          "score": 0.45596
+        }
+      ],
+      "contest_points": null
+    },
+    {
+      "id": "p02",
+      "image": "05_data/01_raw/02_xiangqi/20261023_xiangqi_input_01.jpg",
+      "bbox": [
+        2470,
+        450,
+        2680,
+        620
+      ],
+      "character": "unknown",
+      "ink": "black",
+      "piece_class": "unknown",
+      "raw_text": "安",
+      "score": 0.59509,
+      "status": "low_score",
+      "selected_preprocessing": {
+        "center_fraction": 1.0,
+        "resize_to_square": true,
+        "rotation_ccw_deg": 180
+      },
+      "ink_evidence": {
+        "red_pixel_ratio": 0.036803610333022097,
+        "dark_pixel_ratio": 0.1859632741985683
+      },
+      "attempts": [
+        {
+          "center_fraction": 1.0,
+          "resize_to_square": false,
+          "rotation_ccw_deg": 0,
+          "raw_text": "",
+          "score": 0.0
+        },
+        {
+          "center_fraction": 1.0,
+          "resize_to_square": false,
+          "rotation_ccw_deg": 90,
+          "raw_text": "福",
+          "score": 0.16145
+        },
+        {
+          "center_fraction": 1.0,
+          "resize_to_square": false,
+          "rotation_ccw_deg": 180,
+          "raw_text": "安",
+          "score": 0.59257
+        },
+        {
+          "center_fraction": 1.0,
+          "resize_to_square": false,
+          "rotation_ccw_deg": 270,
+          "raw_text": "福",
+          "score": 0.29281
+        },
+        {
+          "center_fraction": 1.0,
+          "resize_to_square": true,
+          "rotation_ccw_deg": 0,
+          "raw_text": "",
+          "score": 0.0
+        },
+        {
+          "center_fraction": 1.0,
+          "resize_to_square": true,
+          "rotation_ccw_deg": 90,
+          "raw_text": "盛",
+          "score": 0.09805
+        },
+        {
+          "center_fraction": 1.0,
+          "resize_to_square": true,
+          "rotation_ccw_deg": 180,
+          "raw_text": "安",
+          "score": 0.59509
+        },
+        {
+          "center_fraction": 1.0,
+          "resize_to_square": true,
+          "rotation_ccw_deg": 270,
+          "raw_text": "",
+          "score": 0.0
+        },
+        {
+          "center_fraction": 0.8,
+          "resize_to_square": false,
+          "rotation_ccw_deg": 0,
+          "raw_text": "I",
+          "score": 0.07563
+        },
+        {
+          "center_fraction": 0.8,
+          "resize_to_square": false,
+          "rotation_ccw_deg": 90,
+          "raw_text": "紫",
+          "score": 0.25443
+        },
+        {
+          "center_fraction": 0.8,
+          "resize_to_square": false,
+          "rotation_ccw_deg": 180,
+          "raw_text": "安",
+          "score": 0.27998
+        },
+        {
+          "center_fraction": 0.8,
+          "resize_to_square": false,
+          "rotation_ccw_deg": 270,
+          "raw_text": "将",
+          "score": 0.33255
+        },
+        {
+          "center_fraction": 0.8,
+          "resize_to_square": true,
+          "rotation_ccw_deg": 0,
+          "raw_text": "盛",
+          "score": 0.07072
+        },
+        {
+          "center_fraction": 0.8,
+          "resize_to_square": true,
+          "rotation_ccw_deg": 90,
+          "raw_text": "裕",
+          "score": 0.22621
+        },
+        {
+          "center_fraction": 0.8,
+          "resize_to_square": true,
+          "rotation_ccw_deg": 180,
+          "raw_text": "爱",
+          "score": 0.42588
+        },
+        {
+          "center_fraction": 0.8,
+          "resize_to_square": true,
+          "rotation_ccw_deg": 270,
+          "raw_text": "将",
+          "score": 0.19597
+        },
+        {
+          "center_fraction": 0.65,
+          "resize_to_square": false,
+          "rotation_ccw_deg": 0,
+          "raw_text": "X",
+          "score": 0.22664
+        },
+        {
+          "center_fraction": 0.65,
+          "resize_to_square": false,
+          "rotation_ccw_deg": 90,
+          "raw_text": "登",
+          "score": 0.12665
+        },
+        {
+          "center_fraction": 0.65,
+          "resize_to_square": false,
+          "rotation_ccw_deg": 180,
+          "raw_text": "爱",
+          "score": 0.05836
+        },
+        {
+          "center_fraction": 0.65,
+          "resize_to_square": false,
+          "rotation_ccw_deg": 270,
+          "raw_text": "将",
+          "score": 0.4896
+        },
+        {
+          "center_fraction": 0.65,
+          "resize_to_square": true,
+          "rotation_ccw_deg": 0,
+          "raw_text": "X",
+          "score": 0.30706
+        },
+        {
+          "center_fraction": 0.65,
+          "resize_to_square": true,
+          "rotation_ccw_deg": 90,
+          "raw_text": "登",
+          "score": 0.28493
+        },
+        {
+          "center_fraction": 0.65,
+          "resize_to_square": true,
+          "rotation_ccw_deg": 180,
+          "raw_text": "爱",
+          "score": 0.10722
+        },
+        {
+          "center_fraction": 0.65,
+          "resize_to_square": true,
+          "rotation_ccw_deg": 270,
+          "raw_text": "物",
+          "score": 0.48406
+        }
+      ],
+      "contest_points": null
+    },
+    {
+      "id": "p03",
+      "image": "05_data/01_raw/02_xiangqi/20261023_xiangqi_input_02.jpg",
+      "bbox": [
+        650,
+        820,
+        810,
+        980
+      ],
+      "character": "帅",
+      "ink": "red",
+      "piece_class": "red_帅",
+      "raw_text": "帥",
+      "score": 0.83988,
+      "status": "accepted",
+      "selected_preprocessing": {
+        "center_fraction": 0.65,
+        "resize_to_square": false,
+        "rotation_ccw_deg": 90
+      },
+      "ink_evidence": {
+        "red_pixel_ratio": 0.2433810763888889,
+        "dark_pixel_ratio": 0.00043402777777777775
+      },
+      "attempts": [
+        {
+          "center_fraction": 1.0,
+          "resize_to_square": false,
+          "rotation_ccw_deg": 0,
+          "raw_text": "粤",
+          "score": 0.38871
+        },
+        {
+          "center_fraction": 1.0,
+          "resize_to_square": false,
+          "rotation_ccw_deg": 90,
+          "raw_text": "帅",
+          "score": 0.51772
+        },
+        {
+          "center_fraction": 1.0,
+          "resize_to_square": false,
+          "rotation_ccw_deg": 180,
+          "raw_text": "",
+          "score": 0.0
+        },
+        {
+          "center_fraction": 1.0,
+          "resize_to_square": false,
+          "rotation_ccw_deg": 270,
+          "raw_text": "0",
+          "score": 0.51017
+        },
+        {
+          "center_fraction": 1.0,
+          "resize_to_square": true,
+          "rotation_ccw_deg": 0,
+          "raw_text": "粤",
+          "score": 0.38871
+        },
+        {
+          "center_fraction": 1.0,
+          "resize_to_square": true,
+          "rotation_ccw_deg": 90,
+          "raw_text": "帅",
+          "score": 0.51772
+        },
+        {
+          "center_fraction": 1.0,
+          "resize_to_square": true,
+          "rotation_ccw_deg": 180,
+          "raw_text": "",
+          "score": 0.0
+        },
+        {
+          "center_fraction": 1.0,
+          "resize_to_square": true,
+          "rotation_ccw_deg": 270,
+          "raw_text": "0",
+          "score": 0.51017
+        },
+        {
+          "center_fraction": 0.8,
+          "resize_to_square": false,
+          "rotation_ccw_deg": 0,
+          "raw_text": "电",
+          "score": 0.21361
+        },
+        {
+          "center_fraction": 0.8,
+          "resize_to_square": false,
+          "rotation_ccw_deg": 90,
+          "raw_text": "帥",
+          "score": 0.70145
+        },
+        {
+          "center_fraction": 0.8,
+          "resize_to_square": false,
+          "rotation_ccw_deg": 180,
+          "raw_text": "即",
+          "score": 0.32183
+        },
+        {
+          "center_fraction": 0.8,
+          "resize_to_square": false,
+          "rotation_ccw_deg": 270,
+          "raw_text": "明",
+          "score": 0.19691
+        },
+        {
+          "center_fraction": 0.8,
+          "resize_to_square": true,
+          "rotation_ccw_deg": 0,
+          "raw_text": "电",
+          "score": 0.20873
+        },
+        {
+          "center_fraction": 0.8,
+          "resize_to_square": true,
+          "rotation_ccw_deg": 90,
+          "raw_text": "帥",
+          "score": 0.65884
+        },
+        {
+          "center_fraction": 0.8,
+          "resize_to_square": true,
+          "rotation_ccw_deg": 180,
+          "raw_text": "即",
+          "score": 0.36038
+        },
+        {
+          "center_fraction": 0.8,
+          "resize_to_square": true,
+          "rotation_ccw_deg": 270,
+          "raw_text": "明",
+          "score": 0.19138
+        },
+        {
+          "center_fraction": 0.65,
+          "resize_to_square": false,
+          "rotation_ccw_deg": 0,
+          "raw_text": "明",
+          "score": 0.36925
+        },
+        {
+          "center_fraction": 0.65,
+          "resize_to_square": false,
+          "rotation_ccw_deg": 90,
+          "raw_text": "帥",
+          "score": 0.83988
+        },
+        {
+          "center_fraction": 0.65,
+          "resize_to_square": false,
+          "rotation_ccw_deg": 180,
+          "raw_text": "即",
+          "score": 0.31587
+        },
+        {
+          "center_fraction": 0.65,
+          "resize_to_square": false,
+          "rotation_ccw_deg": 270,
+          "raw_text": "",
+          "score": 0.0
+        },
+        {
+          "center_fraction": 0.65,
+          "resize_to_square": true,
+          "rotation_ccw_deg": 0,
+          "raw_text": "明",
+          "score": 0.38249
+        },
+        {
+          "center_fraction": 0.65,
+          "resize_to_square": true,
+          "rotation_ccw_deg": 90,
+          "raw_text": "帥",
+          "score": 0.83933
+        },
+        {
+          "center_fraction": 0.65,
+          "resize_to_square": true,
+          "rotation_ccw_deg": 180,
+          "raw_text": "即",
+          "score": 0.31205
+        },
+        {
+          "center_fraction": 0.65,
+          "resize_to_square": true,
+          "rotation_ccw_deg": 270,
+          "raw_text": "",
+          "score": 0.0
+        }
+      ],
+      "contest_points": null
+    },
+    {
+      "id": "p04",
+      "image": "05_data/01_raw/02_xiangqi/20261023_xiangqi_input_02.jpg",
+      "bbox": [
+        1870,
+        780,
+        2050,
+        940
+      ],
+      "character": "将",
+      "ink": "black",
+      "piece_class": "black_将",
+      "raw_text": "将",
+      "score": 0.88538,
+      "status": "accepted",
+      "selected_preprocessing": {
+        "center_fraction": 0.8,
+        "resize_to_square": true,
+        "rotation_ccw_deg": 270
+      },
+      "ink_evidence": {
+        "red_pixel_ratio": 0.0016396604938271604,
+        "dark_pixel_ratio": 0.17274305555555555
+      },
+      "attempts": [
+        {
+          "center_fraction": 1.0,
+          "resize_to_square": false,
+          "rotation_ccw_deg": 0,
+          "raw_text": "",
+          "score": 0.0
+        },
+        {
+          "center_fraction": 1.0,
+          "resize_to_square": false,
+          "rotation_ccw_deg": 90,
+          "raw_text": "",
+          "score": 0.0
+        },
+        {
+          "center_fraction": 1.0,
+          "resize_to_square": false,
+          "rotation_ccw_deg": 180,
+          "raw_text": "季",
+          "score": 0.29844
+        },
+        {
+          "center_fraction": 1.0,
+          "resize_to_square": false,
+          "rotation_ccw_deg": 270,
+          "raw_text": "怡",
+          "score": 0.57813
+        },
+        {
+          "center_fraction": 1.0,
+          "resize_to_square": true,
+          "rotation_ccw_deg": 0,
+          "raw_text": "安",
+          "score": 0.53236
+        },
+        {
+          "center_fraction": 1.0,
+          "resize_to_square": true,
+          "rotation_ccw_deg": 90,
+          "raw_text": "",
+          "score": 0.0
+        },
+        {
+          "center_fraction": 1.0,
+          "resize_to_square": true,
+          "rotation_ccw_deg": 180,
+          "raw_text": "季",
+          "score": 0.39414
+        },
+        {
+          "center_fraction": 1.0,
+          "resize_to_square": true,
+          "rotation_ccw_deg": 270,
+          "raw_text": "怡",
+          "score": 0.29087
+        },
+        {
+          "center_fraction": 0.8,
+          "resize_to_square": false,
+          "rotation_ccw_deg": 0,
+          "raw_text": "将",
+          "score": 0.29112
+        },
+        {
+          "center_fraction": 0.8,
+          "resize_to_square": false,
+          "rotation_ccw_deg": 90,
+          "raw_text": "绿",
+          "score": 0.32773
+        },
+        {
+          "center_fraction": 0.8,
+          "resize_to_square": false,
+          "rotation_ccw_deg": 180,
+          "raw_text": "秀",
+          "score": 0.57282
+        },
+        {
+          "center_fraction": 0.8,
+          "resize_to_square": false,
+          "rotation_ccw_deg": 270,
+          "raw_text": "将",
+          "score": 0.74943
+        },
+        {
+          "center_fraction": 0.8,
+          "resize_to_square": true,
+          "rotation_ccw_deg": 0,
+          "raw_text": "将",
+          "score": 0.74801
+        },
+        {
+          "center_fraction": 0.8,
+          "resize_to_square": true,
+          "rotation_ccw_deg": 90,
+          "raw_text": "绿",
+          "score": 0.50679
+        },
+        {
+          "center_fraction": 0.8,
+          "resize_to_square": true,
+          "rotation_ccw_deg": 180,
+          "raw_text": "秀",
+          "score": 0.61795
+        },
+        {
+          "center_fraction": 0.8,
+          "resize_to_square": true,
+          "rotation_ccw_deg": 270,
+          "raw_text": "将",
+          "score": 0.88538
+        },
+        {
+          "center_fraction": 0.65,
+          "resize_to_square": false,
+          "rotation_ccw_deg": 0,
+          "raw_text": "将",
+          "score": 0.74525
+        },
+        {
+          "center_fraction": 0.65,
+          "resize_to_square": false,
+          "rotation_ccw_deg": 90,
+          "raw_text": "尚",
+          "score": 0.26603
+        },
+        {
+          "center_fraction": 0.65,
+          "resize_to_square": false,
+          "rotation_ccw_deg": 180,
+          "raw_text": "秀",
+          "score": 0.25609
+        },
+        {
+          "center_fraction": 0.65,
+          "resize_to_square": false,
+          "rotation_ccw_deg": 270,
+          "raw_text": "将",
+          "score": 0.68769
+        },
+        {
+          "center_fraction": 0.65,
+          "resize_to_square": true,
+          "rotation_ccw_deg": 0,
+          "raw_text": "将",
+          "score": 0.61304
+        },
+        {
+          "center_fraction": 0.65,
+          "resize_to_square": true,
+          "rotation_ccw_deg": 90,
+          "raw_text": "绿",
+          "score": 0.39699
+        },
+        {
+          "center_fraction": 0.65,
+          "resize_to_square": true,
+          "rotation_ccw_deg": 180,
+          "raw_text": "秀",
+          "score": 0.66607
+        },
+        {
+          "center_fraction": 0.65,
+          "resize_to_square": true,
+          "rotation_ccw_deg": 270,
+          "raw_text": "将",
+          "score": 0.81338
+        }
+      ],
+      "contest_points": null
+    },
+    {
+      "id": "p05",
+      "image": "05_data/01_raw/02_xiangqi/20261023_xiangqi_input_01.jpg",
+      "bbox": [
+        2040,
+        2310,
+        2250,
+        2490
+      ],
+      "character": "车",
+      "ink": "red",
+      "piece_class": "red_车",
+      "raw_text": "車",
+      "score": 0.99482,
+      "status": "accepted",
+      "selected_preprocessing": {
+        "center_fraction": 0.8,
+        "resize_to_square": true,
+        "rotation_ccw_deg": 0
+      },
+      "ink_evidence": {
+        "red_pixel_ratio": 0.47861552028218696,
+        "dark_pixel_ratio": 0.0
+      },
+      "attempts": [
+        {
+          "center_fraction": 1.0,
+          "resize_to_square": false,
+          "rotation_ccw_deg": 0,
+          "raw_text": "車",
+          "score": 0.96554
+        },
+        {
+          "center_fraction": 1.0,
+          "resize_to_square": false,
+          "rotation_ccw_deg": 90,
+          "raw_text": "車",
+          "score": 0.9909
+        },
+        {
+          "center_fraction": 1.0,
+          "resize_to_square": false,
+          "rotation_ccw_deg": 180,
+          "raw_text": "車",
+          "score": 0.33135
+        },
+        {
+          "center_fraction": 1.0,
+          "resize_to_square": false,
+          "rotation_ccw_deg": 270,
+          "raw_text": "e",
+          "score": 0.23377
+        },
+        {
+          "center_fraction": 1.0,
+          "resize_to_square": true,
+          "rotation_ccw_deg": 0,
+          "raw_text": "車",
+          "score": 0.96693
+        },
+        {
+          "center_fraction": 1.0,
+          "resize_to_square": true,
+          "rotation_ccw_deg": 90,
+          "raw_text": "車",
+          "score": 0.98196
+        },
+        {
+          "center_fraction": 1.0,
+          "resize_to_square": true,
+          "rotation_ccw_deg": 180,
+          "raw_text": "事",
+          "score": 0.31675
+        },
+        {
+          "center_fraction": 1.0,
+          "resize_to_square": true,
+          "rotation_ccw_deg": 270,
+          "raw_text": "e",
+          "score": 0.25119
+        },
+        {
+          "center_fraction": 0.8,
+          "resize_to_square": false,
+          "rotation_ccw_deg": 0,
+          "raw_text": "車",
+          "score": 0.98874
+        },
+        {
+          "center_fraction": 0.8,
+          "resize_to_square": false,
+          "rotation_ccw_deg": 90,
+          "raw_text": "車",
+          "score": 0.92795
+        },
+        {
+          "center_fraction": 0.8,
+          "resize_to_square": false,
+          "rotation_ccw_deg": 180,
+          "raw_text": "重",
+          "score": 0.30212
+        },
+        {
+          "center_fraction": 0.8,
+          "resize_to_square": false,
+          "rotation_ccw_deg": 270,
+          "raw_text": "博",
+          "score": 0.25271
+        },
+        {
+          "center_fraction": 0.8,
+          "resize_to_square": true,
+          "rotation_ccw_deg": 0,
+          "raw_text": "車",
+          "score": 0.99482
+        },
+        {
+          "center_fraction": 0.8,
+          "resize_to_square": true,
+          "rotation_ccw_deg": 90,
+          "raw_text": "車",
+          "score": 0.97109
+        },
+        {
+          "center_fraction": 0.8,
+          "resize_to_square": true,
+          "rotation_ccw_deg": 180,
+          "raw_text": "重",
+          "score": 0.41803
+        },
+        {
+          "center_fraction": 0.8,
+          "resize_to_square": true,
+          "rotation_ccw_deg": 270,
+          "raw_text": "重",
+          "score": 0.16988
+        },
+        {
+          "center_fraction": 0.65,
+          "resize_to_square": false,
+          "rotation_ccw_deg": 0,
+          "raw_text": "車",
+          "score": 0.46931
+        },
+        {
+          "center_fraction": 0.65,
+          "resize_to_square": false,
+          "rotation_ccw_deg": 90,
+          "raw_text": "車",
+          "score": 0.74631
+        },
+        {
+          "center_fraction": 0.65,
+          "resize_to_square": false,
+          "rotation_ccw_deg": 180,
+          "raw_text": "重",
+          "score": 0.647
+        },
+        {
+          "center_fraction": 0.65,
+          "resize_to_square": false,
+          "rotation_ccw_deg": 270,
+          "raw_text": "博",
+          "score": 0.20809
+        },
+        {
+          "center_fraction": 0.65,
+          "resize_to_square": true,
+          "rotation_ccw_deg": 0,
+          "raw_text": "更",
+          "score": 0.62216
+        },
+        {
+          "center_fraction": 0.65,
+          "resize_to_square": true,
+          "rotation_ccw_deg": 90,
+          "raw_text": "車",
+          "score": 0.8745
+        },
+        {
+          "center_fraction": 0.65,
+          "resize_to_square": true,
+          "rotation_ccw_deg": 180,
+          "raw_text": "重",
+          "score": 0.64831
+        },
+        {
+          "center_fraction": 0.65,
+          "resize_to_square": true,
+          "rotation_ccw_deg": 270,
+          "raw_text": "重",
+          "score": 0.52144
+        }
+      ],
+      "contest_points": null
+    },
+    {
+      "id": "p06",
+      "image": "05_data/01_raw/02_xiangqi/20261023_xiangqi_input_01.jpg",
+      "bbox": [
+        1940,
+        1930,
+        2125,
+        2090
+      ],
+      "character": "马",
+      "ink": "black",
+      "piece_class": "black_马",
+      "raw_text": "馬",
+      "score": 0.99477,
+      "status": "accepted",
+      "selected_preprocessing": {
+        "center_fraction": 0.8,
+        "resize_to_square": true,
+        "rotation_ccw_deg": 0
+      },
+      "ink_evidence": {
+        "red_pixel_ratio": 0.03350225225225225,
+        "dark_pixel_ratio": 0.3353978978978979
+      },
+      "attempts": [
+        {
+          "center_fraction": 1.0,
+          "resize_to_square": false,
+          "rotation_ccw_deg": 0,
+          "raw_text": "馬",
+          "score": 0.9822
+        },
+        {
+          "center_fraction": 1.0,
+          "resize_to_square": false,
+          "rotation_ccw_deg": 90,
+          "raw_text": "馬",
+          "score": 0.87155
+        },
+        {
+          "center_fraction": 1.0,
+          "resize_to_square": false,
+          "rotation_ccw_deg": 180,
+          "raw_text": "重",
+          "score": 0.51909
+        },
+        {
+          "center_fraction": 1.0,
+          "resize_to_square": false,
+          "rotation_ccw_deg": 270,
+          "raw_text": "新",
+          "score": 0.37343
+        },
+        {
+          "center_fraction": 1.0,
+          "resize_to_square": true,
+          "rotation_ccw_deg": 0,
+          "raw_text": "馬",
+          "score": 0.99359
+        },
+        {
+          "center_fraction": 1.0,
+          "resize_to_square": true,
+          "rotation_ccw_deg": 90,
+          "raw_text": "馬",
+          "score": 0.9763
+        },
+        {
+          "center_fraction": 1.0,
+          "resize_to_square": true,
+          "rotation_ccw_deg": 180,
+          "raw_text": "重",
+          "score": 0.42028
+        },
+        {
+          "center_fraction": 1.0,
+          "resize_to_square": true,
+          "rotation_ccw_deg": 270,
+          "raw_text": "i",
+          "score": 0.16487
+        },
+        {
+          "center_fraction": 0.8,
+          "resize_to_square": false,
+          "rotation_ccw_deg": 0,
+          "raw_text": "馬",
+          "score": 0.96353
+        },
+        {
+          "center_fraction": 0.8,
+          "resize_to_square": false,
+          "rotation_ccw_deg": 90,
+          "raw_text": "馬",
+          "score": 0.89221
+        },
+        {
+          "center_fraction": 0.8,
+          "resize_to_square": false,
+          "rotation_ccw_deg": 180,
+          "raw_text": "重",
+          "score": 0.40816
+        },
+        {
+          "center_fraction": 0.8,
+          "resize_to_square": false,
+          "rotation_ccw_deg": 270,
+          "raw_text": "i",
+          "score": 0.23323
+        },
+        {
+          "center_fraction": 0.8,
+          "resize_to_square": true,
+          "rotation_ccw_deg": 0,
+          "raw_text": "馬",
+          "score": 0.99477
+        },
+        {
+          "center_fraction": 0.8,
+          "resize_to_square": true,
+          "rotation_ccw_deg": 90,
+          "raw_text": "馬",
+          "score": 0.93204
+        },
+        {
+          "center_fraction": 0.8,
+          "resize_to_square": true,
+          "rotation_ccw_deg": 180,
+          "raw_text": "重",
+          "score": 0.43739
+        },
+        {
+          "center_fraction": 0.8,
+          "resize_to_square": true,
+          "rotation_ccw_deg": 270,
+          "raw_text": "i",
+          "score": 0.19267
+        },
+        {
+          "center_fraction": 0.65,
+          "resize_to_square": false,
+          "rotation_ccw_deg": 0,
+          "raw_text": "馬",
+          "score": 0.68218
+        },
+        {
+          "center_fraction": 0.65,
+          "resize_to_square": false,
+          "rotation_ccw_deg": 90,
+          "raw_text": "馬",
+          "score": 0.33955
+        },
+        {
+          "center_fraction": 0.65,
+          "resize_to_square": false,
+          "rotation_ccw_deg": 180,
+          "raw_text": "重",
+          "score": 0.20032
+        },
+        {
+          "center_fraction": 0.65,
+          "resize_to_square": false,
+          "rotation_ccw_deg": 270,
+          "raw_text": "红",
+          "score": 0.15707
+        },
+        {
+          "center_fraction": 0.65,
+          "resize_to_square": true,
+          "rotation_ccw_deg": 0,
+          "raw_text": "馬",
+          "score": 0.77511
+        },
+        {
+          "center_fraction": 0.65,
+          "resize_to_square": true,
+          "rotation_ccw_deg": 90,
+          "raw_text": "馬",
+          "score": 0.34786
+        },
+        {
+          "center_fraction": 0.65,
+          "resize_to_square": true,
+          "rotation_ccw_deg": 180,
+          "raw_text": "重",
+          "score": 0.46869
+        },
+        {
+          "center_fraction": 0.65,
+          "resize_to_square": true,
+          "rotation_ccw_deg": 270,
+          "raw_text": "美",
+          "score": 0.16242
+        }
+      ],
+      "contest_points": null
+    },
+    {
+      "id": "p07",
+      "image": "05_data/01_raw/02_xiangqi/20261023_xiangqi_input_01.jpg",
+      "bbox": [
+        1480,
+        1450,
+        1730,
+        1680
+      ],
+      "character": "unknown",
+      "ink": "red",
+      "piece_class": "unknown",
+      "raw_text": "2",
+      "score": 0.71058,
+      "status": "not_a_single_piece_character",
+      "selected_preprocessing": {
+        "center_fraction": 0.8,
+        "resize_to_square": false,
+        "rotation_ccw_deg": 180
+      },
+      "ink_evidence": {
+        "red_pixel_ratio": 0.31280193236714976,
+        "dark_pixel_ratio": 0.0018357487922705314
+      },
+      "attempts": [
+        {
+          "center_fraction": 1.0,
+          "resize_to_square": false,
+          "rotation_ccw_deg": 0,
+          "raw_text": "2",
+          "score": 0.21475
+        },
+        {
+          "center_fraction": 1.0,
+          "resize_to_square": false,
+          "rotation_ccw_deg": 90,
+          "raw_text": "2",
+          "score": 0.23264
+        },
+        {
+          "center_fraction": 1.0,
+          "resize_to_square": false,
+          "rotation_ccw_deg": 180,
+          "raw_text": "2",
+          "score": 0.46984
+        },
+        {
+          "center_fraction": 1.0,
+          "resize_to_square": false,
+          "rotation_ccw_deg": 270,
+          "raw_text": "福",
+          "score": 0.34561
+        },
+        {
+          "center_fraction": 1.0,
+          "resize_to_square": true,
+          "rotation_ccw_deg": 0,
+          "raw_text": "福",
+          "score": 0.3558
+        },
+        {
+          "center_fraction": 1.0,
+          "resize_to_square": true,
+          "rotation_ccw_deg": 90,
+          "raw_text": "2",
+          "score": 0.31998
+        },
+        {
+          "center_fraction": 1.0,
+          "resize_to_square": true,
+          "rotation_ccw_deg": 180,
+          "raw_text": "2",
+          "score": 0.52578
+        },
+        {
+          "center_fraction": 1.0,
+          "resize_to_square": true,
+          "rotation_ccw_deg": 270,
+          "raw_text": "",
+          "score": 0.0
+        },
+        {
+          "center_fraction": 0.8,
+          "resize_to_square": false,
+          "rotation_ccw_deg": 0,
+          "raw_text": "色",
+          "score": 0.41488
+        },
+        {
+          "center_fraction": 0.8,
+          "resize_to_square": false,
+          "rotation_ccw_deg": 90,
+          "raw_text": "泡",
+          "score": 0.51168
+        },
+        {
+          "center_fraction": 0.8,
+          "resize_to_square": false,
+          "rotation_ccw_deg": 180,
+          "raw_text": "2",
+          "score": 0.71058
+        },
+        {
+          "center_fraction": 0.8,
+          "resize_to_square": false,
+          "rotation_ccw_deg": 270,
+          "raw_text": "欧",
+          "score": 0.24127
+        },
+        {
+          "center_fraction": 0.8,
+          "resize_to_square": true,
+          "rotation_ccw_deg": 0,
+          "raw_text": "色",
+          "score": 0.28953
+        },
+        {
+          "center_fraction": 0.8,
+          "resize_to_square": true,
+          "rotation_ccw_deg": 90,
+          "raw_text": "地",
+          "score": 0.20103
+        },
+        {
+          "center_fraction": 0.8,
+          "resize_to_square": true,
+          "rotation_ccw_deg": 180,
+          "raw_text": "2",
+          "score": 0.56635
+        },
+        {
+          "center_fraction": 0.8,
+          "resize_to_square": true,
+          "rotation_ccw_deg": 270,
+          "raw_text": "武",
+          "score": 0.21603
+        },
+        {
+          "center_fraction": 0.65,
+          "resize_to_square": false,
+          "rotation_ccw_deg": 0,
+          "raw_text": "5",
+          "score": 0.33006
+        },
+        {
+          "center_fraction": 0.65,
+          "resize_to_square": false,
+          "rotation_ccw_deg": 90,
+          "raw_text": "炮",
+          "score": 0.33042
+        },
+        {
+          "center_fraction": 0.65,
+          "resize_to_square": false,
+          "rotation_ccw_deg": 180,
+          "raw_text": "2",
+          "score": 0.40996
+        },
+        {
+          "center_fraction": 0.65,
+          "resize_to_square": false,
+          "rotation_ccw_deg": 270,
+          "raw_text": "a",
+          "score": 0.21924
+        },
+        {
+          "center_fraction": 0.65,
+          "resize_to_square": true,
+          "rotation_ccw_deg": 0,
+          "raw_text": "",
+          "score": 0.0
+        },
+        {
+          "center_fraction": 0.65,
+          "resize_to_square": true,
+          "rotation_ccw_deg": 90,
+          "raw_text": "炮",
+          "score": 0.32307
+        },
+        {
+          "center_fraction": 0.65,
+          "resize_to_square": true,
+          "rotation_ccw_deg": 180,
+          "raw_text": "2",
+          "score": 0.41421
+        },
+        {
+          "center_fraction": 0.65,
+          "resize_to_square": true,
+          "rotation_ccw_deg": 270,
+          "raw_text": "e",
+          "score": 0.44311
+        }
+      ],
+      "contest_points": null
+    },
+    {
+      "id": "p08",
+      "image": "05_data/01_raw/02_xiangqi/20261023_xiangqi_input_01.jpg",
+      "bbox": [
+        1910,
+        1180,
+        2100,
+        1340
+      ],
+      "character": "unknown",
+      "ink": "red",
+      "piece_class": "unknown",
+      "raw_text": "L",
+      "score": 0.51801,
+      "status": "low_score",
+      "selected_preprocessing": {
+        "center_fraction": 1.0,
+        "resize_to_square": true,
+        "rotation_ccw_deg": 90
+      },
+      "ink_evidence": {
+        "red_pixel_ratio": 0.3153326023391813,
+        "dark_pixel_ratio": 0.005847953216374269
+      },
+      "attempts": [
+        {
+          "center_fraction": 1.0,
+          "resize_to_square": false,
+          "rotation_ccw_deg": 0,
+          "raw_text": "R",
+          "score": 0.17481
+        },
+        {
+          "center_fraction": 1.0,
+          "resize_to_square": false,
+          "rotation_ccw_deg": 90,
+          "raw_text": "4",
+          "score": 0.24412
+        },
+        {
+          "center_fraction": 1.0,
+          "resize_to_square": false,
+          "rotation_ccw_deg": 180,
+          "raw_text": "3",
+          "score": 0.49688
+        },
+        {
+          "center_fraction": 1.0,
+          "resize_to_square": false,
+          "rotation_ccw_deg": 270,
+          "raw_text": "汤",
+          "score": 0.08399
+        },
+        {
+          "center_fraction": 1.0,
+          "resize_to_square": true,
+          "rotation_ccw_deg": 0,
+          "raw_text": "点",
+          "score": 0.15313
+        },
+        {
+          "center_fraction": 1.0,
+          "resize_to_square": true,
+          "rotation_ccw_deg": 90,
+          "raw_text": "L",
+          "score": 0.51801
+        },
+        {
+          "center_fraction": 1.0,
+          "resize_to_square": true,
+          "rotation_ccw_deg": 180,
+          "raw_text": "3",
+          "score": 0.51135
+        },
+        {
+          "center_fraction": 1.0,
+          "resize_to_square": true,
+          "rotation_ccw_deg": 270,
+          "raw_text": "油",
+          "score": 0.14636
+        },
+        {
+          "center_fraction": 0.8,
+          "resize_to_square": false,
+          "rotation_ccw_deg": 0,
+          "raw_text": "5",
+          "score": 0.04533
+        },
+        {
+          "center_fraction": 0.8,
+          "resize_to_square": false,
+          "rotation_ccw_deg": 90,
+          "raw_text": "4",
+          "score": 0.18436
+        },
+        {
+          "center_fraction": 0.8,
+          "resize_to_square": false,
+          "rotation_ccw_deg": 180,
+          "raw_text": "分",
+          "score": 0.11764
+        },
+        {
+          "center_fraction": 0.8,
+          "resize_to_square": false,
+          "rotation_ccw_deg": 270,
+          "raw_text": "冰",
+          "score": 0.17796
+        },
+        {
+          "center_fraction": 0.8,
+          "resize_to_square": true,
+          "rotation_ccw_deg": 0,
+          "raw_text": "5",
+          "score": 0.10932
+        },
+        {
+          "center_fraction": 0.8,
+          "resize_to_square": true,
+          "rotation_ccw_deg": 90,
+          "raw_text": "u",
+          "score": 0.12868
+        },
+        {
+          "center_fraction": 0.8,
+          "resize_to_square": true,
+          "rotation_ccw_deg": 180,
+          "raw_text": "5",
+          "score": 0.14611
+        },
+        {
+          "center_fraction": 0.8,
+          "resize_to_square": true,
+          "rotation_ccw_deg": 270,
+          "raw_text": "冰",
+          "score": 0.17762
+        },
+        {
+          "center_fraction": 0.65,
+          "resize_to_square": false,
+          "rotation_ccw_deg": 0,
+          "raw_text": "五",
+          "score": 0.36085
+        },
+        {
+          "center_fraction": 0.65,
+          "resize_to_square": false,
+          "rotation_ccw_deg": 90,
+          "raw_text": "4y",
+          "score": 0.40908
+        },
+        {
+          "center_fraction": 0.65,
+          "resize_to_square": false,
+          "rotation_ccw_deg": 180,
+          "raw_text": "y",
+          "score": 0.09393
+        },
+        {
+          "center_fraction": 0.65,
+          "resize_to_square": false,
+          "rotation_ccw_deg": 270,
+          "raw_text": "汤",
+          "score": 0.27121
+        },
+        {
+          "center_fraction": 0.65,
+          "resize_to_square": true,
+          "rotation_ccw_deg": 0,
+          "raw_text": "5",
+          "score": 0.45976
+        },
+        {
+          "center_fraction": 0.65,
+          "resize_to_square": true,
+          "rotation_ccw_deg": 90,
+          "raw_text": "u",
+          "score": 0.3277
+        },
+        {
+          "center_fraction": 0.65,
+          "resize_to_square": true,
+          "rotation_ccw_deg": 180,
+          "raw_text": "3",
+          "score": 0.29212
+        },
+        {
+          "center_fraction": 0.65,
+          "resize_to_square": true,
+          "rotation_ccw_deg": 270,
+          "raw_text": "冰",
+          "score": 0.14016
+        }
+      ],
+      "contest_points": null
+    },
+    {
+      "id": "p09",
+      "image": "05_data/01_raw/02_xiangqi/20261023_xiangqi_input_01.jpg",
+      "bbox": [
+        2315,
+        425,
+        2480,
+        570
+      ],
+      "character": "unknown",
+      "ink": "black",
+      "piece_class": "unknown",
+      "raw_text": "H",
+      "score": 0.9779,
+      "status": "not_a_single_piece_character",
+      "selected_preprocessing": {
+        "center_fraction": 0.65,
+        "resize_to_square": false,
+        "rotation_ccw_deg": 0
+      },
+      "ink_evidence": {
+        "red_pixel_ratio": 0.016835016835016835,
+        "dark_pixel_ratio": 0.2102635550911413
+      },
+      "attempts": [
+        {
+          "center_fraction": 1.0,
+          "resize_to_square": false,
+          "rotation_ccw_deg": 0,
+          "raw_text": "H",
+          "score": 0.96744
+        },
+        {
+          "center_fraction": 1.0,
+          "resize_to_square": false,
+          "rotation_ccw_deg": 90,
+          "raw_text": "区",
+          "score": 0.2794
+        },
+        {
+          "center_fraction": 1.0,
+          "resize_to_square": false,
+          "rotation_ccw_deg": 180,
+          "raw_text": "F",
+          "score": 0.84539
+        },
+        {
+          "center_fraction": 1.0,
+          "resize_to_square": false,
+          "rotation_ccw_deg": 270,
+          "raw_text": "F",
+          "score": 0.13771
+        },
+        {
+          "center_fraction": 1.0,
+          "resize_to_square": true,
+          "rotation_ccw_deg": 0,
+          "raw_text": "H",
+          "score": 0.9634
+        },
+        {
+          "center_fraction": 1.0,
+          "resize_to_square": true,
+          "rotation_ccw_deg": 90,
+          "raw_text": "区",
+          "score": 0.19064
+        },
+        {
+          "center_fraction": 1.0,
+          "resize_to_square": true,
+          "rotation_ccw_deg": 180,
+          "raw_text": "F",
+          "score": 0.79682
+        },
+        {
+          "center_fraction": 1.0,
+          "resize_to_square": true,
+          "rotation_ccw_deg": 270,
+          "raw_text": "F",
+          "score": 0.17624
+        },
+        {
+          "center_fraction": 0.8,
+          "resize_to_square": false,
+          "rotation_ccw_deg": 0,
+          "raw_text": "H",
+          "score": 0.83533
+        },
+        {
+          "center_fraction": 0.8,
+          "resize_to_square": false,
+          "rotation_ccw_deg": 90,
+          "raw_text": "生",
+          "score": 0.76684
+        },
+        {
+          "center_fraction": 0.8,
+          "resize_to_square": false,
+          "rotation_ccw_deg": 180,
+          "raw_text": "H",
+          "score": 0.40425
+        },
+        {
+          "center_fraction": 0.8,
+          "resize_to_square": false,
+          "rotation_ccw_deg": 270,
+          "raw_text": "F",
+          "score": 0.30697
+        },
+        {
+          "center_fraction": 0.8,
+          "resize_to_square": true,
+          "rotation_ccw_deg": 0,
+          "raw_text": "H",
+          "score": 0.95836
+        },
+        {
+          "center_fraction": 0.8,
+          "resize_to_square": true,
+          "rotation_ccw_deg": 90,
+          "raw_text": "生",
+          "score": 0.84279
+        },
+        {
+          "center_fraction": 0.8,
+          "resize_to_square": true,
+          "rotation_ccw_deg": 180,
+          "raw_text": "+",
+          "score": 0.49427
+        },
+        {
+          "center_fraction": 0.8,
+          "resize_to_square": true,
+          "rotation_ccw_deg": 270,
+          "raw_text": "F",
+          "score": 0.36874
+        },
+        {
+          "center_fraction": 0.65,
+          "resize_to_square": false,
+          "rotation_ccw_deg": 0,
+          "raw_text": "H",
+          "score": 0.9779
+        },
+        {
+          "center_fraction": 0.65,
+          "resize_to_square": false,
+          "rotation_ccw_deg": 90,
+          "raw_text": "女",
+          "score": 0.23604
+        },
+        {
+          "center_fraction": 0.65,
+          "resize_to_square": false,
+          "rotation_ccw_deg": 180,
+          "raw_text": "H",
+          "score": 0.93131
+        },
+        {
+          "center_fraction": 0.65,
+          "resize_to_square": false,
+          "rotation_ccw_deg": 270,
+          "raw_text": "天",
+          "score": 0.34941
+        },
+        {
+          "center_fraction": 0.65,
+          "resize_to_square": true,
+          "rotation_ccw_deg": 0,
+          "raw_text": "H",
+          "score": 0.78142
+        },
+        {
+          "center_fraction": 0.65,
+          "resize_to_square": true,
+          "rotation_ccw_deg": 90,
+          "raw_text": "女",
+          "score": 0.17478
+        },
+        {
+          "center_fraction": 0.65,
+          "resize_to_square": true,
+          "rotation_ccw_deg": 180,
+          "raw_text": "H",
+          "score": 0.70158
+        },
+        {
+          "center_fraction": 0.65,
+          "resize_to_square": true,
+          "rotation_ccw_deg": 270,
+          "raw_text": "X",
+          "score": 0.4215
+        }
+      ],
+      "contest_points": null
+    },
+    {
+      "id": "p10",
+      "image": "05_data/01_raw/02_xiangqi/20261023_xiangqi_input_01.jpg",
+      "bbox": [
+        1770,
+        2140,
+        2040,
+        2390
+      ],
+      "character": "相",
+      "ink": "red",
+      "piece_class": "red_相",
+      "raw_text": "相",
+      "score": 0.96994,
+      "status": "accepted",
+      "selected_preprocessing": {
+        "center_fraction": 0.65,
+        "resize_to_square": false,
+        "rotation_ccw_deg": 0
+      },
+      "ink_evidence": {
+        "red_pixel_ratio": 0.32329218106995883,
+        "dark_pixel_ratio": 8.23045267489712e-05
+      },
+      "attempts": [
+        {
+          "center_fraction": 1.0,
+          "resize_to_square": false,
+          "rotation_ccw_deg": 0,
+          "raw_text": "相",
+          "score": 0.46611
+        },
+        {
+          "center_fraction": 1.0,
+          "resize_to_square": false,
+          "rotation_ccw_deg": 90,
+          "raw_text": "心",
+          "score": 0.43569
+        },
+        {
+          "center_fraction": 1.0,
+          "resize_to_square": false,
+          "rotation_ccw_deg": 180,
+          "raw_text": "",
+          "score": 0.0
+        },
+        {
+          "center_fraction": 1.0,
+          "resize_to_square": false,
+          "rotation_ccw_deg": 270,
+          "raw_text": "a",
+          "score": 0.13943
+        },
+        {
+          "center_fraction": 1.0,
+          "resize_to_square": true,
+          "rotation_ccw_deg": 0,
+          "raw_text": "酒",
+          "score": 0.27178
+        },
+        {
+          "center_fraction": 1.0,
+          "resize_to_square": true,
+          "rotation_ccw_deg": 90,
+          "raw_text": "心",
+          "score": 0.38564
+        },
+        {
+          "center_fraction": 1.0,
+          "resize_to_square": true,
+          "rotation_ccw_deg": 180,
+          "raw_text": "C",
+          "score": 0.65241
+        },
+        {
+          "center_fraction": 1.0,
+          "resize_to_square": true,
+          "rotation_ccw_deg": 270,
+          "raw_text": "a",
+          "score": 0.14679
+        },
+        {
+          "center_fraction": 0.8,
+          "resize_to_square": false,
+          "rotation_ccw_deg": 0,
+          "raw_text": "相",
+          "score": 0.95931
+        },
+        {
+          "center_fraction": 0.8,
+          "resize_to_square": false,
+          "rotation_ccw_deg": 90,
+          "raw_text": "聘",
+          "score": 0.14825
+        },
+        {
+          "center_fraction": 0.8,
+          "resize_to_square": false,
+          "rotation_ccw_deg": 180,
+          "raw_text": "国仁",
+          "score": 0.50082
+        },
+        {
+          "center_fraction": 0.8,
+          "resize_to_square": false,
+          "rotation_ccw_deg": 270,
+          "raw_text": "N",
+          "score": 0.16179
+        },
+        {
+          "center_fraction": 0.8,
+          "resize_to_square": true,
+          "rotation_ccw_deg": 0,
+          "raw_text": "捆",
+          "score": 0.57136
+        },
+        {
+          "center_fraction": 0.8,
+          "resize_to_square": true,
+          "rotation_ccw_deg": 90,
+          "raw_text": "爬",
+          "score": 0.14308
+        },
+        {
+          "center_fraction": 0.8,
+          "resize_to_square": true,
+          "rotation_ccw_deg": 180,
+          "raw_text": "国",
+          "score": 0.89022
+        },
+        {
+          "center_fraction": 0.8,
+          "resize_to_square": true,
+          "rotation_ccw_deg": 270,
+          "raw_text": "会",
+          "score": 0.05579
+        },
+        {
+          "center_fraction": 0.65,
+          "resize_to_square": false,
+          "rotation_ccw_deg": 0,
+          "raw_text": "相",
+          "score": 0.96994
+        },
+        {
+          "center_fraction": 0.65,
+          "resize_to_square": false,
+          "rotation_ccw_deg": 90,
+          "raw_text": "承",
+          "score": 0.20972
+        },
+        {
+          "center_fraction": 0.65,
+          "resize_to_square": false,
+          "rotation_ccw_deg": 180,
+          "raw_text": "自",
+          "score": 0.48922
+        },
+        {
+          "center_fraction": 0.65,
+          "resize_to_square": false,
+          "rotation_ccw_deg": 270,
+          "raw_text": "金",
+          "score": 0.05233
+        },
+        {
+          "center_fraction": 0.65,
+          "resize_to_square": true,
+          "rotation_ccw_deg": 0,
+          "raw_text": "相",
+          "score": 0.8152
+        },
+        {
+          "center_fraction": 0.65,
+          "resize_to_square": true,
+          "rotation_ccw_deg": 90,
+          "raw_text": "酒",
+          "score": 0.12117
+        },
+        {
+          "center_fraction": 0.65,
+          "resize_to_square": true,
+          "rotation_ccw_deg": 180,
+          "raw_text": "自",
+          "score": 0.41559
+        },
+        {
+          "center_fraction": 0.65,
+          "resize_to_square": true,
+          "rotation_ccw_deg": 270,
+          "raw_text": "Y",
+          "score": 0.06218
+        }
+      ],
+      "contest_points": null
+    },
+    {
+      "id": "p11",
+      "image": "05_data/01_raw/02_xiangqi/20261023_xiangqi_input_01.jpg",
+      "bbox": [
+        2860,
+        565,
+        3030,
+        705
+      ],
+      "character": "象",
+      "ink": "black",
+      "piece_class": "black_象",
+      "raw_text": "象",
+      "score": 0.99765,
+      "status": "accepted",
+      "selected_preprocessing": {
+        "center_fraction": 0.8,
+        "resize_to_square": true,
+        "rotation_ccw_deg": 270
+      },
+      "ink_evidence": {
+        "red_pixel_ratio": 0.0496031746031746,
+        "dark_pixel_ratio": 0.27497665732959853
+      },
+      "attempts": [
+        {
+          "center_fraction": 1.0,
+          "resize_to_square": false,
+          "rotation_ccw_deg": 0,
+          "raw_text": "爱",
+          "score": 0.29237
+        },
+        {
+          "center_fraction": 1.0,
+          "resize_to_square": false,
+          "rotation_ccw_deg": 90,
+          "raw_text": "星",
+          "score": 0.25153
+        },
+        {
+          "center_fraction": 1.0,
+          "resize_to_square": false,
+          "rotation_ccw_deg": 180,
+          "raw_text": "P",
+          "score": 0.21527
+        },
+        {
+          "center_fraction": 1.0,
+          "resize_to_square": false,
+          "rotation_ccw_deg": 270,
+          "raw_text": "象",
+          "score": 0.95666
+        },
+        {
+          "center_fraction": 1.0,
+          "resize_to_square": true,
+          "rotation_ccw_deg": 0,
+          "raw_text": "象",
+          "score": 0.98046
+        },
+        {
+          "center_fraction": 1.0,
+          "resize_to_square": true,
+          "rotation_ccw_deg": 90,
+          "raw_text": "星",
+          "score": 0.49636
+        },
+        {
+          "center_fraction": 1.0,
+          "resize_to_square": true,
+          "rotation_ccw_deg": 180,
+          "raw_text": "R",
+          "score": 0.26034
+        },
+        {
+          "center_fraction": 1.0,
+          "resize_to_square": true,
+          "rotation_ccw_deg": 270,
+          "raw_text": "象",
+          "score": 0.99394
+        },
+        {
+          "center_fraction": 0.8,
+          "resize_to_square": false,
+          "rotation_ccw_deg": 0,
+          "raw_text": "家",
+          "score": 0.52321
+        },
+        {
+          "center_fraction": 0.8,
+          "resize_to_square": false,
+          "rotation_ccw_deg": 90,
+          "raw_text": "星",
+          "score": 0.28648
+        },
+        {
+          "center_fraction": 0.8,
+          "resize_to_square": false,
+          "rotation_ccw_deg": 180,
+          "raw_text": "REL",
+          "score": 0.40873
+        },
+        {
+          "center_fraction": 0.8,
+          "resize_to_square": false,
+          "rotation_ccw_deg": 270,
+          "raw_text": "象",
+          "score": 0.99567
+        },
+        {
+          "center_fraction": 0.8,
+          "resize_to_square": true,
+          "rotation_ccw_deg": 0,
+          "raw_text": "象家",
+          "score": 0.7804
+        },
+        {
+          "center_fraction": 0.8,
+          "resize_to_square": true,
+          "rotation_ccw_deg": 90,
+          "raw_text": "境",
+          "score": 0.20478
+        },
+        {
+          "center_fraction": 0.8,
+          "resize_to_square": true,
+          "rotation_ccw_deg": 180,
+          "raw_text": "PSu",
+          "score": 0.24181
+        },
+        {
+          "center_fraction": 0.8,
+          "resize_to_square": true,
+          "rotation_ccw_deg": 270,
+          "raw_text": "象",
+          "score": 0.99765
+        },
+        {
+          "center_fraction": 0.65,
+          "resize_to_square": false,
+          "rotation_ccw_deg": 0,
+          "raw_text": "K",
+          "score": 0.79579
+        },
+        {
+          "center_fraction": 0.65,
+          "resize_to_square": false,
+          "rotation_ccw_deg": 90,
+          "raw_text": "格",
+          "score": 0.16503
+        },
+        {
+          "center_fraction": 0.65,
+          "resize_to_square": false,
+          "rotation_ccw_deg": 180,
+          "raw_text": "RtA",
+          "score": 0.29555
+        },
+        {
+          "center_fraction": 0.65,
+          "resize_to_square": false,
+          "rotation_ccw_deg": 270,
+          "raw_text": "象",
+          "score": 0.98882
+        },
+        {
+          "center_fraction": 0.65,
+          "resize_to_square": true,
+          "rotation_ccw_deg": 0,
+          "raw_text": "爱",
+          "score": 0.32443
+        },
+        {
+          "center_fraction": 0.65,
+          "resize_to_square": true,
+          "rotation_ccw_deg": 90,
+          "raw_text": "t",
+          "score": 0.10381
+        },
+        {
+          "center_fraction": 0.65,
+          "resize_to_square": true,
+          "rotation_ccw_deg": 180,
+          "raw_text": "Xtbu",
+          "score": 0.41294
+        },
+        {
+          "center_fraction": 0.65,
+          "resize_to_square": true,
+          "rotation_ccw_deg": 270,
+          "raw_text": "象",
+          "score": 0.831
+        }
+      ],
+      "contest_points": null
+    },
+    {
+      "id": "p12",
+      "image": "05_data/01_raw/02_xiangqi/20261023_xiangqi_input_01.jpg",
+      "bbox": [
+        3050,
+        1050,
+        3330,
+        1310
+      ],
+      "character": "unknown",
+      "ink": "black",
+      "piece_class": "unknown",
+      "raw_text": "夜",
+      "score": 0.92131,
+      "status": "not_a_single_piece_character",
+      "selected_preprocessing": {
+        "center_fraction": 0.65,
+        "resize_to_square": true,
+        "rotation_ccw_deg": 270
+      },
+      "ink_evidence": {
+        "red_pixel_ratio": 0.07036019536019536,
+        "dark_pixel_ratio": 0.20711233211233213
+      },
+      "attempts": [
+        {
+          "center_fraction": 1.0,
+          "resize_to_square": false,
+          "rotation_ccw_deg": 0,
+          "raw_text": "3",
+          "score": 0.08569
+        },
+        {
+          "center_fraction": 1.0,
+          "resize_to_square": false,
+          "rotation_ccw_deg": 90,
+          "raw_text": "4",
+          "score": 0.54887
+        },
+        {
+          "center_fraction": 1.0,
+          "resize_to_square": false,
+          "rotation_ccw_deg": 180,
+          "raw_text": "4",
+          "score": 0.12117
+        },
+        {
+          "center_fraction": 1.0,
+          "resize_to_square": false,
+          "rotation_ccw_deg": 270,
+          "raw_text": "我",
+          "score": 0.2471
+        },
+        {
+          "center_fraction": 1.0,
+          "resize_to_square": true,
+          "rotation_ccw_deg": 0,
+          "raw_text": "4",
+          "score": 0.08093
+        },
+        {
+          "center_fraction": 1.0,
+          "resize_to_square": true,
+          "rotation_ccw_deg": 90,
+          "raw_text": "4",
+          "score": 0.24801
+        },
+        {
+          "center_fraction": 1.0,
+          "resize_to_square": true,
+          "rotation_ccw_deg": 180,
+          "raw_text": "4",
+          "score": 0.10521
+        },
+        {
+          "center_fraction": 1.0,
+          "resize_to_square": true,
+          "rotation_ccw_deg": 270,
+          "raw_text": "身",
+          "score": 0.45834
+        },
+        {
+          "center_fraction": 0.8,
+          "resize_to_square": false,
+          "rotation_ccw_deg": 0,
+          "raw_text": "年",
+          "score": 0.08627
+        },
+        {
+          "center_fraction": 0.8,
+          "resize_to_square": false,
+          "rotation_ccw_deg": 90,
+          "raw_text": "福",
+          "score": 0.3007
+        },
+        {
+          "center_fraction": 0.8,
+          "resize_to_square": false,
+          "rotation_ccw_deg": 180,
+          "raw_text": "安",
+          "score": 0.10899
+        },
+        {
+          "center_fraction": 0.8,
+          "resize_to_square": false,
+          "rotation_ccw_deg": 270,
+          "raw_text": "我",
+          "score": 0.36209
+        },
+        {
+          "center_fraction": 0.8,
+          "resize_to_square": true,
+          "rotation_ccw_deg": 0,
+          "raw_text": "华",
+          "score": 0.15349
+        },
+        {
+          "center_fraction": 0.8,
+          "resize_to_square": true,
+          "rotation_ccw_deg": 90,
+          "raw_text": "4",
+          "score": 0.12924
+        },
+        {
+          "center_fraction": 0.8,
+          "resize_to_square": true,
+          "rotation_ccw_deg": 180,
+          "raw_text": "安",
+          "score": 0.18357
+        },
+        {
+          "center_fraction": 0.8,
+          "resize_to_square": true,
+          "rotation_ccw_deg": 270,
+          "raw_text": "身",
+          "score": 0.23924
+        },
+        {
+          "center_fraction": 0.65,
+          "resize_to_square": false,
+          "rotation_ccw_deg": 0,
+          "raw_text": "R",
+          "score": 0.0807
+        },
+        {
+          "center_fraction": 0.65,
+          "resize_to_square": false,
+          "rotation_ccw_deg": 90,
+          "raw_text": "城",
+          "score": 0.17172
+        },
+        {
+          "center_fraction": 0.65,
+          "resize_to_square": false,
+          "rotation_ccw_deg": 180,
+          "raw_text": "4",
+          "score": 0.45836
+        },
+        {
+          "center_fraction": 0.65,
+          "resize_to_square": false,
+          "rotation_ccw_deg": 270,
+          "raw_text": "年",
+          "score": 0.26549
+        },
+        {
+          "center_fraction": 0.65,
+          "resize_to_square": true,
+          "rotation_ccw_deg": 0,
+          "raw_text": "RK",
+          "score": 0.53131
+        },
+        {
+          "center_fraction": 0.65,
+          "resize_to_square": true,
+          "rotation_ccw_deg": 90,
+          "raw_text": "4",
+          "score": 0.12782
+        },
+        {
+          "center_fraction": 0.65,
+          "resize_to_square": true,
+          "rotation_ccw_deg": 180,
+          "raw_text": "4",
+          "score": 0.18921
+        },
+        {
+          "center_fraction": 0.65,
+          "resize_to_square": true,
+          "rotation_ccw_deg": 270,
+          "raw_text": "夜",
+          "score": 0.92131
+        }
+      ],
+      "contest_points": null
+    }
+  ]
+}

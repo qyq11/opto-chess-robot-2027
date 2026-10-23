@@ -1,0 +1,17 @@
+{
+  "coordinate_convention": "xyxy, right/bottom exclusive, original pixels",
+  "regions": [
+    {"id": "p01", "image": "05_data/01_raw/02_xiangqi/20261023_xiangqi_input_01.jpg", "bbox": [1140, 1810, 1375, 2020]},
+    {"id": "p02", "image": "05_data/01_raw/02_xiangqi/20261023_xiangqi_input_01.jpg", "bbox": [2470, 450, 2680, 620]},
+    {"id": "p03", "image": "05_data/01_raw/02_xiangqi/20261023_xiangqi_input_02.jpg", "bbox": [650, 820, 810, 980]},
+    {"id": "p04", "image": "05_data/01_raw/02_xiangqi/20261023_xiangqi_input_02.jpg", "bbox": [1870, 780, 2050, 940]},
+    {"id": "p05", "image": "05_data/01_raw/02_xiangqi/20261023_xiangqi_input_01.jpg", "bbox": [2040, 2310, 2250, 2490]},
+    {"id": "p06", "image": "05_data/01_raw/02_xiangqi/20261023_xiangqi_input_01.jpg", "bbox": [1940, 1930, 2125, 2090]},
+    {"id": "p07", "image": "05_data/01_raw/02_xiangqi/20261023_xiangqi_input_01.jpg", "bbox": [1480, 1450, 1730, 1680]},
+    {"id": "p08", "image": "05_data/01_raw/02_xiangqi/20261023_xiangqi_input_01.jpg", "bbox": [1910, 1180, 2100, 1340]},
+    {"id": "p09", "image": "05_data/01_raw/02_xiangqi/20261023_xiangqi_input_01.jpg", "bbox": [2315, 425, 2480, 570]},
+    {"id": "p10", "image": "05_data/01_raw/02_xiangqi/20261023_xiangqi_input_01.jpg", "bbox": [1770, 2140, 2040, 2390]},
+    {"id": "p11", "image": "05_data/01_raw/02_xiangqi/20261023_xiangqi_input_01.jpg", "bbox": [2860, 565, 3030, 705]},
+    {"id": "p12", "image": "05_data/01_raw/02_xiangqi/20261023_xiangqi_input_01.jpg", "bbox": [3050, 1050, 3330, 1310]}
+  ]
+}

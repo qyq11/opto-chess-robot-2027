@@ -1,0 +1,805 @@
+{
+  "schema_version": 1,
+  "synthetic": true,
+  "config_file": "05_data/01_raw/02_xiangqi/generated_oblique_scene.json",
+  "config_sha256": "46e451f783bd92cb2a0dd91bfe129543b6403c46b0e72f0afae284d89271c3cd",
+  "source_image": "05_data/01_raw/02_xiangqi/20261023_xiangqi_oblique_generated_01.png",
+  "source_image_sha256": "89cded3df50748d8d4d773fbeb6a2bf2278e186912cc14ba9f3033ec41e4e869",
+  "source_image_size": [
+    1536,
+    1024
+  ],
+  "model_file": "05_data/02_models/01_xiangqi_ocr/PP-OCRv6_rec_small.onnx",
+  "model_sha256": "6f327246b50388f3c176ae304bd95767ea6dc0c9ae92153ef8cbe210b3c14884",
+  "geometry_assumption": "将四个手工选取的棋面参考点假定为共面，映射到人工演示矩形；目标纵横比例仅用于定性拉正被压扁的棋面。AI生成图无内参、深度、真实尺寸或受控投影，提示词尺寸不作为标定真值；该结果不是恢复真实3D俯视，也不能用于米制定位或比赛随机布局标定。",
+  "calibration_mode": "manual_four_reference_points_to_demonstration_rectangle_not_metric_calibration",
+  "source_centers": [
+    [
+      478.0,
+      215.0
+    ],
+    [
+      1114.0,
+      217.0
+    ],
+    [
+      1217.0,
+      519.0
+    ],
+    [
+      325.0,
+      506.0
+    ]
+  ],
+  "target_centers": [
+    [
+      250.0,
+      250.0
+    ],
+    [
+      1150.0,
+      250.0
+    ],
+    [
+      1150.0,
+      1375.0
+    ],
+    [
+      250.0,
+      1375.0
+    ]
+  ],
+  "output_size": [
+    1400,
+    1650
+  ],
+  "homography_source_to_target": [
+    [
+      2.122515248490152,
+      1.613060960171383,
+      -997.0370469749099
+    ],
+    [
+      -0.012093913119239548,
+      8.361708534445457,
+      -1427.6530961945468
+    ],
+    [
+      5.046680885542659e-05,
+      0.002014931434083841,
+      1.0
+    ]
+  ],
+  "operation": "cv2.getPerspectiveTransform(src,dst) -> cv2.warpPerspective(image,H,output_size)",
+  "interpolation": "INTER_CUBIC",
+  "border_mode": "BORDER_CONSTANT",
+  "border_bgr": [
+    242,
+    242,
+    242
+  ],
+  "fitted_control_point_rmse_pixels": 0.0,
+  "control_point_rmse_note": "四个拟合控制点的回代误差，仅检验映射计算，不是独立校正精度。",
+  "roi_mode": "manual_source_bbox_and_configured_target_crops",
+  "ground_truth_used_for_inference": false,
+  "threshold": 0.7,
+  "ocr_policy": "same before/after pipeline: preserve ROI aspect ratio; rotations 0/90/180/270; highest score over complete OCR alphabet, then exact piece-character mapping/rejection",
+  "ocr_score_note": "通用 OCR 原始分数；未校准为正确概率，不表示真实比赛精度。",
+  "limitations": [
+    "同高棋面共面是场景假设，AI 图像并非严格相机成像。",
+    "目标矩形是人工演示布局，不是从生成提示词获得的实测尺寸标定。",
+    "比赛随机棋子布局不能直接提供这四个已知几何对应点。",
+    "棋子侧壁、桌面与棋面不同高，单一 H 不能同时将其全部校正。",
+    "无法恢复被遮挡内容、镜头中未采集的细节或生成图本身的错字。",
+    "未进行镜头去畸变、自动找棋子或真实比赛准确率评估。"
+  ],
+  "elapsed_seconds_including_engine_load": 0.8473792000004323,
+  "versions": {
+    "rapidocr": "3.10.0",
+    "onnxruntime": "1.31.0",
+    "opencv-python-headless": "5.0.0.93",
+    "numpy": "2.5.4",
+    "Pillow": "13.0.0"
+  },
+  "visualizations": {
+    "source_points": "05_data/03_results/03_xiangqi/20261023_xiangqi_oblique_points_01.png",
+    "rectified": "05_data/03_results/03_xiangqi/20261023_xiangqi_oblique_rectified_01.png",
+    "target_points": "05_data/03_results/03_xiangqi/20261023_xiangqi_oblique_points_02.png",
+    "comparison": "05_data/03_results/03_xiangqi/20261023_xiangqi_oblique_comparison_01.png",
+    "piece_comparison": "05_data/03_results/03_xiangqi/20261023_xiangqi_oblique_recognition_01.png"
+  },
+  "predictions": [
+    {
+      "id": "s01",
+      "source_bbox": [
+        345,
+        178,
+        613,
+        252
+      ],
+      "target_center": [
+        250,
+        250
+      ],
+      "target_crop_size": [
+        390,
+        390
+      ],
+      "target_bbox": [
+        55,
+        55,
+        445,
+        445
+      ],
+      "before": {
+        "raw_text": "马",
+        "score": 0.93993,
+        "character": "马",
+        "status": "accepted",
+        "ink": "black",
+        "piece_class": "black_马",
+        "ink_evidence": {
+          "red_pixel_ratio": 0.0,
+          "dark_pixel_ratio": 0.29307568438003223
+        },
+        "selected_rotation_ccw_deg": 0,
+        "attempts": [
+          {
+            "rotation_ccw_deg": 0,
+            "input_size": [
+              268,
+              74
+            ],
+            "raw_text": "马",
+            "score": 0.93993,
+            "all_raw_texts": [
+              "马"
+            ],
+            "all_scores": [
+              0.93993
+            ]
+          },
+          {
+            "rotation_ccw_deg": 90,
+            "input_size": [
+              74,
+              268
+            ],
+            "raw_text": "8",
+            "score": 0.17834,
+            "all_raw_texts": [
+              "8"
+            ],
+            "all_scores": [
+              0.17834
+            ]
+          },
+          {
+            "rotation_ccw_deg": 180,
+            "input_size": [
+              268,
+              74
+            ],
+            "raw_text": "",
+            "score": 0.0,
+            "all_raw_texts": [
+              ""
+            ],
+            "all_scores": [
+              0.0
+            ]
+          },
+          {
+            "rotation_ccw_deg": 270,
+            "input_size": [
+              74,
+              268
+            ],
+            "raw_text": "8",
+            "score": 0.15953,
+            "all_raw_texts": [
+              "8"
+            ],
+            "all_scores": [
+              0.15953
+            ]
+          }
+        ]
+      },
+      "after": {
+        "raw_text": "马",
+        "score": 0.99798,
+        "character": "马",
+        "status": "accepted",
+        "ink": "black",
+        "piece_class": "black_马",
+        "ink_evidence": {
+          "red_pixel_ratio": 0.0,
+          "dark_pixel_ratio": 0.30144641683103224
+        },
+        "selected_rotation_ccw_deg": 0,
+        "attempts": [
+          {
+            "rotation_ccw_deg": 0,
+            "input_size": [
+              390,
+              390
+            ],
+            "raw_text": "马",
+            "score": 0.99798,
+            "all_raw_texts": [
+              "马"
+            ],
+            "all_scores": [
+              0.99798
+            ]
+          },
+          {
+            "rotation_ccw_deg": 90,
+            "input_size": [
+              390,
+              390
+            ],
+            "raw_text": "马",
+            "score": 0.99708,
+            "all_raw_texts": [
+              "马"
+            ],
+            "all_scores": [
+              0.99708
+            ]
+          },
+          {
+            "rotation_ccw_deg": 180,
+            "input_size": [
+              390,
+              390
+            ],
+            "raw_text": "恒",
+            "score": 0.30835,
+            "all_raw_texts": [
+              "恒"
+            ],
+            "all_scores": [
+              0.30835
+            ]
+          },
+          {
+            "rotation_ccw_deg": 270,
+            "input_size": [
+              390,
+              390
+            ],
+            "raw_text": "",
+            "score": 0.0,
+            "all_raw_texts": [
+              ""
+            ],
+            "all_scores": [
+              0.0
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "s02",
+      "source_bbox": [
+        980,
+        178,
+        1248,
+        258
+      ],
+      "target_center": [
+        1150,
+        250
+      ],
+      "target_crop_size": [
+        390,
+        390
+      ],
+      "target_bbox": [
+        955,
+        55,
+        1345,
+        445
+      ],
+      "before": {
+        "raw_text": "車",
+        "score": 0.94986,
+        "character": "车",
+        "status": "accepted",
+        "ink": "red",
+        "piece_class": "red_车",
+        "ink_evidence": {
+          "red_pixel_ratio": 0.358667695473251,
+          "dark_pixel_ratio": 0.011574074074074073
+        },
+        "selected_rotation_ccw_deg": 0,
+        "attempts": [
+          {
+            "rotation_ccw_deg": 0,
+            "input_size": [
+              268,
+              80
+            ],
+            "raw_text": "車",
+            "score": 0.94986,
+            "all_raw_texts": [
+              "車"
+            ],
+            "all_scores": [
+              0.94986
+            ]
+          },
+          {
+            "rotation_ccw_deg": 90,
+            "input_size": [
+              80,
+              268
+            ],
+            "raw_text": "0",
+            "score": 0.43638,
+            "all_raw_texts": [
+              "0"
+            ],
+            "all_scores": [
+              0.43638
+            ]
+          },
+          {
+            "rotation_ccw_deg": 180,
+            "input_size": [
+              268,
+              80
+            ],
+            "raw_text": "事",
+            "score": 0.18614,
+            "all_raw_texts": [
+              "事"
+            ],
+            "all_scores": [
+              0.18614
+            ]
+          },
+          {
+            "rotation_ccw_deg": 270,
+            "input_size": [
+              80,
+              268
+            ],
+            "raw_text": "8",
+            "score": 0.27892,
+            "all_raw_texts": [
+              "8"
+            ],
+            "all_scores": [
+              0.27892
+            ]
+          }
+        ]
+      },
+      "after": {
+        "raw_text": "車",
+        "score": 0.98751,
+        "character": "车",
+        "status": "accepted",
+        "ink": "red",
+        "piece_class": "red_车",
+        "ink_evidence": {
+          "red_pixel_ratio": 0.36432537073562715,
+          "dark_pixel_ratio": 0.01307619256337205
+        },
+        "selected_rotation_ccw_deg": 90,
+        "attempts": [
+          {
+            "rotation_ccw_deg": 0,
+            "input_size": [
+              390,
+              390
+            ],
+            "raw_text": "車",
+            "score": 0.88048,
+            "all_raw_texts": [
+              "車"
+            ],
+            "all_scores": [
+              0.88048
+            ]
+          },
+          {
+            "rotation_ccw_deg": 90,
+            "input_size": [
+              390,
+              390
+            ],
+            "raw_text": "車",
+            "score": 0.98751,
+            "all_raw_texts": [
+              "車"
+            ],
+            "all_scores": [
+              0.98751
+            ]
+          },
+          {
+            "rotation_ccw_deg": 180,
+            "input_size": [
+              390,
+              390
+            ],
+            "raw_text": "事",
+            "score": 0.37862,
+            "all_raw_texts": [
+              "事"
+            ],
+            "all_scores": [
+              0.37862
+            ]
+          },
+          {
+            "rotation_ccw_deg": 270,
+            "input_size": [
+              390,
+              390
+            ],
+            "raw_text": "東",
+            "score": 0.19092,
+            "all_raw_texts": [
+              "東"
+            ],
+            "all_scores": [
+              0.19092
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "s03",
+      "source_bbox": [
+        1000,
+        437,
+        1437,
+        612
+      ],
+      "target_center": [
+        1150,
+        1375
+      ],
+      "target_crop_size": [
+        390,
+        390
+      ],
+      "target_bbox": [
+        955,
+        1180,
+        1345,
+        1570
+      ],
+      "before": {
+        "raw_text": "将",
+        "score": 0.99646,
+        "character": "将",
+        "status": "accepted",
+        "ink": "black",
+        "piece_class": "black_将",
+        "ink_evidence": {
+          "red_pixel_ratio": 0.0064457722252399055,
+          "dark_pixel_ratio": 0.3806264711207677
+        },
+        "selected_rotation_ccw_deg": 0,
+        "attempts": [
+          {
+            "rotation_ccw_deg": 0,
+            "input_size": [
+              437,
+              175
+            ],
+            "raw_text": "将",
+            "score": 0.99646,
+            "all_raw_texts": [
+              "将"
+            ],
+            "all_scores": [
+              0.99646
+            ]
+          },
+          {
+            "rotation_ccw_deg": 90,
+            "input_size": [
+              175,
+              437
+            ],
+            "raw_text": "中",
+            "score": 0.19043,
+            "all_raw_texts": [
+              "中"
+            ],
+            "all_scores": [
+              0.19043
+            ]
+          },
+          {
+            "rotation_ccw_deg": 180,
+            "input_size": [
+              437,
+              175
+            ],
+            "raw_text": "姚",
+            "score": 0.3348,
+            "all_raw_texts": [
+              "姚"
+            ],
+            "all_scores": [
+              0.3348
+            ]
+          },
+          {
+            "rotation_ccw_deg": 270,
+            "input_size": [
+              175,
+              437
+            ],
+            "raw_text": "本",
+            "score": 0.15942,
+            "all_raw_texts": [
+              "本"
+            ],
+            "all_scores": [
+              0.15942
+            ]
+          }
+        ]
+      },
+      "after": {
+        "raw_text": "将",
+        "score": 0.99762,
+        "character": "将",
+        "status": "accepted",
+        "ink": "black",
+        "piece_class": "black_将",
+        "ink_evidence": {
+          "red_pixel_ratio": 0.0029585798816568047,
+          "dark_pixel_ratio": 0.4611732047629484
+        },
+        "selected_rotation_ccw_deg": 90,
+        "attempts": [
+          {
+            "rotation_ccw_deg": 0,
+            "input_size": [
+              390,
+              390
+            ],
+            "raw_text": "将",
+            "score": 0.98883,
+            "all_raw_texts": [
+              "将"
+            ],
+            "all_scores": [
+              0.98883
+            ]
+          },
+          {
+            "rotation_ccw_deg": 90,
+            "input_size": [
+              390,
+              390
+            ],
+            "raw_text": "将",
+            "score": 0.99762,
+            "all_raw_texts": [
+              "将"
+            ],
+            "all_scores": [
+              0.99762
+            ]
+          },
+          {
+            "rotation_ccw_deg": 180,
+            "input_size": [
+              390,
+              390
+            ],
+            "raw_text": "桃",
+            "score": 0.44286,
+            "all_raw_texts": [
+              "桃"
+            ],
+            "all_scores": [
+              0.44286
+            ]
+          },
+          {
+            "rotation_ccw_deg": 270,
+            "input_size": [
+              390,
+              390
+            ],
+            "raw_text": "格",
+            "score": 0.08044,
+            "all_raw_texts": [
+              "格"
+            ],
+            "all_scores": [
+              0.08044
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "s04",
+      "source_bbox": [
+        111,
+        427,
+        540,
+        590
+      ],
+      "target_center": [
+        250,
+        1375
+      ],
+      "target_crop_size": [
+        390,
+        390
+      ],
+      "target_bbox": [
+        55,
+        1180,
+        445,
+        1570
+      ],
+      "before": {
+        "raw_text": "中",
+        "score": 0.89716,
+        "character": "unknown",
+        "status": "not_a_single_piece_character",
+        "ink": "red",
+        "piece_class": "unknown",
+        "ink_evidence": {
+          "red_pixel_ratio": 0.39452439452439453,
+          "dark_pixel_ratio": 0.06567606567606568
+        },
+        "selected_rotation_ccw_deg": 180,
+        "attempts": [
+          {
+            "rotation_ccw_deg": 0,
+            "input_size": [
+              429,
+              163
+            ],
+            "raw_text": "帅",
+            "score": 0.84725,
+            "all_raw_texts": [
+              "帅"
+            ],
+            "all_scores": [
+              0.84725
+            ]
+          },
+          {
+            "rotation_ccw_deg": 90,
+            "input_size": [
+              163,
+              429
+            ],
+            "raw_text": "合",
+            "score": 0.21125,
+            "all_raw_texts": [
+              "合"
+            ],
+            "all_scores": [
+              0.21125
+            ]
+          },
+          {
+            "rotation_ccw_deg": 180,
+            "input_size": [
+              429,
+              163
+            ],
+            "raw_text": "中",
+            "score": 0.89716,
+            "all_raw_texts": [
+              "中"
+            ],
+            "all_scores": [
+              0.89716
+            ]
+          },
+          {
+            "rotation_ccw_deg": 270,
+            "input_size": [
+              163,
+              429
+            ],
+            "raw_text": "S",
+            "score": 0.18826,
+            "all_raw_texts": [
+              "S"
+            ],
+            "all_scores": [
+              0.18826
+            ]
+          }
+        ]
+      },
+      "after": {
+        "raw_text": "帥",
+        "score": 0.97871,
+        "character": "帅",
+        "status": "accepted",
+        "ink": "red",
+        "piece_class": "red_帅",
+        "ink_evidence": {
+          "red_pixel_ratio": 0.5076156037694499,
+          "dark_pixel_ratio": 0.03886332091460296
+        },
+        "selected_rotation_ccw_deg": 0,
+        "attempts": [
+          {
+            "rotation_ccw_deg": 0,
+            "input_size": [
+              390,
+              390
+            ],
+            "raw_text": "帥",
+            "score": 0.97871,
+            "all_raw_texts": [
+              "帥"
+            ],
+            "all_scores": [
+              0.97871
+            ]
+          },
+          {
+            "rotation_ccw_deg": 90,
+            "input_size": [
+              390,
+              390
+            ],
+            "raw_text": "盘",
+            "score": 0.10773,
+            "all_raw_texts": [
+              "盘"
+            ],
+            "all_scores": [
+              0.10773
+            ]
+          },
+          {
+            "rotation_ccw_deg": 180,
+            "input_size": [
+              390,
+              390
+            ],
+            "raw_text": "中州",
+            "score": 0.44594,
+            "all_raw_texts": [
+              "中州"
+            ],
+            "all_scores": [
+              0.44594
+            ]
+          },
+          {
+            "rotation_ccw_deg": 270,
+            "input_size": [
+              390,
+              390
+            ],
+            "raw_text": "孚",
+            "score": 0.32671,
+            "all_raw_texts": [
+              "孚"
+            ],
+            "all_scores": [
+              0.32671
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}
