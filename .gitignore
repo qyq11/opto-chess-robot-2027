@@ -18,6 +18,9 @@ Thumbs.db
 Desktop.ini
 *.tmp
 *.temp
+*.FCBak
+*.FCStd1
+~$*
 temp/
 
 # Documentation website generated files (normally written under temp/)

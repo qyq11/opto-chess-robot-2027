@@ -1,0 +1,648 @@
+{
+  "schema_version": 2,
+  "date": "2026-10-24",
+  "units": "mm",
+  "purchase_source": "03_hardware/01_硬件清单.md",
+  "warning": "尺寸简化/设计包络不可直接作为加工图；修改此文件后运行build_models.py重建。",
+  "parts": [
+    {
+      "id": "P01",
+      "name": "泰山派3M RK3576 4G+64G C54110287",
+      "quantity": 1,
+      "purchase_status": "已付款，未确认到货",
+      "model_kind": "尺寸简化",
+      "source_ids": [
+        "S05"
+      ],
+      "known": {
+        "outline_mm": [
+          85,
+          57
+        ]
+      },
+      "assumptions": {
+        "pcb_thickness_mm": 1.6
+      },
+      "pending": [
+        "板厚、孔径孔距、接口突出、板底净空、硬件版本、净重"
+      ],
+      "can_model_ourselves": true
+    },
+    {
+      "id": "P02",
+      "name": "泰山派原配双风扇套件 C55160086",
+      "quantity": 1,
+      "purchase_status": "已付款，未确认到货",
+      "model_kind": "预留包络",
+      "source_ids": [
+        "S06"
+      ],
+      "known": {
+        "fans": 2,
+        "connector": "SH1.0"
+      },
+      "assumptions": {
+        "reserve_mm": [
+          75,
+          50,
+          25
+        ],
+        "fan_diameter_mm": 24
+      },
+      "pending": [
+        "整套长宽高、铜柱高度、孔图、净重；包络不是厂家尺寸"
+      ],
+      "can_model_ourselves": true
+    },
+    {
+      "id": "P03",
+      "name": "65mm尼龙麦轮_左",
+      "quantity": 2,
+      "purchase_status": "已付款，未确认到货",
+      "model_kind": "尺寸简化",
+      "source_ids": [
+        "S02"
+      ],
+      "known": {
+        "diameter_mm": 65,
+        "width_mm": 30.4,
+        "rollers": 9,
+        "mass_each_g": 58,
+        "material": "PA66轮毂、TPU滚子",
+        "hex_af_mm": 12
+      },
+      "assumptions": {
+        "roller_angle_deg": 45,
+        "roller_radius_mm": 6.5,
+        "roller_half_length_mm": 16,
+        "roller_center_radius_mm": 26,
+        "socket_depth_mm": 6,
+        "hub_radius_mm": 22,
+        "center_clearance_mm": 4.3
+      },
+      "pending": [
+        "滚子曲面、轴销、六角配合公差、孔深、左右轮实物方向；厂家图10.20/13.40/18尺寸链尚待实物判定"
+      ],
+      "can_model_ourselves": true
+    },
+    {
+      "id": "P04",
+      "name": "65mm尼龙麦轮_右",
+      "quantity": 2,
+      "purchase_status": "已付款，未确认到货",
+      "model_kind": "尺寸简化",
+      "source_ids": [
+        "S02"
+      ],
+      "known": {
+        "diameter_mm": 65,
+        "width_mm": 30.4,
+        "rollers": 9,
+        "mass_each_g": 58,
+        "material": "PA66轮毂、TPU滚子",
+        "hex_af_mm": 12
+      },
+      "assumptions": {
+        "roller_angle_deg": 45,
+        "roller_radius_mm": 6.5,
+        "roller_half_length_mm": 16,
+        "roller_center_radius_mm": 26,
+        "socket_depth_mm": 6,
+        "hub_radius_mm": 22,
+        "center_clearance_mm": 4.3
+      },
+      "pending": [
+        "滚子曲面、轴销、六角配合公差、孔深、左右轮实物方向；厂家图10.20/13.40/18尺寸链尚待实物判定"
+      ],
+      "can_model_ourselves": true
+    },
+    {
+      "id": "P05",
+      "name": "3mm六角联轴器",
+      "quantity": 4,
+      "purchase_status": "已付款，未确认到货",
+      "model_kind": "尺寸简化",
+      "source_ids": [
+        "S02"
+      ],
+      "known": {
+        "length_mm": 18,
+        "hex_af_mm": 12,
+        "hex_corner_mm": 13.86,
+        "body_diameter_mm": 11.4,
+        "shaft_bore_mm": 3,
+        "bore_depth_mm": 12,
+        "screw": "轴向M4轮侧固定、径向M4紧定"
+      },
+      "assumptions": {
+        "hex_length_mm": 6,
+        "set_screw_offset_mm": 5,
+        "thread_minor_mm": 3.3
+      },
+      "pending": [
+        "六角段长度、紧定孔位置、螺钉规格长度、公差；未画真实牙型"
+      ],
+      "can_model_ourselves": true
+    },
+    {
+      "id": "P06",
+      "name": "亚博MD310Z20_7.4V电机",
+      "quantity": 4,
+      "purchase_status": "已付款，未确认到货",
+      "model_kind": "厂家STEP",
+      "source_ids": [
+        "S01"
+      ],
+      "known": {
+        "body_diameter_mm": 25,
+        "total_length_mm": 61.5,
+        "shaft_extension_mm": 14,
+        "shaft_diameter_mm": 3,
+        "shaft_flat_mm": 2.5,
+        "gear_ratio": 20,
+        "rated_voltage_v": 7.4,
+        "rpm": 450,
+        "mass_each_g": 70
+      },
+      "assumptions": {},
+      "pending": [
+        "实购批次、轴长与STEP端面分段、公差、编码器插头线束"
+      ],
+      "can_model_ourselves": false
+    },
+    {
+      "id": "P07",
+      "name": "亚博310新版原配L支架",
+      "quantity": 4,
+      "purchase_status": "已付款，未确认到货",
+      "model_kind": "厂家STEP",
+      "source_ids": [
+        "S01"
+      ],
+      "known": {
+        "cad_bbox_mm": [
+          33,
+          33,
+          26.5
+        ],
+        "base_holes_diameter_mm": 3.3,
+        "base_hole_pitch_mm": [
+          14,
+          16
+        ],
+        "motor_mount_pitch_mm": 17
+      },
+      "assumptions": {},
+      "pending": [
+        "实购是否为新版L架，螺钉、轴心高度、加工孔复测"
+      ],
+      "can_model_ourselves": false
+    },
+    {
+      "id": "P08",
+      "name": "亚博四路编码器电机驱动",
+      "quantity": 1,
+      "purchase_status": "已付款，未确认到货",
+      "model_kind": "尺寸简化",
+      "source_ids": [
+        "S03"
+      ],
+      "known": {
+        "outline_mm": [
+          65,
+          56
+        ],
+        "overall_height_mm": 13.4,
+        "pcb_thickness_mm": 1.6,
+        "mount_holes_mm": 2.5,
+        "mount_pitch_mm": [
+          58,
+          49
+        ],
+        "mass_g": 22.4,
+        "vm_v": [
+          5,
+          12
+        ],
+        "logic_v": 3.3
+      },
+      "assumptions": {
+        "connector_geometry": "按图示意；无完整尺寸"
+      },
+      "pending": [
+        "到货版本、连接器位置、插头及铜柱高度、线束净空"
+      ],
+      "can_model_ourselves": true
+    },
+    {
+      "id": "P09",
+      "name": "格氏2S 7200mAh 50C硬壳 XT60",
+      "quantity": 1,
+      "purchase_status": "已付款，未确认到货",
+      "model_kind": "选型记录包络",
+      "source_ids": [
+        "S07"
+      ],
+      "known": {
+        "selection_record_outline_mm": [
+          139,
+          47,
+          26
+        ],
+        "selection_record_mass_g": 330,
+        "nominal_v": 7.4,
+        "full_charge_v": 8.4,
+        "capacity_mah": 7200,
+        "connector": "XT60"
+      },
+      "assumptions": {
+        "cable_keepout_mm": [
+          30,
+          25,
+          20
+        ]
+      },
+      "pending": [
+        "本SKU尺寸原图、实物尺寸、出线位置、XT60及平衡头突出量"
+      ],
+      "can_model_ourselves": true
+    },
+    {
+      "id": "P10",
+      "name": "亚博YB-MPP01-V1.0 Type-C电源板",
+      "quantity": 1,
+      "purchase_status": "已付款，待发货；到货核版本",
+      "model_kind": "尺寸简化",
+      "source_ids": [
+        "S08"
+      ],
+      "known": {
+        "pcb_outline_mm": [
+          65,
+          56
+        ],
+        "connector_overall_y_mm": 61.72,
+        "height_from_pcb_bottom_mm": 13.8,
+        "mount_holes_mm": 2.7,
+        "mount_pitch_mm": [
+          58,
+          49
+        ],
+        "mass_g": 32,
+        "input_v": [
+          6,
+          24
+        ],
+        "full_5a_input_v": [
+          7,
+          24
+        ],
+        "output_v": 5,
+        "output_a_at_6v_input": 3,
+        "output_a_at_7v_or_above": 5
+      },
+      "assumptions": {
+        "pcb_thickness_mm": 1.6,
+        "connector_positions": "按厂家图示意，局部轮廓未精确建模"
+      },
+      "pending": [
+        "Type-C及取电线插头/弯曲空间、实际硬件版本、背面器件；2S输入低于7V不按5A预算"
+      ],
+      "can_model_ourselves": true
+    },
+    {
+      "id": "P11",
+      "name": "微雪OV4689 4MP USB Camera A SKU34767",
+      "quantity": 1,
+      "purchase_status": "已选，未下单",
+      "model_kind": "尺寸简化",
+      "source_ids": [
+        "S04"
+      ],
+      "known": {
+        "pcb_outline_mm": [
+          25,
+          25
+        ],
+        "pcb_thickness_mm": 1.6,
+        "overall_depth_mm": 22.1,
+        "depth_tolerance_mm": 0.2,
+        "outline_tolerance_mm": 0.2,
+        "mount_holes_mm": 2,
+        "mount_pitch_mm": [
+          21,
+          21
+        ],
+        "lens_front_diameter_mm": 14,
+        "fov_deg": 92
+      },
+      "assumptions": {
+        "lens_barrel_rear_diameter_mm": 12,
+        "lens_extension_mm": 16
+      },
+      "pending": [
+        "USB/SH插头外凸、线缆弯曲、镜头调焦与支架公差"
+      ],
+      "can_model_ourselves": true
+    },
+    {
+      "id": "P12",
+      "name": "5A短Type-C到Type-C成品供电线",
+      "quantity": 1,
+      "purchase_status": "需锁准确SKU，未下单",
+      "model_kind": "线束示意",
+      "source_ids": [
+        "S09"
+      ],
+      "known": {
+        "required_length_mm": [
+          200,
+          300
+        ],
+        "required_current_a": 5
+      },
+      "assumptions": {
+        "display_cable_length_mm": 300,
+        "sheath_radius_mm": 1.6,
+        "plug_envelope_mm": [
+          12,
+          18,
+          6
+        ]
+      },
+      "pending": [
+        "准确SKU、实际线长、插头壳体尺寸、最小弯曲半径与端口兼容；不再使用裸线焊接尾线"
+      ],
+      "can_model_ourselves": true
+    },
+    {
+      "id": "P13",
+      "name": "STM32F407VET6完整开发板",
+      "quantity": 1,
+      "purchase_status": "准确SKU未定，未下单",
+      "model_kind": "预留包络",
+      "source_ids": [],
+      "known": {},
+      "assumptions": {
+        "reserve_mm": [
+          60,
+          40,
+          16
+        ]
+      },
+      "pending": [
+        "锁定准确整件SKU、厂家图、实物孔位与线束；当前只有需求包络"
+      ],
+      "can_model_ourselves": true
+    },
+    {
+      "id": "P14",
+      "name": "SPI IMU完整模块",
+      "quantity": 1,
+      "purchase_status": "准确SKU未定，未下单",
+      "model_kind": "预留包络",
+      "source_ids": [],
+      "known": {},
+      "assumptions": {
+        "reserve_mm": [
+          24,
+          18,
+          8
+        ]
+      },
+      "pending": [
+        "锁定准确整件SKU、厂家图、实物孔位与线束；当前只有需求包络"
+      ],
+      "can_model_ourselves": true
+    },
+    {
+      "id": "P15",
+      "name": "前碰撞触点",
+      "quantity": 2,
+      "purchase_status": "准确SKU未定，未下单",
+      "model_kind": "预留包络",
+      "source_ids": [],
+      "known": {},
+      "assumptions": {
+        "reserve_mm": [
+          20,
+          8,
+          10
+        ]
+      },
+      "pending": [
+        "锁定准确整件SKU、厂家图、实物孔位与线束；当前只有需求包络"
+      ],
+      "can_model_ourselves": true
+    },
+    {
+      "id": "P16",
+      "name": "≤1mW II类激光及受控固定件",
+      "quantity": 1,
+      "purchase_status": "准确SKU未定，未下单",
+      "model_kind": "预留包络",
+      "source_ids": [],
+      "known": {},
+      "assumptions": {
+        "reserve_mm": [
+          12,
+          30,
+          12
+        ]
+      },
+      "pending": [
+        "锁定准确整件SKU、厂家图、实物孔位与线束；当前只有需求包络"
+      ],
+      "can_model_ourselves": true
+    },
+    {
+      "id": "P17",
+      "name": "保险、开关与XT60/T插分电",
+      "quantity": 1,
+      "purchase_status": "准确SKU未定，未下单",
+      "model_kind": "预留包络",
+      "source_ids": [],
+      "known": {},
+      "assumptions": {
+        "reserve_mm": [
+          35,
+          20,
+          15
+        ]
+      },
+      "pending": [
+        "锁定准确整件SKU、厂家图、实物孔位与线束；当前只有需求包络"
+      ],
+      "can_model_ourselves": true
+    },
+    {
+      "id": "P18",
+      "name": "2S平衡充电器",
+      "quantity": 1,
+      "purchase_status": "准确SKU未定，未下单",
+      "model_kind": "非装车件",
+      "source_ids": [],
+      "known": {},
+      "assumptions": {},
+      "pending": [
+        "准确型号及配套线；无整车几何，不编造模型"
+      ],
+      "can_model_ourselves": true
+    },
+    {
+      "id": "D01",
+      "name": "已购T5X四驱碳板_长宽孔图待测",
+      "quantity": 1,
+      "purchase_status": "已付款2套，先用1片；待发货",
+      "model_kind": "预留包络",
+      "source_ids": [
+        "S10"
+      ],
+      "known": {
+        "thickness_mm": 1.5,
+        "listing_mass_g": 45,
+        "purchased_plates": 2,
+        "used_plates_in_current_layout": 1,
+        "kit_standoff_length_mm": 60
+      },
+      "assumptions": {
+        "outline_mm": [
+          145,
+          205,
+          1.5
+        ],
+        "z_mm": 68,
+        "mount_holes_draft_mm": 3.4
+      },
+      "pending": [
+        "已购四驱加高板长宽、轮廓、孔图及刚度待实测；145×205只是本布局包络，不能套用旧两驱T5X模型；第2片用途待定；60mm套装柱不默认作当前34.5mm电控层支柱"
+      ],
+      "can_model_ourselves": true
+    },
+    {
+      "id": "D02",
+      "name": "电池托盘与绑带",
+      "quantity": 1,
+      "purchase_status": "自制设计，未加工",
+      "model_kind": "自主设计",
+      "source_ids": [],
+      "known": {},
+      "assumptions": {
+        "tray_outline_mm": [
+          53,
+          145,
+          2
+        ],
+        "side_clearance_mm": 1,
+        "strap_width_mm": 10,
+        "strap_thickness_mm": 1.2
+      },
+      "pending": [
+        "依赖电池实测尺寸与出线，绑带不可盖接头"
+      ],
+      "can_model_ourselves": true
+    },
+    {
+      "id": "D03",
+      "name": "电控安装层",
+      "quantity": 1,
+      "purchase_status": "自制设计，未加工",
+      "model_kind": "自主设计",
+      "source_ids": [],
+      "known": {},
+      "assumptions": {
+        "outline_mm": [
+          145,
+          190,
+          1.5
+        ],
+        "z_mm": 104
+      },
+      "pending": [
+        "刚度、材料、散热气流、板卡孔图"
+      ],
+      "can_model_ourselves": true
+    },
+    {
+      "id": "D04",
+      "name": "前推板及支架",
+      "quantity": 1,
+      "purchase_status": "自制设计，未加工",
+      "model_kind": "自主设计",
+      "source_ids": [],
+      "known": {},
+      "assumptions": {
+        "pusher_mm": [
+          130,
+          2,
+          22
+        ],
+        "bottom_z_mm": 3
+      },
+      "pending": [
+        "真实棋具、接触高度、碰撞触发行程与承力"
+      ],
+      "can_model_ourselves": true
+    },
+    {
+      "id": "D05",
+      "name": "相机杆与相机安装板",
+      "quantity": 1,
+      "purchase_status": "自制设计，未加工",
+      "model_kind": "自主设计",
+      "source_ids": [
+        "S04"
+      ],
+      "known": {},
+      "assumptions": {
+        "camera_center_z_mm": 148,
+        "camera_back_y_mm": 106,
+        "mount_plate_mm": [
+          33,
+          33,
+          2
+        ],
+        "rod_mm": [
+          8,
+          8,
+          76.5
+        ],
+        "rod_bottom_z_mm": 69.5
+      },
+      "pending": [
+        "机位视野、调角、刚度、相机实物安装与线束"
+      ],
+      "can_model_ourselves": true
+    },
+    {
+      "id": "D06",
+      "name": "绝缘柱与紧固件",
+      "quantity": 1,
+      "purchase_status": "设计用规格，数量按孔表复核",
+      "model_kind": "自主设计",
+      "source_ids": [],
+      "known": {},
+      "assumptions": {
+        "support_diameter_mm": 5,
+        "motor_bracket_spacer_height_mm": 15.75
+      },
+      "pending": [
+        "最终BOM、材质、螺纹啮合长度和载荷"
+      ],
+      "can_model_ourselves": true
+    }
+  ],
+  "layout": {
+    "wheel_inner_x_mm": 67.5,
+    "motor_face_x_mm": 52.5,
+    "wheel_centers_y_mm": [
+      -70,
+      70
+    ],
+    "wheel_axis_z_mm": 32.5,
+    "coupler_start_x_mm": 55.5,
+    "base_z_mm": 68,
+    "upper_z_mm": 104
+  },
+  "hardware_sync_note": "按最新清单：已购T5X四驱板替代新加工底板；亚博Type-C电源板替代UBEC；短C-C成品线替代焊接尾线。"
+}

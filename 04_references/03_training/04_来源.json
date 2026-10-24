@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "archived_on": "2026-10-24",
+  "source": "用户已存文件；用户于2026-10-24说明由他人制作。作者、原始外部来源及授权范围未核实。",
+  "role": "外部培训参考；不作为本项目必须遵循的采购、算法、教学周期或官方规则。",
+  "archive_bytes_modified": false,
+  "files": [
+    {
+      "original_filename": "智能车光电象棋对抗 · 90分钟本科生入门培训.pptx",
+      "historical_local_path": "temp/本科生培训/智能车光电象棋对抗 · 90分钟本科生入门培训.pptx",
+      "archive_relative_path": "04_references/03_training/01_本科生入门培训.pptx",
+      "sha256": "039e5bb46dbae7d2c888b686e0fb7e7d770b0ead29ecd69e3f98a37e61c68d06",
+      "bytes": 5949837
+    },
+    {
+      "original_filename": "光电赛本科生培训_阶段性方案(1).pdf",
+      "historical_local_path": "temp/本科生培训/光电赛本科生培训_阶段性方案(1).pdf",
+      "archive_relative_path": "04_references/03_training/02_阶段性方案.pdf",
+      "sha256": "a5508e7bdafcd7c56a16f75a160b80544a781bc0260523422cfc760160974ad0",
+      "bytes": 203337
+    },
+    {
+      "original_filename": "03_学生辅助讲义.pdf",
+      "historical_local_path": "temp/本科生培训/03_学生辅助讲义.pdf",
+      "archive_relative_path": "04_references/03_training/03_学生辅助讲义.pdf",
+      "sha256": "b8d2f063f43673f9fb3e7380cb6b90a2e8eba712765fb66b3a461dfbcafba74d",
+      "bytes": 320290
+    }
+  ]
+}

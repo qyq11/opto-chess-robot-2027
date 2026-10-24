@@ -1,0 +1,288 @@
+{
+  "checked_date": "2026-10-25",
+  "purchase_evidence": [
+    {
+      "source_type": "user_provided_order_screenshot_and_purchase_confirmation",
+      "asset": "20261024_lcsc_order_01.png",
+      "original_filename": "codex-clipboard-437a17ce-070f-4f01-95b3-806c234292f0.png",
+      "sha256": "e9bb382d4a8fe94829859974e6035742e8be56380ab4daff5bae25cf0423e1f5",
+      "image_modified": false,
+      "shop": "立创商城",
+      "order_number": "SO26102424311",
+      "ordered_at": "2026-10-24T22:59:40+08:00",
+      "payment_status": "paid",
+      "payment_method": "支付宝支付",
+      "arrival_status": "not_confirmed",
+      "hardware_tested": false,
+      "purchase_list": "../../../03_hardware/01_硬件清单.md",
+      "ledger": "../../../03_hardware/02_采购/01_采购台账.xlsx",
+      "contract": {
+        "source_type": "user_provided_order_contract_pdf",
+        "asset": "../../../03_hardware/02_采购/02_20261024_立创_合同_SO26102424311.pdf",
+        "original_filename": "立创商城订单合同SO26102424311-1.pdf",
+        "sha256": "ac60e5cc6ce55989f6d55be3d937bbc2c6ad1afc6f68ab1f350644a17db789b4",
+        "modified": false,
+        "pages": 2,
+        "archived_date": "2026-10-24"
+      }
+    },
+    {
+      "source_type": "user_provided_jd_order_export_and_screenshot_and_purchase_confirmation",
+      "asset": "20261024_jd_order_01.png",
+      "original_filename": "codex-clipboard-836a740d-4383-4962-91f0-24afda749fc8.png",
+      "sha256": "8463be84092dfd026f9a7b367bc1341b88f440a539bf18f4857bc3b10fbd6474",
+      "image_modified": false,
+      "parent_order_number": "3661477012483787",
+      "total_paid_cny": 525.8,
+      "ordered_at": "2026-10-24T23:39:56+08:00",
+      "order_export": {
+        "asset": "../../../03_hardware/02_采购/03_20261024_京东_订单导出_3661477012483787.xlsx",
+        "original_filename": "京东订单信息.xlsx",
+        "original_location": "项目根目录",
+        "sha256": "d0342381474debe0d2192d1aa892382de21ce969e5618c68f2081352ce2ed4ad",
+        "modified": false,
+        "archived_date": "2026-10-24",
+        "worksheet": "订单信息",
+        "range": "A1:O5",
+        "amount_scope": "I2为电池子订单实付；I3:I5合并，为亚博三项商品整个子订单实付，不能当轮子单价。",
+        "shipping_discount_and_unit_prices": "not_separately_provided"
+      },
+      "orders": [
+        {
+          "order_number": "3661477012486530",
+          "shop": "格氏旗舰店",
+          "paid_cny": 162.0,
+          "items": [
+            {
+              "jd_sku": "10051546999619",
+              "variant_from_export": "格氏（ACE）格式1800/2200/4300/5200/7200/7300mAh RC遥控车模2S3S锂电池50C 7200mAh-50C-7.4V-2S硬壳|满电8.4V 格氏耐用经典款-XT60插头",
+              "quantity": 1,
+              "actual_unit_price_cny": null
+            }
+          ],
+          "ordered_at": "2026-10-24T23:39:56+08:00",
+          "payment_status": "paid",
+          "payment_method": "在线支付",
+          "fulfillment_status": "正在出库",
+          "arrival_status": "not_confirmed",
+          "hardware_tested": false,
+          "freight_cny": null,
+          "discount_cny": null,
+          "tax_cny": null,
+          "tracking_number": null
+        },
+        {
+          "order_number": "3661477000956457",
+          "shop": "亚博智能官方旗舰店",
+          "paid_cny": 363.8,
+          "items": [
+            {
+              "jd_sku": "10098108278160",
+              "variant_from_export": "亚博智能 麦克纳姆轮 万全向轮无人小车DIY底盘520 TT电机80mm轮胎联轴器 65mm尼龙款麦轮*4+3mm六角联轴器",
+              "quantity": 1,
+              "actual_unit_price_cny": null
+            },
+            {
+              "jd_sku": "10069318711256",
+              "variant_from_export": "亚博智能310编码器直流减速电机马达AB相 霍尔码盘智能车底盘电子设计竞赛 7.4V 编码器减速电机+支架",
+              "quantity": 4,
+              "actual_unit_price_cny": null
+            },
+            {
+              "jd_sku": "10140357947374",
+              "variant_from_export": "亚博智能四路编码器电机驱动板4路控制板模块机器人无人小车AT8236电子设计竞赛 四路编码器电机驱动模块+铜柱+数据线+电源线",
+              "quantity": 1,
+              "actual_unit_price_cny": null
+            }
+          ],
+          "ordered_at": "2026-10-24T23:39:56+08:00",
+          "payment_status": "paid",
+          "payment_method": "在线支付",
+          "fulfillment_status": "正在出库",
+          "arrival_status": "not_confirmed",
+          "hardware_tested": false,
+          "freight_cny": null,
+          "discount_cny": null,
+          "tax_cny": null,
+          "tracking_number": null
+        }
+      ],
+      "reconciliation": "162.00 + 363.80 = 525.80；仅子订单计入支出，合单金额不重复累计。",
+      "ledger": "../../../03_hardware/02_采购/01_采购台账.xlsx",
+      "purchase_list": "../../../03_hardware/01_硬件清单.md"
+    },
+    {
+      "source_type": "user_provided_order_pdf_and_purchase_confirmation",
+      "order_number": "5127831576100359305",
+      "shop": "wheeltec旗舰店",
+      "platform": "天猫",
+      "ordered_at": "2026-10-24T23:57:08+08:00",
+      "paid_at": "2026-10-24T23:57:10+08:00",
+      "payment_method": "支付宝支付",
+      "payment_status": "paid",
+      "fulfillment_status": "待发货",
+      "arrival_status": "not_confirmed",
+      "hardware_tested": false,
+      "merchandise_total_cny": 80,
+      "freight_cny": 0,
+      "discount_cny": null,
+      "other_fees_cny": null,
+      "tax_cny": null,
+      "total_paid_cny": 80,
+      "order_document": {
+        "asset": "../../../03_hardware/02_采购/04_20261024_轮趣_订单详情_5127831576100359305.pdf",
+        "original_filename": "订单详情.pdf",
+        "original_location": "项目根目录",
+        "sha256": "765903e8be81937c6fdc62741fa87e5eb9fe305b738e266c9b5aa5a3121e5720",
+        "modified": false,
+        "pages": 1,
+        "archived_date": "2026-10-25"
+      },
+      "product_screenshot": {
+        "asset": "20261024_t5x_options_01.png",
+        "original_filename": "codex-clipboard-32a96ea2-64dd-4ba6-b553-94f9fc7dfb80.png",
+        "sha256": "401e55a1c9d7df681ac595cce8c23eb19e836d6a52b2644a0e0c829c82ce73a0",
+        "modified": false,
+        "source_type": "user_provided_product_page_screenshot",
+        "product_url": "https://detail.tmall.com/item.htm?id=671414115083",
+        "claims": {
+          "thickness_mm": 1.5,
+          "stated_mass_g": 45,
+          "mass_scope": "商品图标称，是否含配套件未明确，未实秤",
+          "per_set_contents": [
+            "四驱小车底盘加高板1片",
+            "60mm单通金属柱4根",
+            "M3×8圆头螺丝4颗",
+            "M3螺母4颗"
+          ]
+        }
+      },
+      "items": [
+        {
+          "product_id": "671414115083",
+          "sku_id": null,
+          "variant_from_order": "T5X碳纤维高性能四驱小车底盘加高板【多仓发货 大部分区域次日达】",
+          "quantity": 2,
+          "unit": "套",
+          "plates_per_set": 1,
+          "actual_unit_price_cny": 40,
+          "merchandise_subtotal_cny": 80
+        }
+      ],
+      "assembly_decision": {
+        "use_one_as_main_plate_for_trial_layout": true,
+        "additional_holes_or_adapter_permitted_by_user": true,
+        "second_plate_use": "到货布局与称重后决定上层或备用，不默认两片装车",
+        "actual_dimensions_holes_rigidity_and_fit_verified": false
+      },
+      "reconciliation": "2×40.00=80.00；运费0.00；实付80.00。936.00+162.00+363.80+80.00=1541.80。",
+      "ledger": "../../../03_hardware/02_采购/01_采购台账.xlsx",
+      "purchase_list": "../../../03_hardware/01_硬件清单.md"
+    },
+    {
+      "source_type": "user_provided_order_pdf_and_purchase_confirmation",
+      "order_number": "5127385935119112530",
+      "shop": "亚博智能科技",
+      "platform": "淘宝",
+      "ordered_at": "2026-10-25T00:21:45+08:00",
+      "paid_at": "2026-10-25T00:21:47+08:00",
+      "payment_method": "支付宝支付",
+      "payment_status": "paid",
+      "fulfillment_status": "待发货",
+      "arrival_status": "not_confirmed",
+      "hardware_tested": false,
+      "merchandise_total_cny": 75,
+      "freight_cny": 0,
+      "discount_cny": 11.3,
+      "other_fees_cny": null,
+      "tax_cny": null,
+      "total_paid_cny": 63.7,
+      "order_document": {
+        "asset": "../../../03_hardware/02_采购/05_20261025_亚博_订单详情_5127385935119112530.pdf",
+        "original_filename": "订单详情.pdf",
+        "original_location": "项目根目录",
+        "sha256": "d2f92148608a36008ed6c9939e1febadd2ef4464554ecbd529784bb9f282ae1d",
+        "modified": false,
+        "pages": 1,
+        "archived_date": "2026-10-25"
+      },
+      "items": [
+        {
+          "title_from_order": "机器人降压稳压电源扩展板树莓派5小车开发板Type-C供电转接模块",
+          "variant_from_order": "机器人稳压电源扩展板",
+          "quantity": 1,
+          "unit": "块",
+          "original_unit_price_cny": 75,
+          "actual_unit_price_cny": 63.7,
+          "net_merchandise_subtotal_cny": 63.7,
+          "product_id_from_existing_selection": "789594995509",
+          "sku_id_from_existing_selection": "5559923531866",
+          "sku_id_verified_from_order_pdf": false,
+          "model_from_existing_selection": "YB-MPP01-V1.0，实际版本待到货核对"
+        }
+      ],
+      "reconciliation": "75.00+0.00-11.30=63.70；明细净成交价63.70不再扣一次订单优惠；1541.80+63.70=1605.50。",
+      "ledger": "../../../03_hardware/02_采购/01_采购台账.xlsx",
+      "purchase_list": "../../../03_hardware/01_硬件清单.md"
+    }
+  ],
+  "source_type": "user_provided_product_screenshot",
+  "asset": "20261024_mecanum_options_01.png",
+  "original_filename": "codex-clipboard-6b5d57f4-9d6b-4bf9-966b-e05494bc3d73.png",
+  "sha256": "ca605b6cf2ca7d75a6479071a2a5769b35774a81ac028452f621489520634026",
+  "image_modified": false,
+  "shop": "轮趣科技",
+  "product_title": "一组4个麦克纳姆轮含工业级抱紧式联轴器60 75 100 127 152mm麦轮",
+  "product_url": "https://item.taobao.com/item.htm?id=569166349044",
+  "product_url_evidence": "Current browser tab inventory has matching title and item ID; page contents inaccessible because tab belongs to another browser session.",
+  "observed_browser_url": "https://item.taobao.com/item.htm?id=569166349044&skuId=5084852197535",
+  "observed_sku_id": "5084852197535",
+  "sku_option_binding_verified": false,
+  "screenshot_options": {
+    "color_category": "麦轮直径60mm*4个【多仓发货 大部分区域次日达】",
+    "whitespace_normalized": true,
+    "fixing_method": "工业级抱紧式联轴器",
+    "shaft_bore": "3mm",
+    "order_quantity": 1,
+    "wheels_per_set": 4
+  },
+  "displayed_price": {
+    "currency": "CNY",
+    "shop_discounted_per_set": 177,
+    "before_discount_per_set": 209,
+    "shipping": "快递:免运费",
+    "conditions": "Screenshot only; discount eligibility, stock, delivery and checkout total require reconfirmation. Not a quote for a compatible FIT0458 hub combination."
+  },
+  "intended_purchase": {
+    "status": "withdrawn_after_user_requires_fully_matched_system",
+    "set_quantity": 1,
+    "left_wheels": 2,
+    "right_wheels": 2,
+    "left_right_contents_verified_from_screenshot": false,
+    "selected_3mm_bore_compatible_with_current_motor_candidate": false,
+    "motor_candidate": "DFRobot FIT0458",
+    "motor_shaft_cad_mm": {
+      "main_diameter": 5.4,
+      "across_flats": 3.7,
+      "exposed_length": 8.8
+    },
+    "motor_dimensions_source": null,
+    "hardware_tested": false,
+    "ordered": false,
+    "status_note": "Retain screenshot as historical evidence; selected wheel SKU and FIT0458 pairing are not recommended or currently selected for purchase. See compatibility_review.json.",
+    "removed_model_note": "旧FIT0458唯一用户原件保留在temp/旧硬件待删除/供用户自行处理；旧生成模型及临时副本已清理。历史参数不作为当前选型，当前模型见03_hardware/01_机械/model_inventory.json。"
+  },
+  "procurement_totals": {
+    "currency": "CNY",
+    "lcsc_paid": 936.0,
+    "jd_paid": 525.8,
+    "cumulative_paid": 1605.5,
+    "payment_order_count": 5,
+    "item_line_count": 8,
+    "parent_order_double_counted": false,
+    "ledger": "../../../03_hardware/02_采购/01_采购台账.xlsx",
+    "ledger_sha256": "898fec5f467615b64d37c8674a4cd9924b7fc0b574d020b6effb85f686e3425d",
+    "tmall_paid": 80,
+    "taobao_paid": 63.7
+  }
+}

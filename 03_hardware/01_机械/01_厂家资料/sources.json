@@ -1,0 +1,135 @@
+{
+  "date": "2026-10-24",
+  "sources": [
+    {
+      "id": "S01",
+      "url": "https://www.yahboom.net/study/MD310/",
+      "cad_download_index": "https://drive.google.com/drive/folders/1Jtzf7zqZUiggxtO23tltsWPmllaOnn6C",
+      "local_files": [
+        "310Motor.STEP",
+        "310Motor_Bracket-NEW.STEP",
+        "03_电机尺寸.PNG",
+        "04_支架尺寸.pdf"
+      ],
+      "license": "厂家资料，未单独取得再分发许可",
+      "status": "已取得原件；实购批次待核",
+      "checked_date": "2026-10-24",
+      "hashes": {
+        "03_hardware/01_机械/01_厂家资料/310Motor.STEP": "ff4b5efa0e056d7529783a7a6d07f8068b6dc8d13cec240350c3c43bedf49f38",
+        "03_hardware/01_机械/01_厂家资料/310Motor_Bracket-NEW.STEP": "fa9624745c8aef4a2682ba81332aaa1214a427cc25b736ea6c1545ad4ae43ce3",
+        "03_hardware/01_机械/01_厂家资料/03_电机尺寸.PNG": "5650ff1bb0ff279a1f8fa2c112e8483d74bbe8b1ab36b06dbff6b84db55dcfd2",
+        "03_hardware/01_机械/01_厂家资料/04_支架尺寸.pdf": "156489de43ece235423f58f18a4e0ad562ef0180d2447461e806f53d5ba3cdd3"
+      }
+    },
+    {
+      "id": "S02",
+      "url": "https://www.yahboom.store/products/mecanum-wheel",
+      "local_project_files": [
+        "05_data/01_raw/03_procurement/20261024_yahboom_wheel_dimensions_01.jpg",
+        "05_data/01_raw/03_procurement/20261024_yahboom_hex_dimensions_01.jpg",
+        "05_data/01_raw/03_procurement/20261024_yahboom_wheel_specs_01.jpg"
+      ],
+      "status": "本轮重新查阅厂家页，未取得该65mm尼龙轮/六角毂精确STEP；自行建立简化模型",
+      "checked_date": "2026-10-24",
+      "hashes": {
+        "05_data/01_raw/03_procurement/20261024_yahboom_wheel_dimensions_01.jpg": "0b47efe093e469fc7fc5a8a5bf83a73cb0f3287ce27b24cb04ec93f34bceba45",
+        "05_data/01_raw/03_procurement/20261024_yahboom_hex_dimensions_01.jpg": "e3b3a2ad298dab8be8ffb3c5df0068d184c42965983f418b411445dea9cf4c0c",
+        "05_data/01_raw/03_procurement/20261024_yahboom_wheel_specs_01.jpg": "c76b477cdf02c18f6a5d6d0ab1cafaa91af6b612685423c4108c251fc0d36a40"
+      }
+    },
+    {
+      "id": "S03",
+      "url": "https://www.yahboom.store/products/quad-md-module",
+      "drawing_url": "https://cdn.shopify.com/s/files/1/0066/9686/1780/files/4-Channel_encoder_motor_drive_board_details_26.jpg?v=1782463521",
+      "local_files": [
+        "01_四路驱动尺寸.jpg"
+      ],
+      "status": "厂家标注尺寸；到货版本待核",
+      "checked_date": "2026-10-24",
+      "hashes": {
+        "03_hardware/01_机械/01_厂家资料/01_四路驱动尺寸.jpg": "aa96653495e02f5c37d4b60d494e4ceb67493c4b07b9641d4f4bc75237b3032e"
+      }
+    },
+    {
+      "id": "S04",
+      "url": "https://www.waveshare.net/shop/OV4689-4MP-USB-Camera-A.htm",
+      "drawing_url": "https://www.waveshare.com/img/devkit/accBoard/OV4689-4MP-USB-Camera-A/OV4689-4MP-USB-Camera-A-details-size.jpg",
+      "local_files": [
+        "02_相机尺寸.jpg"
+      ],
+      "status": "厂家标注尺寸，未取得精确STEP；自行建模",
+      "checked_date": "2026-10-24",
+      "hashes": {
+        "03_hardware/01_机械/01_厂家资料/02_相机尺寸.jpg": "01915756cbf8d45e684f96d0152615aa7625e114c89f73bb91e3362bb71e7485"
+      }
+    },
+    {
+      "id": "S05",
+      "url": "https://item.szlcsc.com/57330947.html",
+      "local_project_files": [
+        "04_references/04_datasheets/01_泰山派3M_RK3576_规格书.pdf"
+      ],
+      "hardware_url": "https://wiki.lckfb.com/zh-hans/tspi-3-rk3576/open-source-hardware/",
+      "status": "85×57mm来自已归档规格书；本轮未取得机械STEP和可靠孔图",
+      "checked_date": "2026-10-24",
+      "hashes": {
+        "04_references/04_datasheets/01_泰山派3M_RK3576_规格书.pdf": "11ca0ee9e2cd04c38b64fea21c590c5592714f8aa5d876ae80d4d18a5639cba1"
+      }
+    },
+    {
+      "id": "S06",
+      "url": "https://wiki.lckfb.com/zh-hans/tspi-3-rk3576/development-kit/cooling-fan-kit.html",
+      "status": "厂家确认双风扇、SH1.0、铜柱螺丝；无可靠长宽高及孔图",
+      "checked_date": "2026-10-24",
+      "hashes": {}
+    },
+    {
+      "id": "S07",
+      "url": "https://item.jd.com/10051546999619.html",
+      "local_project_files": [
+        "05_data/01_raw/03_procurement/compatibility_review.json",
+        "03_hardware/02_采购/03_20261024_京东_订单导出_3661477012483787.xlsx"
+      ],
+      "status": "139×47×26mm、330g沿用本SKU既有选型记录；本轮未重新取得原始尺寸图，不能作为实测或确认加工尺寸",
+      "checked_date": "2026-10-24",
+      "hashes": {
+        "05_data/01_raw/03_procurement/compatibility_review.json": "5f3fa4a632874e98a6596208c439ff2d1ba96d6aaf46a547c8320e7d696371b0",
+        "03_hardware/02_采购/03_20261024_京东_订单导出_3661477012483787.xlsx": "d0342381474debe0d2192d1aa892382de21ce969e5618c68f2081352ce2ed4ad"
+      }
+    },
+    {
+      "id": "S08",
+      "url": "https://www.yahboom.store/collections/accessory/products/power-board-pi5",
+      "drawing_url": "https://cdn.shopify.com/s/files/1/0066/9686/1780/files/15_dde01d53-ff66-421d-a9e0-2ec218e52372.jpg?v=1730097136",
+      "local_files": [
+        "05_亚博电源板尺寸.jpg"
+      ],
+      "checked_date": "2026-10-25",
+      "status": "厂家尺寸图：PCB65×56、含突出接口Y61.72、58×49孔距、4×Ø2.7；图中侧视13.8从PCB底面量起，不含未知背面器件",
+      "hashes": {
+        "03_hardware/01_机械/01_厂家资料/05_亚博电源板尺寸.jpg": "99ca67461c08abed92b94ed143f381aaec148519b30e58711d14bbe4f5847f73"
+      }
+    },
+    {
+      "id": "S09",
+      "url": "https://www.yahboom.store/collections/accessory/products/power-board-pi5",
+      "checked_date": "2026-10-25",
+      "status": "配线改为0.2–0.3m、5A C-C成品线；准确SKU和插头几何未定，不沿用已撤销的焊接尾线",
+      "hashes": {}
+    },
+    {
+      "id": "S10",
+      "url": "https://detail.tmall.com/item.htm?id=671414115083",
+      "checked_date": "2026-10-25",
+      "local_project_files": [
+        "05_data/01_raw/03_procurement/20261024_t5x_options_01.png",
+        "03_hardware/02_采购/04_20261024_轮趣_订单详情_5127831576100359305.pdf"
+      ],
+      "status": "用户商品截图和订单：四驱加高板2套、1.5mm、图标45g、附60mm金属柱；长宽/孔图未知。未取得与本已购SKU绑定的精确CAD。",
+      "hashes": {
+        "05_data/01_raw/03_procurement/20261024_t5x_options_01.png": "401e55a1c9d7df681ac595cce8c23eb19e836d6a52b2644a0e0c829c82ce73a0",
+        "03_hardware/02_采购/04_20261024_轮趣_订单详情_5127831576100359305.pdf": "765903e8be81937c6fdc62741fa87e5eb9fe305b738e266c9b5aa5a3121e5720"
+      }
+    }
+  ]
+}

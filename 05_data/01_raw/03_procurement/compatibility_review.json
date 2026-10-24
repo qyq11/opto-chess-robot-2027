@@ -1,0 +1,897 @@
+{
+  "wiring_revision": {
+    "date": "2026-10-25",
+    "purpose": "按已付款硬件更新系统框架、整车供电图和逐线接线定义",
+    "design_document": "../../../01_docs/02_design/03_系统规划.md",
+    "topology": "2S XT60→F0/S0→正负母线；动力F1/S1→驱动端子；计算F2→亚博5V板→5A C-C→RK；控制F3→独立稳压→F407/IMU",
+    "driver_battery_compatibility": "驱动推荐5–12V，310允许4.2–8.4V；已购2S满充8.4V在两者范围内，动力不经过RK降压板",
+    "power_board_package": "只选基础板5559923531866，不加T插线5559923531867；额外T插输入线不直接匹配XT60，当前统一端子分电，Type-C长线需另配",
+    "driver_package": "已购套装含T插→红黑裸线；本版直接从配电端子接驱动正负输入，该T插线不作为必用转接",
+    "signal_topology": "RK↔F407↔驱动RX2/TX2/GND；四组编码器进驱动，驱动协处理器做轮速PID",
+    "wheel_mapping": {
+      "M1": "左前",
+      "M2": "左后",
+      "M3": "右前",
+      "M4": "右后"
+    },
+    "wire_definitions": "P01–P11、S01–S08，以设计文档6.1–6.4为准",
+    "pending": "线束/分电/保护/控制稳压准确SKU和保险额定、RK UART物理针号与电平、未购F407/IMU整板接口仍待锁定；不作为全车已配齐或实物测试通过",
+    "evidence": [
+      {
+        "file": "20261025_yahboom_driver_power_kit_01.jpg",
+        "sha256": "1a233de6c3d447cba6ce5e3ec4152135dbdcf119ef0584b18861119fd4676f2c",
+        "source_page": "https://category.yahboom.net/products/quad-md-module",
+        "kind": "此前保存的厂家套装图原件，从项目temp复制归档，内容未改"
+      },
+      {
+        "file": "20261025_yahboom_power_tplug_01.png",
+        "sha256": "790c86fc2e3bb1d81ed13665e6a53f75479a6ac973aa4ed21f5f3e58561d9ceb",
+        "url": "https://item.taobao.com/item.htm?id=789594995509&skuId=5559923531867",
+        "kind": "浏览器选择附线套餐后核含件的截图；非当前采购选项；优惠后价格未显示，不推算报价"
+      }
+    ],
+    "sources": [
+      "https://www.yahboom.net/public/upload/upload-html/1750303224/1.1%20Introduction%20to%204-channel%20motor%20drive%20board.html",
+      "https://www.yahboom.net/study/MD310/14018/",
+      "https://www.yahboom.net/study/MD310/14035/",
+      "https://www.yahboom.net/study/MD310/14039/",
+      "https://www.yahboom.store/collections/accessory/products/power-board-pi5"
+    ],
+    "artifacts": [
+      {
+        "file": "../../03_results/01_design/02_系统信号连接.drawio",
+        "sha256": "0fe6111a411f4b296800f168806a1c07b2f6a01d0ce3076e03cbb3d1a39fa079"
+      },
+      {
+        "file": "../../03_results/01_design/02_系统信号连接.png",
+        "sha256": "01ddeb4ed0ec6de7aed6d5bd9542ac685332b5dd1398ca84c7183da60f73aae5"
+      },
+      {
+        "file": "../../03_results/01_design/03_系统供电.drawio",
+        "sha256": "9371c6c39c01301605450bfd9aa3c83a4ae1aec0053de16b1288240e4b99200b"
+      },
+      {
+        "file": "../../03_results/01_design/03_系统供电.png",
+        "sha256": "be9ba27fa55c959c01c9115a5f21ad82105bb12048253e70c2eef4b5bb63f462"
+      }
+    ],
+    "hardware_verified": false
+  },
+  "checked_date": "2026-10-25",
+  "rk_power_supply_selection": {
+    "selected_date": "2026-10-25",
+    "user_requirement": "不要求航模品牌；普通成品、免焊接，Type-C直接插主控",
+    "status": "已购买并付款，待发货；实际版本、到货与供电验收待确认，配线尚未购齐",
+    "model": "Yahboom 亚博机器人稳压电源扩展板，YB-MPP01-V1.0",
+    "quantity": 1,
+    "seller": "亚博智能科技",
+    "url": "https://item.taobao.com/item.htm?id=789594995509&skuId=5559923531866",
+    "option_exact": "机器人稳压电源扩展板",
+    "price_cny": 63.7,
+    "shipping_cny": 0,
+    "price_condition": "2026-10-25订单折前75.00元、官方立减11.30元、运费0.00元、实付63.70元；配线另计",
+    "manufacturer_url": "https://www.yahboom.store/collections/accessory/products/power-board-pi5",
+    "manufacturer_specs_image_url": "https://cdn.shopify.com/s/files/1/0066/9686/1780/files/15_dde01d53-ff66-421d-a9e0-2ec218e52372.jpg?v=1730097136",
+    "input_v": [
+      6,
+      24
+    ],
+    "rated_output": "厂家图：7–24V输入时5V/5A，6V输入时5V/3A",
+    "line_compensation": "空载4.9–5V，随输出电流增加最高5.25V",
+    "dimensions_mm": [
+      65,
+      56,
+      13.8
+    ],
+    "mounting_hole_diameter_mm": 2.7,
+    "mass_g": 32,
+    "battery": "已付款格氏2S LiPo，标称7.4V、满充8.4V、7200mAh、XT60",
+    "voltage_condition": "电源板输入≥7.0V才按5A预算；欠压停车考虑线损与电机启动压降；不能宣称降到6V仍有5A，小时续航估算不作为保证",
+    "wiring": "XT60成品主取电线→F0/S0→绝缘正负母线；计算分支F2→18AWG端子线→亚博板IN+/IN−，5A短C-C线→RK Power Type-C；动力和控制各走独立并联分支，不通过RK稳压板。详见wiring_revision。",
+    "pending": [
+      "XT60成品取电线准确SKU，1条",
+      "0.2–0.3m且明确支持5A的C-C成品线准确SKU，1条"
+    ],
+    "package_note": "已核带线款增加T插输入线；本版端子分电选基础板，不加T插线。Type-C长线另配；短桥接板不默认适配RK布局。",
+    "evidence_file": "20261025_yahboom_typec_power_01.png",
+    "evidence_sha256": "df9610b2978ed032239858f56cfdb5d0a4e55618bc9440708a2ee17431607d90",
+    "evidence_method": "下单前按准确SKU核价的DOM与截图、厂家资料核对；现已购买，付款与订单来源另见purchase及sources.json。未在本车实测。",
+    "selection_price_condition": "2026-10-25选中基础板选项，官方立减15%后价，未计额外满减，以结算为准；配线另计",
+    "purchase": {
+      "order_number": "5127385935119112530",
+      "quantity": 1,
+      "paid_cny": 63.7,
+      "paid_at": "2026-10-25T00:21:47+08:00",
+      "fulfillment_status": "待发货",
+      "order_document": "03_hardware/02_采购/05_20261025_亚博_订单详情_5127385935119112530.pdf",
+      "source_metadata": "sources.json#purchase_evidence",
+      "physical_test_passed": false
+    },
+    "model_status": "已按亚博板含突出接口Y61.72mm重建并重排中层；实物接头空间待核"
+  },
+  "rk_power_supply_previous_welded_option": {
+    "selected_date": "2026-10-24",
+    "status": "已撤下：用户要求免焊、Type-C直插；此前未下单、未实测，原始来源留档，不计实际支出",
+    "battery": "当前格氏2S LiPo，7.4V标称、8.4V满充、7200mAh、XT60",
+    "module": {
+      "model": "HOBBYWING 好盈UBEC 5A，2–8S版；商家图标UBEC5AV2 Air",
+      "quantity": 1,
+      "seller": "海龙王模型店",
+      "url": "https://item.taobao.com/item.htm?id=678899592829&skuId=5578038634636",
+      "options": [
+        "5A【2-8S】",
+        "好盈系列UBEC"
+      ],
+      "price_cny": 74.82,
+      "displayed_shipping_cny": 6,
+      "price_condition": "选定5A版的店铺优惠后价；非分组最低起价，结算为准",
+      "manufacturer_url": "https://www.hobbywing.com/products/ubec-5a93",
+      "manual_url": "https://hobbywing.oss-cn-shenzhen.aliyuncs.com/pdf/pdfcn/UBEC5Acn.pdf",
+      "input": "2–8S LiPo",
+      "configured_output_v": 5,
+      "continuous_output_a": 5,
+      "instantaneous_output_a_not_continuous": 15,
+      "dimensions_mm": [
+        50,
+        17,
+        10
+      ],
+      "mass_g": 21,
+      "voltage_setting": "按厂家说明书，5V档不插短路跳帽；禁止6V/7.4V接RK",
+      "evidence_file": "20261024_hobbywing_ubec5a_page_01.png",
+      "evidence_sha256": "5cdebd5ad17b34d51ff25505d04bc272b5acd4febd07dae5cf38ac33c67bac98"
+    },
+    "type_c_power_tail": {
+      "quantity": 1,
+      "seller": "邵深源线材工厂批发店",
+      "url": "https://item.taobao.com/item.htm?id=758548942539&skuId=5762200425909",
+      "options": [
+        "Type-C公单黑色",
+        "0.3m"
+      ],
+      "seller_specification": "两芯0.5mm²／20AWG，标称5A；未独立实测载流或压降",
+      "price_cny": 1.98,
+      "displayed_shipping_cny": 3,
+      "evidence_file": "20261024_typec_power_cable_01.png",
+      "evidence_sha256": "2220270735aaf328eddcdcd6e67125c1fa0437eb67c802f8048ee116bc9eaa33"
+    },
+    "indicative_goods_cny": 76.8,
+    "indicative_with_displayed_shipping_cny": 85.8,
+    "wiring": "电池经保险/开关/分电接UBEC输入红正黑负；输出去掉原航模插头，红接Type-C VBUS、黑接GND，分别热缩绝缘和固定；RK仅接Power Type-C 5V，USB相机和5V风扇由RK供电，三者共用5A总额。动力与控制分支另接，不经细杜邦接点带主控电流；UBEC输入接头随整车配电线束配齐。",
+    "evidence_method": "淘宝浏览器选择具体商品选项后的DOM与页面截图；厂家商品页及说明书规格核对。未购买、未发消息。"
+  },
+  "user_requirement": "Recommend only an entire matched system; prioritize stock motor, encoder, coupling, Mecanum wheels, brackets, fasteners and harnesses; verify complete vehicle mass and dimensions. 用户明确不采用60mm ABS，改核65mm尼龙/六角联轴器；采购页面仅保留一个主选，最多一个必要备选并简化MD。",
+  "purchase_status": "主控/散热、65mm轮系、四台310与支架、含动力线四路驱动、格氏2S电池、T5X四驱碳板2套及亚博稳压电源板1块均已付款；京东件正在出库，碳板及电源板待发货。其余配线、电控与安装件继续配齐，到货与验收待确认。",
+  "withdrawn": {
+    "motor": "DFRobot FIT0458",
+    "wheel": "WHEELTEC 60mm metal Mecanum set with 3mm couplings",
+    "custom_hub_and_bracket": true,
+    "reason": "Known shaft mismatch; custom interface and mounting unverified. User requires a fully matching system."
+  },
+  "supplier_images": [
+    {
+      "file": "20261024_wheeltec_wheel_specs_01.jpg",
+      "source_url": "https://www.wheeltec.net/kindeditor/attached/image/20251121/20251121163219_54131.jpg",
+      "sha256": "48c7bc1a58d996d979ff4ed640ebfcba2eb7841b15d193589cb06a47fa07a3c5",
+      "modified": false,
+      "source_kind": "manufacturer_original_image"
+    },
+    {
+      "file": "20261024_wheeltec_motor_specs_01.jpg",
+      "source_url": "https://www.wheeltec.net/kindeditor/attached/image/202410/23/20241023091819_60412.jpg",
+      "sha256": "5f51837c1637d255feceae379a668c7df6cba22cdc0a5e51e04da520c74b5cd4",
+      "modified": false,
+      "source_kind": "manufacturer_original_image"
+    },
+    {
+      "file": "20261024_wheeltec_wheel_dimensions_01.jpg",
+      "source_url": "https://www.wheeltec.net/kindeditor/attached/image/20251121/20251121163219_74600.jpg",
+      "sha256": "17279bd6c748c989f48c8f19382e7bc23b977d535f634b0daa6d44a5d10e6d27",
+      "modified": false,
+      "source_kind": "manufacturer_original_image"
+    }
+  ],
+  "manufacturer_mass_g": {
+    "wheeltec_four_60mm_wheels_including_couplings": 350,
+    "wheeltec_MG513_each_approx": 145,
+    "measured_on_project_hardware": false,
+    "same_as_selected_sku_net_mass_guaranteed": false
+  },
+  "mass_calculations": {
+    "rule_limit_g": 1500,
+    "wheels_percent_of_limit": 23.333333333333332,
+    "old_budget_total_g": 1391,
+    "old_wheels_g": 260,
+    "old_motors_g": 260,
+    "old_hubs_g": 104,
+    "old_motor_brackets_g": 40,
+    "other_old_budget_g": 727,
+    "MG513_four_motor_plus_wheels_g": 930,
+    "MG513_combination_plus_other_budget_without_new_brackets_g": 1657,
+    "interpretation": "Manufacturer nominal masses plus an artificial allocation, not actual measured vehicle mass. Existing budget excludes this heavy motor combination; new brackets would add further mass."
+  },
+  "lightweight_comparison": {
+    "manufacturer": "KittenBot",
+    "source_url": "https://kittenbot.readthedocs.io/electronics/%E9%BA%A6%E5%85%8B%E7%BA%B3%E5%A7%86%E8%BD%AE%E5%AD%90.html",
+    "diameter_mm": 65,
+    "width_mm": 30,
+    "declared_each_g": 48.5,
+    "four_wheels_g": 194,
+    "arithmetic_difference_from_metal_set_g": 156,
+    "warning": "Different 65mm model, not selected replacement for current 60mm design; included adapters may differ."
+  },
+  "wheeltec_MG310_inquiry": {
+    "shop": "轮趣官方旗舰店",
+    "source_url": "https://item.jd.com/10162024845647.html",
+    "observed_option": "MG310电机（霍尔编码器）+25支架",
+    "price_cny": 30.8,
+    "crossed_out_price_cny": 36.3,
+    "price_condition": "Page shows official 15 percent discount; actual checkout and quantity conditions unverified.",
+    "motor_only_source_url": "https://item.jd.com/10162024845646.html",
+    "motor_only_option": "MG310电机（霍尔编码器）轴径3mm",
+    "motor_only_displayed_price_cny": 28.8,
+    "mass_field_verbatim": "0.69kg",
+    "rated_torque_field_verbatim": "1.5Kgf.cm",
+    "evidence_kind": "Live browser DOM and screenshot inspected in official JD shop",
+    "recommendation_status": "Unverified candidate only; do not order as fully matched",
+    "unresolved": [
+      "Reliable exact motor and bracket net masses",
+      "Shaft projection, flat geometry and hub engagement/retention",
+      "Bracket and base hole dimensions",
+      "Encoder voltage and wire order",
+      "Motor voltage, rated and stall currents and torque",
+      "Four-wheel full-car dimensions and mass"
+    ],
+    "warning": "Do not change 0.69kg to 69g without evidence. Do not reuse Yahboom 310 specifications."
+  },
+  "yahboom_lightweight_inquiry": {
+    "wheel_url": "https://www.yahboom.store/collections/accessory/products/mecanum-wheel",
+    "wheel_option": "60mm wheel (ABS) *4+TT coupling*4",
+    "motor_url": "https://www.yahboom.store/products/encoder-tt-motor",
+    "motor_version": "Black Metal Single Shaft",
+    "motor_option": "Motor+Bracket",
+    "manufacturer_QA_motor_each_g": 32,
+    "recommendation_status": "Candidate only, not a verified complete system",
+    "unresolved": [
+      "Weight and exact coupling of selected wheel option",
+      "Mass and shaft drawing tied to current motor version",
+      "Explicit compatibility of specific metal shaft and TT couplings",
+      "Domestic Taobao/JD exact SKUs and CNY selected-option prices",
+      "Bracket/base dimensions, fixings, wiring and electrical compatibility"
+    ],
+    "warning": "No foreign purchasing recommendation; do not use general TT name as proof of exact compatibility; current website text has ambiguous speed and torque units."
+  },
+  "supplier_catalog_url": "https://www.worldrobotconference.com/uploads/exfile/video/sqnfrt.pdf",
+  "supplier_catalog_wheel_printed_page": 33,
+  "ordered": false,
+  "merchant_contacted": false,
+  "hardware_tested": false,
+  "superseded_purchase_note": {
+    "date": "2026-10-24",
+    "reason": "用户要求购买清单简化，仅保留唯一主方案；旧候选与核查细节归档，不作为当前订单。",
+    "sha256": "0228ebcb00bef65ab8823a426a404c9d90e313e53c797141de4838fe02d427fd",
+    "markdown": "# 购买清单\n\n更新日期：2026-10-24。**主控已按用户最终确认统一为立创泰山派3M RK3576，4GB内存＋64GB eMMC，数量1块。** 本文是当前方案唯一的购买清单；按单车列数量，保留准确商品入口、分类原文、配套条件和未闭合项。当前没有本车已下单、到货或装配验收凭证，模型与厂家参数不能代替实物验证。\n\n本车采用USB相机直连RK进行视觉与决策，RK经UART与1块STM32下位机通信；STM32连接IMU、4组编码器及4个独立电机驱动通道。底盘使用**60 mm麦克纳姆轮2左＋2右**、碳纤维底板和固定式可拆卸前推板。普通轮、万向轮、75 mm麦轮、额外辅助轮及前铲舵机不计入本次购买。\n\n主控型号已定。**2026-10-24按用户纠正，撤下“FIT0458＋截图金属麦轮＋定制双扁轮毂/抱座”的采购推荐，也撤下截图轮组“当前需要买”的认定。** 当前需要采购的是一套接口、外廓、重量及电气参数均已核对的四轮传动系统，准确商品组合尚未确定；原CAD保留为旧设计研究。优先核对同厂现货电机、编码器、原配联轴器、左右麦轮、支架、螺钉和线束的完整组合，不为保留旧CAD强行增加定制件。购买渠道优先淘宝、其次京东；用户指定的立创主板使用立创官方入口。\n\n## 1. 已确定主控：照这个型号核价\n\n| 购买项 | 准确型号、商品分类与入口 | 数量 | 价格、附件与购买条件 |\n| --- | --- | ---: | --- |\n| 泰山派3M完整开发板 | **LCKFB-TSPI3M-RK3576-4G-64G**，立创商品编号 **C54110287**；商品名称原文 **“立创·泰山派开发板3M 4G+64G版本”**；[立创商城具体商品](https://item.szlcsc.com/57330947.html)、[立创开发板官方入口](https://lckfb.com/project/detail/lckfb-tspi3m-rk3576-4g-64g?param=baseInfo) | **1块** | **型号已定，可按此型号核价采购**。实际结算价、库存和交期待下单页面确认，未核实的价格不填0。确认完整开发板、所需排针是否已焊、实际硬件版本及随盒附件；不购买0+0裸配置或单独芯片 |\n| 泰山派3M匹配主动散热组件 | **LCKFB-TSPI3M-COOLING-FAN-KIT / C55160086**；[官方具体商品](https://item.szlcsc.com/58921706.html)、[安装说明](https://wiki.lckfb.com/zh-hans/tspi-3-rk3576/development-kit/cooling-fan-kit.html)，含散热片、铜柱、螺丝与SH1.0线 | **1套** | **型号已核，价格/库存待核**；若主板套餐已含则不重复买。FAN仅支持5V，需2026-07-06或之后的系统镜像；安装净重、完整高度、固定孔与USB线空间待核，44.6g商品毛重不作装车净重 |\n| 桌面开发电源及供电线 | **按5V/4A起采购，并另核外设余量**；[规格书](../04_references/04_datasheets/01_泰山派3M_RK3576_规格书.pdf)第3页与[官方供电指南](https://wiki.lckfb.com/zh-hans/tspi-3-rk3576/system-usage/)交叉核对 | **1套，已有合格电源则不买** | 准确适配器SKU、分类及价格待核；将USB相机、风扇的功耗计入余量。核Type-C供电线与接头，不把普通手机线默认当作足够的供电线。台架电源不计入装车重量 |\n\n2026-10-24再次核对官方商城，型号、4G+64G版本和商品编号一致。[官方规格书](../04_references/04_datasheets/01_泰山派3M_RK3576_规格书.pdf)第1页整板**85×57mm**、图示丝印V1.3；安装孔、板厚与净重仍未知，商城98g毛重不能作为整板净重。第3页Power Type-C写**5V-4A输入（仅供电）**，快速指南另写5V、适配器峰值≥3A；采购按5V/4A起并核外设余量，不能将3A当满载额定或板耗电上限。Type-C Power或指定排针不得同时供电；车载电池需经过独立5V稳压支路，不能直接接主板，也不能沿用其他RK板的12V供电或排针定义。\n\n官方资料已提供镜像、原理图/PCB、GPIO和系统教程，以及OpenCV USB相机采集入口，可支撑本项目开发；实际相机识别速度、模型准确率、散热和同时负载仍需本车实测。主控与下位机的分工和接口以[系统规划](../01_docs/02_design/03_系统规划.md)为准。\n\n## 2. 单车其余部件：按数量与配套条件购买\n\n“待核”表示缺少准确店铺选项或影响装配/电气兼容的证据；“不下单”表示当前缺口会影响整组选型。下表数量是单车需求，不表示已购买。完整购买前先扣除现有库存和套餐含件。\n\n### 2.1 控制、视觉与传感器\n\n| 部件 | 单车数量 | 当前型号、商品入口与规格 | 商品分类、价格与下单条件 |\n| --- | ---: | --- | --- |\n| STM32下位机完整开发板 | **1块** | 建议 **STM32F407VET6完整开发板**，具有稳压供电、SWD和所需已引出接口 | **准确板型/SKU待核，不下单**。F407VET6是芯片名；需先分配4组编码器定时器、4路电机PWM/方向、RK UART、IMU SPI及保护输入，并核引脚复用、3.3V逻辑、安装孔与接口朝向。要求所需排针已焊；分类、套餐和价格待核 |\n| 四通道H桥电机驱动 | **4个独立通道；可由2块双路板提供** | 旧方案核对型号Cytron MDD3A；[厂家产品](https://www.cytron.io/p-3amp-4v-16v-dc-motor-driver-2-channels)：4–16V，每通道3A连续、5A峰值（小于5秒），支持3.3V逻辑 | **随最终电机重新选型，不作为新系统已匹配推荐**。四轮各占一路，按新电机电压、电流、电平、保护及安装核定准确SKU和价格；若继续评估MDD3A，其5VO仅200mA，不能供RK |\n| 彩色USB相机 | **1套** | **微雪OV4689 4MP USB Camera (A)，厂家SKU34767**；[厂家国内页](https://www.waveshare.net/shop/OV4689-4MP-USB-Camera-A.htm)、[京东具体商品10228760421666](https://item.jd.com/10228760421666.html)；UVC、92°视场；板25×25mm、模块深22.1mm、4×Ø2孔/21×21mm孔距；[尺寸图](https://www.waveshare.com/img/devkit/accBoard/OV4689-4MP-USB-Camera-A/OV4689-4MP-USB-Camera-A-details-size.jpg)、[Linux说明](https://docs.waveshare.com/OV4689-4MP-USB-Camera-A/Linux) | **已有具体入口，镜头/线缆分类、套餐、店铺库存与价格待核**。核商品与厂家SKU一致、附带兼容USB线；棋字清晰度、曝光和运动模糊需要实际机位验证 |\n| 六轴IMU模块 | **1块** | 优先核对 **LSM6DSO完整模块**，SPI连接STM32；要求3.3V逻辑，SPI引脚已引出、排针已焊，有驱动和坐标轴资料 | **具体模块型号、SKU、分类、孔图及价格待核，不下单**；不把裸芯片当可跳线接入的成品模块 |\n| 前碰撞触点 | **2个** | 前左、前右各1个，含固定件与可观察的触发行程 | **型号、触点型式、行程、接线及价格待核**；按推板位置确认防误触与触发空间 |\n| 激光器及受控开关/驱动 | **1套** | 按赛题要求选择 **≤1mW、II类** 激光器，含匹配供电、受控开关/驱动和固定座 | **准确型号、等级/功率证明、供电、光路与价格待核，不下单**；通用商品“红点激光”名称不足以确认符合要求 |\n\nUSB相机直接接泰山派USB HOST，不因采用USB相机另购MIPI转接板。RK与STM32可在确认双方为3.3V TTL、交叉TX/RX并共地后用短跳线进行台架调试；**泰山派实际UART引脚和对应系统启用方法需按本板资料确认**，不照搬其他板的8/10/6脚位。IMU接STM32的SPI。各板分别按要求供电；上车后使用有固定和应力释放的线束。\n\n### 2.2 轮系、传动与结构\n\n**当前购买需求：1套四轮独立编码器传动系统，含2左＋2右麦轮、4电机、匹配联轴器、支架、紧固件及线束，优先60mm。具体型号未定，当前没有已确认可直接购买的整套推荐。** 截图轮组和FIT0458均不再列为当前待购型号；3mm孔版本与FIT0458不能配套，不能仅凭轮径相同认定整套适用。下表保留已查型号及排除依据，避免继续按旧候选下单。\n\n| 部件 | 单车数量 | 当前型号、规格与入口 | 商品分类、价格与下单条件 |\n| --- | ---: | --- | --- |\n| 60mm麦克纳姆左右轮 | **需求2左＋2右，共4个；型号待整套确认** | 已查轮趣金属轮：约32mm宽、8滚子、轮侧3×Ø3/PCD23；[厂家产品](https://www.wheeltec.net/product/html/?164.html)、[尺寸图](https://www.wheeltec.net/kindeditor/attached/image/20251121/20251121163219_74600.jpg)、[淘宝569166349044](https://item.taobao.com/item.htm?id=569166349044) | **撤下当前待购认定，只保留对照资料**。截图分类“麦轮直径60mm*4个【多仓发货 大部分区域次日达】”、固定方式“工业级抱紧式联轴器”、安装孔径“3mm”，优惠后¥177/组、优惠前¥209。厂家标称**四个含联轴器350g**；未确认完整匹配系统，不按截图下单 |\n| 带编码器减速电机 | **4台，准确型号待整套确认** | 原CAD为DFRobot FIT0458 L型，6V、160rpm、120:1，A/B编码器；[厂家规格](https://wiki.dfrobot.com/fit0458/)标称50g/台、额定转矩0.2kgf·cm、堵转2.8A/台 | **FIT0458退出采购推荐，仅保留CAD研究**。不为匹配截图轮组继续默认定制轮毂；重选同厂现货配套，电机轴型/轴伸、转矩、速度、电流、编码器电平及尺寸均需与整套闭合。MG310现货线索与已查价格见后文，不等于已选定 |\n| 电机与麦轮匹配的原配联轴器 | **4件，含在套装则不重复购买** | 轴孔/扁位/插深/止退与最终电机一致，轮侧接口与最终麦轮一致；供应商给出明确配套型号 | **型号待定**。原FIT0458专用双扁轮毂退出采购推荐，不下单、不发加工；不将3mm、5mm、6mm孔选项随意套到不同轴型 |\n| 电机原配安装支架 | **4件，含在套装则不重复购买** | 与最终电机孔图、底板固定孔、工具空间和轮轴高度匹配，含合适螺钉 | **型号待定**。原FIT0458定制抱座退出采购推荐，不下单、不发加工；需连同底板接口整体核对 |\n| 碳纤维底板 | **1件** | 现有模型外形 **147×205×1.5mm**，保留外形开展布置；实物材料和厚度另核 | **孔表未定，不下单/不发加工**。需与四电机支架、板卡、相机和推板一起校核；不按普通轮套件孔位直接采购。现有几何不能证明实物为该材质或已经到货 |\n| 相机可调杆、固定座 | **1套** | 对应相机21×21mm孔距，支持高度和俯角手调并可靠锁紧 | **具体型号/加工图、价格待核**。确认光心、USB插头空间、振动、前推板遮挡与整车180mm限高 |\n| 板卡转接片、绝缘支柱 | **1套，覆盖RK/STM32/驱动** | 以实际泰山派3M及STM32板孔图匹配底板；包括绝缘垫片和所需固定件 | **准确板孔及安装空间待核，不发加工**。碳纤维导电；留出板底元件、散热、接头插拔和走线空间，不将电路板底面直接贴在碳板上 |\n| 前推板与双L形支架 | **1块推板＋2个支架** | 底板现有孔/槽→左右支架→推板；固定式可拆卸，竖槽手动调离地高度，锁紧后靠整车运动推棋；**每只支架至少两点固定** | **材料、板厚、宽高、孔距/槽孔、螺钉、前伸与报价待核，不发加工**。先核含推板的整车长度、工具空间和免自行打孔安装条件；首版无需舵机 |\n| 电池托盘及绑带 | **1套** | 按最终电池实物尺寸固定，可拆卸、不压伤线缆 | **随电池待核**。原75×40×25mm只是空间占位，不能据此保证格氏2200mAh电池能放下；复核重心、固定孔、碰撞防松和重量 |\n| 轮端及整车紧固件 | **1套** | 轮侧三孔×4轮至少 **12枚M3螺钉**，长度配专用轮毂；其余螺母、支柱、垫片按最终孔表列规格和数量 | **孔表及报价待核，不批量买通用包替代**。轴端中心孔不直接认定为M2螺纹，需核盲孔深度、轴向固定和齿轮干涉；备件另列，不与装车数量混算 |\n\n**2026-10-24商品截图核对：** 店铺“轮趣科技”，标题“一组4个麦克纳姆轮含工业级抱紧式联轴器60 75 100 127 152mm麦轮”。[用户截图原件](../05_data/01_raw/03_procurement/20261024_mecanum_options_01.png)已原样保存，[来源与SHA-256](../05_data/01_raw/03_procurement/sources.json)可追溯。上表保留分类原文，展示空格已合并；数量框为1，对应1组4轮，不是1个轮子。截图显示该组合有货、快递免运费；¥177是店铺优惠后展示价，¥209是优惠前展示价，优惠资格、库存、交期和实际结算价以下单时为准。浏览器当前同名商品页URL含`skuId=5084852197535`，但本次无法读取该会话页面核对SKU与截图选项的对应，不把它标为已确认适配SKU。\n\n这里有两种不同的孔：**商品页“安装孔径3mm”是抱紧式联轴器套电机输出轴的中心孔；轮面3×Ø3/PCD23是联轴器与轮子连接的三个固定孔**，两者不能混用。[原厂家CAD尺寸登记](01_机械/03_四驱方案/assembly_manifest.json)中的FIT0458轴为**主圆Ø5.4mm、双扁对边3.7mm、外露约8.8mm**，3mm轴孔无法套入。这是撤下旧组合的已知接口问题；不再以“之后定制轮毂”为由保留该采购推荐，也不把5mm或6mm普通轴孔直接标为已适配。\n\n以上截图与价格保留为历史核查证据，**不再表示当前推荐或待购型号**。原始STEP来源不明，不能仅凭外形称为WHEELTEC原厂CAD。[原四驱装配草案](../01_docs/02_design/04_四驱底盘方案.md)及[原模型部件清单](01_机械/02_原模型部件清单.md)继续保留；更换传动后须重新布局，原237×192×170.1mm和1391g分配不能沿用为新系统验收结论。\n\n#### 重量和同厂配套核查（2026-10-24）\n\n| 核查对象 | 已核结果 | 对本车的判断 |\n| --- | --- | --- |\n| 截图同系列轮趣60mm金属麦轮 | [厂家参数图](https://www.wheeltec.net/kindeditor/attached/image/20251121/20251121163219_54131.jpg)与[厂家手册](https://www.worldrobotconference.com/uploads/exfile/video/sqnfrt.pdf)印刷第33页均写**0.35kg/组，4个含联轴器**；约87.5g/轮端，不含电机和支架 | 占全车1500g上限**23.3%**，其余所有部件共剩1150g。对本车预算偏重，但不能仅凭350g断言任意搭配必超重；10kg载荷是四轮组额定承载，不是轮组自身重量 |\n| 轮趣MG513＋上述金属轮 | [厂家电机参数图](https://www.wheeltec.net/kindeditor/attached/image/202410/23/20241023091819_60412.jpg)标称**145g左右/台**；四台约580g，连轮组共**930g**，尚不含电机支架/底板 | 按旧BOM剔除轮、电机、轮毂及抱座后的**727g人工预算**推算，930＋727＝**1657g**，尚需补支架；当前预算下排除，不因同店有6mm配件就推荐。该数是设计估算，不是实车称重 |\n| KittenBot塑料麦轮，重量对照 | [厂家文档](https://kittenbot.readthedocs.io/electronics/%E9%BA%A6%E5%85%8B%E7%BA%B3%E5%A7%86%E8%BD%AE%E5%AD%90.html)：**65mm、30mm宽、48.5g/个**，四轮194g；TT/积木轴接口 | 相比上述350g组算术上少156g，安装附件范围未必相同。**它是65mm，非当前60mm替代已定型号**；仅说明轻量化可查方向，不将此重量套给别家60mm轮 |\n| 轮趣MG310霍尔电机＋25支架 | 浏览器实读[轮趣官方旗舰店京东10162024845647](https://item.jd.com/10162024845647.html)，分类原文**“MG310电机（霍尔编码器）+25支架”**；2026-10-24到手价**¥30.8/套**、划线¥36.3，页面标官方直降15%。同商品族裸电机分类标轴径3mm | 这是同厂现货配套线索，**尚不推荐下单**。参数区电机净重填**0.69kg**、额定/输出转矩1.5Kgf.cm，缺少可核对的厂家型号图，不能擅自改成69g或套用亚博310参数。轴伸、轮毂有效夹持长度、支架孔图/净重、编码器电平、电机电压/电流及完整四套外廓未闭合。页面未列60mm麦轮套餐；不能把48mm普通胶轮套餐当麦轮套装 |\n| 亚博同厂轻量方案线索 | [厂家轮组页](https://www.yahboom.store/collections/accessory/products/mecanum-wheel)有**“60mm wheel (ABS) *4+TT coupling*4”**；[TT编码器电机页](https://www.yahboom.store/products/encoder-tt-motor)有**“Black Metal Single Shaft”＋“Motor+Bracket”**，厂商问答称电机单只32g | **仅作待核线索，不是最终整套推荐**。60mm轮组净重、当前黑色电机版本对应净重/轴图、原配TT联轴器和该电机的具体兼容、紧固件、国内淘宝/京东SKU及人民币整套价未核齐；不从国外美元起价推算国内订单，也不把电机页面的16000rpm当减速输出转速 |\n\n**本轮结论：不购买截图3mm轮组与FIT0458的混搭，不转买MG513重型组合；优先核轻量的同厂成套传动。** 四轮各自A/B编码器、2左2右、联轴器止退/插深、支架/底板孔图、所有线束电平、电机驱动与电池供电、含RK/电池/推板的全车≤250×200×180mm且≤1500g必须同时成立，才将具体SKU移入当前待购。未知重量与缺失配套不通过人工预算“凑合格”。厂家原图、页面核查数据及重量算式见[采购来源与分析](../05_data/01_raw/03_procurement/compatibility_review.json)。\n\n### 2.3 车载电池、稳压与线束\n\n**传动重选期间，下表6V动力、FIT0458编码器5V/电平适配和11.2A堵转核算只属于已撤下的旧电机草案，不是新系统采购规格。** 电池仍是待核候选，须随最终电机重新确定动力电压、四路驱动、电流与重量；不得自动将MG310、TT或GT50套入旧6V组合。泰山派独立5V支路的已确认要求继续有效。\n\n电池只保留以下一组待配套候选，不与其他电池路线累计购买。**3S电池满充12.6V，不能直接接6V电机或5V泰山派。** 电池、动力稳压、RK稳压、驱动和保护须按同一套负载条件闭合后再下单。\n\n| 部件 | 数量 | 型号、页面分类原文与购买入口 | 已核价格与下单条件 |\n| --- | ---: | --- | --- |\n| 车载电池候选 | **1块** | **格氏G-Tech 3S 11.1V 2200mAh 30C、XT60**；[格氏旗舰店商品14831679922，SKU4533004502798](https://detail.tmall.com/item.htm?id=14831679922&skuId=4533004502798)；分类原文 **“2200mAh-30C-3S-XT60（G-TECH智能）航电”** | 2026-10-24已选择该分类，账户页面店铺优惠后 **¥97**、优惠前 **¥115**、有货，页面显示24小时内发货；下单价/库存以实际结算为准。**仍不下单**：准确净重、外形、允许持续/瞬态电流、保护配置和装车空间待核；不套用其他地区/版本的174g参数 |\n| 配套平衡充电器 | **1台，不装车** | **格氏iMars S60**；[格氏旗舰店商品536345666104](https://detail.tmall.com/item.htm?id=536345666104)；分类原文 **“S60型充电器/支持2-4S 标配（内置电源）”** | 已读取该分类，**尚未选中核价**；默认S10的61.6元不能写为S60价格。随电池确认后购买；核对XT60主充电线和3S平衡插头是否齐全，缺线再补，不默认另买全部转接线 |\n| 约6V动力稳压支路 | **1套** | 输入覆盖所选电池满充至低压停车范围，输出受控约6V，供4路驱动/电机；FIT0458四台堵转合计 **11.2A**，6V侧短时约67.2W | **模块准确型号/SKU与价格待核，不下单**。按持续工况、启动/受阻峰值及持续时间、效率、散热、制动回生/反灌、端子和保护成套核定；不能将“12A”广告值当已通过验证，也不以持续堵转作为正常使用要求 |\n| RK专用5V稳压及供电线 | **1套** | 按规格书**5V/4A起**，并另核相机、5V风扇和并行/启动负载余量；wiki峰值≥3A不作满载额定；接口与实际供电方式匹配 | **型号、输入范围、输出动态、接头、线径与价格待核，不下单**。不由MDD3A的200mA辅助5V供电；不把3S直接接入RK，也不同时从Type-C与排针供电 |\n| STM32/IMU/编码器控制支路及电平适配 | **1套，含4组A/B共8路适配** | 按实际STM32整板输入提供独立控制稳压，供IMU的稳压/逻辑电源按模块核定；FIT0458编码器工作电压4.5–7.5V，优先稳压5V。根据A/B电平、输出类型及STM32引脚5V容限确定8路适配；可评估3.3V供电的[TI SN74LVC245A](https://www.ti.com/product/SN74LVC245A)单向缓冲方案 | **准确模块/电路、SKU与价格待核，不下单**。核定STM32、IMU和编码器的总电流、滤波与接头；编码器不能直接3.3V供电。LVC245输入上限5.5V，不可将供7.2V时未知的A/B电平直接接入；裸芯片不是可跳线模块，方向、使能、上拉与线序需明确 |\n| 总保险、开关、动力硬停机和分支保护 | **1套** | 包括主保险/座、分支保护、总开关、动力切断、反接与欠压处理、电池电压采样及回生电压处理 | **额定值、具体件号、接头与价格待核**。按电池、稳压、驱动和线束电流选择，不凭容量指定保险；软件停车之外需有相应硬件保护和动力切断手段 |\n| 线束、连接器及固定件 | **1套** | 4组电机＋编码器线、XT60主电源/分配、6V动力、RK 5V、逻辑5V、USB相机、UART、SPI、碰撞和激光线，含应力释放和扎带固定 | **逐线定义线径、长度、端子、线序与价格后采购**。大电流动力不用杜邦线；编码器/信号线按电平和接头配线；相机USB直头/弯头按安装空间选，不以能插上代替固定可靠性 |\n\nFIT0458电机工作范围为3–7.5V、额定6V，2S锂电满充8.4V和3S满充12.6V都超过其允许上限；低占空比PWM不能替代合适的电源电压。电池标称倍率不能单独证明整车放电能力，高倍率LiPo也不能默认自带完整BMS。格氏候选需低压停车、总保险、驱动限流/堵转处理及匹配3S平衡充电；充电器与主线、平衡插头一起核对，不能用普通12V适配器替代。\n\n## 3. 车外开发工具与备件\n\n| 项目 | 数量 | 购买条件 |\n| --- | ---: | --- |\n| ST-Link/SWD下载器及线 | **1套，已有则不买** | 与最终STM32开发板SWD接口匹配；准确型号、接头和价格待核；不计入装车重量 |\n| USB转TTL串口及线 | **1套，已有合适设备则不买** | 仅调试需要时补，核对3.3V逻辑、TX/RX/GND与RK调试串口；不是RK↔STM32日常通信的必需转接板；具体SKU待核 |\n| 备用轮、备用电机、紧固件 | **单独列备件数量** | 当前单车只计4轮、4电机；不因旧“约16轮”设想自动加购。先完成准确装车选型，再按预算列备用件、价格和运费 |\n\n若已有相机、开发板、电源或工具，先以准确型号核库存；未取得本车购买凭证不等于用户其他项目没有库存。套餐含线、充电器、支柱和风扇逐件去重。\n\n## 4. 下单前必须闭合的配套与费用\n\n1. **完整传动系统**：同厂麦轮—原配联轴器—4台编码器电机—原配支架—底板形成同一尺寸链，取得准确现货SKU、含件、孔图、净重和整套价；同时核驱动与供电、电平、推送转矩、速度、止退和运动间隙。原FIT0458/定制轮毂/抱座采购路线撤下；新系统未定前不下单。\n2. **供电与接口**：按同一电池全电压范围核6V动力、5V RK和编码器/逻辑支路，以及峰值电流、保护、回生、接头和线束。明确STM32实际整板与引脚分配、泰山派UART及IMU/编码器电平后，才能形成完整接线表；当前电源组合不下单。\n3. **安装与整车约束**：用实际板卡、散热、相机、线缆、电池与推板检查整车 **≤250×200×180mm、≤1.5kg**。1.40kg只是设计预算，不是已达成重量。厂家四个60mm轮含原联轴器标称350g，更换专用毂后需重算/称重，不能在整套350g上重复加计同一轮毂。电池、板卡和定制件的真实质量与安装孔未核前，不称整车已配齐。\n4. **准确订单与总价**：采用项逐一补齐具体SKU/分类、数量、含件、人民币结算价、库存/交期和核价日期；未知保留“待核/待询价”，不填0、不用商品组起价替代选中SKU价格。单车装车成本与含充电器、备件、加工和运费的采购总支出分别计算，套餐含件不重复，每笔运费只记一次。**现阶段完整整车总价未知。**\n\n执行状态及后续验收统一维护在[开发计划](../01_docs/01_plans/01_开发计划.md)。本清单记录当前购买依据与缺口；未联系商家、未实际下单和未进行本车硬件验证的事项不记为已完成。\n"
+  },
+  "current_evidence": [
+    {
+      "file": "20261024_yahboom_wheel_specs_01.jpg",
+      "source_url": "https://cdn.shopify.com/s/files/1/0066/9686/1780/files/Yahboom_Mecanum_Wheel_Kits_details_8.jpg?v=1766661126",
+      "sha256": "c76b477cdf02c18f6a5d6d0ab1cafaa91af6b612685423c4108c251fc0d36a40",
+      "modified": false,
+      "source_kind": "manufacturer_original_image"
+    },
+    {
+      "file": "20261024_yahboom_wheel_dimensions_01.jpg",
+      "source_url": "https://cdn.shopify.com/s/files/1/0066/9686/1780/files/Yahboom_Mecanum_Wheel_Kits_details_9.jpg?v=1766661282",
+      "sha256": "0b47efe093e469fc7fc5a8a5bf83a73cb0f3287ce27b24cb04ec93f34bceba45",
+      "modified": false,
+      "source_kind": "manufacturer_original_image"
+    },
+    {
+      "file": "20261024_yahboom_hex_dimensions_01.jpg",
+      "source_url": "https://cdn.shopify.com/s/files/1/0066/9686/1780/files/Yahboom_Mecanum_Wheel_Kits_details_10.jpg?v=1766661283",
+      "sha256": "e3b3a2ad298dab8be8ffb3c5df0068d184c42965983f418b411445dea9cf4c0c",
+      "modified": false,
+      "source_kind": "manufacturer_original_image"
+    },
+    {
+      "file": "20261024_yahboom_wheel_assembly_01.jpg",
+      "source_url": "https://cdn.shopify.com/s/files/1/0066/9686/1780/files/Yahboom_Mecanum_Wheel_Kits_details_12.jpg?v=1766661284",
+      "sha256": "9cbfd3d237172c7f817fec6db719641ac0570e4fb075f8a7a00e9482283e8ada",
+      "modified": false,
+      "source_kind": "manufacturer_original_image"
+    },
+    {
+      "file": "20261024_yahboom_md310_specs_01.jpg",
+      "source_page": "https://www.yahboom.store/collections/accessory/products/310motor",
+      "sha256": "926c538c1e3fe5f115ffad579e09544a668aad20e1f287e5b69b2ccfecd2a9ee",
+      "modified": false,
+      "source_kind": "manufacturer_original_image"
+    },
+    {
+      "file": "20261024_yahboom_nylon65_price_01.png",
+      "source_url": "https://item.jd.com/10098108278160.html",
+      "observed_variant": "65mm尼龙款麦轮*4+3mm六角联轴器",
+      "price_cny": 109,
+      "sha256": "420b0e507ba910f803a4853cd36ed26070f889ff1e74dc36ea6089bdb7113138",
+      "source_kind": "live_browser_screenshot",
+      "modified": false
+    },
+    {
+      "file": "20261024_yahboom_md310_price_01.png",
+      "source_url": "https://item.jd.com/10069318711256.html",
+      "observed_variant": "编码器减速电机+支架",
+      "price_cny": 49.9,
+      "sha256": "2bbba29483cdbd48c36689e56ea6386b1fb6041bb6e37861ffa7d294b70cb2c6",
+      "source_kind": "live_browser_screenshot",
+      "modified": false
+    },
+    {
+      "file": "20261024_yahboom_driver_price_01.png",
+      "source_url": "https://item.jd.com/10140357947373.html",
+      "observed_variant": "四路编码器电机驱动模块+铜柱+数据线",
+      "price_cny": 52.7,
+      "sha256": "bb23d74a7554117823506067816dbf75035e62b27da4ce20bc79081cf9af1466",
+      "source_kind": "live_browser_screenshot",
+      "modified": false
+    },
+    {
+      "file": "20261024_yahboom_520_price_01.png",
+      "source_url": "https://item.jd.com/10064745878547.html",
+      "observed_options": [
+        "编码器减速电机+支架",
+        "减速比1:30"
+      ],
+      "price_cny": 59,
+      "sha256": "f42cc706f9b428ebf8f860667509af4b810671584103d495230baaf85c599024",
+      "modified": false,
+      "source_kind": "live_browser_screenshot"
+    },
+    {
+      "file": "20261024_yahboom_nylon65_6mm_price_01.png",
+      "source_url": "https://item.jd.com/10042934980408.html",
+      "observed_variant": "65mm尼龙款麦轮*4+6mm六角联轴器",
+      "price_cny": 109,
+      "sha256": "0d5809a807a3f4f8a0b5381ad5ffb59c08bcb825b7136e78789eb1bb10656007",
+      "source_kind": "live_browser_screenshot",
+      "modified": false
+    },
+    {
+      "file": "20261024_yahboom_driver_power_price_01.png",
+      "source_url": "https://item.jd.com/10140357947374.html",
+      "observed_variant": "四路编码器电机驱动模块+铜柱+数据线+电源线",
+      "price_cny": 55.2,
+      "sha256": "3d2b8a9c41ef181c36fca60abd2aea6b369c6538fdd2ad865579a9d648cae340",
+      "source_kind": "live_browser_screenshot",
+      "modified": false
+    }
+  ],
+  "selected_system": {
+    "checked_date": "2026-10-24",
+    "purchase_executed": true,
+    "wheel": {
+      "manufacturer": "Yahboom 亚博",
+      "jd_sku": "10098108278160",
+      "variant": "65mm尼龙款麦轮*4+3mm六角联轴器",
+      "set_qty": 1,
+      "wheels": 4,
+      "handedness": "2左+2右",
+      "material": "PA66轮体，TPU滚子",
+      "diameter_mm": 65,
+      "width_mm": 30.4,
+      "each_wheel_nominal_g": 58,
+      "four_wheels_nominal_g": 232,
+      "price_cny": 109,
+      "coupling_shaft_bore_mm": 3,
+      "external_hex_across_flats_mm": 12,
+      "coupling_length_mm": 18,
+      "shaft_bore_depth_mm": 12,
+      "motor_compatibility": "原厂参数/装配图及京东主图明确3mm六角联轴器配310；6mm选项对应520，不选择",
+      "ordered": true,
+      "payment_status": "paid",
+      "order_number": "3661477000956457",
+      "fulfillment_status": "正在出库",
+      "actual_unit_price_cny": null,
+      "price_scope": "原price_cny/unit_price_cny为此前页面参考价；京东导出未提供分项成交单价。"
+    },
+    "motor": {
+      "model": "MD310Z20_7.4V",
+      "jd_sku": "10069318711256",
+      "variant": "编码器减速电机+支架",
+      "qty": 4,
+      "unit_price_cny": 49.9,
+      "nominal_each_motor_g": 70,
+      "rated_voltage_v": 7.4,
+      "allowed_voltage_v": [
+        4.2,
+        8.4
+      ],
+      "shaft": "3mm D轴，厂家图对边2.5mm、端面轴伸14mm",
+      "ratio": 20,
+      "no_load_rpm": 450,
+      "rated_torque_kgf_cm": 0.4,
+      "stall_current_at_rated_voltage_a_max": 1.4,
+      "encoder": "13线A/B霍尔，3.3–5V，PH2.0-6P",
+      "kit_contents": "电机、原配支架、安装螺钉和单端PH2.0到杜邦线；不另买电机套餐内联轴器或普通胶轮",
+      "ordered": true,
+      "payment_status": "paid",
+      "order_number": "3661477000956457",
+      "fulfillment_status": "正在出库",
+      "actual_unit_price_cny": null,
+      "price_scope": "原price_cny/unit_price_cny为此前页面参考价；京东导出未提供分项成交单价。"
+    },
+    "driver": {
+      "jd_sku": "10140357947374",
+      "url": "https://item.jd.com/10140357947374.html",
+      "variant": "四路编码器电机驱动模块+铜柱+数据线+电源线",
+      "qty": 1,
+      "price_cny": 55.2,
+      "crossed_out_price_cny": 65,
+      "manufacturer_input_recommended_v": [
+        5,
+        12
+      ],
+      "motor_connection": "310使用PH2.0到杜邦线，A→A、B→B，类型2、13线、减速比20；不是520黑色双端线配置",
+      "initial_configuration": [
+        "$mtype:2#",
+        "$mline:13#",
+        "$mphase:20#",
+        "$wdiameter:65#"
+      ],
+      "configuration_scope": "厂家对应接法的初始值，实际版本及读回待核；未写入设备",
+      "driver_single_channel_nominal_a": 4,
+      "manufacturer_5v_output_a": 0.7,
+      "not_RK_power": true,
+      "power_cable": "随包T插动力线；电池XT60需匹配成品转接线，核方向、极性、线径/载流及固定",
+      "ordered": true,
+      "payment_status": "paid",
+      "order_number": "3661477000956457",
+      "fulfillment_status": "正在出库",
+      "actual_unit_price_cny": null,
+      "price_scope": "原price_cny/unit_price_cny为此前页面参考价；京东导出未提供分项成交单价。"
+    },
+    "wheel_and_motor_subtotal_cny": 308.6,
+    "mass_scope": "四台310电机280g+四轮232g+已选电池330g+主板/散热商品毛重142.6g=984.6g，已计电池，余515.4g用于其他装车件；非实秤。",
+    "mechanical_check": "厂家同系列明确适配。电机轴伸14mm、联轴器轴孔深12mm；不能把两数相减直接认作实际插入/避让验收，仍须核轴肩、紧定螺钉落在D平面、轮毂与支架间隙及M4轮侧螺钉长度。现有60mm/PCD23 CAD不适用于65mm六角轮毂。",
+    "electrical_check": "普通2S LiPo满充8.4V在厂家MD310范围内，3S直供超限；5V RK必须独立稳压，电池接头/保护/充电与全车启动负载未闭合。",
+    "unresolved": [
+      "65mm轮、3mm六角毂、310原配支架与底板的安装孔表和间隙",
+      "电池XT60与驱动随附T插的匹配成品线、方向、极性和载流",
+      "独立RK 5V稳压与2S充电器准确SKU/价格",
+      "F407、传感器和固定件准确SKU",
+      "已计电池后的剩余全部装车件质量及整车外廓；尺寸/称重/推棋沿既有计划，不新增续航验收"
+    ],
+    "selection_authority": "用户明确：还是选310的吧，然后电池不变。",
+    "ordered_motor_wheel_driver": true,
+    "wheel_motor_driver_subtotal_cny": 363.8,
+    "power_route": "保持普通2S格氏7.4V/7200mAh/50C硬壳/XT60；满充8.4V在310允许4.2–8.4V及驱动推荐5–12V内。RK独立5V稳压，至少4A并核相机/风扇余量。",
+    "encoder_config": {
+      "motor_type": 2,
+      "encoder_lines": 13,
+      "ratio": 20,
+      "counts_per_output_rev_quad": 1040,
+      "wheel_diameter_mm": 65
+    },
+    "runtime_goal_minutes": [
+      30,
+      60
+    ],
+    "size_battery_for_runtime_minutes": 60,
+    "battery": {
+      "brand": "格氏",
+      "jd_sku": "10051546999619",
+      "url": "https://item.jd.com/10051546999619.html",
+      "variant": "7200mAh-50C-7.4V-2S硬壳|满电8.4V，格氏耐用经典款-XT60插头",
+      "qty": 1,
+      "nominal_v": 7.4,
+      "full_charge_v": 8.4,
+      "capacity_mah": 7200,
+      "energy_wh_nominal": 53.28,
+      "manufacturer_nominal_mass_g": 330,
+      "dimensions_mm": [
+        139,
+        47,
+        26
+      ],
+      "connector": "XT60",
+      "price_cny": 162.0,
+      "ordered_status": "paid_pending_dispatch",
+      "status": "已购已付款，正在出库，到货与验收待确认",
+      "price_scope": "单件电池子订单实付；商品价与运费未单列",
+      "actual_unit_price_cny": null,
+      "order_paid_cny": 162.0,
+      "order_number": "3661477012486530"
+    },
+    "jd_parent_order": "3661477012483787",
+    "motor_wheel_driver_order": "3661477000956457",
+    "motor_wheel_driver_actual_paid_cny": 363.8,
+    "fulfillment_status": "正在出库",
+    "hardware_tested": false,
+    "purchase_evidence": "sources.json#purchase_evidence"
+  },
+  "replaced_light_system": {
+    "status": "用户明确不采用，已从购买表撤下",
+    "wheel": "60mm ABS*4+TT联轴器，JD10098108278163，79元",
+    "motor": "13线TT电机+支架，JD10042540440043，48.9元/套",
+    "nominal_mass_scope": "轮43.5g/只，电机含支架线束套餐63.4g/套；427.6g并非已计齐所有轮端件",
+    "not_reason_to_recommend": "不将旧页面问答32g套给当前电机+支架套餐"
+  },
+  "manufacturer_urls": [
+    "https://category.yahboom.net/products/mecanum-wheel",
+    "https://www.yahboom.store/collections/accessory/products/310motor",
+    "https://www.yahboom.net/study/MD310/14018/",
+    "https://www.yahboom.net/study/MD310/14039/",
+    "https://www.yahboom.net/public/upload/upload-html/1750303224/1.1%20Introduction%20to%204-channel%20motor%20drive%20board.html"
+  ],
+  "system_comparison_3mm_vs_6mm": {
+    "checked_date": "2026-10-24",
+    "scope": "同品牌同65mm尼龙轮；3mm以MD310Z20_7.4V为例，6mm以直型MD520Z30_12V/1:30为例；不把轴径当性能型号。",
+    "primary_source": "https://www.yahboom.net/study/MD310/14018/",
+    "three_mm": {
+      "motor": "MD310Z20_7.4V",
+      "each_motor_nominal_g": 70,
+      "four_motors_nominal_g": 280,
+      "four_wheels_plus_motors_g": 512,
+      "manufacturer_rated_torque_kgf_cm": 0.4,
+      "manufacturer_stall_torque_kgf_cm_min": 1.0,
+      "no_load_rpm": 450,
+      "rated_voltage_v": 7.4,
+      "battery_route": "普通2S LiPo，满充8.4V",
+      "manufacturer_stall_current_a_max": 1.4,
+      "motor_and_bracket_each_price_cny": 49.9,
+      "wheel_motor_driver_core_price_cny": 361.3
+    },
+    "six_mm": {
+      "motor_reference": "MD520Z30_12V",
+      "ratio": 30,
+      "each_motor_nominal_g": 150,
+      "four_motors_nominal_g": 600,
+      "four_wheels_plus_motors_g": 832,
+      "manufacturer_rated_torque_kgf_cm": 3.3,
+      "manufacturer_stall_torque_kgf_cm": 4.8,
+      "no_load_rpm": 333,
+      "rated_voltage_v": 12,
+      "battery_route": "按厂家11–16V建议核普通3S，满充12.6V；原2S不能原样套用额定性能",
+      "manufacturer_stall_current_a": 3,
+      "exact_domestic_motor_kit_price_cny": null,
+      "core_total_price_cny": null,
+      "price_status": "未核准确1:30电机+支架和6mm轮组SKU展示价，不用裸电机/默认1:19起价代替"
+    },
+    "nominal_four_motor_mass_difference_g": 320,
+    "mass_exclusions": [
+      "联轴器",
+      "电机支架",
+      "紧固件",
+      "线束",
+      "驱动",
+      "电池",
+      "RK等全部其他部件"
+    ],
+    "engineering_interpretation": "6mm/520例子的厂家转矩更高，同时更重、供电和驱动峰值要求更高；实际推棋力受地面摩擦、打滑、驱动限流、减速箱允许工况影响，不能直接将转矩比当推力比或归因于轴径。限重1500g，520的轮+电机832g后只剩668g给所有其余部件；310对应剩988g，均非完整整车验收。",
+    "selection_status": "310仅为当前轻量拟选，推棋所需力/启动及整车空间质量尚未闭合，不能以接口已匹配宣称性能已确认。"
+  },
+  "520_vehicle_mass_reassessment": {
+    "date": "2026-10-24",
+    "trigger": "用户指出四台520约600g，整车尚余900g，应按所有装车部件核而非因多320g直接排除520。",
+    "conclusion": "同意重新优先核520/6mm完整方案的可行性；600g电机本身不构成超重或排除依据，当前尚无完整整车净重结论。310仍只是轻量拟选，不把520评估通过写成已最终换型或已下单。",
+    "items": [
+      {
+        "part": "四台直型MD520",
+        "qty": 4,
+        "subtotal_g": 600,
+        "basis": "厂家单台150g±1g标称，非本车称量",
+        "source": "https://www.yahboom.net/study/MD310/14018/"
+      },
+      {
+        "part": "四只65mm尼龙麦轮",
+        "qty": 4,
+        "subtotal_g": 232,
+        "basis": "厂家单轮58g；联轴器等额外范围仍单独核",
+        "source": "https://category.yahboom.net/products/mecanum-wheel"
+      },
+      {
+        "part": "已购RK3576主控及原配散热",
+        "subtotal_g": 150,
+        "basis": "本轮临时质量预留，不是净重；商城主板98g与散热44.6g均为商品毛重，合计142.6g，仅作预留参考",
+        "sources": [
+          "https://item.szlcsc.com/57330947.html",
+          "https://item.szlcsc.com/58921706.html"
+        ]
+      },
+      {
+        "part": "相机+支架+USB线",
+        "subtotal_g": 50,
+        "basis": "本轮临时质量预留，不是净重；微雪相机商品Weight字段15g，不代表含车载固定和USB线重量",
+        "source": "https://www.waveshare.com/product/ov4689-4mp-usb-camera-a.htm"
+      }
+    ],
+    "nominal_and_allocation_subtotal_g": 1032,
+    "remaining_to_rule_limit_g": 468,
+    "optional_100g_margin_requires_remaining_parts_at_most_g": 368,
+    "remaining_required_parts": [
+      "3S电池及托盘绑带",
+      "四个520电机支架",
+      "四个6mm六角联轴器与轮端螺钉",
+      "碳板、板卡固定、前推板",
+      "四路驱动、F407、IMU、触点和激光",
+      "RK独立5V稳压及控制供电",
+      "动力线、数据线、保险、开关、接头与其他紧固件"
+    ],
+    "warning": "468g是以上标称/预算数下剩余的质量分配额度，不是已验证实车余量，不由此宣称整车已<1.5kg。不得把剩余部件仅概括为主控、摄像头和底板；电池和电机支架不可漏计。"
+  },
+  "purchased_RK_and_cooling_weight_check": {
+    "checked_date": "2026-10-24",
+    "order_number": "SO26102424311",
+    "purchase_status": "paid",
+    "arrival_and_project_weighing_confirmed": false,
+    "main_board": {
+      "model": "LCKFB-TSPI3M-RK3576-4G-64G",
+      "lcsc_code": "C54110287",
+      "quantity": 1,
+      "listing_weight_g": 98,
+      "field_verbatim": "商品毛重",
+      "packaging": "袋装",
+      "installed_net_mass_g": null,
+      "source_url": "https://item.szlcsc.com/57330947.html",
+      "verification": "本轮浏览器实际读取商品型号、编号与商品毛重字段"
+    },
+    "cooling": {
+      "model": "LCKFB-TSPI3M-COOLING-FAN-KIT",
+      "lcsc_code": "C55160086",
+      "quantity": 1,
+      "listing_weight_g": 44.6,
+      "field_verbatim": "商品毛重",
+      "packaging": "盒装",
+      "installed_net_mass_g": null,
+      "source_url": "https://item.szlcsc.com/58921706.html",
+      "verification": "本轮读取官方商品页型号、编号、商品毛重字段"
+    },
+    "listing_gross_total_g": 142.6,
+    "installed_net_total_g": null,
+    "interpretation": "型号及已付款状态已确定。官方页面可核到98g+44.6g=142.6g，均为商品毛重；未找到可核实的已装散热整板净重。142.6g可暂作保守估算参考，不能写成实测净重或保证绝对上限；原150g只是取整预留。",
+    "520_case_recalculation": {
+      "four_motors_nominal_g": 600,
+      "four_wheels_nominal_g": 232,
+      "purchased_goods_listing_gross_g": 142.6,
+      "subtotal_mixed_basis_g": 974.6,
+      "remaining_allocation_to_1500g": 525.4,
+      "camera_mount_and_usb_allocation_g": 50,
+      "with_camera_allocation_subtotal_g": 1024.6,
+      "remaining_allocation_to_1500g_with_camera": 475.4,
+      "basis": "厂家标称+商品毛重参考+相机人工预留混合预算，非实车称重余量"
+    }
+  },
+  "selection_history": [
+    {
+      "date": "2026-10-24",
+      "status": "superseded_by_user_selected_520",
+      "system": {
+        "checked_date": "2026-10-24",
+        "purchase_executed": false,
+        "wheel": {
+          "manufacturer": "Yahboom 亚博",
+          "jd_sku": "10098108278160",
+          "variant": "65mm尼龙款麦轮*4+3mm六角联轴器",
+          "set_qty": 1,
+          "wheels": 4,
+          "handedness": "2左+2右",
+          "material": "PA66轮体，TPU滚子",
+          "diameter_mm": 65,
+          "width_mm": 30.4,
+          "each_wheel_nominal_g": 58,
+          "four_wheels_nominal_g": 232,
+          "price_cny": 109,
+          "coupling_shaft_bore_mm": 3,
+          "external_hex_across_flats_mm": 12,
+          "coupling_length_mm": 18,
+          "shaft_bore_depth_mm": 12,
+          "motor_compatibility": "原厂参数/装配图及京东主图明确3mm六角联轴器配310；6mm选项对应520，不选择"
+        },
+        "motor": {
+          "model": "MD310Z20_7.4V",
+          "jd_sku": "10069318711256",
+          "variant": "编码器减速电机+支架",
+          "qty": 4,
+          "unit_price_cny": 49.9,
+          "nominal_each_motor_g": 70,
+          "rated_voltage_v": 7.4,
+          "allowed_voltage_v": [
+            4.2,
+            8.4
+          ],
+          "shaft": "3mm D轴，厂家图对边2.5mm、端面轴伸14mm",
+          "ratio": 20,
+          "no_load_rpm": 450,
+          "rated_torque_kgf_cm": 0.4,
+          "stall_current_at_rated_voltage_a_max": 1.4,
+          "encoder": "13线A/B霍尔，3.3–5V，PH2.0-6P",
+          "kit_contents": "电机、原配支架、安装螺钉和单端PH2.0到杜邦线；不另买电机套餐内联轴器或普通胶轮"
+        },
+        "driver": {
+          "jd_sku": "10140357947373",
+          "variant": "四路编码器电机驱动模块+铜柱+数据线",
+          "qty": 1,
+          "price_cny": 52.7,
+          "price_condition": "官方直降15%，划线价62；未计599减20",
+          "power_input_recommended_v": [
+            5,
+            12
+          ],
+          "motor_connection": "厂家MD310推荐单端PH2.0-6P→杜邦线，A→A、B→B，类型2，13线、减速比20；按到货版本和丝印复核",
+          "interface": "UART或IIC二选一，内置协处理器收编码器并做四轮速度PID",
+          "board_5v_output_a": 0.7,
+          "not_RK_power_supply": true
+        },
+        "wheel_and_motor_subtotal_cny": 308.6,
+        "with_driver_subtotal_cny": 361.3,
+        "mass_scope": "四轮232g+四电机约280g=约512g；联轴器、支架、紧固件、线束和驱动板尚未计入，不能称完整传动总重或整车实重",
+        "mechanical_check": "厂家同系列明确适配。电机轴伸14mm、联轴器轴孔深12mm；不能把两数相减直接认作实际插入/避让验收，仍须核轴肩、紧定螺钉落在D平面、轮毂与支架间隙及M4轮侧螺钉长度。现有60mm/PCD23 CAD不适用于65mm六角轮毂。",
+        "electrical_check": "普通2S LiPo满充8.4V在厂家MD310范围内，3S直供超限；5V RK必须独立稳压，电池接头/保护/充电与全车启动负载未闭合。",
+        "unresolved": [
+          "65mm轮/六角联轴器的完整尺寸链和新的底板孔图、四电机/后端接线空间",
+          "联轴器/支架/驱动等真实质量与整车<=1500g",
+          "整车全外廓<=250x200x180mm，不能沿用60mm CAD结论",
+          "2S电池、RK独立5V稳压和全部保护/接头/线束准确SKU与价格",
+          "F407完整开发板、IMU/激光/碰撞及固定件准确SKU和孔图",
+          "带载推棋、横移、启动及失联停车实测"
+        ]
+      }
+    },
+    {
+      "date": "2026-10-24",
+      "status": "superseded_by_user_return_to_310_keep_2S_battery",
+      "system": {
+        "checked_date": "2026-10-24",
+        "selection_authority": "用户明确：OK，那我们就选用这个520的。按前述对照型号统一1:30，保持一个主选。",
+        "ordered_motor_wheel_driver": false,
+        "wheel": {
+          "manufacturer": "Yahboom 亚博",
+          "jd_sku": "10042934980408",
+          "url": "https://item.jd.com/10042934980408.html",
+          "variant": "65mm尼龙款麦轮*4+6mm六角联轴器",
+          "set_qty": 1,
+          "handedness": "2左+2右",
+          "diameter_mm": 65,
+          "width_mm": 30.4,
+          "four_wheels_nominal_g": 232,
+          "coupling_shaft_bore_mm": 6,
+          "coupling_external_hex_across_flats_mm": 12,
+          "coupling_length_mm": 18,
+          "unit_set_price_cny": 109
+        },
+        "motor": {
+          "model": "MD520Z30_12V",
+          "jd_sku": "10064745878547",
+          "url": "https://item.jd.com/10064745878547.html",
+          "color_option": "编码器减速电机+支架",
+          "version_option": "减速比1:30",
+          "qty": 4,
+          "unit_kit_price_cny": 59,
+          "four_kit_price_cny": 236,
+          "rated_voltage_v": 12,
+          "manufacturer_operating_recommendation_v": [
+            11,
+            16
+          ],
+          "gear_ratio": 30,
+          "nominal_no_load_rpm": 333,
+          "shaft": "6mm D轴",
+          "each_motor_nominal_g": 150,
+          "nominal_mass_tolerance_each_g": 1,
+          "four_motors_nominal_g": 600,
+          "manufacturer_stall_current_a": 3,
+          "four_stall_current_a_arithmetic": 12,
+          "manufacturer_rated_torque_kgf_cm": 3.3,
+          "torque_scope": "厂家标称，不把转矩比例当实车推力；推棋/横移及驱动限流后的性能仍待实测",
+          "encoder": "11线A/B霍尔，3.3–5V，输出轴四倍频1320计数/转",
+          "kit_contents": "电机、原配支架及安装件，黑色PH2.0-6Pin双端线、单端杜邦线等按实物清点；不另选含普通轮/联轴器的电机套餐"
+        },
+        "driver": {
+          "jd_sku": "10140357947374",
+          "url": "https://item.jd.com/10140357947374.html",
+          "variant": "四路编码器电机驱动模块+铜柱+数据线+电源线",
+          "qty": 1,
+          "price_cny": 55.2,
+          "crossed_out_price_cny": 65,
+          "price_condition": "页面官方直降15%，未计跨商品门槛优惠，以实际结算为准",
+          "power_cable": "厂家图为T插到红黑裸线，接驱动蓝色正负端子；分电端接头须与选定电池/配电一致，数据线不替代动力线",
+          "motor_connection": "按厂家520推荐接法，黑色PH2.0-6Pin双端线；A相到板B相的线序用mtype1。若用单端杜邦线A→A/B→B，厂家指引用mtype2；本版不混用两种接法。到货复核线序和版本。",
+          "initial_configuration": [
+            "$mtype:1#",
+            "$mline:11#",
+            "$mphase:30#",
+            "$wdiameter:65#"
+          ],
+          "configuration_scope": "对应厂家黑色双端520接法的初始配置，按实际固件确认读回；不是已写入设备的结果",
+          "manufacturer_5v_output_a": 0.7,
+          "not_RK_power": true
+        },
+        "mechanical_subtotal_cny": 345,
+        "wheel_motor_driver_subtotal_cny": 400.2,
+        "power_route": "普通3S锂电，标称11.1V/满充12.6V，厂家四路驱动销售页明确520推荐12.6V；RK独立5V稳压。电池容量、保护、配电接头和充电器准确SKU尚未闭合。",
+        "driver_supply_evidence": "https://category.yahboom.net/products/quad-md-module；教程表推荐5–12V，厂家520配套说明明确12.6V；不把“推荐”字段当绝对最大值，按到货版本复核。",
+        "mass_scope": "四台电机600g+四轮232g+已购主控散热商品毛重142.6g=974.6g，其余可分配525.4g；不含联轴器、支架、电池、底板推板、驱动、F407、线束等，非实车净重余量。",
+        "unresolved": [
+          "520四角安装尺寸链、原配支架孔表、联轴器紧定落点和轮侧螺钉长度",
+          "四电机后端及线缆空间、含推板/相机的完整外廓<=250x200x180mm",
+          "剩余全部装车件重量及整车实秤<=1500g",
+          "普通3S电池及保护/充电、RK独立5V稳压与匹配接头准确SKU",
+          "F407及传感器准确SKU和安装件",
+          "启动/受阻、驱动热条件、制动和失联硬停机验证"
+        ],
+        "runtime_goal_minutes": [
+          30,
+          60
+        ],
+        "size_battery_for_runtime_minutes": 60,
+        "battery_status": "普通3S重新匹配；保留原续航目标，容量/净重/接头/SKU/价格待闭合。"
+      }
+    }
+  ],
+  "selected_battery": {
+    "brand": "格氏",
+    "jd_sku": "10051546999619",
+    "url": "https://item.jd.com/10051546999619.html",
+    "variant": "7200mAh-50C-7.4V-2S硬壳|满电8.4V，格氏耐用经典款-XT60插头",
+    "qty": 1,
+    "nominal_v": 7.4,
+    "full_charge_v": 8.4,
+    "capacity_mah": 7200,
+    "energy_wh_nominal": 53.28,
+    "manufacturer_nominal_mass_g": 330,
+    "dimensions_mm": [
+      139,
+      47,
+      26
+    ],
+    "connector": "XT60",
+    "price_cny": 162.0,
+    "ordered_status": "paid_pending_dispatch",
+    "status": "已购已付款，正在出库，到货与验收待确认",
+    "price_scope": "单件电池子订单实付；商品价与运费未单列",
+    "actual_unit_price_cny": null,
+    "order_paid_cny": 162.0,
+    "order_number": "3661477012486530"
+  },
+  "battery_selection_history": [
+    {
+      "status": "superseded_for_direct_motor_power_after_user_selected_12v_520",
+      "model": "格氏7.4V 2S 7200mAh 50C硬壳 XT60",
+      "qty": 1,
+      "ordered": false,
+      "source_thread_id": "01a16e67-dcc0-72f2-b75b-a4111213f13e",
+      "source_user_choice": "用户在310方案阶段要求按30分钟至1小时、按1小时选电池，并认可直接写入计划、不新增验收；该偏好继续保留。",
+      "conflict": "本轮用户选定12V/1:30的520之后，旧2S不得与520额定性能/3S路线混写。原型号记录保留，不将其毛重、尺寸或能量套给新3S电池。",
+      "runtime_goal_minutes": [
+        30,
+        60
+      ],
+      "size_for_runtime_minutes": 60,
+      "new_runtime_acceptance_task_added": false
+    }
+  ],
+  "mass_calculation_current": {
+    "motor_g": 280,
+    "wheel_g": 232,
+    "battery_g": 330,
+    "RK_cooling_listing_gross_g": 142.6,
+    "subtotal_mixed_basis_g": 1016.6,
+    "remaining_allocation_to_1500g": 483.4,
+    "measured": false,
+    "power_board_g": 32
+  },
+  "current_purchase_record": {
+    "parent_order": "3661477012483787",
+    "jd_paid_cny": 525.8,
+    "cumulative_paid_cny": 1605.5,
+    "sources": "sources.json#purchase_evidence",
+    "order_export_sha256": "d0342381474debe0d2192d1aa892382de21ce969e5618c68f2081352ce2ed4ad",
+    "order_screenshot_sha256": "8463be84092dfd026f9a7b367bc1341b88f440a539bf18f4857bc3b10fbd6474",
+    "latest_order": "5127385935119112530",
+    "power_board_paid_cny": 63.7,
+    "carbon_board_paid_cny": 80,
+    "payment_order_count": 5,
+    "item_line_count": 8,
+    "scope": "含立创、京东两子单、轮趣T5X及亚博电源板；逐笔凭证见sources.json"
+  }
+}

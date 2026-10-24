@@ -1,9 +1,14 @@
 * text=auto eol=lf
 
 *.pdf binary
+*.pptx binary
+*.xlsx binary
 *.png binary
 *.jpg binary
 *.jpeg binary
 *.gif binary
 *.zip binary
 *.onnx binary
+*.stp binary
+*.step binary
+*.FCStd binary

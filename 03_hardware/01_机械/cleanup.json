@@ -1,0 +1,680 @@
+{
+  "date": "2026-10-25",
+  "authorized_action": "2026-10-25用户要求等待三个窗口完成，更新README和记录、清理无用及中间文件后commit/push；保留唯一原件和有用成果。",
+  "status": "obsolete_generated_files_cleaned_unique_originals_preserved",
+  "completed": true,
+  "archive": "temp/旧硬件待删除",
+  "moved_target_count": 89,
+  "moved_file_count": 6028,
+  "moved_bytes": 1334584177,
+  "all_moved_file_sha256_verified": true,
+  "protected_files_verified_at_move": 67,
+  "manifest": "temp/旧硬件待删除/02_移动清单.json",
+  "targets": [
+    {
+      "previous_path": "03_hardware/01_机械/01_候选原件",
+      "current_path": "temp/旧硬件待删除/03_hardware/01_机械/01_候选原件",
+      "file_count": 9
+    },
+    {
+      "previous_path": "03_hardware/01_机械/02_试装工程",
+      "current_path": "temp/旧硬件待删除/03_hardware/01_机械/02_试装工程",
+      "file_count": 11
+    },
+    {
+      "previous_path": "03_hardware/01_机械/03_四驱方案",
+      "current_path": "temp/旧硬件待删除/03_hardware/01_机械/03_四驱方案",
+      "file_count": 13
+    },
+    {
+      "previous_path": "03_hardware/01_机械/01_选型与费用.csv",
+      "current_path": "temp/旧硬件待删除/03_hardware/01_机械/01_选型与费用.csv",
+      "file_count": 1
+    },
+    {
+      "previous_path": "03_hardware/01_机械/02_原模型部件清单.md",
+      "current_path": "temp/旧硬件待删除/03_hardware/01_机械/02_原模型部件清单.md",
+      "file_count": 1
+    },
+    {
+      "previous_path": "temp/cad-review/01_临时文件说明.md",
+      "current_path": "temp/旧硬件待删除/temp/cad-review/01_临时文件说明.md",
+      "file_count": 1
+    },
+    {
+      "previous_path": "temp/cad-review/analyze_interfaces.py",
+      "current_path": "temp/旧硬件待删除/temp/cad-review/analyze_interfaces.py",
+      "file_count": 1
+    },
+    {
+      "previous_path": "temp/cad-review/build.done",
+      "current_path": "temp/旧硬件待删除/temp/cad-review/build.done",
+      "file_count": 1
+    },
+    {
+      "previous_path": "temp/cad-review/build_demo.FCMacro",
+      "current_path": "temp/旧硬件待删除/temp/cad-review/build_demo.FCMacro",
+      "file_count": 1
+    },
+    {
+      "previous_path": "temp/cad-review/check_wheel_fit.py",
+      "current_path": "temp/旧硬件待删除/temp/cad-review/check_wheel_fit.py",
+      "file_count": 1
+    },
+    {
+      "previous_path": "temp/cad-review/fit_contact_details.json",
+      "current_path": "temp/旧硬件待删除/temp/cad-review/fit_contact_details.json",
+      "file_count": 1
+    },
+    {
+      "previous_path": "temp/cad-review/fit_contact_details.py",
+      "current_path": "temp/旧硬件待删除/temp/cad-review/fit_contact_details.py",
+      "file_count": 1
+    },
+    {
+      "previous_path": "temp/cad-review/fit_right_wheels.json",
+      "current_path": "temp/旧硬件待删除/temp/cad-review/fit_right_wheels.json",
+      "file_count": 1
+    },
+    {
+      "previous_path": "temp/cad-review/fit_right_wheels.py",
+      "current_path": "temp/旧硬件待删除/temp/cad-review/fit_right_wheels.py",
+      "file_count": 1
+    },
+    {
+      "previous_path": "temp/cad-review/FreeCAD.7z",
+      "current_path": "temp/旧硬件待删除/temp/cad-review/FreeCAD.7z",
+      "file_count": 1
+    },
+    {
+      "previous_path": "temp/cad-review/freecad_objects.json",
+      "current_path": "temp/旧硬件待删除/temp/cad-review/freecad_objects.json",
+      "file_count": 1
+    },
+    {
+      "previous_path": "temp/cad-review/full_car",
+      "current_path": "temp/旧硬件待删除/temp/cad-review/full_car",
+      "file_count": 18
+    },
+    {
+      "previous_path": "temp/cad-review/full_car_bom_draft.json",
+      "current_path": "temp/旧硬件待删除/temp/cad-review/full_car_bom_draft.json",
+      "file_count": 1
+    },
+    {
+      "previous_path": "temp/cad-review/guide_draft.md",
+      "current_path": "temp/旧硬件待删除/temp/cad-review/guide_draft.md",
+      "file_count": 1
+    },
+    {
+      "previous_path": "temp/cad-review/inspect.done",
+      "current_path": "temp/旧硬件待删除/temp/cad-review/inspect.done",
+      "file_count": 1
+    },
+    {
+      "previous_path": "temp/cad-review/inspect.FCMacro",
+      "current_path": "temp/旧硬件待删除/temp/cad-review/inspect.FCMacro",
+      "file_count": 1
+    },
+    {
+      "previous_path": "temp/cad-review/inspect_t5x_assembly.py",
+      "current_path": "temp/旧硬件待删除/temp/cad-review/inspect_t5x_assembly.py",
+      "file_count": 1
+    },
+    {
+      "previous_path": "temp/cad-review/interfaces_geometry.json",
+      "current_path": "temp/旧硬件待删除/temp/cad-review/interfaces_geometry.json",
+      "file_count": 1
+    },
+    {
+      "previous_path": "temp/cad-review/motor-candidates",
+      "current_path": "temp/旧硬件待删除/temp/cad-review/motor-candidates",
+      "file_count": 2
+    },
+    {
+      "previous_path": "temp/cad-review/normalized_60mm麦轮_右.step",
+      "current_path": "temp/旧硬件待删除/temp/cad-review/normalized_60mm麦轮_右.step",
+      "file_count": 1
+    },
+    {
+      "previous_path": "temp/cad-review/normalized_60mm麦轮_左.step",
+      "current_path": "temp/旧硬件待删除/temp/cad-review/normalized_60mm麦轮_左.step",
+      "file_count": 1
+    },
+    {
+      "previous_path": "temp/cad-review/normalized_75mm麦轮_右.step",
+      "current_path": "temp/旧硬件待删除/temp/cad-review/normalized_75mm麦轮_右.step",
+      "file_count": 1
+    },
+    {
+      "previous_path": "temp/cad-review/normalized_75mm麦轮_左.step",
+      "current_path": "temp/旧硬件待删除/temp/cad-review/normalized_75mm麦轮_左.step",
+      "file_count": 1
+    },
+    {
+      "previous_path": "temp/cad-review/normalized_T5X四轮两驱差速小车【3D模型】.step",
+      "current_path": "temp/旧硬件待删除/temp/cad-review/normalized_T5X四轮两驱差速小车【3D模型】.step",
+      "file_count": 1
+    },
+    {
+      "previous_path": "temp/cad-review/normalized_轴直径6mm_外径28mm_抱紧式联轴器.step",
+      "current_path": "temp/旧硬件待删除/temp/cad-review/normalized_轴直径6mm_外径28mm_抱紧式联轴器.step",
+      "file_count": 1
+    },
+    {
+      "previous_path": "temp/cad-review/original_hashes.json",
+      "current_path": "temp/旧硬件待删除/temp/cad-review/original_hashes.json",
+      "file_count": 1
+    },
+    {
+      "previous_path": "temp/cad-review/pip.log",
+      "current_path": "temp/旧硬件待删除/temp/cad-review/pip.log",
+      "file_count": 1
+    },
+    {
+      "previous_path": "temp/cad-review/present_results.py",
+      "current_path": "temp/旧硬件待删除/temp/cad-review/present_results.py",
+      "file_count": 1
+    },
+    {
+      "previous_path": "temp/cad-review/procurement",
+      "current_path": "temp/旧硬件待删除/temp/cad-review/procurement",
+      "file_count": 40
+    },
+    {
+      "previous_path": "temp/cad-review/procurement_ready",
+      "current_path": "temp/旧硬件待删除/temp/cad-review/procurement_ready",
+      "file_count": 107
+    },
+    {
+      "previous_path": "temp/cad-review/python",
+      "current_path": "temp/旧硬件待删除/temp/cad-review/python",
+      "file_count": 5706
+    },
+    {
+      "previous_path": "temp/cad-review/render_fix.done",
+      "current_path": "temp/旧硬件待删除/temp/cad-review/render_fix.done",
+      "file_count": 1
+    },
+    {
+      "previous_path": "temp/cad-review/render_fix.FCMacro",
+      "current_path": "temp/旧硬件待删除/temp/cad-review/render_fix.FCMacro",
+      "file_count": 1
+    },
+    {
+      "previous_path": "temp/cad-review/rotation_frames",
+      "current_path": "temp/旧硬件待删除/temp/cad-review/rotation_frames",
+      "file_count": 12
+    },
+    {
+      "previous_path": "temp/cad-review/rules",
+      "current_path": "temp/旧硬件待删除/temp/cad-review/rules",
+      "file_count": 18
+    },
+    {
+      "previous_path": "temp/cad-review/source_0.FCStd",
+      "current_path": "temp/旧硬件待删除/temp/cad-review/source_0.FCStd",
+      "file_count": 1
+    },
+    {
+      "previous_path": "temp/cad-review/source_0.png",
+      "current_path": "temp/旧硬件待删除/temp/cad-review/source_0.png",
+      "file_count": 1
+    },
+    {
+      "previous_path": "temp/cad-review/source_1.FCStd",
+      "current_path": "temp/旧硬件待删除/temp/cad-review/source_1.FCStd",
+      "file_count": 1
+    },
+    {
+      "previous_path": "temp/cad-review/source_1.png",
+      "current_path": "temp/旧硬件待删除/temp/cad-review/source_1.png",
+      "file_count": 1
+    },
+    {
+      "previous_path": "temp/cad-review/source_2.FCStd",
+      "current_path": "temp/旧硬件待删除/temp/cad-review/source_2.FCStd",
+      "file_count": 1
+    },
+    {
+      "previous_path": "temp/cad-review/source_2.png",
+      "current_path": "temp/旧硬件待删除/temp/cad-review/source_2.png",
+      "file_count": 1
+    },
+    {
+      "previous_path": "temp/cad-review/source_3.FCStd",
+      "current_path": "temp/旧硬件待删除/temp/cad-review/source_3.FCStd",
+      "file_count": 1
+    },
+    {
+      "previous_path": "temp/cad-review/source_3.png",
+      "current_path": "temp/旧硬件待删除/temp/cad-review/source_3.png",
+      "file_count": 1
+    },
+    {
+      "previous_path": "temp/cad-review/source_4.FCStd",
+      "current_path": "temp/旧硬件待删除/temp/cad-review/source_4.FCStd",
+      "file_count": 1
+    },
+    {
+      "previous_path": "temp/cad-review/source_4.png",
+      "current_path": "temp/旧硬件待删除/temp/cad-review/source_4.png",
+      "file_count": 1
+    },
+    {
+      "previous_path": "temp/cad-review/source_5.FCStd",
+      "current_path": "temp/旧硬件待删除/temp/cad-review/source_5.FCStd",
+      "file_count": 1
+    },
+    {
+      "previous_path": "temp/cad-review/source_5.png",
+      "current_path": "temp/旧硬件待删除/temp/cad-review/source_5.png",
+      "file_count": 1
+    },
+    {
+      "previous_path": "temp/cad-review/t5x_assembly_evidence.json",
+      "current_path": "temp/旧硬件待删除/temp/cad-review/t5x_assembly_evidence.json",
+      "file_count": 1
+    },
+    {
+      "previous_path": "temp/cad-review/t5x_assembly_graph.json",
+      "current_path": "temp/旧硬件待删除/temp/cad-review/t5x_assembly_graph.json",
+      "file_count": 1
+    },
+    {
+      "previous_path": "temp/cad-review/t5x_product_232876.stp",
+      "current_path": "temp/旧硬件待删除/temp/cad-review/t5x_product_232876.stp",
+      "file_count": 1
+    },
+    {
+      "previous_path": "temp/cad-review/t5x_product_244508.stp",
+      "current_path": "temp/旧硬件待删除/temp/cad-review/t5x_product_244508.stp",
+      "file_count": 1
+    },
+    {
+      "previous_path": "temp/cad-review/t5x_product_373937.stp",
+      "current_path": "temp/旧硬件待删除/temp/cad-review/t5x_product_373937.stp",
+      "file_count": 1
+    },
+    {
+      "previous_path": "temp/cad-review/tspi3m",
+      "current_path": "temp/旧硬件待删除/temp/cad-review/tspi3m",
+      "file_count": 14
+    },
+    {
+      "previous_path": "temp/cad-review/wheel_fit.json",
+      "current_path": "temp/旧硬件待删除/temp/cad-review/wheel_fit.json",
+      "file_count": 1
+    },
+    {
+      "previous_path": "05_data/03_results/04_mechanical/20261024_chassis_raw_01.png",
+      "current_path": "temp/旧硬件待删除/05_data/03_results/04_mechanical/20261024_chassis_raw_01.png",
+      "file_count": 1
+    },
+    {
+      "previous_path": "05_data/03_results/04_mechanical/20261024_exploded_60_raw_01.png",
+      "current_path": "temp/旧硬件待删除/05_data/03_results/04_mechanical/20261024_exploded_60_raw_01.png",
+      "file_count": 1
+    },
+    {
+      "previous_path": "05_data/03_results/04_mechanical/20261024_exploded_75_raw_01.png",
+      "current_path": "temp/旧硬件待删除/05_data/03_results/04_mechanical/20261024_exploded_75_raw_01.png",
+      "file_count": 1
+    },
+    {
+      "previous_path": "05_data/03_results/04_mechanical/20261024_fit_60_raw_01.png",
+      "current_path": "temp/旧硬件待删除/05_data/03_results/04_mechanical/20261024_fit_60_raw_01.png",
+      "file_count": 1
+    },
+    {
+      "previous_path": "05_data/03_results/04_mechanical/20261024_fit_75_raw_01.png",
+      "current_path": "temp/旧硬件待删除/05_data/03_results/04_mechanical/20261024_fit_75_raw_01.png",
+      "file_count": 1
+    },
+    {
+      "previous_path": "05_data/03_results/04_mechanical/20261024_fullcar_bottom_raw_01.png",
+      "current_path": "temp/旧硬件待删除/05_data/03_results/04_mechanical/20261024_fullcar_bottom_raw_01.png",
+      "file_count": 1
+    },
+    {
+      "previous_path": "05_data/03_results/04_mechanical/20261024_fullcar_iso_raw_01.png",
+      "current_path": "temp/旧硬件待删除/05_data/03_results/04_mechanical/20261024_fullcar_iso_raw_01.png",
+      "file_count": 1
+    },
+    {
+      "previous_path": "05_data/03_results/04_mechanical/20261024_fullcar_sheet_01.png",
+      "current_path": "temp/旧硬件待删除/05_data/03_results/04_mechanical/20261024_fullcar_sheet_01.png",
+      "file_count": 1
+    },
+    {
+      "previous_path": "05_data/03_results/04_mechanical/20261024_fullcar_sheet_01.svg",
+      "current_path": "temp/旧硬件待删除/05_data/03_results/04_mechanical/20261024_fullcar_sheet_01.svg",
+      "file_count": 1
+    },
+    {
+      "previous_path": "05_data/03_results/04_mechanical/20261024_fullcar_side_raw_01.png",
+      "current_path": "temp/旧硬件待删除/05_data/03_results/04_mechanical/20261024_fullcar_side_raw_01.png",
+      "file_count": 1
+    },
+    {
+      "previous_path": "05_data/03_results/04_mechanical/20261024_fullcar_software_raw_01.jpg",
+      "current_path": "temp/旧硬件待删除/05_data/03_results/04_mechanical/20261024_fullcar_software_raw_01.jpg",
+      "file_count": 1
+    },
+    {
+      "previous_path": "05_data/03_results/04_mechanical/20261024_fullcar_top_raw_01.png",
+      "current_path": "temp/旧硬件待删除/05_data/03_results/04_mechanical/20261024_fullcar_top_raw_01.png",
+      "file_count": 1
+    },
+    {
+      "previous_path": "05_data/03_results/04_mechanical/20261024_layout_raw_01.png",
+      "current_path": "temp/旧硬件待删除/05_data/03_results/04_mechanical/20261024_layout_raw_01.png",
+      "file_count": 1
+    },
+    {
+      "previous_path": "05_data/03_results/04_mechanical/20261024_model_atlas_01.png",
+      "current_path": "temp/旧硬件待删除/05_data/03_results/04_mechanical/20261024_model_atlas_01.png",
+      "file_count": 1
+    },
+    {
+      "previous_path": "05_data/03_results/04_mechanical/20261024_parts_raw_01.png",
+      "current_path": "temp/旧硬件待删除/05_data/03_results/04_mechanical/20261024_parts_raw_01.png",
+      "file_count": 1
+    },
+    {
+      "previous_path": "05_data/03_results/04_mechanical/20261024_software_hide_raw_01.jpg",
+      "current_path": "temp/旧硬件待删除/05_data/03_results/04_mechanical/20261024_software_hide_raw_01.jpg",
+      "file_count": 1
+    },
+    {
+      "previous_path": "05_data/03_results/04_mechanical/20261024_software_layout_raw_01.jpg",
+      "current_path": "temp/旧硬件待删除/05_data/03_results/04_mechanical/20261024_software_layout_raw_01.jpg",
+      "file_count": 1
+    },
+    {
+      "previous_path": "05_data/03_results/04_mechanical/20261024_software_measure_annotated_01.png",
+      "current_path": "temp/旧硬件待删除/05_data/03_results/04_mechanical/20261024_software_measure_annotated_01.png",
+      "file_count": 1
+    },
+    {
+      "previous_path": "05_data/03_results/04_mechanical/20261024_software_measure_annotated_01.svg",
+      "current_path": "temp/旧硬件待删除/05_data/03_results/04_mechanical/20261024_software_measure_annotated_01.svg",
+      "file_count": 1
+    },
+    {
+      "previous_path": "05_data/03_results/04_mechanical/20261024_software_measure_raw_01.jpg",
+      "current_path": "temp/旧硬件待删除/05_data/03_results/04_mechanical/20261024_software_measure_raw_01.jpg",
+      "file_count": 1
+    },
+    {
+      "previous_path": "05_data/03_results/04_mechanical/20261024_software_properties_raw_01.jpg",
+      "current_path": "temp/旧硬件待删除/05_data/03_results/04_mechanical/20261024_software_properties_raw_01.jpg",
+      "file_count": 1
+    },
+    {
+      "previous_path": "05_data/03_results/04_mechanical/20261024_source_0_raw_01.png",
+      "current_path": "temp/旧硬件待删除/05_data/03_results/04_mechanical/20261024_source_0_raw_01.png",
+      "file_count": 1
+    },
+    {
+      "previous_path": "05_data/03_results/04_mechanical/20261024_source_1_raw_01.png",
+      "current_path": "temp/旧硬件待删除/05_data/03_results/04_mechanical/20261024_source_1_raw_01.png",
+      "file_count": 1
+    },
+    {
+      "previous_path": "05_data/03_results/04_mechanical/20261024_source_2_raw_01.png",
+      "current_path": "temp/旧硬件待删除/05_data/03_results/04_mechanical/20261024_source_2_raw_01.png",
+      "file_count": 1
+    },
+    {
+      "previous_path": "05_data/03_results/04_mechanical/20261024_source_3_raw_01.png",
+      "current_path": "temp/旧硬件待删除/05_data/03_results/04_mechanical/20261024_source_3_raw_01.png",
+      "file_count": 1
+    },
+    {
+      "previous_path": "05_data/03_results/04_mechanical/20261024_source_4_raw_01.png",
+      "current_path": "temp/旧硬件待删除/05_data/03_results/04_mechanical/20261024_source_4_raw_01.png",
+      "file_count": 1
+    },
+    {
+      "previous_path": "05_data/03_results/04_mechanical/20261024_source_5_raw_01.png",
+      "current_path": "temp/旧硬件待删除/05_data/03_results/04_mechanical/20261024_source_5_raw_01.png",
+      "file_count": 1
+    },
+    {
+      "previous_path": "05_data/03_results/04_mechanical/20261024_wheel_fit_01.gif",
+      "current_path": "temp/旧硬件待删除/05_data/03_results/04_mechanical/20261024_wheel_fit_01.gif",
+      "file_count": 1
+    },
+    {
+      "previous_path": "03_hardware/01_机械/02_零件库.20261025-000524.FCBak",
+      "current_path": "temp/旧硬件待删除/03_hardware/01_机械/02_零件库.20261025-000524.FCBak",
+      "file_count": 1
+    },
+    {
+      "previous_path": "03_hardware/01_机械/03_整车布局.20261025-000524.FCBak",
+      "current_path": "temp/旧硬件待删除/03_hardware/01_机械/03_整车布局.20261025-000524.FCBak",
+      "file_count": 1
+    }
+  ],
+  "prior_delete_attempts": {
+    "status": "blocked_by_policy",
+    "actions": [
+      "按已校验项目内绝对路径清单批量Remove-Item",
+      "单个明确旧候选CAD目录Remove-Item -LiteralPath -Recurse"
+    ],
+    "result": "未删除任何文件；用户随后改为集中移动，本报告按新指令完成。"
+  },
+  "relocation_history_status": "relocated_and_hash_verified",
+  "deleted_file_count_at_relocation": 0,
+  "targets_scope": "targets保存此前89项目标的移动历史；部分历史current_path现已删除，实际留存以final_cleanup为准。",
+  "final_cleanup": {
+    "date": "2026-10-25",
+    "completed": true,
+    "deleted_file_count": 6215,
+    "deleted_bytes": 1326896701,
+    "deleted_targets": [
+      {
+        "path": "temp/20261025_procurement_update",
+        "files": 23,
+        "bytes": 949735
+      },
+      {
+        "path": "temp/脚本",
+        "files": 1,
+        "bytes": 5926
+      },
+      {
+        "path": "temp/cad_inventory",
+        "files": 63,
+        "bytes": 8362578
+      },
+      {
+        "path": "temp/cleanup_current",
+        "files": 4,
+        "bytes": 8385
+      },
+      {
+        "path": "temp/procurement_ledger",
+        "files": 42,
+        "bytes": 2615110
+      },
+      {
+        "path": "temp/procurement-confirm",
+        "files": 14,
+        "bytes": 2528579
+      },
+      {
+        "path": "temp/purchase_update",
+        "files": 12,
+        "bytes": 1204167
+      },
+      {
+        "path": "temp/system_planning",
+        "files": 34,
+        "bytes": 14425324
+      },
+      {
+        "path": "temp/20261025_power_selection_docs.py",
+        "files": 1,
+        "bytes": 8529
+      },
+      {
+        "path": "temp/旧硬件待删除/temp",
+        "files": 5963,
+        "bytes": 1220098882
+      },
+      {
+        "path": "temp/旧硬件待删除/05_data",
+        "files": 28,
+        "bytes": 5264266
+      },
+      {
+        "path": "temp/旧硬件待删除/03_hardware/01_机械/02_试装工程",
+        "files": 11,
+        "bytes": 30742735
+      },
+      {
+        "path": "temp/旧硬件待删除/03_hardware/01_机械/03_四驱方案",
+        "files": 13,
+        "bytes": 39619432
+      },
+      {
+        "path": "temp/旧硬件待删除/03_hardware/01_机械/01_选型与费用.csv",
+        "files": 1,
+        "bytes": 4938
+      },
+      {
+        "path": "temp/旧硬件待删除/03_hardware/01_机械/02_原模型部件清单.md",
+        "files": 1,
+        "bytes": 16433
+      },
+      {
+        "path": "temp/旧硬件待删除/03_hardware/01_机械/02_零件库.20261025-000524.FCBak",
+        "files": 1,
+        "bytes": 178522
+      },
+      {
+        "path": "temp/旧硬件待删除/03_hardware/01_机械/03_整车布局.20261025-000524.FCBak",
+        "files": 1,
+        "bytes": 393391
+      },
+      {
+        "path": "temp/旧硬件待删除/03_hardware/01_机械/01_候选原件/03_电机/310Motor.STEP",
+        "files": 1,
+        "bytes": 355151
+      },
+      {
+        "path": "temp/旧硬件待删除/03_hardware/01_机械/01_候选原件/04_支架/310Motor_Bracket-NEW.STEP",
+        "files": 1,
+        "bytes": 114618
+      }
+    ],
+    "all_targets_resolved_inside_workspace": true,
+    "duplicate_manufacturer_originals_sha256_verified": true,
+    "unique_legacy_user_originals_preserved": [
+      {
+        "path": "temp/旧硬件待删除/03_hardware/01_机械/01_候选原件/01_60mm麦轮/60mm麦轮_右.stp",
+        "bytes": 1305009,
+        "sha256": "bdd5826965bea2a28d3717147f985b7e1ea0dff5601646817a19f41a31018203"
+      },
+      {
+        "path": "temp/旧硬件待删除/03_hardware/01_机械/01_候选原件/01_60mm麦轮/60mm麦轮_左.stp",
+        "bytes": 1203688,
+        "sha256": "ca74779ff242341b24675e9afe4d850b0dfc94be589887310220d87f618e3e93"
+      },
+      {
+        "path": "temp/旧硬件待删除/03_hardware/01_机械/01_候选原件/02_75mm麦轮/75mm麦轮_右.stp",
+        "bytes": 2768960,
+        "sha256": "8a4d595ae810ba4e1ed746dc381b1429f76e662529acb40d4c03e02694437102"
+      },
+      {
+        "path": "temp/旧硬件待删除/03_hardware/01_机械/01_候选原件/02_75mm麦轮/75mm麦轮_左.stp",
+        "bytes": 2615500,
+        "sha256": "a16b7e8102933689bae2518edc4c7a833afc5f4737d757cb1e943ab7c6f9110c"
+      },
+      {
+        "path": "temp/旧硬件待删除/03_hardware/01_机械/01_候选原件/03_电机/FIT0458.stp",
+        "bytes": 6379782,
+        "sha256": "c3083218ade5fab400b22d7f0624fccaa66075f2d9df8100f527997802d1ac44"
+      },
+      {
+        "path": "temp/旧硬件待删除/03_hardware/01_机械/01_候选原件/T5X四轮两驱差速小车【3D模型】.stp",
+        "bytes": 23467986,
+        "sha256": "06b90417f67e5b043bedf5170f0da9a808729812526ae84bd7ad7551fb52e7a4"
+      },
+      {
+        "path": "temp/旧硬件待删除/03_hardware/01_机械/01_候选原件/轴直径6mm_外径28mm_抱紧式联轴器.stp",
+        "bytes": 54884,
+        "sha256": "b6580704e085f4681c3466038e74bb97a3158cca131caec2070f9082f33f0f34"
+      }
+    ],
+    "retained_runtime": [
+      "temp/cad-review/freecad/",
+      "temp/perspective/dependencies/",
+      "temp/xiangqi_recognition/dependencies/",
+      "temp/docusaurus/node_modules/"
+    ],
+    "protected_current_binary_file_count": 95,
+    "figure_source_archived": "05_data/03_results/01_design/draw_pushing.py",
+    "figure_source_reproduction": "1600×1080像素逐像素一致",
+    "hardware_validation": "not performed",
+    "protected_binary_verification": {
+      "unchanged": 94,
+      "intentional_derived_png_refresh": 1,
+      "originals_lost": 0
+    },
+    "refreshed_derived_artifacts": [
+      {
+        "path": "05_data/03_results/01_design/03_系统供电.png",
+        "old_sha256": "b8ff69eed209b8d7963acf78b6851d3ff3e2b10d5b7c8a66f37c5817c5980d00",
+        "sha256": "be9ba27fa55c959c01c9115a5f21ad82105bb12048253e70c2eef4b5bb63f462",
+        "pixels": [
+          2000,
+          1937
+        ],
+        "reason": "同步电源板已付款状态，采用已人工检查完整内容的draw.io Desktop导出，避免本机大倍率导出裁切。",
+        "editable_source": "05_data/03_results/01_design/03_系统供电.drawio"
+      }
+    ],
+    "final_generated_cleanup": [
+      {
+        "bytes": 59337,
+        "files": 30,
+        "path": "temp/docusaurus/.docusaurus"
+      },
+      {
+        "bytes": 47118132,
+        "files": 148,
+        "path": "temp/docusaurus/build"
+      },
+      {
+        "bytes": 786963,
+        "files": 9,
+        "path": "temp/docusaurus/http-check"
+      },
+      {
+        "bytes": 1329088,
+        "files": 532,
+        "path": "temp/docusaurus/tmp"
+      },
+      {
+        "bytes": 22529938,
+        "files": 33,
+        "path": "temp/finalize"
+      }
+    ],
+    "final_verification": {
+      "algorithm_reruns": "matched existing records",
+      "website_build": "passed",
+      "fcstd_files": 2,
+      "cad_step_files": 23,
+      "markdown_links": 259,
+      "verified_hashes": 158,
+      "generated_page_content": "passed",
+      "json_files": 22,
+      "latest_progress_report": "包含新增Perspective效果图；汇报窗口已结束"
+    },
+    "post_report_build_cache_status": "最后一次包含Perspective汇报的构建已通过；再次删除网站缓存的操作被自动审批拦截，返回blocked by policy且未提供具体原因。此前清理已完成，最后一次生成的缓存保留在Git忽略的temp/docusaurus中，不随提交上传。"
+  }
+}
