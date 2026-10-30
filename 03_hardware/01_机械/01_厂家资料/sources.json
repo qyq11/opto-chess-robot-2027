@@ -5,21 +5,21 @@
       "id": "S01",
       "url": "https://www.yahboom.net/study/MD310/",
       "cad_download_index": "https://drive.google.com/drive/folders/1Jtzf7zqZUiggxtO23tltsWPmllaOnn6C",
-      "local_files": [
-        "310Motor.STEP",
-        "310Motor_Bracket-NEW.STEP",
-        "03_电机尺寸.PNG",
-        "04_支架尺寸.pdf"
-      ],
       "license": "厂家资料，未单独取得再分发许可",
       "status": "已取得原件；实购批次待核",
       "checked_date": "2026-10-24",
       "hashes": {
-        "03_hardware/01_机械/01_厂家资料/310Motor.STEP": "ff4b5efa0e056d7529783a7a6d07f8068b6dc8d13cec240350c3c43bedf49f38",
-        "03_hardware/01_机械/01_厂家资料/310Motor_Bracket-NEW.STEP": "fa9624745c8aef4a2682ba81332aaa1214a427cc25b736ea6c1545ad4ae43ce3",
-        "03_hardware/01_机械/01_厂家资料/03_电机尺寸.PNG": "5650ff1bb0ff279a1f8fa2c112e8483d74bbe8b1ab36b06dbff6b84db55dcfd2",
-        "03_hardware/01_机械/01_厂家资料/04_支架尺寸.pdf": "156489de43ece235423f58f18a4e0ad562ef0180d2447461e806f53d5ba3cdd3"
-      }
+        "03_hardware/01_机械/01_厂家资料/02_310电机/01_310电机.STEP": "ff4b5efa0e056d7529783a7a6d07f8068b6dc8d13cec240350c3c43bedf49f38",
+        "03_hardware/01_机械/01_厂家资料/02_310电机/02_四孔支架.STEP": "fa9624745c8aef4a2682ba81332aaa1214a427cc25b736ea6c1545ad4ae43ce3",
+        "03_hardware/01_机械/01_厂家资料/02_310电机/05_电机尺寸.PNG": "5650ff1bb0ff279a1f8fa2c112e8483d74bbe8b1ab36b06dbff6b84db55dcfd2",
+        "03_hardware/01_机械/01_厂家资料/02_310电机/06_四孔支架尺寸.pdf": "156489de43ece235423f58f18a4e0ad562ef0180d2447461e806f53d5ba3cdd3"
+      },
+      "local_project_files": [
+        "03_hardware/01_机械/01_厂家资料/02_310电机/01_310电机.STEP",
+        "03_hardware/01_机械/01_厂家资料/02_310电机/02_四孔支架.STEP",
+        "03_hardware/01_机械/01_厂家资料/02_310电机/05_电机尺寸.PNG",
+        "03_hardware/01_机械/01_厂家资料/02_310电机/06_四孔支架尺寸.pdf"
+      ]
     },
     {
       "id": "S02",
@@ -29,7 +29,7 @@
         "05_data/01_raw/03_procurement/20261024_yahboom_hex_dimensions_01.jpg",
         "05_data/01_raw/03_procurement/20261024_yahboom_wheel_specs_01.jpg"
       ],
-      "status": "本轮重新查阅厂家页，未取得该65mm尼龙轮/六角毂精确STEP；自行建立简化模型",
+      "status": "65mm尼龙麦轮仍为尺寸简化；2026-10-27采用用户提供的厂家3mm六角联轴器STEP，见S11；实购批次及配合公差待核。",
       "checked_date": "2026-10-24",
       "hashes": {
         "05_data/01_raw/03_procurement/20261024_yahboom_wheel_dimensions_01.jpg": "0b47efe093e469fc7fc5a8a5bf83a73cb0f3287ce27b24cb04ec93f34bceba45",
@@ -41,14 +41,14 @@
       "id": "S03",
       "url": "https://www.yahboom.store/products/quad-md-module",
       "drawing_url": "https://cdn.shopify.com/s/files/1/0066/9686/1780/files/4-Channel_encoder_motor_drive_board_details_26.jpg?v=1782463521",
-      "local_files": [
-        "01_四路驱动尺寸.jpg"
-      ],
-      "status": "厂家标注尺寸；到货版本待核",
+      "status": "原尺寸图保留；2026-10-27加入用户提供V2曲面CAD，原件不含实体，实购版本待到货核对。",
       "checked_date": "2026-10-24",
       "hashes": {
-        "03_hardware/01_机械/01_厂家资料/01_四路驱动尺寸.jpg": "aa96653495e02f5c37d4b60d494e4ceb67493c4b07b9641d4f4bc75237b3032e"
-      }
+        "03_hardware/01_机械/01_厂家资料/03_四路电机驱动/02_驱动尺寸.jpg": "aa96653495e02f5c37d4b60d494e4ceb67493c4b07b9641d4f4bc75237b3032e"
+      },
+      "local_project_files": [
+        "03_hardware/01_机械/01_厂家资料/03_四路电机驱动/02_驱动尺寸.jpg"
+      ]
     },
     {
       "id": "S04",
@@ -120,16 +120,466 @@
     {
       "id": "S10",
       "url": "https://detail.tmall.com/item.htm?id=671414115083",
-      "checked_date": "2026-10-25",
+      "checked_date": "2026-10-27",
       "local_project_files": [
         "05_data/01_raw/03_procurement/20261024_t5x_options_01.png",
-        "03_hardware/02_采购/04_20261024_轮趣_订单详情_5127831576100359305.pdf"
+        "03_hardware/02_采购/04_20261024_轮趣_订单详情_5127831576100359305.pdf",
+        "03_hardware/01_机械/01_厂家资料/01_T5X四驱/06_版权声明.pdf",
+        "03_hardware/01_机械/01_厂家资料/01_T5X四驱/01_底板孔位说明.pdf",
+        "03_hardware/01_机械/01_厂家资料/01_T5X四驱/04_厂家整车原件.stp",
+        "03_hardware/01_机械/01_厂家资料/01_T5X四驱/03_底板孔位图.dwg",
+        "03_hardware/01_机械/01_厂家资料/01_T5X四驱/02_底板孔位图.pdf",
+        "03_hardware/01_机械/01_厂家资料/01_T5X四驱/05_四驱底板.step"
       ],
-      "status": "用户商品截图和订单：四驱加高板2套、1.5mm、图标45g、附60mm金属柱；长宽/孔图未知。未取得与本已购SKU绑定的精确CAD。",
+      "status": "用户提供厂家资料包，已提取147×210×1.5mm板件并用于原改装模型的上下两层，其他几何和位置不变；原孔固定及相机杆通道待核。",
       "hashes": {
         "05_data/01_raw/03_procurement/20261024_t5x_options_01.png": "401e55a1c9d7df681ac595cce8c23eb19e836d6a52b2644a0e0c829c82ce73a0",
-        "03_hardware/02_采购/04_20261024_轮趣_订单详情_5127831576100359305.pdf": "765903e8be81937c6fdc62741fa87e5eb9fe305b738e266c9b5aa5a3121e5720"
+        "03_hardware/02_采购/04_20261024_轮趣_订单详情_5127831576100359305.pdf": "765903e8be81937c6fdc62741fa87e5eb9fe305b738e266c9b5aa5a3121e5720",
+        "03_hardware/01_机械/01_厂家资料/01_T5X四驱/06_版权声明.pdf": "5e56df24fb3e63575dce4cf56722b0fc4940ccf6ea7f354ae8fa2746022ed63f",
+        "03_hardware/01_机械/01_厂家资料/01_T5X四驱/01_底板孔位说明.pdf": "99c947928025a03c5b42de94c00dc075c9d6f35ac276037faa61d0fba4b91389",
+        "03_hardware/01_机械/01_厂家资料/01_T5X四驱/04_厂家整车原件.stp": "5be365267d66bc33d663e9b9fd56b56e58a187aee9a922810e58246e2384fb75",
+        "03_hardware/01_机械/01_厂家资料/01_T5X四驱/03_底板孔位图.dwg": "4f689c0dff7a93f85fcb8f298139e529b55d9e167a74ec597efcc84e4753cada",
+        "03_hardware/01_机械/01_厂家资料/01_T5X四驱/02_底板孔位图.pdf": "79b7c97be69c33078b14d721973572f36f246d55ac54bf5be955fe12114ad6e2",
+        "03_hardware/01_机械/01_厂家资料/01_T5X四驱/05_四驱底板.step": "2cd989d6a928c0405fa06f2b53dbe2dc6c7cec2b2b5266bcb59a9f52b6724f6a"
+      },
+      "derived_plate": {
+        "path": "03_hardware/01_机械/01_厂家资料/01_T5X四驱/05_四驱底板.step",
+        "source": "03_hardware/01_机械/01_厂家资料/01_T5X四驱/04_厂家整车原件.stp",
+        "source_solid_index_zero_based": 20,
+        "translation": "仅将板件底面归零；中心对齐X/Y零点，未缩放或修改孔槽",
+        "outline_mm": [
+          147,
+          210,
+          1.5
+        ],
+        "valid": true,
+        "used_by": [
+          "D01下层板，底面离地68mm",
+          "D03上层板，底面离地104mm"
+        ]
+      }
+    },
+    {
+      "id": "S11",
+      "checked_date": "2026-10-27",
+      "source": "用户提供的310电机资料包，选取2026.6.24及之后的四路驱动分支；未在线下载或核实更新版本",
+      "status": "10份完整核心原件已归档；联轴器采用实体STEP，驱动采用未封闭曲面参考；电机和四孔支架复用已存在的相同原件 2026-10-28已按310电机与四路驱动分目录管理，链接同步。",
+      "license": "厂家资料，未另行取得再分发许可",
+      "local_project_files": [
+        "03_hardware/01_机械/01_厂家资料/03_四路电机驱动/05_串口寄存器.xlsx",
+        "03_hardware/01_机械/01_厂家资料/02_310电机/04_电机参数.docx",
+        "03_hardware/01_机械/01_厂家资料/03_四路电机驱动/03_驱动简介.pdf",
+        "03_hardware/01_机械/01_厂家资料/03_四路电机驱动/07_STM32串口示例.pdf",
+        "03_hardware/01_机械/01_厂家资料/03_四路电机驱动/04_控制指令.pdf",
+        "03_hardware/01_机械/01_厂家资料/03_四路电机驱动/01_四路驱动_V2.STEP",
+        "03_hardware/01_机械/01_厂家资料/03_四路电机驱动/09_电机与驱动用法.pdf",
+        "03_hardware/01_机械/01_厂家资料/03_四路电机驱动/06_IIC寄存器.xlsx",
+        "03_hardware/01_机械/01_厂家资料/03_四路电机驱动/08_STM32_IIC示例.pdf",
+        "03_hardware/01_机械/01_厂家资料/02_310电机/03_3mm六角联轴器.STEP"
+      ],
+      "hashes": {
+        "03_hardware/01_机械/01_厂家资料/03_四路电机驱动/05_串口寄存器.xlsx": "8ac0536b067532497aba9417997134be1f5e15d098667f3e54d0d4ee2ba488c8",
+        "03_hardware/01_机械/01_厂家资料/02_310电机/04_电机参数.docx": "5edbb6801ed56a26db33739b1cf7461a0c7bd0ff56986e1496c6f188a0605ae5",
+        "03_hardware/01_机械/01_厂家资料/03_四路电机驱动/03_驱动简介.pdf": "45bfd0353ef28f7a73728d271704b4f2a2f36c40d76fc77b27a1cb4d2f02c1f8",
+        "03_hardware/01_机械/01_厂家资料/03_四路电机驱动/07_STM32串口示例.pdf": "109d4e9a003a6663d02481cd5889fd0ea7da67e32749896426692449f756220d",
+        "03_hardware/01_机械/01_厂家资料/03_四路电机驱动/04_控制指令.pdf": "e38cf21e23d68f92fc2df8fcbdaabcf6db835477621770a92f631e499a4a04a6",
+        "03_hardware/01_机械/01_厂家资料/03_四路电机驱动/01_四路驱动_V2.STEP": "4729d6a7acdd3ff69320a012646d4e4aa4f2710e0aa3c6b7ae3c70610af953e4",
+        "03_hardware/01_机械/01_厂家资料/03_四路电机驱动/09_电机与驱动用法.pdf": "638f57fe6a2a9ecaae873871615095564009514da0ec0eddae1d59025dda6384",
+        "03_hardware/01_机械/01_厂家资料/03_四路电机驱动/06_IIC寄存器.xlsx": "ca6eb263bae59860a9f1949dc0a5723f0d1b70a06010269c73b76b2d968766ab",
+        "03_hardware/01_机械/01_厂家资料/03_四路电机驱动/08_STM32_IIC示例.pdf": "ed80eac17b19b0711745eccb3f92f5f4642661705a6f4f33d71cf50de9c13d02",
+        "03_hardware/01_机械/01_厂家资料/02_310电机/03_3mm六角联轴器.STEP": "8feaa409e30686038913f197021caaddf006112b7a6824ced6cd1f1b8cb82947"
+      }
+    },
+    {
+      "id": "S12",
+      "checked_date": "2026-10-28",
+      "source": "用户提供的独立四路电机驱动资料包，按2026.6.24及以后分支采用；未在线核实版本",
+      "license": "厂家原件，未另行取得再分发许可",
+      "status": "驱动V2 CAD与此前归档原件完全一致；新增固件更新说明、厂家固件及STM32完整参考工程。未烧写固件，未将F103例程作为本车F407程序验收。",
+      "local_project_files": [
+        "03_hardware/01_机械/01_厂家资料/03_四路电机驱动/10_固件更新说明.pdf",
+        "03_hardware/01_机械/01_厂家资料/03_四路电机驱动/11_厂家固件.hex",
+        "03_hardware/01_机械/01_厂家资料/03_四路电机驱动/12_STM32串口工程.zip"
+      ],
+      "hashes": {
+        "03_hardware/01_机械/01_厂家资料/03_四路电机驱动/10_固件更新说明.pdf": "e30184238ad4257a42161150310c1414e1d2e7644b87c37b6b03ee341e871a9c",
+        "03_hardware/01_机械/01_厂家资料/03_四路电机驱动/11_厂家固件.hex": "4f6d6857e8c849a6010c9ff7b3c634432fe4a4ed368ba1f746ed7245c1a1e287",
+        "03_hardware/01_机械/01_厂家资料/03_四路电机驱动/12_STM32串口工程.zip": "22d7985147ec4b7cc50aa606920c43e94e1e182fd1f4e089e6c261d2a8fa33da"
       }
     }
-  ]
+  ],
+  "t5x_user_import": {
+    "date": "2026-10-27",
+    "source": "用户放入项目的WHEELTEC T5X系列底盘客户资料",
+    "package_version_label": "2026.06.18（原资料包目录名，未在线核实）",
+    "external_download_verified": false,
+    "license": "轮趣厂家资料，版权声明原件随四驱资料保存；未取得额外再分发许可。",
+    "scope": "用户确认只使用T5X板件，上下两层各1片；保留5份来源原件，14份未采用资料移至temp留存，12份两驱专属资料按用户要求删除。其余模型几何和位置不变，上层与相机杆相交待处理。",
+    "files": [
+      {
+        "original_path": "03_hardware/WHEELTEC T5X系列底盘客户资料/上位机与手机APP资料.txt",
+        "path": "temp/t5x-intake/未采用原件/上位机与手机APP资料.txt",
+        "category": "当前未采用，保留唯一原件",
+        "size_bytes": 133,
+        "sha256": "5c5bf4441010a36a70c72232f83819b6b9ca5c68821749efdf8a013b9ec467dd",
+        "original_last_write_time": "2026-10-27T16:47:44.0043476+08:00"
+      },
+      {
+        "original_path": "03_hardware/WHEELTEC T5X系列底盘客户资料/智能车与电赛产品Agent助手链接.txt",
+        "path": "temp/t5x-intake/未采用原件/智能车与电赛产品Agent助手链接.txt",
+        "category": "当前未采用，保留唯一原件",
+        "size_bytes": 520,
+        "sha256": "03175d86079d07b978b12797fd189d20f6ec2ec37039875a264fc75b03dd26d5",
+        "original_last_write_time": "2026-10-27T16:47:43.3904561+08:00"
+      },
+      {
+        "original_path": "03_hardware/WHEELTEC T5X系列底盘客户资料/智能小车底盘开发参考资料.txt",
+        "path": "temp/t5x-intake/未采用原件/智能小车底盘开发参考资料.txt",
+        "category": "未采用的厂家整车、程序或附件资料；保留原件",
+        "size_bytes": 162,
+        "sha256": "1a53d86eb50d67908eebf8fcad6f12eb94c1d9a72d55a014cfc6c122eca4c5b6",
+        "original_last_write_time": "2026-10-27T16:47:43.6287996+08:00"
+      },
+      {
+        "original_path": "03_hardware/WHEELTEC T5X系列底盘客户资料/WHEELTEC_MSPM0G3507开发板相关资料.txt",
+        "path": "temp/t5x-intake/未采用原件/WHEELTEC_MSPM0G3507开发板相关资料.txt",
+        "category": "当前未采用，保留唯一原件",
+        "size_bytes": 177,
+        "sha256": "33cb128b44d00a6959542e94bdd61feba44b6705ff1262bcb119a31824dc2f8f",
+        "original_last_write_time": "2026-10-27T16:47:43.5262104+08:00"
+      },
+      {
+        "original_path": "03_hardware/WHEELTEC T5X系列底盘客户资料/WHEELTEC T5X系列底盘客户资料_2026.06.18/版权声明.pdf",
+        "path": "03_hardware/01_机械/01_厂家资料/01_T5X四驱/06_版权声明.pdf",
+        "category": "仅采用四驱底板；厂家整车STEP仅用于提取原始板件",
+        "size_bytes": 359078,
+        "sha256": "5e56df24fb3e63575dce4cf56722b0fc4940ccf6ea7f354ae8fa2746022ed63f",
+        "original_last_write_time": "2026-10-27T16:47:44.7283938+08:00"
+      },
+      {
+        "original_path": "03_hardware/WHEELTEC T5X系列底盘客户资料/WHEELTEC T5X系列底盘客户资料_2026.06.18/联系我们.pdf",
+        "path": "temp/t5x-intake/未采用原件/WHEELTEC T5X系列底盘客户资料_2026.06.18/联系我们.pdf",
+        "category": "当前未采用，保留唯一原件",
+        "size_bytes": 340329,
+        "sha256": "5898bfb5fb282a58d361b7a19b8e39b646254d80f73d16e697cd9297b9fb76e7",
+        "original_last_write_time": "2026-10-27T16:47:44.6973743+08:00"
+      },
+      {
+        "original_path": "03_hardware/WHEELTEC T5X系列底盘客户资料/WHEELTEC T5X系列底盘客户资料_2026.06.18/1.孔位说明与孔位图纸/T5X差速小车孔位示意图.pdf",
+        "path": "temp/t5x-intake/未采用原件/WHEELTEC T5X系列底盘客户资料_2026.06.18/1.孔位说明与孔位图纸/T5X差速小车孔位示意图.pdf",
+        "category": "用户于2026-10-27明确要求删除两驱车型专属原件",
+        "size_bytes": 29527,
+        "sha256": "c385dcf64b7fcbe73fd25f59c6f102b48e4b78cd47ba5094699e3739bec46f78",
+        "original_last_write_time": "2026-10-27T16:47:46.5128206+08:00",
+        "disposition": "deleted_by_user_request"
+      },
+      {
+        "original_path": "03_hardware/WHEELTEC T5X系列底盘客户资料/WHEELTEC T5X系列底盘客户资料_2026.06.18/1.孔位说明与孔位图纸/T5X四驱小车孔位示意图.pdf",
+        "path": "03_hardware/01_机械/01_厂家资料/01_T5X四驱/01_底板孔位说明.pdf",
+        "category": "仅采用四驱底板；厂家整车STEP仅用于提取原始板件",
+        "size_bytes": 24252,
+        "sha256": "99c947928025a03c5b42de94c00dc075c9d6f35ac276037faa61d0fba4b91389",
+        "original_last_write_time": "2026-10-27T16:47:46.7205644+08:00"
+      },
+      {
+        "original_path": "03_hardware/WHEELTEC T5X系列底盘客户资料/WHEELTEC T5X系列底盘客户资料_2026.06.18/2.安装视频教程、三维模型、二维图纸/T5X小车孔位示意图.dwg",
+        "path": "temp/t5x-intake/未采用原件/WHEELTEC T5X系列底盘客户资料_2026.06.18/2.安装视频教程、三维模型、二维图纸/T5X小车孔位示意图.dwg",
+        "category": "未采用的厂家整车、程序或附件资料；保留原件",
+        "size_bytes": 104870,
+        "sha256": "bb3224b1c6643fe1abff5b3df8dcd048e8a5cb20fd07de63612df1624cff2e44",
+        "original_last_write_time": "2026-10-27T16:47:48.51496+08:00"
+      },
+      {
+        "original_path": "03_hardware/WHEELTEC T5X系列底盘客户资料/WHEELTEC T5X系列底盘客户资料_2026.06.18/2.安装视频教程、三维模型、二维图纸/T5X四驱车/T5X四轮四驱小车【安装视频】.mp4",
+        "path": "temp/t5x-intake/未采用原件/WHEELTEC T5X系列底盘客户资料_2026.06.18/2.安装视频教程、三维模型、二维图纸/T5X四驱车/T5X四轮四驱小车【安装视频】.mp4",
+        "category": "未采用的厂家整车、程序或附件资料；保留原件",
+        "size_bytes": 164966380,
+        "sha256": "95ab0eccaedb2c2c0357e9fadffc3a3477a96d478213192347ed8b0a69bda447",
+        "original_last_write_time": "2026-10-27T16:48:51.9490362+08:00"
+      },
+      {
+        "original_path": "03_hardware/WHEELTEC T5X系列底盘客户资料/WHEELTEC T5X系列底盘客户资料_2026.06.18/2.安装视频教程、三维模型、二维图纸/T5X四驱车/T5X四驱差速小车.dwg",
+        "path": "temp/t5x-intake/未采用原件/WHEELTEC T5X系列底盘客户资料_2026.06.18/2.安装视频教程、三维模型、二维图纸/T5X四驱车/T5X四驱差速小车.dwg",
+        "category": "未采用的厂家整车、程序或附件资料；保留原件",
+        "size_bytes": 450242,
+        "sha256": "5f6fd8561a2d69c4430c620a161b4336d5817478a091fab36e69e92047ec39b0",
+        "original_last_write_time": "2026-10-27T16:47:59.0935891+08:00"
+      },
+      {
+        "original_path": "03_hardware/WHEELTEC T5X系列底盘客户资料/WHEELTEC T5X系列底盘客户资料_2026.06.18/2.安装视频教程、三维模型、二维图纸/T5X四驱车/T5X四驱差速小车.pdf",
+        "path": "temp/t5x-intake/未采用原件/WHEELTEC T5X系列底盘客户资料_2026.06.18/2.安装视频教程、三维模型、二维图纸/T5X四驱车/T5X四驱差速小车.pdf",
+        "category": "未采用的厂家整车、程序或附件资料；保留原件",
+        "size_bytes": 217230,
+        "sha256": "fe286efd2901699c8bb4bf2e4324a6bcc5ca8c2f3ad0fcb213abc60023302c6a",
+        "original_last_write_time": "2026-10-27T16:47:58.9038502+08:00"
+      },
+      {
+        "original_path": "03_hardware/WHEELTEC T5X系列底盘客户资料/WHEELTEC T5X系列底盘客户资料_2026.06.18/2.安装视频教程、三维模型、二维图纸/T5X四驱车/T5X四驱小车【3D模型】.stp",
+        "path": "03_hardware/01_机械/01_厂家资料/01_T5X四驱/04_厂家整车原件.stp",
+        "category": "仅采用四驱底板；厂家整车STEP仅用于提取原始板件",
+        "size_bytes": 18127374,
+        "sha256": "5be365267d66bc33d663e9b9fd56b56e58a187aee9a922810e58246e2384fb75",
+        "original_last_write_time": "2026-10-27T16:48:26.5675571+08:00"
+      },
+      {
+        "original_path": "03_hardware/WHEELTEC T5X系列底盘客户资料/WHEELTEC T5X系列底盘客户资料_2026.06.18/2.安装视频教程、三维模型、二维图纸/T5X四驱车/T5X四驱小车【3D模型截图】.png",
+        "path": "temp/t5x-intake/未采用原件/WHEELTEC T5X系列底盘客户资料_2026.06.18/2.安装视频教程、三维模型、二维图纸/T5X四驱车/T5X四驱小车【3D模型截图】.png",
+        "category": "未采用的厂家整车、程序或附件资料；保留原件",
+        "size_bytes": 356105,
+        "sha256": "ab9f37d5392fc3214601b196173a98f90903ab4d7ef65553b7ee712b6c02dcf3",
+        "original_last_write_time": "2026-10-27T16:47:58.1020101+08:00"
+      },
+      {
+        "original_path": "03_hardware/WHEELTEC T5X系列底盘客户资料/WHEELTEC T5X系列底盘客户资料_2026.06.18/2.安装视频教程、三维模型、二维图纸/T5X四驱车/T5X四驱小车板件孔位【孔位图】.dwg",
+        "path": "03_hardware/01_机械/01_厂家资料/01_T5X四驱/03_底板孔位图.dwg",
+        "category": "仅采用四驱底板；厂家整车STEP仅用于提取原始板件",
+        "size_bytes": 105539,
+        "sha256": "4f689c0dff7a93f85fcb8f298139e529b55d9e167a74ec597efcc84e4753cada",
+        "original_last_write_time": "2026-10-27T16:47:57.8951198+08:00"
+      },
+      {
+        "original_path": "03_hardware/WHEELTEC T5X系列底盘客户资料/WHEELTEC T5X系列底盘客户资料_2026.06.18/2.安装视频教程、三维模型、二维图纸/T5X四驱车/T5X四驱小车孔位【孔位图】.pdf",
+        "path": "03_hardware/01_机械/01_厂家资料/01_T5X四驱/02_底板孔位图.pdf",
+        "category": "仅采用四驱底板；厂家整车STEP仅用于提取原始板件",
+        "size_bytes": 87714,
+        "sha256": "79b7c97be69c33078b14d721973572f36f246d55ac54bf5be955fe12114ad6e2",
+        "original_last_write_time": "2026-10-27T16:47:58.6947042+08:00"
+      },
+      {
+        "original_path": "03_hardware/WHEELTEC T5X系列底盘客户资料/WHEELTEC T5X系列底盘客户资料_2026.06.18/2.安装视频教程、三维模型、二维图纸/T5X差速车/T5X差速小车板件孔位【孔位图】.dwg",
+        "path": "temp/t5x-intake/未采用原件/WHEELTEC T5X系列底盘客户资料_2026.06.18/2.安装视频教程、三维模型、二维图纸/T5X差速车/T5X差速小车板件孔位【孔位图】.dwg",
+        "category": "用户于2026-10-27明确要求删除两驱车型专属原件",
+        "size_bytes": 103394,
+        "sha256": "093f674e01087d2b97dede24bbc47a53255d556ebb7cf6a0e699d0ffecf198f7",
+        "original_last_write_time": "2026-10-27T16:47:55.0842277+08:00",
+        "disposition": "deleted_by_user_request"
+      },
+      {
+        "original_path": "03_hardware/WHEELTEC T5X系列底盘客户资料/WHEELTEC T5X系列底盘客户资料_2026.06.18/2.安装视频教程、三维模型、二维图纸/T5X差速车/T5X差速小车板件孔位【孔位图】.pdf",
+        "path": "temp/t5x-intake/未采用原件/WHEELTEC T5X系列底盘客户资料_2026.06.18/2.安装视频教程、三维模型、二维图纸/T5X差速车/T5X差速小车板件孔位【孔位图】.pdf",
+        "category": "用户于2026-10-27明确要求删除两驱车型专属原件",
+        "size_bytes": 96114,
+        "sha256": "197321ca9517669c9319f86cb6d79201942c19fb8eca906b71bafb9c09a3630f",
+        "original_last_write_time": "2026-10-27T16:47:55.056606+08:00",
+        "disposition": "deleted_by_user_request"
+      },
+      {
+        "original_path": "03_hardware/WHEELTEC T5X系列底盘客户资料/WHEELTEC T5X系列底盘客户资料_2026.06.18/2.安装视频教程、三维模型、二维图纸/T5X差速车/T5X三轮两驱差速小车.dwg",
+        "path": "temp/t5x-intake/未采用原件/WHEELTEC T5X系列底盘客户资料_2026.06.18/2.安装视频教程、三维模型、二维图纸/T5X差速车/T5X三轮两驱差速小车.dwg",
+        "category": "用户于2026-10-27明确要求删除两驱车型专属原件",
+        "size_bytes": 828253,
+        "sha256": "5cdeca5f93c1c5984b7c9a89bed2d490d7f8da9f67455fde23cdbc16deea0e86",
+        "original_last_write_time": "2026-10-27T16:47:55.643497+08:00",
+        "disposition": "deleted_by_user_request"
+      },
+      {
+        "original_path": "03_hardware/WHEELTEC T5X系列底盘客户资料/WHEELTEC T5X系列底盘客户资料_2026.06.18/2.安装视频教程、三维模型、二维图纸/T5X差速车/T5X三轮两驱差速小车.pdf",
+        "path": "temp/t5x-intake/未采用原件/WHEELTEC T5X系列底盘客户资料_2026.06.18/2.安装视频教程、三维模型、二维图纸/T5X差速车/T5X三轮两驱差速小车.pdf",
+        "category": "用户于2026-10-27明确要求删除两驱车型专属原件",
+        "size_bytes": 421777,
+        "sha256": "84af6e159517bdbd643cd53a6a824cc9e750364288c4ce58c62df96caa208b0e",
+        "original_last_write_time": "2026-10-27T16:47:55.1858142+08:00",
+        "disposition": "deleted_by_user_request"
+      },
+      {
+        "original_path": "03_hardware/WHEELTEC T5X系列底盘客户资料/WHEELTEC T5X系列底盘客户资料_2026.06.18/2.安装视频教程、三维模型、二维图纸/T5X差速车/T5X三轮两驱差速小车【3D模型】.stp",
+        "path": "temp/t5x-intake/未采用原件/WHEELTEC T5X系列底盘客户资料_2026.06.18/2.安装视频教程、三维模型、二维图纸/T5X差速车/T5X三轮两驱差速小车【3D模型】.stp",
+        "category": "用户于2026-10-27明确要求删除两驱车型专属原件",
+        "size_bytes": 23465235,
+        "sha256": "ad557b7961db5193918215686bb0643c44da47ed5fbfaac3658bac28bf8b0aef",
+        "original_last_write_time": "2026-10-27T16:48:30.3361355+08:00",
+        "disposition": "deleted_by_user_request"
+      },
+      {
+        "original_path": "03_hardware/WHEELTEC T5X系列底盘客户资料/WHEELTEC T5X系列底盘客户资料_2026.06.18/2.安装视频教程、三维模型、二维图纸/T5X差速车/T5X三轮两驱差速小车【3D模型截图】.png",
+        "path": "temp/t5x-intake/未采用原件/WHEELTEC T5X系列底盘客户资料_2026.06.18/2.安装视频教程、三维模型、二维图纸/T5X差速车/T5X三轮两驱差速小车【3D模型截图】.png",
+        "category": "用户于2026-10-27明确要求删除两驱车型专属原件",
+        "size_bytes": 216700,
+        "sha256": "07e4469dff79ad0ddf34bafd2bb4cb0134af88ad33744ca5e9bd9b21884c90c9",
+        "original_last_write_time": "2026-10-27T16:47:55.1858142+08:00",
+        "disposition": "deleted_by_user_request"
+      },
+      {
+        "original_path": "03_hardware/WHEELTEC T5X系列底盘客户资料/WHEELTEC T5X系列底盘客户资料_2026.06.18/2.安装视频教程、三维模型、二维图纸/T5X差速车/T5X四轮两驱差速小车.dwg",
+        "path": "temp/t5x-intake/未采用原件/WHEELTEC T5X系列底盘客户资料_2026.06.18/2.安装视频教程、三维模型、二维图纸/T5X差速车/T5X四轮两驱差速小车.dwg",
+        "category": "用户于2026-10-27明确要求删除两驱车型专属原件",
+        "size_bytes": 823671,
+        "sha256": "ce4db53d2e88b3d231d80b4023ebb917d79e4b185d98c978c503ba58086d7e30",
+        "original_last_write_time": "2026-10-27T16:47:55.7703294+08:00",
+        "disposition": "deleted_by_user_request"
+      },
+      {
+        "original_path": "03_hardware/WHEELTEC T5X系列底盘客户资料/WHEELTEC T5X系列底盘客户资料_2026.06.18/2.安装视频教程、三维模型、二维图纸/T5X差速车/T5X四轮两驱差速小车.pdf",
+        "path": "temp/t5x-intake/未采用原件/WHEELTEC T5X系列底盘客户资料_2026.06.18/2.安装视频教程、三维模型、二维图纸/T5X差速车/T5X四轮两驱差速小车.pdf",
+        "category": "用户于2026-10-27明确要求删除两驱车型专属原件",
+        "size_bytes": 416022,
+        "sha256": "efd664db616a11cffca9019ef8f81e80b24a7c318c68bc5ff62a333bbbcf2d7f",
+        "original_last_write_time": "2026-10-27T16:47:55.9609074+08:00",
+        "disposition": "deleted_by_user_request"
+      },
+      {
+        "original_path": "03_hardware/WHEELTEC T5X系列底盘客户资料/WHEELTEC T5X系列底盘客户资料_2026.06.18/2.安装视频教程、三维模型、二维图纸/T5X差速车/T5X四轮两驱差速小车【3D模型】.stp",
+        "path": "temp/t5x-intake/未采用原件/WHEELTEC T5X系列底盘客户资料_2026.06.18/2.安装视频教程、三维模型、二维图纸/T5X差速车/T5X四轮两驱差速小车【3D模型】.stp",
+        "category": "用户于2026-10-27明确要求删除两驱车型专属原件",
+        "size_bytes": 23467986,
+        "sha256": "06b90417f67e5b043bedf5170f0da9a808729812526ae84bd7ad7551fb52e7a4",
+        "original_last_write_time": "2026-10-27T16:48:35.5496507+08:00",
+        "disposition": "deleted_by_user_request"
+      },
+      {
+        "original_path": "03_hardware/WHEELTEC T5X系列底盘客户资料/WHEELTEC T5X系列底盘客户资料_2026.06.18/2.安装视频教程、三维模型、二维图纸/T5X差速车/T5X四轮两驱差速小车【3D模型截图】.png",
+        "path": "temp/t5x-intake/未采用原件/WHEELTEC T5X系列底盘客户资料_2026.06.18/2.安装视频教程、三维模型、二维图纸/T5X差速车/T5X四轮两驱差速小车【3D模型截图】.png",
+        "category": "用户于2026-10-27明确要求删除两驱车型专属原件",
+        "size_bytes": 250741,
+        "sha256": "7909610dd576ae2d6be812942d9cf1904b4e3fa578ba02fe88823c458c375498",
+        "original_last_write_time": "2026-10-27T16:47:55.6678375+08:00",
+        "disposition": "deleted_by_user_request"
+      },
+      {
+        "original_path": "03_hardware/WHEELTEC T5X系列底盘客户资料/WHEELTEC T5X系列底盘客户资料_2026.06.18/2.安装视频教程、三维模型、二维图纸/T5X差速车/T5X四轮两驱差速小车【安装视频】.mp4",
+        "path": "temp/t5x-intake/未采用原件/WHEELTEC T5X系列底盘客户资料_2026.06.18/2.安装视频教程、三维模型、二维图纸/T5X差速车/T5X四轮两驱差速小车【安装视频】.mp4",
+        "category": "用户于2026-10-27明确要求删除两驱车型专属原件",
+        "size_bytes": 156908837,
+        "sha256": "f4068d8225e08bf37a20e81d832fdd03199ba9ecebf740d4247eca65b7282f93",
+        "original_last_write_time": "2026-10-27T16:48:51.3054586+08:00",
+        "disposition": "deleted_by_user_request"
+      },
+      {
+        "original_path": "03_hardware/WHEELTEC T5X系列底盘客户资料/WHEELTEC T5X系列底盘客户资料_2026.06.18/3.铰链支架安装说明/带铰链高度角度可调支架安装及其拓展安装说明.pdf",
+        "path": "temp/t5x-intake/未采用原件/WHEELTEC T5X系列底盘客户资料_2026.06.18/3.铰链支架安装说明/带铰链高度角度可调支架安装及其拓展安装说明.pdf",
+        "category": "当前未采用，保留唯一原件",
+        "size_bytes": 1194760,
+        "sha256": "ec52cf8a5d686bc0831ed4e451bd9df5a2664bcde310d85501f9f94f0cad707c",
+        "original_last_write_time": "2026-10-27T16:47:51.2082254+08:00"
+      },
+      {
+        "original_path": "03_hardware/WHEELTEC T5X系列底盘客户资料/WHEELTEC T5X系列底盘客户资料_2026.06.18/3.铰链支架安装说明/CDD可调节支架安装说明.pdf",
+        "path": "temp/t5x-intake/未采用原件/WHEELTEC T5X系列底盘客户资料_2026.06.18/3.铰链支架安装说明/CDD可调节支架安装说明.pdf",
+        "category": "当前未采用，保留唯一原件",
+        "size_bytes": 1034347,
+        "sha256": "913bf73bd646fde3da91daeab5284716703fabb988820d3e536d20a1101e7d6e",
+        "original_last_write_time": "2026-10-27T16:47:50.9057731+08:00"
+      },
+      {
+        "original_path": "03_hardware/WHEELTEC T5X系列底盘客户资料/WHEELTEC T5X系列底盘客户资料_2026.06.18/4.底盘程序开发参考代码/C30D2.0_T5X小车_霍尔编码器_STM32参考程序.zip",
+        "path": "temp/t5x-intake/未采用原件/WHEELTEC T5X系列底盘客户资料_2026.06.18/4.底盘程序开发参考代码/C30D2.0_T5X小车_霍尔编码器_STM32参考程序.zip",
+        "category": "未采用的厂家整车、程序或附件资料；保留原件",
+        "size_bytes": 1284185,
+        "sha256": "e88a2be3ab8d65b5cda2a469077db78dcc951ff7f4a04a6dba98c54132897dd7",
+        "original_last_write_time": "2026-10-27T16:47:52.9522091+08:00"
+      },
+      {
+        "original_path": "03_hardware/WHEELTEC T5X系列底盘客户资料/WHEELTEC T5X系列底盘客户资料_2026.06.18/4.底盘程序开发参考代码/C30D2.0_T5X小车_GMR编码器_STM32参考程序.zip",
+        "path": "temp/t5x-intake/未采用原件/WHEELTEC T5X系列底盘客户资料_2026.06.18/4.底盘程序开发参考代码/C30D2.0_T5X小车_GMR编码器_STM32参考程序.zip",
+        "category": "未采用的厂家整车、程序或附件资料；保留原件",
+        "size_bytes": 1281858,
+        "sha256": "d7687332f03a774948f896db146d0b2f9b5181a70258ca5f3d6a76fffcfa7b5c",
+        "original_last_write_time": "2026-10-27T16:47:53.3377564+08:00"
+      }
+    ]
+  },
+  "yahboom_user_import": {
+    "date": "2026-10-27",
+    "source": "用户提供310电机资料包",
+    "scope": "10份完整核心文件复制归档，复制前后核对源与目标SHA-256一致。电机及四孔支架沿用已有相同原件。",
+    "pending_archive": "2026-10-28已无下载临时文件；两个完整原包已移入temp留存，逐文件比较前后指纹一致。",
+    "files": [
+      {
+        "original_path": "03_hardware/310电机/5、四路电机驱动板资料/新（2026.6.24及之后购买的客户看这里）/附件/通信协议/串口通信协议.xlsx",
+        "path": "03_hardware/01_机械/01_厂家资料/03_四路电机驱动/05_串口寄存器.xlsx",
+        "size_bytes": 13356,
+        "sha256": "8ac0536b067532497aba9417997134be1f5e15d098667f3e54d0d4ee2ba488c8"
+      },
+      {
+        "original_path": "03_hardware/310电机/1、电机硬件参数资料/电机参数.docx",
+        "path": "03_hardware/01_机械/01_厂家资料/02_310电机/04_电机参数.docx",
+        "size_bytes": 1188297,
+        "sha256": "5edbb6801ed56a26db33739b1cf7461a0c7bd0ff56986e1496c6f188a0605ae5"
+      },
+      {
+        "original_path": "03_hardware/310电机/5、四路电机驱动板资料/新（2026.6.24及之后购买的客户看这里）/附件/四路电机驱动板简介/四路电机驱动板简介.pdf",
+        "path": "03_hardware/01_机械/01_厂家资料/03_四路电机驱动/03_驱动简介.pdf",
+        "size_bytes": 449349,
+        "sha256": "45bfd0353ef28f7a73728d271704b4f2a2f36c40d76fc77b27a1cb4d2f02c1f8"
+      },
+      {
+        "original_path": "03_hardware/310电机/5、四路电机驱动板资料/新（2026.6.24及之后购买的客户看这里）/4、STM32驱动/USART/小车控制与编码器读取-USART.pdf",
+        "path": "03_hardware/01_机械/01_厂家资料/03_四路电机驱动/07_STM32串口示例.pdf",
+        "size_bytes": 1098974,
+        "sha256": "109d4e9a003a6663d02481cd5889fd0ea7da67e32749896426692449f756220d"
+      },
+      {
+        "original_path": "03_hardware/310电机/5、四路电机驱动板资料/新（2026.6.24及之后购买的客户看这里）/附件/四路电机驱动板简介/4路电机驱动板控制指令.pdf",
+        "path": "03_hardware/01_机械/01_厂家资料/03_四路电机驱动/04_控制指令.pdf",
+        "size_bytes": 280556,
+        "sha256": "e38cf21e23d68f92fc2df8fcbdaabcf6db835477621770a92f631e499a4a04a6"
+      },
+      {
+        "original_path": "03_hardware/310电机/5、四路电机驱动板资料/新（2026.6.24及之后购买的客户看这里）/附件/模型文件/YB-ESF01-V2.0.STEP",
+        "path": "03_hardware/01_机械/01_厂家资料/03_四路电机驱动/01_四路驱动_V2.STEP",
+        "size_bytes": 33365434,
+        "sha256": "4729d6a7acdd3ff69320a012646d4e4aa4f2710e0aa3c6b7ae3c70610af953e4"
+      },
+      {
+        "original_path": "03_hardware/310电机/5、四路电机驱动板资料/新（2026.6.24及之后购买的客户看这里）/0、310电机介绍以及用法/310电机介绍以及用法.pdf",
+        "path": "03_hardware/01_机械/01_厂家资料/03_四路电机驱动/09_电机与驱动用法.pdf",
+        "size_bytes": 3515625,
+        "sha256": "638f57fe6a2a9ecaae873871615095564009514da0ec0eddae1d59025dda6384"
+      },
+      {
+        "original_path": "03_hardware/310电机/5、四路电机驱动板资料/新（2026.6.24及之后购买的客户看这里）/附件/通信协议/IIC通信协议.xlsx",
+        "path": "03_hardware/01_机械/01_厂家资料/03_四路电机驱动/06_IIC寄存器.xlsx",
+        "size_bytes": 12089,
+        "sha256": "ca6eb263bae59860a9f1949dc0a5723f0d1b70a06010269c73b76b2d968766ab"
+      },
+      {
+        "original_path": "03_hardware/310电机/5、四路电机驱动板资料/新（2026.6.24及之后购买的客户看这里）/4、STM32驱动/IIC/小车控制与编码器读取-IIC.pdf",
+        "path": "03_hardware/01_机械/01_厂家资料/03_四路电机驱动/08_STM32_IIC示例.pdf",
+        "size_bytes": 1069003,
+        "sha256": "ed80eac17b19b0711745eccb3f92f5f4642661705a6f4f33d71cf50de9c13d02"
+      },
+      {
+        "original_path": "03_hardware/310电机/1、电机硬件参数资料/模型/310电机联轴器3mm.STEP",
+        "path": "03_hardware/01_机械/01_厂家资料/02_310电机/03_3mm六角联轴器.STEP",
+        "size_bytes": 103600,
+        "sha256": "8feaa409e30686038913f197021caaddf006112b7a6824ced6cd1f1b8cb82947"
+      }
+    ]
+  },
+  "yahboom_folder_reorganization": {
+    "date": "2026-10-28",
+    "path_map": {
+      "03_hardware/01_机械/01_厂家资料/310Motor.STEP": "03_hardware/01_机械/01_厂家资料/02_310电机/01_310电机.STEP",
+      "03_hardware/01_机械/01_厂家资料/310Motor_Bracket-NEW.STEP": "03_hardware/01_机械/01_厂家资料/02_310电机/02_四孔支架.STEP",
+      "03_hardware/01_机械/01_厂家资料/02_亚博310/01_3mm六角联轴器.STEP": "03_hardware/01_机械/01_厂家资料/02_310电机/03_3mm六角联轴器.STEP",
+      "03_hardware/01_机械/01_厂家资料/02_亚博310/03_电机参数.docx": "03_hardware/01_机械/01_厂家资料/02_310电机/04_电机参数.docx",
+      "03_hardware/01_机械/01_厂家资料/03_电机尺寸.PNG": "03_hardware/01_机械/01_厂家资料/02_310电机/05_电机尺寸.PNG",
+      "03_hardware/01_机械/01_厂家资料/04_支架尺寸.pdf": "03_hardware/01_机械/01_厂家资料/02_310电机/06_四孔支架尺寸.pdf",
+      "03_hardware/01_机械/01_厂家资料/02_亚博310/02_四路驱动_V2.STEP": "03_hardware/01_机械/01_厂家资料/03_四路电机驱动/01_四路驱动_V2.STEP",
+      "03_hardware/01_机械/01_厂家资料/01_四路驱动尺寸.jpg": "03_hardware/01_机械/01_厂家资料/03_四路电机驱动/02_驱动尺寸.jpg",
+      "03_hardware/01_机械/01_厂家资料/02_亚博310/04_四路驱动简介.pdf": "03_hardware/01_机械/01_厂家资料/03_四路电机驱动/03_驱动简介.pdf",
+      "03_hardware/01_机械/01_厂家资料/02_亚博310/05_四路驱动控制指令.pdf": "03_hardware/01_机械/01_厂家资料/03_四路电机驱动/04_控制指令.pdf",
+      "03_hardware/01_机械/01_厂家资料/02_亚博310/06_串口寄存器.xlsx": "03_hardware/01_机械/01_厂家资料/03_四路电机驱动/05_串口寄存器.xlsx",
+      "03_hardware/01_机械/01_厂家资料/02_亚博310/07_IIC寄存器.xlsx": "03_hardware/01_机械/01_厂家资料/03_四路电机驱动/06_IIC寄存器.xlsx",
+      "03_hardware/01_机械/01_厂家资料/02_亚博310/08_STM32串口示例.pdf": "03_hardware/01_机械/01_厂家资料/03_四路电机驱动/07_STM32串口示例.pdf",
+      "03_hardware/01_机械/01_厂家资料/02_亚博310/09_STM32_IIC示例.pdf": "03_hardware/01_机械/01_厂家资料/03_四路电机驱动/08_STM32_IIC示例.pdf",
+      "03_hardware/01_机械/01_厂家资料/02_亚博310/10_电机与驱动用法.pdf": "03_hardware/01_机械/01_厂家资料/03_四路电机驱动/09_电机与驱动用法.pdf"
+    },
+    "archive_directories": {
+      "03_hardware/310电机": "temp/yahboom-intake/310电机完整原包",
+      "03_hardware/4路电机驱动板": "temp/yahboom-intake/四路驱动完整原包"
+    },
+    "archive_file_count": 22115,
+    "archive_manifest": "temp/mechanical-20261028/original_manifest.json",
+    "deleted_originals": 0,
+    "scope": "正式资料分两类，完整下载包留存在temp。未删除未采用型号、旧版本及完整IDE工程。",
+    "formal_folders": [
+      "03_hardware/01_机械/01_厂家资料/02_310电机",
+      "03_hardware/01_机械/01_厂家资料/03_四路电机驱动"
+    ],
+    "formal_files": {
+      "310电机": 6,
+      "四路电机驱动": 12
+    }
+  }
 }

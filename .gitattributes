@@ -11,4 +11,12 @@
 *.onnx binary
 *.stp binary
 *.step binary
+*.STEP binary
+*.docx binary
 *.FCStd binary
+*.dwg binary
+*.hex binary
+
+# Preserve archived manufacturer originals byte for byte, including source line endings.
+/03_hardware/01_机械/01_厂家资料/** -text
+/03_hardware/01_机械/01_厂家资料/sources.json text eol=lf

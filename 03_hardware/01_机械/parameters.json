@@ -121,9 +121,10 @@
       "name": "3mm六角联轴器",
       "quantity": 4,
       "purchase_status": "已付款，未确认到货",
-      "model_kind": "尺寸简化",
+      "model_kind": "厂家STEP",
       "source_ids": [
-        "S02"
+        "S02",
+        "S11"
       ],
       "known": {
         "length_mm": 18,
@@ -131,18 +132,22 @@
         "hex_corner_mm": 13.86,
         "body_diameter_mm": 11.4,
         "shaft_bore_mm": 3,
-        "bore_depth_mm": 12,
-        "screw": "轴向M4轮侧固定、径向M4紧定"
+        "screw": "轴向M4轮侧固定、径向M4紧定",
+        "cad_file": "03_hardware/01_机械/01_厂家资料/02_310电机/03_3mm六角联轴器.STEP",
+        "selection_record_bore_depth_mm": 12,
+        "cad_shaft_bore_segment_mm": 6,
+        "cad_axial_minor_diameter_mm": 3.5,
+        "cad_hex_length_mm": 6,
+        "cad_set_screw_offset_mm": 4
       },
-      "assumptions": {
-        "hex_length_mm": 6,
-        "set_screw_offset_mm": 5,
-        "thread_minor_mm": 3.3
-      },
+      "assumptions": {},
       "pending": [
-        "六角段长度、紧定孔位置、螺钉规格长度、公差；未画真实牙型"
+        "厂家CAD的Ø3孔段长6mm，较深段为Ø3.5；原资料12mm插深口径与此不同，实购批次、轴端及轮侧螺丝长度待核。CAD仅转换坐标并绕轴转30°以对齐现有六角孔，未修改原孔或缩放。"
       ],
-      "can_model_ourselves": true
+      "can_model_ourselves": false,
+      "source_documents": [
+        "03_hardware/01_机械/01_厂家资料/02_310电机/04_电机参数.docx"
+      ]
     },
     {
       "id": "P06",
@@ -162,13 +167,17 @@
         "gear_ratio": 20,
         "rated_voltage_v": 7.4,
         "rpm": 450,
-        "mass_each_g": 70
+        "mass_each_g": 70,
+        "cad_file": "03_hardware/01_机械/01_厂家资料/02_310电机/01_310电机.STEP"
       },
       "assumptions": {},
       "pending": [
         "实购批次、轴长与STEP端面分段、公差、编码器插头线束"
       ],
-      "can_model_ourselves": false
+      "can_model_ourselves": false,
+      "source_documents": [
+        "03_hardware/01_机械/01_厂家资料/02_310电机/04_电机参数.docx"
+      ]
     },
     {
       "id": "P07",
@@ -190,22 +199,28 @@
           14,
           16
         ],
-        "motor_mount_pitch_mm": 17
+        "motor_mount_pitch_mm": 17,
+        "cad_file": "03_hardware/01_机械/01_厂家资料/02_310电机/02_四孔支架.STEP"
       },
       "assumptions": {},
       "pending": [
         "实购是否为新版L架，螺钉、轴心高度、加工孔复测"
       ],
-      "can_model_ourselves": false
+      "can_model_ourselves": false,
+      "source_documents": [
+        "03_hardware/01_机械/01_厂家资料/02_310电机/04_电机参数.docx",
+        "03_hardware/01_机械/01_厂家资料/02_310电机/06_四孔支架尺寸.pdf"
+      ]
     },
     {
       "id": "P08",
       "name": "亚博四路编码器电机驱动",
       "quantity": 1,
       "purchase_status": "已付款，未确认到货",
-      "model_kind": "尺寸简化",
+      "model_kind": "厂家曲面CAD（非封闭实体）",
       "source_ids": [
-        "S03"
+        "S03",
+        "S11"
       ],
       "known": {
         "outline_mm": [
@@ -224,15 +239,38 @@
           5,
           12
         ],
-        "logic_v": 3.3
+        "logic_v": 3.3,
+        "cad_file": "03_hardware/01_机械/01_厂家资料/03_四路电机驱动/01_四路驱动_V2.STEP",
+        "cad_translation_mm": [
+          -86.916999817556,
+          -71.09100147925,
+          1.60148
+        ],
+        "cad_pcb_thickness_mm": 1.60148
       },
       "assumptions": {
-        "connector_geometry": "按图示意；无完整尺寸"
+        "mount_pcb_z_mm": 116,
+        "adapter_outline_mm": [
+          76,
+          63,
+          2
+        ],
+        "pcb_standoff_height_mm": 5
       },
       "pending": [
-        "到货版本、连接器位置、插头及铜柱高度、线束净空"
+        "厂家V2原件为3602个面、888个壳，其中885个未封闭，零个实体；用于外观、接口和尺寸位置参考，不能认定体积干涉检查通过。实购V2硬件版本、插头空间、绝缘柱与固定仍待到货核对。",
+        "2026-10-28保留X=-37、Y=-62，PCB抬高到116mm；安装板＋5mm绝缘柱固定，曲面参考下侧器件与安装板间隙需核。"
       ],
-      "can_model_ourselves": true
+      "can_model_ourselves": false,
+      "source_documents": [
+        "03_hardware/01_机械/01_厂家资料/03_四路电机驱动/03_驱动简介.pdf",
+        "03_hardware/01_机械/01_厂家资料/03_四路电机驱动/04_控制指令.pdf",
+        "03_hardware/01_机械/01_厂家资料/03_四路电机驱动/05_串口寄存器.xlsx",
+        "03_hardware/01_机械/01_厂家资料/03_四路电机驱动/06_IIC寄存器.xlsx",
+        "03_hardware/01_机械/01_厂家资料/03_四路电机驱动/07_STM32串口示例.pdf",
+        "03_hardware/01_机械/01_厂家资料/03_四路电机驱动/08_STM32_IIC示例.pdf",
+        "03_hardware/01_机械/01_厂家资料/03_四路电机驱动/09_电机与驱动用法.pdf"
+      ]
     },
     {
       "id": "P09",
@@ -491,10 +529,10 @@
     },
     {
       "id": "D01",
-      "name": "已购T5X四驱碳板_长宽孔图待测",
+      "name": "T5X四驱碳纤维底板_厂家CAD",
       "quantity": 1,
-      "purchase_status": "已付款2套，先用1片；待发货",
-      "model_kind": "预留包络",
+      "purchase_status": "已购两片之一，作下层；到货未确认",
+      "model_kind": "厂家板件＋补孔设计",
       "source_ids": [
         "S10"
       ],
@@ -502,22 +540,22 @@
         "thickness_mm": 1.5,
         "listing_mass_g": 45,
         "purchased_plates": 2,
-        "used_plates_in_current_layout": 1,
-        "kit_standoff_length_mm": 60
-      },
-      "assumptions": {
-        "outline_mm": [
-          145,
-          205,
+        "used_plates_in_current_layout": 2,
+        "kit_standoff_length_mm": 60,
+        "cad_outline_mm": [
+          147,
+          210,
           1.5
         ],
-        "z_mm": 68,
-        "mount_holes_draft_mm": 3.4
+        "cad_file": "03_hardware/01_机械/01_厂家资料/01_T5X四驱/05_四驱底板.step"
+      },
+      "assumptions": {
+        "z_mm": 68
       },
       "pending": [
-        "已购四驱加高板长宽、轮廓、孔图及刚度待实测；145×205只是本布局包络，不能套用旧两驱T5X模型；第2片用途待定；60mm套装柱不默认作当前34.5mm电控层支柱"
+        "厂家CAD原件保持不变，当前下层模型另加桥板、托盘、相机底座及推板固定孔；补孔、紧固件及实物批次仍须核对，不能直接据此发加工。"
       ],
-      "can_model_ourselves": true
+      "can_model_ourselves": false
     },
     {
       "id": "D02",
@@ -535,33 +573,59 @@
         ],
         "side_clearance_mm": 1,
         "strap_width_mm": 10,
-        "strap_thickness_mm": 1.2
+        "strap_thickness_mm": 1.2,
+        "foot_global_xy_mm": [
+          [
+            -18,
+            -48
+          ],
+          [
+            -18,
+            48
+          ],
+          [
+            18,
+            -48
+          ],
+          [
+            18,
+            48
+          ]
+        ]
       },
       "pending": [
-        "依赖电池实测尺寸与出线，绑带不可盖接头"
+        "四支脚已改到板材区域并加Ø3.4通孔；固定螺丝在放电池前从托盘上方安装，头部需低于电池支承面，实际出线与绑带待核。"
       ],
       "can_model_ourselves": true
     },
     {
       "id": "D03",
-      "name": "电控安装层",
+      "name": "T5X四驱碳纤维上层板_厂家CAD",
       "quantity": 1,
-      "purchase_status": "自制设计，未加工",
-      "model_kind": "自主设计",
-      "source_ids": [],
-      "known": {},
-      "assumptions": {
-        "outline_mm": [
-          145,
-          190,
+      "purchase_status": "复用已购第2片T5X板；到货未确认",
+      "model_kind": "厂家板件＋补孔设计",
+      "source_ids": [
+        "S10"
+      ],
+      "known": {
+        "cad_outline_mm": [
+          147,
+          210,
           1.5
         ],
-        "z_mm": 104
+        "cad_file": "03_hardware/01_机械/01_厂家资料/01_T5X四驱/05_四驱底板.step"
+      },
+      "assumptions": {
+        "z_mm": 104.5,
+        "camera_rod_clearance_mm": [
+          8.8,
+          8.8
+        ]
       },
       "pending": [
-        "刚度、材料、散热气流、板卡孔图"
+        "两层柱改35mm净高，中心采用原孔X±50、Y±85；上层另加驱动安装板固定孔及相机杆8.8mm通孔。实际强度、公差及板卡固定待核。"
       ],
-      "can_model_ourselves": true
+      "can_model_ourselves": false
     },
     {
       "id": "D04",
@@ -577,10 +641,28 @@
           2,
           22
         ],
-        "bottom_z_mm": 3
+        "bottom_z_mm": 3,
+        "mount_global_xy_mm": [
+          [
+            -55,
+            90
+          ],
+          [
+            -50,
+            96
+          ],
+          [
+            55,
+            90
+          ],
+          [
+            50,
+            96
+          ]
+        ]
       },
       "pending": [
-        "真实棋具、接触高度、碰撞触发行程与承力"
+        "两侧连接件改向板内延伸并各用两处补孔固定；前触点占位暂移开连接件，触点准确型号和行程、推送受力待实物核对。"
       ],
       "can_model_ourselves": true
     },
@@ -607,10 +689,15 @@
           8,
           76.5
         ],
-        "rod_bottom_z_mm": 69.5
+        "rod_bottom_z_mm": 69.5,
+        "base_outline_mm": [
+          36,
+          14,
+          2
+        ]
       },
       "pending": [
-        "机位视野、调角、刚度、相机实物安装与线束"
+        "底座扩大并增加两孔固定；上层预留8.8mm见方通道避免穿板；机位、杆刚度、镜头和线缆仍待验证。"
       ],
       "can_model_ourselves": true
     },
@@ -624,10 +711,58 @@
       "known": {},
       "assumptions": {
         "support_diameter_mm": 5,
-        "motor_bracket_spacer_height_mm": 15.75
+        "motor_bracket_spacer_height_mm": 13.75,
+        "layer_column_height_mm": 35
       },
       "pending": [
-        "最终BOM、材质、螺纹啮合长度和载荷"
+        "35mm层间柱4根；电机架隔柱13.75mm共16根为设计尺寸，不能当作套装60mm柱免加工可用；具体螺纹、材质、长度和受力待验。"
+      ],
+      "can_model_ourselves": true
+    },
+    {
+      "id": "D07",
+      "name": "前后电机固定桥板",
+      "quantity": 2,
+      "purchase_status": "新增加工设计，未制作",
+      "model_kind": "自主设计",
+      "source_ids": [],
+      "known": {},
+      "assumptions": {
+        "outline_mm": [
+          110,
+          42,
+          2
+        ],
+        "mount_method": "原孔X±50/Y±85与补孔X±32/Y±52夹紧底板；电机架螺丝先装入桥板沉头孔，再将桥板装到底板下方。"
+      },
+      "pending": [
+        "只完成CAD尺寸与装配检查，材料、加工、公差、紧固和实物受力未验收。"
+      ],
+      "can_model_ourselves": true
+    },
+    {
+      "id": "D08",
+      "name": "四路驱动安装板",
+      "quantity": 1,
+      "purchase_status": "新增加工设计，未制作",
+      "model_kind": "自主设计",
+      "source_ids": [],
+      "known": {},
+      "assumptions": {
+        "outline_mm": [
+          76,
+          63,
+          2
+        ],
+        "pcb_pitch_mm": [
+          58,
+          49
+        ],
+        "pcb_hole_diameter_mm": 2.7,
+        "chassis_hole_diameter_mm": 3.4
+      },
+      "pending": [
+        "只完成CAD尺寸与装配检查，材料、加工、公差、紧固和实物受力未验收。"
       ],
       "can_model_ourselves": true
     }
@@ -642,7 +777,114 @@
     "wheel_axis_z_mm": 32.5,
     "coupler_start_x_mm": 55.5,
     "base_z_mm": 68,
-    "upper_z_mm": 104
+    "upper_z_mm": 104.5,
+    "layer_column_xy_mm": [
+      [
+        -50,
+        -85
+      ],
+      [
+        -50,
+        85
+      ],
+      [
+        50,
+        -85
+      ],
+      [
+        50,
+        85
+      ]
+    ],
+    "layer_column_height_mm": 35,
+    "motor_bridge_bottom_z_mm": 66,
+    "motor_bridge_thickness_mm": 2,
+    "tray_foot_xy_mm": [
+      [
+        -18,
+        -48
+      ],
+      [
+        -18,
+        48
+      ],
+      [
+        18,
+        -48
+      ],
+      [
+        18,
+        48
+      ]
+    ],
+    "camera_foot_xy_mm": [
+      [
+        -12,
+        94
+      ],
+      [
+        12,
+        94
+      ]
+    ],
+    "pusher_foot_xy_mm": [
+      [
+        -55,
+        90
+      ],
+      [
+        -50,
+        96
+      ],
+      [
+        55,
+        90
+      ],
+      [
+        50,
+        96
+      ]
+    ],
+    "bridge_extra_xy_mm": [
+      [
+        -32,
+        -52
+      ],
+      [
+        -32,
+        52
+      ],
+      [
+        32,
+        -52
+      ],
+      [
+        32,
+        52
+      ]
+    ],
+    "driver_adapter_xy_mm": [
+      [
+        -28,
+        -94
+      ],
+      [
+        -12,
+        -94
+      ],
+      [
+        -36,
+        -36
+      ],
+      [
+        -24,
+        -36
+      ]
+    ],
+    "driver_adapter_bottom_z_mm": 109,
+    "driver_adapter_thickness_mm": 2,
+    "driver_pcb_z_mm": 116
   },
-  "hardware_sync_note": "按最新清单：已购T5X四驱板替代新加工底板；亚博Type-C电源板替代UBEC；短C-C成品线替代焊接尾线。"
+  "hardware_sync_note": "2026-10-28用户允许补孔、尽量少加转接件：新增前后电机桥板2片、驱动安装板1片；其他未定SKU仍为橙色占位。厂家原件未改写。",
+  "geometry_revision_date": "2026-10-28"
 }

@@ -676,5 +676,996 @@
       "latest_progress_report": "包含新增Perspective效果图；汇报窗口已结束"
     },
     "post_report_build_cache_status": "最后一次包含Perspective汇报的构建已通过；再次删除网站缓存的操作被自动审批拦截，返回blocked by policy且未提供具体原因。此前清理已完成，最后一次生成的缓存保留在Git忽略的temp/docusaurus中，不随提交上传。"
+  },
+  "cleanup_20261030": {
+    "date": "2026-10-30",
+    "scope": "用户要求清理缓存和中间文件后commit/push；不删除唯一原件、正式源码和当前成果。",
+    "completed": true,
+    "deleted_files": 601,
+    "deleted_bytes": 125235509,
+    "targets": [
+      {
+        "path": "temp/20261029_camera_review",
+        "file_count": 30,
+        "bytes": 24566346
+      },
+      {
+        "path": "temp/meeting_report",
+        "file_count": 7,
+        "bytes": 6333245
+      },
+      {
+        "path": "temp/reimbursement-review",
+        "file_count": 42,
+        "bytes": 7556242
+      },
+      {
+        "path": "temp/cad-review",
+        "file_count": 0,
+        "bytes": 0
+      },
+      {
+        "path": "temp/freecad_association/configure.ps1",
+        "file_count": 1,
+        "bytes": 5756
+      },
+      {
+        "path": "temp/yahboom-intake/before_integration",
+        "file_count": 8,
+        "bytes": 18741247
+      },
+      {
+        "path": "temp/yahboom-intake/20261027_audit_camera_failed_preview.png",
+        "file_count": 1,
+        "bytes": 32837
+      },
+      {
+        "path": "temp/yahboom-intake/audit_stderr.log",
+        "file_count": 1,
+        "bytes": 0
+      },
+      {
+        "path": "temp/yahboom-intake/audit_stdout.log",
+        "file_count": 1,
+        "bytes": 0
+      },
+      {
+        "path": "temp/yahboom-intake/final_asset_check.json",
+        "file_count": 1,
+        "bytes": 103
+      },
+      {
+        "path": "temp/yahboom-intake/final_check.json",
+        "file_count": 1,
+        "bytes": 58805
+      },
+      {
+        "path": "temp/yahboom-intake/finalize.py",
+        "file_count": 1,
+        "bytes": 5193
+      },
+      {
+        "path": "temp/yahboom-intake/integrate_stderr.log",
+        "file_count": 1,
+        "bytes": 0
+      },
+      {
+        "path": "temp/yahboom-intake/integrate_stdout.log",
+        "file_count": 1,
+        "bytes": 0
+      },
+      {
+        "path": "temp/yahboom-intake/integration_check.json",
+        "file_count": 1,
+        "bytes": 3347
+      },
+      {
+        "path": "temp/yahboom-intake/joints_stderr.log",
+        "file_count": 1,
+        "bytes": 0
+      },
+      {
+        "path": "temp/yahboom-intake/joints_stdout.log",
+        "file_count": 1,
+        "bytes": 0
+      },
+      {
+        "path": "temp/yahboom-intake/render_done.txt",
+        "file_count": 1,
+        "bytes": 28
+      },
+      {
+        "path": "temp/yahboom-intake/render_integrated.FCMacro",
+        "file_count": 1,
+        "bytes": 1350
+      },
+      {
+        "path": "temp/yahboom-intake/update_docs.py",
+        "file_count": 1,
+        "bytes": 17245
+      },
+      {
+        "path": "temp/yahboom-intake/verify_integrated.py",
+        "file_count": 1,
+        "bytes": 3371
+      },
+      {
+        "path": "temp/yahboom-intake/verify_stderr.log",
+        "file_count": 1,
+        "bytes": 0
+      },
+      {
+        "path": "temp/yahboom-intake/verify_stdout.log",
+        "file_count": 1,
+        "bytes": 0
+      },
+      {
+        "path": "temp/t5x-intake/__pycache__",
+        "file_count": 1,
+        "bytes": 4192
+      },
+      {
+        "path": "temp/t5x-intake/原模型快照",
+        "file_count": 10,
+        "bytes": 4131675
+      },
+      {
+        "path": "temp/t5x-intake/motor_docx_media",
+        "file_count": 7,
+        "bytes": 1176567
+      },
+      {
+        "path": "temp/t5x-intake/版权声明.png",
+        "file_count": 1,
+        "bytes": 417417
+      },
+      {
+        "path": "temp/t5x-intake/assembly_audit_joints.json",
+        "file_count": 1,
+        "bytes": 28550
+      },
+      {
+        "path": "temp/t5x-intake/assembly_audit_raw.json",
+        "file_count": 1,
+        "bytes": 54124
+      },
+      {
+        "path": "temp/t5x-intake/asset_check.json",
+        "file_count": 1,
+        "bytes": 218
+      },
+      {
+        "path": "temp/t5x-intake/audit_assembly.py",
+        "file_count": 1,
+        "bytes": 5140
+      },
+      {
+        "path": "temp/t5x-intake/audit_joints.py",
+        "file_count": 1,
+        "bytes": 2422
+      },
+      {
+        "path": "temp/t5x-intake/audit_render_done.txt",
+        "file_count": 1,
+        "bytes": 43
+      },
+      {
+        "path": "temp/t5x-intake/audit_render_error.txt",
+        "file_count": 1,
+        "bytes": 676
+      },
+      {
+        "path": "temp/t5x-intake/audit_stderr.log",
+        "file_count": 1,
+        "bytes": 0
+      },
+      {
+        "path": "temp/t5x-intake/audit_stdout.log",
+        "file_count": 1,
+        "bytes": 0
+      },
+      {
+        "path": "temp/t5x-intake/C30D2.0_T5X小车_霍尔编码器_STM32参考程序_robot_select_init.c.txt",
+        "file_count": 1,
+        "bytes": 4611
+      },
+      {
+        "path": "temp/t5x-intake/C30D2.0_T5X小车_霍尔编码器_STM32参考程序_robot_select_init.h.txt",
+        "file_count": 1,
+        "bytes": 3831
+      },
+      {
+        "path": "temp/t5x-intake/C30D2.0_T5X小车_霍尔编码器_STM32参考程序_stm32f4xx.h.txt",
+        "file_count": 1,
+        "bytes": 713331
+      },
+      {
+        "path": "temp/t5x-intake/C30D2.0_T5X小车_霍尔编码器_STM32参考程序_system_stm32f4xx.h.txt",
+        "file_count": 1,
+        "bytes": 2338
+      },
+      {
+        "path": "temp/t5x-intake/C30D2.0_T5X小车_GMR编码器_STM32参考程序_robot_select_init.c.txt",
+        "file_count": 1,
+        "bytes": 4691
+      },
+      {
+        "path": "temp/t5x-intake/C30D2.0_T5X小车_GMR编码器_STM32参考程序_robot_select_init.h.txt",
+        "file_count": 1,
+        "bytes": 3831
+      },
+      {
+        "path": "temp/t5x-intake/C30D2.0_T5X小车_GMR编码器_STM32参考程序_stm32f4xx.h.txt",
+        "file_count": 1,
+        "bytes": 713331
+      },
+      {
+        "path": "temp/t5x-intake/C30D2.0_T5X小车_GMR编码器_STM32参考程序_system_stm32f4xx.h.txt",
+        "file_count": 1,
+        "bytes": 2338
+      },
+      {
+        "path": "temp/t5x-intake/cad_check.json",
+        "file_count": 1,
+        "bytes": 214
+      },
+      {
+        "path": "temp/t5x-intake/copy_yahboom_core.ps1",
+        "file_count": 1,
+        "bytes": 4036
+      },
+      {
+        "path": "temp/t5x-intake/counts_stderr.log",
+        "file_count": 1,
+        "bytes": 0
+      },
+      {
+        "path": "temp/t5x-intake/counts_stdout.log",
+        "file_count": 1,
+        "bytes": 0
+      },
+      {
+        "path": "temp/t5x-intake/driver_shells.json",
+        "file_count": 1,
+        "bytes": 229956
+      },
+      {
+        "path": "temp/t5x-intake/final_geometry_check.json",
+        "file_count": 1,
+        "bytes": 839
+      },
+      {
+        "path": "temp/t5x-intake/find_plate.py",
+        "file_count": 1,
+        "bytes": 675
+      },
+      {
+        "path": "temp/t5x-intake/finish_metadata.py",
+        "file_count": 1,
+        "bytes": 2122
+      },
+      {
+        "path": "temp/t5x-intake/inspect_driver_shells.py",
+        "file_count": 1,
+        "bytes": 1632
+      },
+      {
+        "path": "temp/t5x-intake/integrate_new_cad.py",
+        "file_count": 1,
+        "bytes": 6886
+      },
+      {
+        "path": "temp/t5x-intake/joints_stderr.log",
+        "file_count": 1,
+        "bytes": 0
+      },
+      {
+        "path": "temp/t5x-intake/joints_stdout.log",
+        "file_count": 1,
+        "bytes": 0
+      },
+      {
+        "path": "temp/t5x-intake/new_cad_scan.json",
+        "file_count": 1,
+        "bytes": 4672
+      },
+      {
+        "path": "temp/t5x-intake/newscan_stderr.log",
+        "file_count": 1,
+        "bytes": 0
+      },
+      {
+        "path": "temp/t5x-intake/newscan_stdout.log",
+        "file_count": 1,
+        "bytes": 0
+      },
+      {
+        "path": "temp/t5x-intake/organize_yahboom_stderr.log",
+        "file_count": 1,
+        "bytes": 556
+      },
+      {
+        "path": "temp/t5x-intake/organize_yahboom_stdout.log",
+        "file_count": 1,
+        "bytes": 0
+      },
+      {
+        "path": "temp/t5x-intake/organize_yahboom.ps1",
+        "file_count": 1,
+        "bytes": 4407
+      },
+      {
+        "path": "temp/t5x-intake/organize.ps1",
+        "file_count": 1,
+        "bytes": 5213
+      },
+      {
+        "path": "temp/t5x-intake/plate_candidates.json",
+        "file_count": 1,
+        "bytes": 2635
+      },
+      {
+        "path": "temp/t5x-intake/plate_scan_stderr.log",
+        "file_count": 1,
+        "bytes": 0
+      },
+      {
+        "path": "temp/t5x-intake/plate_scan_stdout.log",
+        "file_count": 1,
+        "bytes": 0
+      },
+      {
+        "path": "temp/t5x-intake/refine_scope.ps1",
+        "file_count": 1,
+        "bytes": 3423
+      },
+      {
+        "path": "temp/t5x-intake/render_audit.FCMacro",
+        "file_count": 1,
+        "bytes": 2519
+      },
+      {
+        "path": "temp/t5x-intake/render_done.txt",
+        "file_count": 1,
+        "bytes": 16
+      },
+      {
+        "path": "temp/t5x-intake/render_models.FCMacro",
+        "file_count": 1,
+        "bytes": 2705
+      },
+      {
+        "path": "temp/t5x-intake/replace_plate.py",
+        "file_count": 1,
+        "bytes": 4295
+      },
+      {
+        "path": "temp/t5x-intake/replace_stderr.log",
+        "file_count": 1,
+        "bytes": 0
+      },
+      {
+        "path": "temp/t5x-intake/replace_stdout.log",
+        "file_count": 1,
+        "bytes": 0
+      },
+      {
+        "path": "temp/t5x-intake/replace_upper_plate.py",
+        "file_count": 1,
+        "bytes": 3960
+      },
+      {
+        "path": "temp/t5x-intake/replacement_check.json",
+        "file_count": 1,
+        "bytes": 840
+      },
+      {
+        "path": "temp/t5x-intake/review_bundle.py",
+        "file_count": 1,
+        "bytes": 1673
+      },
+      {
+        "path": "temp/t5x-intake/scan_new_cad.py",
+        "file_count": 1,
+        "bytes": 967
+      },
+      {
+        "path": "temp/t5x-intake/shells_stderr.log",
+        "file_count": 1,
+        "bytes": 0
+      },
+      {
+        "path": "temp/t5x-intake/shells_stdout.log",
+        "file_count": 1,
+        "bytes": 0
+      },
+      {
+        "path": "temp/t5x-intake/T5X四驱差速小车.png",
+        "file_count": 1,
+        "bytes": 199711
+      },
+      {
+        "path": "temp/t5x-intake/T5X四驱小车孔位【孔位图】.png",
+        "file_count": 1,
+        "bytes": 173302
+      },
+      {
+        "path": "temp/t5x-intake/T5X四驱小车孔位示意图.png",
+        "file_count": 1,
+        "bytes": 136950
+      },
+      {
+        "path": "temp/t5x-intake/two_plate_check.json",
+        "file_count": 1,
+        "bytes": 758
+      },
+      {
+        "path": "temp/t5x-intake/update_docs_metadata.py",
+        "file_count": 1,
+        "bytes": 12868
+      },
+      {
+        "path": "temp/t5x-intake/update_two_plates.py",
+        "file_count": 1,
+        "bytes": 10209
+      },
+      {
+        "path": "temp/t5x-intake/upper_stderr.log",
+        "file_count": 1,
+        "bytes": 0
+      },
+      {
+        "path": "temp/t5x-intake/upper_stdout.log",
+        "file_count": 1,
+        "bytes": 0
+      },
+      {
+        "path": "temp/t5x-intake/verify_assets.py",
+        "file_count": 1,
+        "bytes": 1600
+      },
+      {
+        "path": "temp/t5x-intake/verify_counts_generator.py",
+        "file_count": 1,
+        "bytes": 1170
+      },
+      {
+        "path": "temp/t5x-intake/verify_current.py",
+        "file_count": 1,
+        "bytes": 3884
+      },
+      {
+        "path": "temp/t5x-intake/verify_stderr.log",
+        "file_count": 1,
+        "bytes": 0
+      },
+      {
+        "path": "temp/t5x-intake/verify_stdout.log",
+        "file_count": 1,
+        "bytes": 0
+      },
+      {
+        "path": "temp/mechanical-20261028/before_structure",
+        "file_count": 9,
+        "bytes": 54194308
+      },
+      {
+        "path": "temp/mechanical-20261028/added_sources.json",
+        "file_count": 1,
+        "bytes": 1075
+      },
+      {
+        "path": "temp/mechanical-20261028/asset_check.json",
+        "file_count": 1,
+        "bytes": 106
+      },
+      {
+        "path": "temp/mechanical-20261028/build_stderr.log",
+        "file_count": 1,
+        "bytes": 0
+      },
+      {
+        "path": "temp/mechanical-20261028/build_stdout.log",
+        "file_count": 1,
+        "bytes": 1317
+      },
+      {
+        "path": "temp/mechanical-20261028/configure_revision.py",
+        "file_count": 1,
+        "bytes": 4143
+      },
+      {
+        "path": "temp/mechanical-20261028/finalize_metadata.py",
+        "file_count": 1,
+        "bytes": 2258
+      },
+      {
+        "path": "temp/mechanical-20261028/finish_record.py",
+        "file_count": 1,
+        "bytes": 9265
+      },
+      {
+        "path": "temp/mechanical-20261028/fixed_points.py",
+        "file_count": 1,
+        "bytes": 622
+      },
+      {
+        "path": "temp/mechanical-20261028/fixed_scan.json",
+        "file_count": 1,
+        "bytes": 2488
+      },
+      {
+        "path": "temp/mechanical-20261028/fixed_stderr.log",
+        "file_count": 1,
+        "bytes": 0
+      },
+      {
+        "path": "temp/mechanical-20261028/fixed_stdout.log",
+        "file_count": 1,
+        "bytes": 0
+      },
+      {
+        "path": "temp/mechanical-20261028/layout_scan.json",
+        "file_count": 1,
+        "bytes": 4136
+      },
+      {
+        "path": "temp/mechanical-20261028/layout_stderr.log",
+        "file_count": 1,
+        "bytes": 0
+      },
+      {
+        "path": "temp/mechanical-20261028/layout_stdout.log",
+        "file_count": 1,
+        "bytes": 0
+      },
+      {
+        "path": "temp/mechanical-20261028/mount_scan.json",
+        "file_count": 1,
+        "bytes": 30155
+      },
+      {
+        "path": "temp/mechanical-20261028/organize_stderr.log",
+        "file_count": 1,
+        "bytes": 0
+      },
+      {
+        "path": "temp/mechanical-20261028/organize_stdout.log",
+        "file_count": 1,
+        "bytes": 98
+      },
+      {
+        "path": "temp/mechanical-20261028/organize.ps1",
+        "file_count": 1,
+        "bytes": 5564
+      },
+      {
+        "path": "temp/mechanical-20261028/path_map.json",
+        "file_count": 1,
+        "bytes": 2383
+      },
+      {
+        "path": "temp/mechanical-20261028/render_done.txt",
+        "file_count": 1,
+        "bytes": 28
+      },
+      {
+        "path": "temp/mechanical-20261028/render_revision.FCMacro",
+        "file_count": 1,
+        "bytes": 1540
+      },
+      {
+        "path": "temp/mechanical-20261028/scan_layout.py",
+        "file_count": 1,
+        "bytes": 1240
+      },
+      {
+        "path": "temp/mechanical-20261028/scan_mounts.py",
+        "file_count": 1,
+        "bytes": 1294
+      },
+      {
+        "path": "temp/mechanical-20261028/scan_stderr.log",
+        "file_count": 1,
+        "bytes": 0
+      },
+      {
+        "path": "temp/mechanical-20261028/scan_stdout.log",
+        "file_count": 1,
+        "bytes": 0
+      },
+      {
+        "path": "temp/mechanical-20261028/structure_check.json",
+        "file_count": 1,
+        "bytes": 10582
+      },
+      {
+        "path": "temp/mechanical-20261028/update_current_docs.py",
+        "file_count": 1,
+        "bytes": 7501
+      },
+      {
+        "path": "temp/mechanical-20261028/update_overviews.py",
+        "file_count": 1,
+        "bytes": 6668
+      },
+      {
+        "path": "temp/mechanical-20261028/update_paths.py",
+        "file_count": 1,
+        "bytes": 4436
+      },
+      {
+        "path": "temp/mechanical-20261028/verify_stderr.log",
+        "file_count": 1,
+        "bytes": 0
+      },
+      {
+        "path": "temp/mechanical-20261028/verify_stdout.log",
+        "file_count": 1,
+        "bytes": 0
+      },
+      {
+        "path": "temp/mechanical-20261028/verify_structure.py",
+        "file_count": 1,
+        "bytes": 4525
+      },
+      {
+        "path": "temp/freecad_migration/verify_migration.py",
+        "file_count": 1,
+        "bytes": 1770
+      },
+      {
+        "path": "temp/perspective/dependencies/cv2/__pycache__",
+        "file_count": 3,
+        "bytes": 10607
+      },
+      {
+        "path": "temp/perspective/dependencies/cv2/data/__pycache__",
+        "file_count": 1,
+        "bytes": 395
+      },
+      {
+        "path": "temp/perspective/dependencies/cv2/gapi/__pycache__",
+        "file_count": 1,
+        "bytes": 25163
+      },
+      {
+        "path": "temp/perspective/dependencies/cv2/mat_wrapper/__pycache__",
+        "file_count": 1,
+        "bytes": 1953
+      },
+      {
+        "path": "temp/perspective/dependencies/cv2/misc/__pycache__",
+        "file_count": 2,
+        "bytes": 642
+      },
+      {
+        "path": "temp/perspective/dependencies/cv2/typing/__pycache__",
+        "file_count": 1,
+        "bytes": 6856
+      },
+      {
+        "path": "temp/perspective/dependencies/cv2/utils/__pycache__",
+        "file_count": 1,
+        "bytes": 644
+      },
+      {
+        "path": "temp/xiangqi_recognition/dependencies/certifi/__pycache__",
+        "file_count": 2,
+        "bytes": 2399
+      },
+      {
+        "path": "temp/xiangqi_recognition/dependencies/charset_normalizer/__pycache__",
+        "file_count": 7,
+        "bytes": 115173
+      },
+      {
+        "path": "temp/xiangqi_recognition/dependencies/colorama/__pycache__",
+        "file_count": 6,
+        "bytes": 41670
+      },
+      {
+        "path": "temp/xiangqi_recognition/dependencies/colorlog/__pycache__",
+        "file_count": 4,
+        "bytes": 20575
+      },
+      {
+        "path": "temp/xiangqi_recognition/dependencies/cv2/__pycache__",
+        "file_count": 3,
+        "bytes": 10630
+      },
+      {
+        "path": "temp/xiangqi_recognition/dependencies/cv2/data/__pycache__",
+        "file_count": 1,
+        "bytes": 403
+      },
+      {
+        "path": "temp/xiangqi_recognition/dependencies/cv2/mat_wrapper/__pycache__",
+        "file_count": 1,
+        "bytes": 1961
+      },
+      {
+        "path": "temp/xiangqi_recognition/dependencies/cv2/misc/__pycache__",
+        "file_count": 2,
+        "bytes": 658
+      },
+      {
+        "path": "temp/xiangqi_recognition/dependencies/cv2/typing/__pycache__",
+        "file_count": 1,
+        "bytes": 4650
+      },
+      {
+        "path": "temp/xiangqi_recognition/dependencies/cv2/utils/__pycache__",
+        "file_count": 1,
+        "bytes": 652
+      },
+      {
+        "path": "temp/xiangqi_recognition/dependencies/idna/__pycache__",
+        "file_count": 5,
+        "bytes": 59977
+      },
+      {
+        "path": "temp/xiangqi_recognition/dependencies/numpy/__pycache__",
+        "file_count": 10,
+        "bytes": 72668
+      },
+      {
+        "path": "temp/xiangqi_recognition/dependencies/numpy/core/__pycache__",
+        "file_count": 3,
+        "bytes": 3229
+      },
+      {
+        "path": "temp/xiangqi_recognition/dependencies/numpy/lib/__pycache__",
+        "file_count": 29,
+        "bytes": 879547
+      },
+      {
+        "path": "temp/xiangqi_recognition/dependencies/numpy/linalg/__pycache__",
+        "file_count": 2,
+        "bytes": 128926
+      },
+      {
+        "path": "temp/xiangqi_recognition/dependencies/numpy/matrixlib/__pycache__",
+        "file_count": 2,
+        "bytes": 36745
+      },
+      {
+        "path": "temp/xiangqi_recognition/dependencies/numpy/_core/__pycache__",
+        "file_count": 26,
+        "bytes": 911601
+      },
+      {
+        "path": "temp/xiangqi_recognition/dependencies/numpy/_typing/__pycache__",
+        "file_count": 10,
+        "bytes": 44403
+      },
+      {
+        "path": "temp/xiangqi_recognition/dependencies/numpy/_utils/__pycache__",
+        "file_count": 3,
+        "bytes": 14473
+      },
+      {
+        "path": "temp/xiangqi_recognition/dependencies/omegaconf/__pycache__",
+        "file_count": 19,
+        "bytes": 440076
+      },
+      {
+        "path": "temp/xiangqi_recognition/dependencies/omegaconf/grammar/__pycache__",
+        "file_count": 1,
+        "bytes": 209
+      },
+      {
+        "path": "temp/xiangqi_recognition/dependencies/omegaconf/grammar/gen/__pycache__",
+        "file_count": 4,
+        "bytes": 117970
+      },
+      {
+        "path": "temp/xiangqi_recognition/dependencies/omegaconf/resolvers/__pycache__",
+        "file_count": 1,
+        "bytes": 292
+      },
+      {
+        "path": "temp/xiangqi_recognition/dependencies/omegaconf/resolvers/oc/__pycache__",
+        "file_count": 2,
+        "bytes": 10818
+      },
+      {
+        "path": "temp/xiangqi_recognition/dependencies/omegaconf/vendor/__pycache__",
+        "file_count": 1,
+        "bytes": 208
+      },
+      {
+        "path": "temp/xiangqi_recognition/dependencies/omegaconf/vendor/antlr4/__pycache__",
+        "file_count": 17,
+        "bytes": 119852
+      },
+      {
+        "path": "temp/xiangqi_recognition/dependencies/omegaconf/vendor/antlr4/atn/__pycache__",
+        "file_count": 16,
+        "bytes": 178967
+      },
+      {
+        "path": "temp/xiangqi_recognition/dependencies/omegaconf/vendor/antlr4/dfa/__pycache__",
+        "file_count": 3,
+        "bytes": 8330
+      },
+      {
+        "path": "temp/xiangqi_recognition/dependencies/omegaconf/vendor/antlr4/error/__pycache__",
+        "file_count": 5,
+        "bytes": 32273
+      },
+      {
+        "path": "temp/xiangqi_recognition/dependencies/omegaconf/vendor/antlr4/tree/__pycache__",
+        "file_count": 7,
+        "bytes": 33866
+      },
+      {
+        "path": "temp/xiangqi_recognition/dependencies/onnxruntime/__pycache__",
+        "file_count": 1,
+        "bytes": 19861
+      },
+      {
+        "path": "temp/xiangqi_recognition/dependencies/onnxruntime/capi/__pycache__",
+        "file_count": 7,
+        "bytes": 104615
+      },
+      {
+        "path": "temp/xiangqi_recognition/dependencies/PIL/__pycache__",
+        "file_count": 18,
+        "bytes": 421958
+      },
+      {
+        "path": "temp/xiangqi_recognition/dependencies/pyclipper/__pycache__",
+        "file_count": 2,
+        "bytes": 1201
+      },
+      {
+        "path": "temp/xiangqi_recognition/dependencies/rapidocr/__pycache__",
+        "file_count": 3,
+        "bytes": 30738
+      },
+      {
+        "path": "temp/xiangqi_recognition/dependencies/rapidocr/cal_rec_boxes/__pycache__",
+        "file_count": 2,
+        "bytes": 17750
+      },
+      {
+        "path": "temp/xiangqi_recognition/dependencies/rapidocr/ch_ppocr_cls/__pycache__",
+        "file_count": 3,
+        "bytes": 9422
+      },
+      {
+        "path": "temp/xiangqi_recognition/dependencies/rapidocr/ch_ppocr_det/__pycache__",
+        "file_count": 3,
+        "bytes": 23509
+      },
+      {
+        "path": "temp/xiangqi_recognition/dependencies/rapidocr/ch_ppocr_rec/__pycache__",
+        "file_count": 4,
+        "bytes": 21186
+      },
+      {
+        "path": "temp/xiangqi_recognition/dependencies/rapidocr/inference_engine/__pycache__",
+        "file_count": 2,
+        "bytes": 7522
+      },
+      {
+        "path": "temp/xiangqi_recognition/dependencies/rapidocr/inference_engine/onnxruntime/__pycache__",
+        "file_count": 3,
+        "bytes": 18276
+      },
+      {
+        "path": "temp/xiangqi_recognition/dependencies/rapidocr/utils/__pycache__",
+        "file_count": 14,
+        "bytes": 81788
+      },
+      {
+        "path": "temp/xiangqi_recognition/dependencies/requests/__pycache__",
+        "file_count": 18,
+        "bytes": 238827
+      },
+      {
+        "path": "temp/xiangqi_recognition/dependencies/shapely/__pycache__",
+        "file_count": 19,
+        "bytes": 331561
+      },
+      {
+        "path": "temp/xiangqi_recognition/dependencies/shapely/algorithms/__pycache__",
+        "file_count": 3,
+        "bytes": 5577
+      },
+      {
+        "path": "temp/xiangqi_recognition/dependencies/shapely/geometry/__pycache__",
+        "file_count": 10,
+        "bytes": 107676
+      },
+      {
+        "path": "temp/xiangqi_recognition/dependencies/tqdm/__pycache__",
+        "file_count": 8,
+        "bytes": 113095
+      },
+      {
+        "path": "temp/xiangqi_recognition/dependencies/urllib3/__pycache__",
+        "file_count": 12,
+        "bytes": 246597
+      },
+      {
+        "path": "temp/xiangqi_recognition/dependencies/urllib3/contrib/__pycache__",
+        "file_count": 2,
+        "bytes": 8254
+      },
+      {
+        "path": "temp/xiangqi_recognition/dependencies/urllib3/http2/__pycache__",
+        "file_count": 2,
+        "bytes": 5431
+      },
+      {
+        "path": "temp/xiangqi_recognition/dependencies/urllib3/util/__pycache__",
+        "file_count": 13,
+        "bytes": 114141
+      },
+      {
+        "path": "temp/xiangqi_recognition/dependencies/yaml/__pycache__",
+        "file_count": 17,
+        "bytes": 250427
+      }
+    ],
+    "all_absolute_targets_verified_inside_project": true,
+    "protected_current_original_and_result_files": 134,
+    "kept_originals": [
+      "temp/旧硬件待删除/",
+      "temp/t5x-intake/未采用原件/",
+      "temp/yahboom-intake/310电机完整原包/",
+      "temp/yahboom-intake/四路驱动完整原包/",
+      "temp/mechanical-20261028/original_manifest.json"
+    ],
+    "kept_local_dependencies": [
+      "temp/docusaurus/node_modules/",
+      "temp/perspective/dependencies/",
+      "temp/xiangqi_recognition/dependencies/"
+    ],
+    "freecad_location": "C:/Users/52400/AppData/Local/Programs/FreeCAD",
+    "verification_scope": "比较正式文件指纹、核对本地链接和资料原包清单；网站重新构建。没有加工、实物装配、板端运行或电机实测。",
+    "website_and_final_cleanup": [
+      {
+        "bytes": 51626,
+        "path": "temp/docusaurus/.docusaurus",
+        "file_count": 28
+      },
+      {
+        "bytes": 152758613,
+        "path": "temp/docusaurus/build",
+        "file_count": 177
+      },
+      {
+        "bytes": 0,
+        "path": "temp/docusaurus/tmp",
+        "file_count": 0
+      },
+      {
+        "bytes": 488285037,
+        "path": "temp/docusaurus/node_modules/.cache",
+        "file_count": 75
+      },
+      {
+        "bytes": 137588,
+        "path": "temp/cleanup-20261030",
+        "file_count": 8
+      }
+    ],
+    "deleted_files_total": 889,
+    "deleted_bytes_total": 766468373,
+    "checks": {
+      "json_files": 22,
+      "preserved_original_package_files": 22115,
+      "hardware_validation": "not performed",
+      "website_build": "passed",
+      "renamed_manufacturer_originals": 5,
+      "preserved_package_file_sizes": "all matched",
+      "relative_markdown_links": 336,
+      "protected_formal_files": 134,
+      "verified_file_hashes": 223,
+      "renamed_originals_bytes": "all matched"
+    }
   }
 }

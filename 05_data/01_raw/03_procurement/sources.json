@@ -24,6 +24,27 @@
         "modified": false,
         "pages": 2,
         "archived_date": "2026-10-24"
+      },
+      "invoice": {
+        "source_type": "user_provided_invoice_pdf",
+        "asset": "../../../03_hardware/02_采购/06_20261027_立创_发票_SO26102424311.pdf",
+        "original_filename": "9116598A26957000000217288389.pdf",
+        "original_location": "项目根目录",
+        "sha256": "8ef910fc1b5165d7b51d4220756609d0277fbc1b9fa638237fb506a84aecc74a",
+        "modified": false,
+        "pages": 1,
+        "archived_date": "2026-10-29",
+        "invoice_date": "2026-10-27",
+        "invoice_number": "26957000000217288389",
+        "invoice_type": "电子发票（普通发票）",
+        "order_number": "SO26102424311",
+        "total_including_tax_cny": 936.0,
+        "goods_including_tax_cny": 928.0,
+        "shipping_including_tax_cny": 8.0,
+        "buyer_name": "上海工程技术大学",
+        "buyer_tax_id": "12310000425022547M",
+        "seller_name": "深圳市立创电子商务有限公司",
+        "scope": "已核PDF文字与页面、抬头税号、订单号、规格数量及含税合计；未进行税务网站验真。"
       }
     },
     {
@@ -80,19 +101,22 @@
               "jd_sku": "10098108278160",
               "variant_from_export": "亚博智能 麦克纳姆轮 万全向轮无人小车DIY底盘520 TT电机80mm轮胎联轴器 65mm尼龙款麦轮*4+3mm六角联轴器",
               "quantity": 1,
-              "actual_unit_price_cny": null
+              "actual_unit_price_cny": 109.0,
+              "actual_unit_price_source": "2026-10-30发票：含税行金额除以数量；电机4套按199.60/4=49.90元计算。"
             },
             {
               "jd_sku": "10069318711256",
               "variant_from_export": "亚博智能310编码器直流减速电机马达AB相 霍尔码盘智能车底盘电子设计竞赛 7.4V 编码器减速电机+支架",
               "quantity": 4,
-              "actual_unit_price_cny": null
+              "actual_unit_price_cny": 49.9,
+              "actual_unit_price_source": "2026-10-30发票：含税行金额除以数量；电机4套按199.60/4=49.90元计算。"
             },
             {
               "jd_sku": "10140357947374",
               "variant_from_export": "亚博智能四路编码器电机驱动板4路控制板模块机器人无人小车AT8236电子设计竞赛 四路编码器电机驱动模块+铜柱+数据线+电源线",
               "quantity": 1,
-              "actual_unit_price_cny": null
+              "actual_unit_price_cny": 55.2,
+              "actual_unit_price_source": "2026-10-30发票：含税行金额除以数量；电机4套按199.60/4=49.90元计算。"
             }
           ],
           "ordered_at": "2026-10-24T23:39:56+08:00",
@@ -104,7 +128,54 @@
           "freight_cny": null,
           "discount_cny": null,
           "tax_cny": null,
-          "tracking_number": null
+          "tracking_number": null,
+          "invoice": {
+            "source_type": "user_provided_invoice_pdf",
+            "asset": "../../../03_hardware/02_采购/07_20261030_亚博_发票_3661477000956457.pdf",
+            "original_filename": "269520000046-16768251.pdf",
+            "original_location": "项目根目录",
+            "sha256": "7391f31464c3c9501e5a70628edfcf38eb5636d6a8cb037853e4543c04d23bac",
+            "modified": false,
+            "pages": 1,
+            "archived_date": "2026-10-30",
+            "invoice_date": "2026-10-30",
+            "invoice_number": "26952000004616768251",
+            "invoice_type": "电子发票（普通发票）",
+            "order_number": "3661477000956457",
+            "total_including_tax_cny": 363.8,
+            "goods_excluding_tax_cny": 321.95,
+            "tax_cny": 41.85,
+            "buyer_name": "上海工程技术大学",
+            "buyer_tax_id": "12310000425022547M",
+            "seller_name": "深圳市亚博智能科技有限公司",
+            "scope": "已核PDF页面、抬头税号、订单号、商品数量和金额；未进行税务网站验真。",
+            "item_amounts": [
+              {
+                "item": "65mm麦轮及3mm联轴器",
+                "quantity": 1,
+                "excluding_tax_cny": 96.46,
+                "tax_cny": 12.54,
+                "including_tax_cny": 109.0,
+                "unit_including_tax_cny": 109.0
+              },
+              {
+                "item": "310电机及支架",
+                "quantity": 4,
+                "excluding_tax_cny": 176.64,
+                "tax_cny": 22.96,
+                "including_tax_cny": 199.6,
+                "unit_including_tax_cny": 49.9
+              },
+              {
+                "item": "四路电机驱动",
+                "quantity": 1,
+                "excluding_tax_cny": 48.85,
+                "tax_cny": 6.35,
+                "including_tax_cny": 55.2,
+                "unit_including_tax_cny": 55.2
+              }
+            ]
+          }
         }
       ],
       "reconciliation": "162.00 + 363.80 = 525.80；仅子订单计入支出，合单金额不重复累计。",
@@ -223,7 +294,71 @@
       ],
       "reconciliation": "75.00+0.00-11.30=63.70；明细净成交价63.70不再扣一次订单优惠；1541.80+63.70=1605.50。",
       "ledger": "../../../03_hardware/02_采购/01_采购台账.xlsx",
-      "purchase_list": "../../../03_hardware/01_硬件清单.md"
+      "purchase_list": "../../../03_hardware/01_硬件清单.md",
+      "invoice": {
+        "source_type": "user_provided_invoice_pdf",
+        "asset": "../../../03_hardware/02_采购/08_20261030_亚博_发票_5127385935119112530.pdf",
+        "original_filename": "上海工程技术大学_5127385935119112530.pdf",
+        "original_location": "项目根目录",
+        "sha256": "045ea28b6f12f69bc8535a728c68e148cf08c22f5c207b0cf268f1d5692955da",
+        "modified": false,
+        "pages": 1,
+        "archived_date": "2026-10-30",
+        "invoice_date": "2026-10-30",
+        "invoice_number": "26952000004616646061",
+        "invoice_type": "电子发票（普通发票）",
+        "order_number": "5127385935119112530",
+        "total_including_tax_cny": 63.7,
+        "goods_excluding_tax_cny": 56.37,
+        "tax_cny": 7.33,
+        "buyer_name": "上海工程技术大学",
+        "buyer_tax_id": "12310000425022547M",
+        "seller_name": "深圳市亚博智能科技有限公司",
+        "scope": "已核PDF页面、抬头税号、订单号、商品数量和金额；未进行税务网站验真。"
+      }
+    },
+    {
+      "source_type": "user_provided_order_screenshot_and_purchase_confirmation",
+      "asset": "20261030_imx415_order_01.png",
+      "original_filename": "codex-clipboard-2ff56f86-92f4-44b1-923e-2741f28e871b.png",
+      "original_location": "用户本次附图",
+      "sha256": "ba16fdd19a25d2c5ddae5e37c975aa689191de6170ded92cdd3cec9fcab6d078",
+      "image_modified": false,
+      "shop": "摄像头生产厂家",
+      "platform": "淘宝",
+      "order_number": "5127902461003012147",
+      "ordered_at": "2026-10-30T11:22:18+08:00",
+      "paid_at": "2026-10-30T11:22:21+08:00",
+      "payment_method": "支付宝支付",
+      "alipay_transaction_number": "2026103023001170211458973439",
+      "payment_status": "paid",
+      "fulfillment_status": "待发货",
+      "arrival_status": "not_confirmed",
+      "hardware_tested": false,
+      "merchandise_total_cny": 178.98,
+      "freight_cny": 9.0,
+      "discount_cny": null,
+      "other_fees_cny": null,
+      "tax_cny": null,
+      "total_paid_cny": 187.98,
+      "invoice_status": "未提供票据",
+      "items": [
+        {
+          "title_from_order": "800万像素 30P MIPI接口 IMX415摄像头 4K高清 瑞芯微rk3588s",
+          "variant_from_order": "30P-无畸变105度定焦IMX415摄像头",
+          "quantity": 1,
+          "unit": "个",
+          "actual_unit_price_cny": 178.98,
+          "merchandise_subtotal_cny": 178.98,
+          "product_url": null,
+          "product_id": null,
+          "sku_id": null
+        }
+      ],
+      "reconciliation": "178.98+9.00=187.98元；运费只在订单汇总计算一次。加原累计1605.50元，本次累计1793.48元。",
+      "ledger": "../../../03_hardware/02_采购/01_采购台账.xlsx",
+      "purchase_list": "../../../03_hardware/01_硬件清单.md",
+      "technical_scope": "按已购MIPI摄像头登记；适配、安装尺寸及板端使用尚未验证，不据此改写既有模型。"
     }
   ],
   "source_type": "user_provided_product_screenshot",
@@ -276,13 +411,79 @@
     "currency": "CNY",
     "lcsc_paid": 936.0,
     "jd_paid": 525.8,
-    "cumulative_paid": 1605.5,
-    "payment_order_count": 5,
-    "item_line_count": 8,
+    "cumulative_paid": 1793.48,
+    "payment_order_count": 6,
+    "item_line_count": 9,
     "parent_order_double_counted": false,
     "ledger": "../../../03_hardware/02_采购/01_采购台账.xlsx",
-    "ledger_sha256": "898fec5f467615b64d37c8674a4cd9924b7fc0b574d020b6effb85f686e3425d",
+    "ledger_sha256": "0e5ce8ed8e418131ecaa8bb677279224b6ad9d0cbe9e60f56ea3a42703f14083",
     "tmall_paid": 80,
-    "taobao_paid": 63.7
+    "taobao_paid": 251.68,
+    "updated_date": "2026-10-30"
+  },
+  "reimbursement_review": {
+    "checked_date": "2026-10-30",
+    "rule_path": "D:\\Completed\\01_财务票据\\上海工程技术大学\\报销文件整理规则.md",
+    "rule_sha256": "265baa9e6de9b1cf5eb6b94de3d9fc240a72acb432f679391bad49e50a6f7ff9",
+    "unit_information_path": "D:\\Completed\\01_财务票据\\上海工程技术大学\\报销信息.md",
+    "package_directory": "D:\\Completed\\01_财务票据\\上海工程技术大学\\2026-10_邱宇强报光电赛材料费_待补材料",
+    "package_zip": "D:\\Completed\\01_财务票据\\上海工程技术大学\\2026-10_邱宇强报光电赛材料费_待补材料.zip",
+    "package_zip_sha256": "803ff3a6c588c92fc143547e66d9bb5eacf52e992fd52413b97585578ece5451",
+    "package_status": "仅待补3笔订单发票，未向老师上传，未申报报销",
+    "total_paid_cny": 1793.48,
+    "invoice_received_cny": 1363.5,
+    "invoice_count": 3,
+    "orders_without_local_invoice_cny": 429.98,
+    "missing_invoice_orders": [
+      {
+        "order_number": "3661477012486530",
+        "shop": "格氏旗舰店",
+        "paid_cny": 162
+      },
+      {
+        "order_number": "5127831576100359305",
+        "shop": "wheeltec旗舰店（轮趣）",
+        "paid_cny": 80
+      },
+      {
+        "order_number": "5127902461003012147",
+        "shop": "摄像头生产厂家（淘宝）",
+        "paid_cny": 187.98
+      }
+    ],
+    "remaining_materials": [
+      "电池162.00元、轮趣底板80.00元、IMX415摄像头187.98元的发票PDF，合计429.98元"
+    ],
+    "purchase_and_payment_records": "现有购买记录及付款记录已整理入Word，新增摄像头原始订单截图一并收录；不另增独立付款流水要求。",
+    "files": [
+      {
+        "name": "发票_亚博稳压电源板_63.70元_2026-10-30.pdf",
+        "sha256": "045ea28b6f12f69bc8535a728c68e148cf08c22f5c207b0cf268f1d5692955da"
+      },
+      {
+        "name": "发票_亚博麦轮电机及驱动_363.80元_2026-10-30.pdf",
+        "sha256": "7391f31464c3c9501e5a70628edfcf38eb5636d6a8cb037853e4543c04d23bac"
+      },
+      {
+        "name": "发票_泰山派3M主控及散热含运费_936.00元_2026-10-27.pdf",
+        "sha256": "8ef910fc1b5165d7b51d4220756609d0277fbc1b9fa638237fb506a84aecc74a"
+      },
+      {
+        "name": "材料费购买记录及付款记录_待补材料.docx",
+        "sha256": "68c10e841b7646d6b00a72d3d2e40a3c81b64c15cc821068cf87e89b1be342db"
+      }
+    ],
+    "validation": {
+      "invoice_archive_and_submission_copy_identical": true,
+      "folder_has_no_subfolders": true,
+      "zip_crc_and_file_hashes_passed": true,
+      "docx_pages_visually_reviewed": 6,
+      "docx_render_engine": "本机Word兼容接口导出PDF，实际进程WPS；Poppler转PNG逐页检查。",
+      "ledger_unchanged_values_formulas_styles_and_existing_links_checked": true,
+      "order_count": 6,
+      "item_line_count": 9,
+      "camera_freight_counted_once": true,
+      "jd_parent_order_double_counted": false
+    }
   }
 }
