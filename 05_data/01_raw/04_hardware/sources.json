@@ -1,0 +1,127 @@
+{
+  "sources": [
+    {
+      "date": "2026-10-30",
+      "source": "用户在本次聊天提供的原始串口助手截图",
+      "original_path": "C:\\Users\\52400\\AppData\\Local\\Temp\\codex-clipboard-e6e42dda-bb2a-47fe-b145-0536ab2df128.png",
+      "path": "05_data/01_raw/04_hardware/20261030_motor_uart_01.png",
+      "sha256": "3d742dfeb581cc186d7f908c751a3a93d25492ea5b9b2feedace385d1ab6312c",
+      "modified": false,
+      "observation": "COM20，115200/8N1，无流控，ASCII；接收区可见MAll总计数及MSPD四路零速度；发送框为M3反转目标，不能据此认定该目标已经发送或电机已转动。",
+      "limits": "用户此时仍在询问动力接法，未确认电池已接；没有电源端子或插头实物照片。"
+    },
+    {
+      "date": "2026-10-30",
+      "source": "用户指定京东商品页，移动版页面中与实际SKU对应的规格图片",
+      "url": "https://item.jd.com/10051546999619.html",
+      "retrieved_page": "https://item.m.jd.com/product/10051546999619.html",
+      "jd_sku": "10051546999619",
+      "variant": "7200mAh-50C-7.4V-2S硬壳|满电8.4V，格氏耐用经典款-XT60插头",
+      "image_url": "https://img10.360buyimg.com/imgzone/jfs/t1/167895/1/16708/271030/627601a1E4a40aded/703cbabdbea7c4d1.jpg",
+      "path": "05_data/01_raw/04_hardware/20261030_battery_reference_01.jpg",
+      "sha256": "69f7c7c712c535d3e0dbb2f519d8c50d82cb5018fc65feda5716234d3404bbd6",
+      "modified": false,
+      "observation": "对应规格商品图明确显示黄色XT60插孔端主放电口，以及壳体旁白色小平衡插头；主输出线红正黑负。",
+      "limits": "商家商品图，用户表示与现物相同；不是用户拍摄的实物接线证据。未确认用户已有XT60配对取电线、保险和开关。"
+    },
+    {
+      "date": "2026-10-30",
+      "source": "用户在本次聊天提供的电池、驱动与供电线实拍",
+      "original_path": "C:\\Users\\52400\\xwechat_files\\wxid_7yopmftvc95322_6830\\temp\\RWTemp\\2026-10\\3742483682d9f5e4921a5b2968d79e58\\3386bb2dfc0cb15235f4b053f5d1e3c2.jpg",
+      "path": "05_data/01_raw/04_hardware/20261030_power_connectors_01.jpg",
+      "sha256": "b3e071fae2d1185802a00d6e7d7d36187c044f29d3b773fc72a5ea84cda9734c",
+      "modified": false,
+      "observation": "可见电池黄色XT60主插头；独立红色T插至红黑裸线；驱动板左侧蓝色电源端子仅局部入镜，USB仍连接。照片中XT60与T插未对接，不能直接配对。",
+      "limits": "蓝色电源端子的正负丝印未完整入镜，不能按照片位置认定哪孔为正；未见匹配XT60取电线和保险/开关。细线黑壳小插头不用于本次动力连接，未核具体充电接口型号。"
+    },
+    {
+      "date": "2026-10-30",
+      "source": "用户提供的红框标注图，标注由用户提供，未由助手改图",
+      "original_path": "C:\\Users\\52400\\AppData\\Local\\Temp\\codex-clipboard-2379cf4d-cf23-4274-8913-ddf454253256.png",
+      "path": "05_data/01_raw/04_hardware/20261030_power_connectors_marked_01.png",
+      "sha256": "cfc2c2fc3cabb57f8fd3562fd43dbe51e03985140532405b67f32b0c0b8ca181",
+      "modified": false,
+      "based_on": "05_data/01_raw/04_hardware/20261030_power_connectors_01.jpg",
+      "observation": "用户圈出厂家提供的红色T插至红黑剥线电源线，询问是否可以使用；黄色XT60是电池的另一组粗线。",
+      "limits": "红框包含两组尚未配对的线，不表示它们已经连通；没有动力运行证据。"
+    },
+    {
+      "date": "2026-10-30",
+      "source": "京东亚博智能官方旗舰店公开移动商品页及对应SKU主图",
+      "url": "https://item.jd.com/10067272016882.html",
+      "retrieved_page": "https://item.m.jd.com/product/10067272016882.html",
+      "jd_sku": "10067272016882",
+      "variant": "7.4V锂电池2000mAh高倍率",
+      "image_url": "https://img30.360buyimg.com/n1/jfs/t1/496588/2/701/87887/6a6b2362F098fba0c/0083320320ff2e2f.jpg",
+      "path": "05_data/01_raw/04_hardware/20261030_yahboom_battery_2000_01.jpg",
+      "sha256": "c5397c41bfda87cc2b4d01deaa0a29bda3debf9ee820b38f54f968ce80be0f27",
+      "modified": false,
+      "observation": "官方商品图显示2000mAh电池、红色T插主输出与独立圆形充电插座。",
+      "limits": "只完成商品、选项和接口资料核对；尚未购买、到货或实物通电。公开页面价格要求登录，未取得准确价格。页面缓存已在2026-11-02清理，原始商品图保存在本目录。"
+    },
+    {
+      "date": "2026-10-30",
+      "source": "京东亚博智能官方旗舰店公开移动商品页及对应SKU主图",
+      "url": "https://item.jd.com/10078720536310.html",
+      "retrieved_page": "https://item.m.jd.com/product/10078720536310.html",
+      "jd_sku": "10078720536310",
+      "variant": "8.4V锂电池充电器（2A）",
+      "image_url": "https://img30.360buyimg.com/n1/jfs/t1/496644/6/628/81040/6a6b2371Fdb0f76f5/0083320320e8035a.jpg",
+      "path": "05_data/01_raw/04_hardware/20261030_yahboom_charger_84v_01.jpg",
+      "sha256": "bd761e19db2bff5fcc3123bdb4a5f5f0dc52c28cf19c518adb9651f1b99d8b28",
+      "modified": false,
+      "observation": "同商品组原配充电器商品图标明8.4V、2A、DC4.0×1.7圆串插头，以及7.4V 2S锂电池专用。",
+      "limits": "只完成商品、选项和接口资料核对；尚未购买、到货或实物通电。公开页面价格要求登录，未取得准确价格。页面缓存已在2026-11-02清理，原始商品图保存在本目录。"
+    },
+    {
+      "date": "2026-10-30",
+      "source": "用户在本次聊天提供的现有11.1V电池实拍",
+      "original_path": "C:\\Users\\52400\\xwechat_files\\wxid_7yopmftvc95322_6830\\temp\\RWTemp\\2026-10\\3742483682d9f5e4921a5b2968d79e58\\e295e592afbc06f4fd7edf868d59ed10.jpg",
+      "path": "05_data/01_raw/04_hardware/20261030_battery_111v_01.jpg",
+      "sha256": "c2c7557d51456a6ab49025462dfbf6d45483d75de641809843c7d00b2af076bb",
+      "modified": false,
+      "observation": "照片标签名称普瑞莱12V锂电池组；标称电压11.1V、充电截止12.6V、最大持续电流4A、标称容量2200mAh，未见独立型号编号。",
+      "limits": "只完成标签和用户最终使用决定登记；4A属于电池端标签值，不是旧电源模块5V输出保证。尺寸、重量、接口尺寸和极性、保护功能及匹配充电器待核；无新增负载、续航或四轮带载测量。",
+      "final_use_decision": {
+        "date": "2026-10-30",
+        "source": "用户本次聊天确认",
+        "status": "车载电池最终确定为普瑞莱12V锂电池组",
+        "existing_photo_matches_current_attachment": true
+      },
+      "nameplate": {
+        "label_name": "普瑞莱12V锂电池组",
+        "separate_model_number": null,
+        "nominal_voltage_v": 11.1,
+        "charge_cutoff_voltage_v": 12.6,
+        "nominal_capacity_mah": 2200,
+        "maximum_continuous_current_a": 4
+      }
+    },
+    {
+      "date": "2026-10-30",
+      "source": "亚博官网商品页的厂家电源板原图",
+      "url": "https://www.yahboom.store/collections/accessory/products/power-board-pi5",
+      "image_url": "https://cdn.shopify.com/s/files/1/0066/9686/1780/files/RPi5_Power_Board_Yahboom_03.jpg?v=1715066228",
+      "path": "05_data/01_raw/04_hardware/20261030_power_board_reference_01.jpg",
+      "sha256": "5b95f80ee8b3cc67e8b53ec3b789636c84aa27ec476411324357e9951f16cf4b",
+      "modified": false,
+      "observation": "YB-MPP01-V1.0：上方为DC6V～24V输入，下方为DC5V输出；图中蓝色输入端子左正右负。",
+      "annotation": {
+        "tool": "image_gen",
+        "path": "05_data/03_results/01_design/04_稳压板接线示意.png",
+        "sha256": "5070ccab5cb0dd908ed15e00e57b8e38ec5582eae22d9e1e128dd4b15b670d62",
+        "recipe": "05_data/03_results/01_design/04_稳压板接线示意.json",
+        "recipe_sha256": "4bd849407a5167cf542e83539f4ab277015dddfe7013a3ff6478e735c30e5122",
+        "observation": "当前接法从白色两针OUT口经PH2.0-2P插头转线接驱动蓝色端子，电池输入用上方圆孔，RK用Type-C；图上不保留修正字样。"
+      },
+      "limits": "厂家参考图片；生成标注图可能改绘细节，实物丝印优先。不是用户实物通电或带载证据。"
+    }
+  ],
+  "current_power_configuration": {
+    "date": "2026-10-30",
+    "battery_photo": "05_data/01_raw/04_hardware/20261030_battery_111v_01.jpg",
+    "battery_name": "普瑞莱12V锂电池组",
+    "power_module": "现用电源模块型号与输出能力待实物核对。",
+    "hardware_scope": "用户已报告M3转动，整车供电与四轮带载未验收。"
+  }
+}

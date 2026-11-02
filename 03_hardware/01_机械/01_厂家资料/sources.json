@@ -93,9 +93,10 @@
       "status": "139×47×26mm、330g沿用本SKU既有选型记录；本轮未重新取得原始尺寸图，不能作为实测或确认加工尺寸",
       "checked_date": "2026-10-24",
       "hashes": {
-        "05_data/01_raw/03_procurement/compatibility_review.json": "5f3fa4a632874e98a6596208c439ff2d1ba96d6aaf46a547c8320e7d696371b0",
+        "05_data/01_raw/03_procurement/compatibility_review.json": "0fd3ad3cfa2fb0e25da0de5a434e6938ec8bdd1a14c30d9167f372f7462f1ba9",
         "03_hardware/02_采购/03_20261024_京东_订单导出_3661477012483787.xlsx": "d0342381474debe0d2192d1aa892382de21ce969e5618c68f2081352ce2ed4ad"
-      }
+      },
+      "hash_refresh_date": "2026-11-02"
     },
     {
       "id": "S08",
@@ -205,9 +206,58 @@
         "03_hardware/01_机械/01_厂家资料/03_四路电机驱动/10_固件更新说明.pdf": "e30184238ad4257a42161150310c1414e1d2e7644b87c37b6b03ee341e871a9c",
         "03_hardware/01_机械/01_厂家资料/03_四路电机驱动/11_厂家固件.hex": "4f6d6857e8c849a6010c9ff7b3c634432fe4a4ed368ba1f746ed7245c1a1e287",
         "03_hardware/01_机械/01_厂家资料/03_四路电机驱动/12_STM32串口工程.zip": "22d7985147ec4b7cc50aa606920c43e94e1e182fd1f4e089e6c261d2a8fa33da"
-      }
+      },
+      "user_cable_confirmation": {
+        "source": "用户2026-11-02补充：U接口排线是可以接的，它是30针的那种长线",
+        "pins": 30,
+        "available": true,
+        "user_confirmed_connectable": true,
+        "actual_length_mm": null,
+        "actual_capture_verified": false
+      },
+      "electrical_finding_scope": "此前两份参考图的对比结论；用户后续确认现有30针长排线可以连接，不能据此图纸对比标记实物已确认不兼容。板端采集尚未验证。"
+    },
+    {
+      "id": "S12",
+      "checked_date": "2026-11-02",
+      "status": "已购100度IMX415替换旧USB相机；用户确认已到货。PCB沿用120度图纸，100度镜头为参考包络。",
+      "local_project_files": [
+        "04_references/04_datasheets/02_IMX415_120度模组图纸.pdf",
+        "03_hardware/01_机械/01_厂家资料/04_RK摄像头接口原理图.webp"
+      ],
+      "hashes": {
+        "04_references/04_datasheets/02_IMX415_120度模组图纸.pdf": "cc3bb38c5b9803c0e60888543d51f317cca84db27e96269aa16de8bd3ea0f600",
+        "03_hardware/01_机械/01_厂家资料/04_RK摄像头接口原理图.webp": "4770be358bedcc273c0600b60c915fae8b197be5d0f57b3cdfa93e0537f550bd"
+      },
+      "rk_hardware_url": "https://wiki.lckfb.com/zh-hans/tspi-3-rk3576/open-source-hardware/",
+      "rk_project_url": "https://oshwhub.com/li-chuang-kai-fa-ban/project_gzzvrwqn",
+      "rk_schematic_image_url": "https://image-pro.lceda.cn/projects/thumbs/67d92fa16003434199a50d4247da8b95.webp",
+      "rk_reference_board": "公开工程V1.4，MIPI_CSI页；实物版本待核",
+      "rk_usage_url": "https://wiki.lckfb.com/zh-hans/tspi-3-rk3576/system-usage/ubuntu24-usage/mipi-camera.html",
+      "license": "相机图纸为用户提供商家资料，原件不改；立创开源工程声明CC BY-NC-SA 4.0。",
+      "electrical_finding": "官方图的RK 25脚为1.8V、27脚为1.2V；相机4脚为1.8V、3脚为1.2V、6脚为地。即使反序，RK25→相机6、RK27→相机4、RK28地→相机3仍不匹配。需向商家核实匹配排线/转接及实际针号，未通电。",
+      "electrical_finding_scope": "此前两份参考图的对比结论；用户后续确认现有30针长排线可以连接，不能据此图纸对比标记实物已确认不兼容。板端采集尚未验证。"
     }
   ],
+  "pc_uart_debug_import": {
+    "date": "2026-10-30",
+    "source": "用户已提供的四路驱动完整原包，新资料（2026.6.24及之后下单的客户看这里））分支",
+    "official_tutorial": "https://www.yahboom.net/study/MD310/14019/",
+    "license": "厂家原件，未另行取得再分发许可",
+    "status": "按用户要求提取电脑串口助手和操作教程；正式文件与原包逐份比较SHA-256一致。软件运行副本及设置放在temp/motor-uart，尚无电机动作实测结论。",
+    "files": [
+      {
+        "original_path": "temp/yahboom-intake/四路驱动完整原包/新资料（2026.6.24及之后下单的客户看这里））/6.附件/串口助手/UartAssist 5.0.3.exe",
+        "path": "03_hardware/01_机械/01_厂家资料/03_四路电机驱动/13_UartAssist_5.0.3.exe",
+        "sha256": "de00689c3cb865673926920e931d8f0a39a94ebea40ec6d153955141849ea31f"
+      },
+      {
+        "original_path": "temp/yahboom-intake/四路驱动完整原包/新资料（2026.6.24及之后下单的客户看这里））/2.驱动资料/PC上位机/串口通讯.pdf",
+        "path": "03_hardware/01_机械/01_厂家资料/03_四路电机驱动/14_PC串口调试.pdf",
+        "sha256": "e3b9fde3743623c38e98e7654be1633cb3bfc43ef83d9c55a8f092d981a7d74b"
+      }
+    ]
+  },
   "t5x_user_import": {
     "date": "2026-10-27",
     "source": "用户放入项目的WHEELTEC T5X系列底盘客户资料",

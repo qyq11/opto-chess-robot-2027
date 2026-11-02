@@ -25,7 +25,8 @@ module.exports = async function createConfig() {
           && node.url && !/^(?:[a-z][a-z\d+.-]*:|\/|#)/i.test(node.url)) {
           const [, pathname, suffix] = node.url.match(/^([^?#]*)(.*)$/s);
           const target = path.resolve(path.dirname(file.path), decodeURIComponent(pathname));
-          if ((!path.extname(target) || /\.mdx?$/i.test(target)) && isProjectAttachment(target)) {
+          // HTML动画也作为实际文件打包，避免被当成文档站页面地址。
+          if ((!path.extname(target) || /\.(?:mdx?|html?)$/i.test(target)) && isProjectAttachment(target)) {
             node.url = `@site/${path.relative(__dirname, target).split(path.sep).join('/')}${suffix}`;
           }
         }

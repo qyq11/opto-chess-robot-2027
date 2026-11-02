@@ -350,38 +350,61 @@
     },
     {
       "id": "P11",
-      "name": "微雪OV4689 4MP USB Camera A SKU34767",
+      "name": "IMX415 100度M12 30针MIPI相机",
       "quantity": 1,
-      "purchase_status": "已选，未下单",
-      "model_kind": "尺寸简化",
+      "purchase_status": "2026-11-02用户确认已到货；未上板验证",
+      "model_kind": "参考图尺寸简化",
       "source_ids": [
-        "S04"
+        "S12"
       ],
       "known": {
+        "ordered_variant": "30P-IMX415配无畸变100度镜头M12",
         "pcb_outline_mm": [
-          25,
-          25
+          32,
+          32
         ],
         "pcb_thickness_mm": 1.6,
-        "overall_depth_mm": 22.1,
-        "depth_tolerance_mm": 0.2,
-        "outline_tolerance_mm": 0.2,
-        "mount_holes_mm": 2,
         "mount_pitch_mm": [
-          21,
-          21
+          28,
+          28
         ],
-        "lens_front_diameter_mm": 14,
-        "fov_deg": 92
+        "mount_holes_mm": 2.2,
+        "upper_mount_holes_mm": 3,
+        "upper_mount_pitch_mm": 22.7,
+        "lens_center_from_top_mm": 11.6,
+        "connector_pitch_mm": 0.5,
+        "connector_pins": 30,
+        "dimension_basis": "商家120度参考图；用户2026-11-02认为100度与120度版本只更换镜头，板形及孔位相同，尚未实测。"
       },
       "assumptions": {
-        "lens_barrel_rear_diameter_mm": 12,
-        "lens_extension_mm": 16
+        "overall_depth_mm": 24.6,
+        "lens_front_diameter_mm": 18.3,
+        "lens_holder_mm": [
+          17,
+          17,
+          6.1
+        ],
+        "lens_barrel_diameter_mm": 12,
+        "lens_center_local_y_mm": -4.4,
+        "upper_hole_local_y_mm": -11.4,
+        "connector_outline_mm": [
+          18.5,
+          4,
+          2.5
+        ],
+        "connector_center_local_y_mm": 10.5,
+        "lens_scope": "24.6为图纸从PCB背面到镜头前端的参考总深，含1.6板厚；100度镜头长度和直径未实测。上方两孔的竖向位置及插座轮廓仅按图示试排。"
       },
       "pending": [
-        "USB/SH插头外凸、线缆弯曲、镜头调焦与支架公差"
+        "实物板形、孔位与参考图一致性；四角为可分离边框，使用四角孔须保留边框并确认完整性",
+        "100度镜头外径、总厚、净重、实际视场与调焦空间",
+        "用户已有30针长排线并确认可连接；实际长度、两端方向、参考图版本及板端出图待核",
+        "主板实物版本、匹配驱动及真实采集"
       ],
-      "can_model_ourselves": true
+      "can_model_ourselves": true,
+      "source_documents": [
+        "04_references/04_datasheets/02_IMX415_120度模组图纸.pdf"
+      ]
     },
     {
       "id": "P12",
@@ -673,15 +696,15 @@
       "purchase_status": "自制设计，未加工",
       "model_kind": "自主设计",
       "source_ids": [
-        "S04"
+        "S12"
       ],
       "known": {},
       "assumptions": {
         "camera_center_z_mm": 148,
-        "camera_back_y_mm": 106,
+        "camera_back_y_mm": 109,
         "mount_plate_mm": [
-          33,
-          33,
+          36,
+          36,
           2
         ],
         "rod_mm": [
@@ -694,10 +717,20 @@
           36,
           14,
           2
-        ]
+        ],
+        "camera_board_center_z_mm": 143.6,
+        "camera_pcb_rear_gap_mm": 3,
+        "mount_pitch_mm": [
+          28,
+          28
+        ],
+        "mount_clearance_holes_mm": 2.4,
+        "insulating_spacer_outer_diameter_mm": 3.8
       },
       "pending": [
-        "底座扩大并增加两孔固定；上层预留8.8mm见方通道避免穿板；机位、杆刚度、镜头和线缆仍待验证。"
+        "相机四角边框须保留；M2螺丝、螺母及垫片的实际空间另核",
+        "36×36安装面、3mm板后隔离和机位属于设计值；不是已购支架规格",
+        "杆刚度、防松、角度调节、排线弯曲与真实视野待验证"
       ],
       "can_model_ourselves": true
     },
@@ -886,5 +919,73 @@
     "driver_pcb_z_mm": 116
   },
   "hardware_sync_note": "2026-10-28用户允许补孔、尽量少加转接件：新增前后电机桥板2片、驱动安装板1片；其他未定SKU仍为橙色占位。厂家原件未改写。",
-  "geometry_revision_date": "2026-10-28"
+  "geometry_revision_date": "2026-11-02",
+  "camera_connection": {
+    "scope": "使用用户已有的30针长排线连接相机与RK；用户2026-11-02确认可以连接。模型表达安装和排线通道，尚未上板出图。",
+    "camera_board_center_mm": [
+      0,
+      109,
+      143.6
+    ],
+    "lens_center_height_mm": 148,
+    "mount_plate_center_mm": [
+      0,
+      106,
+      143.6
+    ],
+    "ribbon_width_mm": 16,
+    "ribbon_thickness_mm": 0.2,
+    "ribbon_centerline_mm": [
+      [
+        0,
+        112,
+        133.1
+      ],
+      [
+        0,
+        118,
+        133.1
+      ],
+      [
+        0,
+        119,
+        125
+      ],
+      [
+        0,
+        115,
+        119
+      ],
+      [
+        22,
+        107,
+        116
+      ],
+      [
+        22,
+        94,
+        111
+      ],
+      [
+        22,
+        88,
+        106.9
+      ],
+      [
+        22,
+        78,
+        106.9
+      ]
+    ],
+    "rk_port_position_scope": "RK背面摄像头插座暂用主板前缘下方示意位置，准确插座坐标、型号、触点和弯曲半径待核；不作加工尺寸。",
+    "electrical_status": "用户确认现有30针长排线可连接；实际板版本、两端触点方向和板端采集待核。参考图差异不作为实物已确认不兼容的结论。",
+    "existing_cable": {
+      "source": "用户2026-11-02补充：U接口排线是可以接的，它是30针的那种长线",
+      "pins": 30,
+      "available": true,
+      "user_confirmed_connectable": true,
+      "actual_length_mm": null,
+      "actual_capture_verified": false
+    }
+  }
 }

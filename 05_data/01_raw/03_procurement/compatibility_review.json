@@ -1,21 +1,21 @@
 {
   "wiring_revision": {
-    "date": "2026-10-25",
-    "purpose": "按已付款硬件更新系统框架、整车供电图和逐线接线定义",
+    "date": "2026-10-30",
+    "purpose": "按用户决定改为RK40针硬件串口直连四路驱动；撤下额外STM32与专用控制供电",
     "design_document": "../../../01_docs/02_design/03_系统规划.md",
-    "topology": "2S XT60→F0/S0→正负母线；动力F1/S1→驱动端子；计算F2→亚博5V板→5A C-C→RK；控制F3→独立稳压→F407/IMU",
+    "topology": "2S XT60→F0/S0→正负母线；动力F1/S1→驱动；计算F2→亚博5V板→5A C-C→RK；取消F3/专用控制稳压",
     "driver_battery_compatibility": "驱动推荐5–12V，310允许4.2–8.4V；已购2S满充8.4V在两者范围内，动力不经过RK降压板",
     "power_board_package": "只选基础板5559923531866，不加T插线5559923531867；额外T插输入线不直接匹配XT60，当前统一端子分电，Type-C长线需另配",
     "driver_package": "已购套装含T插→红黑裸线；本版直接从配电端子接驱动正负输入，该T插线不作为必用转接",
-    "signal_topology": "RK↔F407↔驱动RX2/TX2/GND；四组编码器进驱动，驱动协处理器做轮速PID",
+    "signal_topology": "RK40针硬件UART↔驱动RX2/TX2/GND；编码器接驱动，轮速PID在驱动板内执行",
     "wheel_mapping": {
       "M1": "左前",
       "M2": "左后",
       "M3": "右前",
       "M4": "右后"
     },
-    "wire_definitions": "P01–P11、S01–S08，以设计文档6.1–6.4为准",
-    "pending": "线束/分电/保护/控制稳压准确SKU和保险额定、RK UART物理针号与电平、未购F407/IMU整板接口仍待锁定；不作为全车已配齐或实物测试通过",
+    "wire_definitions": "P01–P09、S01–S07，现行设计文档第6节；2026-10-25旧线号仅作历史",
+    "pending": "本车RK/驱动版本、UART物理针位/电平/设备节点、断电接口条件、配电与独立失联停车待核；当前无串口或运动实测结论",
     "evidence": [
       {
         "file": "20261025_yahboom_driver_power_kit_01.jpg",
@@ -40,22 +40,31 @@
     "artifacts": [
       {
         "file": "../../03_results/01_design/02_系统信号连接.drawio",
-        "sha256": "0fe6111a411f4b296800f168806a1c07b2f6a01d0ce3076e03cbb3d1a39fa079"
+        "sha256": "7895a14e71a4b8576e129d68645729710459875a70567ed4f30925e51af5ba78"
       },
       {
         "file": "../../03_results/01_design/02_系统信号连接.png",
-        "sha256": "01ddeb4ed0ec6de7aed6d5bd9542ac685332b5dd1398ca84c7183da60f73aae5"
+        "sha256": "ff9bf20ce72f93ae5235f14653cf77ab907300ab5d84a5617736f5bac14cf636"
       },
       {
         "file": "../../03_results/01_design/03_系统供电.drawio",
-        "sha256": "9371c6c39c01301605450bfd9aa3c83a4ae1aec0053de16b1288240e4b99200b"
+        "sha256": "31f2a8e7246963c047334371baaa947f14ec5755f9e7abf1be7018dc09f69afe"
       },
       {
         "file": "../../03_results/01_design/03_系统供电.png",
-        "sha256": "be9ba27fa55c959c01c9115a5f21ad82105bb12048253e70c2eef4b5bb63f462"
+        "sha256": "1d190460620fad630bff611d72c9d347a421424973ff89caca3adcd05f00df45"
       }
     ],
-    "hardware_verified": false
+    "hardware_verified": false,
+    "decision_source": "2026-10-30本聊天用户明确要求；不是厂家原件内容",
+    "test_guide": "../../../01_docs/02_design/05_底盘串口接线与测试.md",
+    "extra_stm32_required": false,
+    "assembly_status": {
+      "source": "用户说明及两张装配照片",
+      "reported_wheels_and_motors_assembled": true,
+      "driver_connected": false,
+      "electrical_tested": false
+    }
   },
   "checked_date": "2026-10-25",
   "rk_power_supply_selection": {
@@ -494,12 +503,12 @@
         26
       ],
       "connector": "XT60",
-      "price_cny": 162.0,
+      "price_cny": 162,
       "ordered_status": "paid_pending_dispatch",
       "status": "已购已付款，正在出库，到货与验收待确认",
       "price_scope": "单件电池子订单实付；商品价与运费未单列",
       "actual_unit_price_cny": null,
-      "order_paid_cny": 162.0,
+      "order_paid_cny": 162,
       "order_number": "3661477012486530"
     },
     "jd_parent_order": "3661477012483787",
@@ -533,7 +542,7 @@
       "four_motors_nominal_g": 280,
       "four_wheels_plus_motors_g": 512,
       "manufacturer_rated_torque_kgf_cm": 0.4,
-      "manufacturer_stall_torque_kgf_cm_min": 1.0,
+      "manufacturer_stall_torque_kgf_cm_min": 1,
       "no_load_rpm": 450,
       "rated_voltage_v": 7.4,
       "battery_route": "普通2S LiPo，满充8.4V",
@@ -845,12 +854,12 @@
       26
     ],
     "connector": "XT60",
-    "price_cny": 162.0,
+    "price_cny": 162,
     "ordered_status": "paid_pending_dispatch",
     "status": "已购已付款，正在出库，到货与验收待确认",
     "price_scope": "单件电池子订单实付；商品价与运费未单列",
     "actual_unit_price_cny": null,
-    "order_paid_cny": 162.0,
+    "order_paid_cny": 162,
     "order_number": "3661477012486530"
   },
   "battery_selection_history": [
@@ -882,16 +891,124 @@
   },
   "current_purchase_record": {
     "parent_order": "3661477012483787",
-    "jd_paid_cny": 525.8,
-    "cumulative_paid_cny": 1605.5,
+    "jd_paid_cny": 363.8,
+    "cumulative_paid_cny": 1660.68,
     "sources": "sources.json#purchase_evidence",
     "order_export_sha256": "d0342381474debe0d2192d1aa892382de21ce969e5618c68f2081352ce2ed4ad",
     "order_screenshot_sha256": "8463be84092dfd026f9a7b367bc1341b88f440a539bf18f4857bc3b10fbd6474",
-    "latest_order": "5127385935119112530",
+    "latest_order": "5127836868022085702",
     "power_board_paid_cny": 63.7,
     "carbon_board_paid_cny": 80,
     "payment_order_count": 5,
     "item_line_count": 8,
-    "scope": "含立创、京东两子单、轮趣T5X及亚博电源板；逐笔凭证见sources.json"
+    "scope": "当前购买清单含立创、京东亚博、轮趣T5X、亚博电源板及IMX415相机；已移出当前清单的旧格氏电池不计入本合计，历史凭证保留。",
+    "camera_paid_cny": 217.18
+  },
+  "wiring_revision_history": [
+    {
+      "date": "2026-10-25",
+      "purpose": "按已付款硬件更新系统框架、整车供电图和逐线接线定义",
+      "design_document": "../../../01_docs/02_design/03_系统规划.md",
+      "topology": "2S XT60→F0/S0→正负母线；动力F1/S1→驱动端子；计算F2→亚博5V板→5A C-C→RK；控制F3→独立稳压→F407/IMU",
+      "driver_battery_compatibility": "驱动推荐5–12V，310允许4.2–8.4V；已购2S满充8.4V在两者范围内，动力不经过RK降压板",
+      "power_board_package": "只选基础板5559923531866，不加T插线5559923531867；额外T插输入线不直接匹配XT60，当前统一端子分电，Type-C长线需另配",
+      "driver_package": "已购套装含T插→红黑裸线；本版直接从配电端子接驱动正负输入，该T插线不作为必用转接",
+      "signal_topology": "RK↔F407↔驱动RX2/TX2/GND；四组编码器进驱动，驱动协处理器做轮速PID",
+      "wheel_mapping": {
+        "M1": "左前",
+        "M2": "左后",
+        "M3": "右前",
+        "M4": "右后"
+      },
+      "wire_definitions": "P01–P11、S01–S08，以设计文档6.1–6.4为准",
+      "pending": "线束/分电/保护/控制稳压准确SKU和保险额定、RK UART物理针号与电平、未购F407/IMU整板接口仍待锁定；不作为全车已配齐或实物测试通过",
+      "evidence": [
+        {
+          "file": "20261025_yahboom_driver_power_kit_01.jpg",
+          "sha256": "1a233de6c3d447cba6ce5e3ec4152135dbdcf119ef0584b18861119fd4676f2c",
+          "source_page": "https://category.yahboom.net/products/quad-md-module",
+          "kind": "此前保存的厂家套装图原件，从项目temp复制归档，内容未改"
+        },
+        {
+          "file": "20261025_yahboom_power_tplug_01.png",
+          "sha256": "790c86fc2e3bb1d81ed13665e6a53f75479a6ac973aa4ed21f5f3e58561d9ceb",
+          "url": "https://item.taobao.com/item.htm?id=789594995509&skuId=5559923531867",
+          "kind": "浏览器选择附线套餐后核含件的截图；非当前采购选项；优惠后价格未显示，不推算报价"
+        }
+      ],
+      "sources": [
+        "https://www.yahboom.net/public/upload/upload-html/1750303224/1.1%20Introduction%20to%204-channel%20motor%20drive%20board.html",
+        "https://www.yahboom.net/study/MD310/14018/",
+        "https://www.yahboom.net/study/MD310/14035/",
+        "https://www.yahboom.net/study/MD310/14039/",
+        "https://www.yahboom.store/collections/accessory/products/power-board-pi5"
+      ],
+      "artifacts": [
+        {
+          "file": "../../03_results/01_design/02_系统信号连接.drawio",
+          "sha256": "0fe6111a411f4b296800f168806a1c07b2f6a01d0ce3076e03cbb3d1a39fa079"
+        },
+        {
+          "file": "../../03_results/01_design/02_系统信号连接.png",
+          "sha256": "01ddeb4ed0ec6de7aed6d5bd9542ac685332b5dd1398ca84c7183da60f73aae5"
+        },
+        {
+          "file": "../../03_results/01_design/03_系统供电.drawio",
+          "sha256": "9371c6c39c01301605450bfd9aa3c83a4ae1aec0053de16b1288240e4b99200b"
+        },
+        {
+          "file": "../../03_results/01_design/03_系统供电.png",
+          "sha256": "be9ba27fa55c959c01c9115a5f21ad82105bb12048253e70c2eef4b5bb63f462"
+        }
+      ],
+      "hardware_verified": false
+    }
+  ],
+  "camera_purchase_20261030": {
+    "order_number": "5127836868022085702",
+    "variant": "30P-IMX415配无畸变100度镜头M12",
+    "paid_cny": 217.18,
+    "status": "已到货；现有30针长排线用户确认可连接；待板端出图",
+    "source": "sources.json#purchase_evidence",
+    "supplier_document": {
+      "asset": "../../../04_references/04_datasheets/02_IMX415_120度模组图纸.pdf",
+      "original_filename": "IX415摄像头 120度 仁恒 2026年10月17日.pdf",
+      "sha256": "cc3bb38c5b9803c0e60888543d51f317cca84db27e96269aa16de8bd3ea0f600",
+      "modified": false,
+      "pages": 1,
+      "archived_date": "2026-10-30",
+      "source_type": "user_supplied_seller_reference_drawing",
+      "manufacturer_on_drawing": "深圳市仁恒影像科技有限公司",
+      "revision_date_on_drawing": "2025-07-25",
+      "scope": "文件名为120度版本；图内列IMX415、32×32mm、0.5mm间距30针、2.1mm焦距，限作尺寸与引脚参考。与已购100度版本的一致性待商家确认。",
+      "license": "商家资料，未单独取得再分发许可。"
+    },
+    "compatibility": "30针MIPI不等于与泰山派3M插座兼容；先核针脚、电源、排线方向与镜像驱动。当前没有板端出图或实物验证结果。",
+    "receipt_20261102": {
+      "source": "用户本次消息：现在摄像头模块也到了",
+      "status": "用户确认已到货；未接RK或实物安装验收",
+      "pcb_basis": "用户认为100度/120度只更换镜头；PCB和孔位沿用商家参考图，未实测",
+      "camera_board_mm": [
+        32,
+        32,
+        1.6
+      ],
+      "mount_pitch_mm": [
+        28,
+        28
+      ],
+      "mount_hole_diameter_mm": 2.2,
+      "lens_depth_reference_mm": 24.6,
+      "rk_electrical_compatibility": "用户确认现有30针长排线可连接；实际板版本、两端触点方向和板端采集待核。参考图差异不作为实物已确认不兼容的结论。",
+      "model_parameters": "../../../03_hardware/01_机械/parameters.json",
+      "existing_cable": {
+        "source": "用户2026-11-02补充：U接口排线是可以接的，它是30针的那种长线",
+        "pins": 30,
+        "available": true,
+        "user_confirmed_connectable": true,
+        "actual_length_mm": null,
+        "actual_capture_verified": false
+      }
+    }
   }
 }

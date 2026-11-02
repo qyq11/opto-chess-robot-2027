@@ -1,0 +1,284 @@
+<div id="perspective-explainer">
+  <div class="pe-heading"><h2>斜视平面 → 俯视平面</h2><span id="pe-stage" class="text-small" aria-live="polite">斜视形变</span></div>
+  <canvas id="pe-canvas" role="img" aria-label="透视变换动画：展示斜视网格、四点对应、平面校正、逆向取色和项目实拍样图。">透视变换将同一平面的四个对应点映射到矩形四角，再对整个平面进行坐标换算和像素取样。</canvas>
+  <div class="pe-control-label"><label for="pe-time">动画进度</label><output id="pe-clock" class="tabular-nums">0.0 / 26.0 秒</output></div>
+  <div class="pe-controls"><button type="button" id="pe-play" class="btn btn-primary">播放</button><input id="pe-time" class="form-range" type="range" min="0" max="26" step="0.05" value="0" aria-label="动画进度，秒"></div>
+  <div class="pe-legend text-small"><span>斜视形变</span><span>四点对应</span><span>平面拉正</span><span>反查取色</span><span>项目样图</span></div>
+  <script type="application/json" id="pe-sample">__PROJECT_SAMPLE__</script>
+</div>
+<style>
+#perspective-explainer { color:var(--foreground); display:flex; flex-direction:column; gap:calc(var(--font-size-base)*.75); }
+#perspective-explainer .pe-heading { display:flex; gap:calc(var(--font-size-base)*.75); align-items:baseline; flex-wrap:wrap; padding-right:90px; }
+#perspective-explainer .pe-heading span { color:var(--muted-foreground); }
+#perspective-explainer canvas { display:block; width:100%; }
+#perspective-explainer .pe-control-label { display:flex; justify-content:space-between; gap:calc(var(--font-size-base)*.5); flex-wrap:wrap; }
+#perspective-explainer .pe-controls { display:flex; align-items:center; gap:calc(var(--font-size-base)*.75); }
+#perspective-explainer .pe-controls input { flex:1; min-width:0; }
+#perspective-explainer .pe-legend { display:flex; flex-wrap:wrap; justify-content:space-between; gap:calc(var(--font-size-base)*.5); color:var(--muted-foreground); }
+#perspective-explainer .pe-legend .pe-current { color:var(--foreground); font-weight:500; }
+@media(max-width:450px) { #perspective-explainer .pe-heading { padding-right:0; } }
+</style>
+<script>
+(() => {
+  const root = document.getElementById('perspective-explainer');
+  const canvas = root.querySelector('#pe-canvas');
+  const ctx = canvas.getContext('2d');
+  const slider = root.querySelector('#pe-time');
+  const play = root.querySelector('#pe-play');
+  const clock = root.querySelector('#pe-clock');
+  const stageLabel = root.querySelector('#pe-stage');
+  const sample = JSON.parse(root.querySelector('#pe-sample').textContent);
+  const unit = [[0,0],[1,0],[1,1],[0,1]];
+  const starts = [0,4,8,15,21,26];
+  const names = ['斜视形变','四点对应','平面拉正','反查取色','项目样图'];
+  const work = document.createElement('canvas');
+  const workCtx = work.getContext('2d');
+  const texture = document.createElement('canvas');
+  texture.width=400; texture.height=640;
+  let texturePixels, photoPixels, colors, width=0, height=0;
+  let time=0, playing=false, frame=0, last=0, previousStage=-1;
+  const reduced = matchMedia('(prefers-reduced-motion: reduce)');
+
+  // BEGIN GEOMETRY
+  // 四组对应点形成八条线性方程，最后一个矩阵元素固定为1。
+  function homography(source, target) {
+    const rows=[];
+    for(let k=0;k<4;k++) {
+      const [x,y]=source[k], [u,v]=target[k];
+      rows.push([x,y,1,0,0,0,-u*x,-u*y,u]);
+      rows.push([0,0,0,x,y,1,-v*x,-v*y,v]);
+    }
+    for(let i=0;i<8;i++) {
+      let pivot=i;
+      for(let j=i+1;j<8;j++) if(Math.abs(rows[j][i])>Math.abs(rows[pivot][i])) pivot=j;
+      [rows[i],rows[pivot]]=[rows[pivot],rows[i]];
+      if(Math.abs(rows[i][i])<1e-12) throw new Error('四点不能确定有效的平面映射');
+      const scale=rows[i][i];
+      for(let k=i;k<9;k++) rows[i][k]/=scale;
+      for(let j=0;j<8;j++) if(j!==i) {
+        const factor=rows[j][i];
+        for(let k=i;k<9;k++) rows[j][k]-=factor*rows[i][k];
+      }
+    }
+    return rows.map(row=>row[8]).concat(1);
+  }
+  function mapped(h,x,y) {
+    const d=h[6]*x+h[7]*y+h[8];
+    return [(h[0]*x+h[1]*y+h[2])/d,(h[3]*x+h[4]*y+h[5])/d];
+  }
+  function inverse(m) {
+    const [a,b,c,d,e,f,g,h,i]=m;
+    const r=[e*i-f*h,c*h-b*i,b*f-c*e,f*g-d*i,a*i-c*g,c*d-a*f,d*h-e*g,b*g-a*h,a*e-b*d];
+    const det=a*r[0]+b*r[3]+c*r[6];
+    if(Math.abs(det)<1e-12) throw new Error('矩阵不可逆');
+    return r.map(v=>v/det);
+  }
+  // 从浮点来源位置混合四个邻近像素，图像边缘夹取到最近边界。
+  function bilinear(pixels,x,y,out,index) {
+    const sw=pixels.width, sh=pixels.height, data=pixels.data;
+    const x0=Math.floor(x), y0=Math.floor(y), x1=Math.min(x0+1,sw-1), y1=Math.min(y0+1,sh-1);
+    const fx=x-x0, fy=y-y0;
+    const a=(y0*sw+x0)*4,b=(y0*sw+x1)*4,c=(y1*sw+x0)*4,d=(y1*sw+x1)*4;
+    for(let k=0;k<4;k++) out[index+k]=(data[a+k]*(1-fx)+data[b+k]*fx)*(1-fy)+(data[c+k]*(1-fx)+data[d+k]*fx)*fy;
+  }
+  // END GEOMETRY
+
+  function color(token) {
+    const probe=document.createElement('span');
+    probe.style.color=`var(${token})`; root.appendChild(probe);
+    const resolved=getComputedStyle(probe).color; probe.remove(); return resolved;
+  }
+  function palette() {
+    colors={fg:color('--foreground'),muted:color('--muted-foreground'),surface:color('--background'),grid:color('--border'),fill:color('--muted'),one:color('--viz-series-1'),two:color('--viz-series-2')};
+    const t=texture.getContext('2d');
+    t.clearRect(0,0,400,640);
+    t.fillStyle=colors.surface; t.fillRect(0,0,400,640);
+    for(let y=0;y<8;y++) for(let x=0;x<5;x++) if((x+y)%2===0) {
+      t.globalAlpha=.55; t.fillStyle=colors.fill; t.fillRect(x*80,y*80,80,80); t.globalAlpha=1;
+    }
+    t.strokeStyle=colors.grid; t.lineWidth=2;
+    for(let x=0;x<=5;x++) { t.beginPath();t.moveTo(x*80,0);t.lineTo(x*80,640);t.stroke(); }
+    for(let y=0;y<=8;y++) { t.beginPath();t.moveTo(0,y*80);t.lineTo(400,y*80);t.stroke(); }
+    for(const [x,y,word] of [[120,120,'帅'],[280,360,'车'],[120,520,'马']]) {
+      t.fillStyle=colors.surface;t.strokeStyle=colors.fg;t.lineWidth=3;
+      t.beginPath();t.arc(x,y,33,0,Math.PI*2);t.fill();t.stroke();
+      t.font='500 39px "Microsoft YaHei",sans-serif';t.textAlign='center';t.textBaseline='middle';t.fillStyle=colors.fg;t.fillText(word,x,y+1);
+    }
+    texturePixels=t.getImageData(0,0,400,640);
+    if(width) draw();
+  }
+  function path(points,stroke=colors.grid,fill=null,lineWidth=1) {
+    ctx.beginPath();points.forEach(([x,y],i)=>i?ctx.lineTo(x,y):ctx.moveTo(x,y));ctx.closePath();
+    if(fill) {ctx.fillStyle=fill;ctx.fill();}ctx.strokeStyle=stroke;ctx.lineWidth=lineWidth;ctx.stroke();
+  }
+  function line(a,b,stroke=colors.grid,lineWidth=1) {
+    ctx.beginPath();ctx.moveTo(...a);ctx.lineTo(...b);ctx.strokeStyle=stroke;ctx.lineWidth=lineWidth;ctx.stroke();
+  }
+  function label(text,x,y,align='center',secondary=false) {
+    ctx.fillStyle=secondary?colors.muted:colors.fg;
+    ctx.font=`400 ${parseFloat(getComputedStyle(root).fontSize)*(secondary?.86:1)}px "Microsoft YaHei",sans-serif`;
+    ctx.textAlign=align;ctx.textBaseline='middle';ctx.fillText(text,x,y);
+  }
+  function numbered(q,count=4) {
+    const c=q.reduce((a,p)=>[a[0]+p[0]/4,a[1]+p[1]/4],[0,0]);
+    for(let k=0;k<count;k++) {
+      const [x,y]=q[k];
+      ctx.beginPath();ctx.arc(x,y,4,0,Math.PI*2);ctx.fillStyle=colors.one;ctx.fill();
+      const lx=x+(x<c[0]?-15:15),ly=y+(y<c[1]?-14:14);
+      ctx.beginPath();ctx.arc(lx,ly,10,0,Math.PI*2);ctx.fillStyle=colors.surface;ctx.fill();
+      label(String(k+1),lx,ly);
+    }
+  }
+  // 逐个输出像素反查来源坐标；不靠CSS旋转或重新生成图片。
+  function warp(pixels,sourceQuad,destinationQuad) {
+    const back=homography(destinationQuad,sourceQuad);
+    const minX=Math.max(0,Math.floor(Math.min(...destinationQuad.map(p=>p[0]))));
+    const maxX=Math.min(width-1,Math.ceil(Math.max(...destinationQuad.map(p=>p[0]))));
+    const minY=Math.max(0,Math.floor(Math.min(...destinationQuad.map(p=>p[1]))));
+    const maxY=Math.min(height-1,Math.ceil(Math.max(...destinationQuad.map(p=>p[1]))));
+    const local=homography(destinationQuad,unit);
+    const image=workCtx.createImageData(maxX-minX+1,maxY-minY+1), out=image.data;
+    for(let y=minY;y<=maxY;y++) for(let x=minX;x<=maxX;x++) {
+      const ld=local[6]*x+local[7]*y+local[8];
+      const u=(local[0]*x+local[1]*y+local[2])/ld,v=(local[3]*x+local[4]*y+local[5])/ld;
+      if(u<0||u>1||v<0||v>1) continue;
+      const d=back[6]*x+back[7]*y+back[8];
+      const sx=(back[0]*x+back[1]*y+back[2])/d,sy=(back[3]*x+back[4]*y+back[5])/d;
+      if(sx<0||sy<0||sx>pixels.width-1||sy>pixels.height-1) continue;
+      bilinear(pixels,sx,sy,out,((y-minY)*image.width+x-minX)*4);
+    }
+    work.width=image.width;work.height=image.height;workCtx.putImageData(image,0,0);
+    ctx.drawImage(work,minX,minY);
+  }
+  const texQuad=[[0,0],[399,0],[399,639],[0,639]];
+  function rect(x,y,w,h) {return [[x,y],[x+w,y],[x+w,y+h],[x,y+h]];}
+  function split() {
+    if(width<550) return [{x:width*.08,y:44,w:width*.84,h:205},{x:width*.08,y:315,w:width*.84,h:230}];
+    return [{x:width*.03,y:55,w:width*.43,h:280},{x:width*.55,y:55,w:width*.40,h:280}];
+  }
+  function oblique(p) {
+    return [[p.x+p.w*.27,p.y+p.h*.24],[p.x+p.w*.71,p.y+p.h*.15],[p.x+p.w*.94,p.y+p.h*.78],[p.x+p.w*.06,p.y+p.h*.90]];
+  }
+  function upright(p) {
+    const h=p.h*.86,w=h*5/8;return rect(p.x+(p.w-w)/2,p.y+p.h*.05,w,h);
+  }
+  function curvedArrow(a,b) {
+    const narrow=width<550;
+    ctx.beginPath();ctx.moveTo(...a);
+    if(narrow) ctx.bezierCurveTo(width*.92,a[1],width*.92,b[1],...b);
+    else ctx.bezierCurveTo(a[0],a[1]-65,b[0],b[1]-65,...b);
+    ctx.strokeStyle=colors.one;ctx.lineWidth=1.5;ctx.stroke();
+    const start=narrow?[width*.92,b[1]]:[b[0],b[1]-65];
+    const angle=Math.atan2(b[1]-start[1],b[0]-start[0]);
+    line(b,[b[0]-7*Math.cos(angle-.45),b[1]-7*Math.sin(angle-.45)],colors.one,1.5);
+    line(b,[b[0]-7*Math.cos(angle+.45),b[1]-7*Math.sin(angle+.45)],colors.one,1.5);
+  }
+  function draw() {
+    if(!width||!texturePixels) return;
+    ctx.clearRect(0,0,width,height);
+    const stage=Math.min(4,starts.findIndex((s,i)=>i>0&&time<s)-1);
+    const current=stage<0?4:stage;
+    if(current!==previousStage) {
+      stageLabel.textContent=names[current];
+      root.querySelectorAll('.pe-legend span').forEach((el,i)=>el.classList.toggle('pe-current',i===current));
+      previousStage=current;
+    }
+    if(current===0||current===2) {
+      const p={x:width*.03,y:35,w:width*.94,h:height-83};
+      const source=oblique(p),target=upright(p);
+      const amount=current===0?0:Math.min(1,Math.max(0,(time-8)/7));
+      const ease=amount*amount*(3-2*amount);
+      const q=source.map((a,i)=>a.map((v,j)=>v+(target[i][j]-v)*ease));
+      warp(texturePixels,texQuad,q);path(q,colors.grid);
+      if(current===2) numbered(q);
+      label(current===0?'斜视平面 · 教学示意':amount===1?'目标矩形':'同一映射作用于整个平面',width/2,19);
+      label(current===0?'远处格子小，近处格子大':`校正进度 ${Math.round(amount*100)}%`,width/2,height-17,'center',true);
+    } else if(current===1||current===3) {
+      const panels=split(),q=oblique(panels[0]),r=upright(panels[1]);
+      warp(texturePixels,texQuad,q);warp(texturePixels,texQuad,r);
+      path(q);path(r);
+      label('原图平面',panels[0].x+panels[0].w/2,panels[0].y-26);
+      label(current===1?'目标矩形':'输出图',panels[1].x+panels[1].w/2,panels[1].y-26);
+      if(current===1) {
+        const count=Math.min(4,Math.floor(time-4)+1);numbered(q,count);numbered(r,count);
+        const k=count-1;line(q[k],r[k],colors.one,1.5);
+        label(`${count} ↔ ${count}`,width/2,width<550?279:height-22,'center',true);
+      } else {
+        const k=Math.min(59,Math.floor((time-15)/6*60));
+        const u=(k%6+.5)/6,v=(Math.floor(k/6)+.5)/10;
+        const source=mapped(homography(unit,q),u,v),target=mapped(homography(unit,r),u,v);
+        for(let j=0;j<=k;j++) {
+          const p=mapped(homography(unit,r),(j%6+.5)/6,(Math.floor(j/6)+.5)/10);
+          ctx.globalAlpha=j===k?1:.25;ctx.fillStyle=colors.one;ctx.fillRect(p[0]-2,p[1]-2,4,4);
+        }
+        ctx.globalAlpha=1;curvedArrow(target,source);
+        ctx.strokeStyle=colors.one;ctx.lineWidth=2;ctx.strokeRect(source[0]-5,source[1]-5,10,10);ctx.strokeRect(target[0]-5,target[1]-5,10,10);
+        const uv=`输出 (${Math.round(u*500)}, ${Math.round(v*800)})`;
+        label(uv,width/2,height-17,'center',true);
+      }
+    } else {
+      const panels=split();
+      if(photoPixels) {
+        const p=panels[0], scale=Math.min(p.w/640,p.h/480);
+        const x=p.x+(p.w-640*scale)/2,y=p.y+(p.h-480*scale)/2;
+        ctx.drawImage(photo,x,y,640*scale,480*scale);
+        const q=sample.source_points.map(([sx,sy])=>[x+sx*scale,y+sy*scale]);
+        path(q,colors.one,null,1.5);numbered(q);
+        const r=upright(panels[1]);warp(photoPixels,sample.source_points,r);path(r);numbered(r);
+      }
+      label('OpenCV实拍样图 · 640×480',panels[0].x+panels[0].w/2,panels[0].y-26);
+      label('项目校正 · 501×801',panels[1].x+panels[1].w/2,panels[1].y-26);
+      label('四点围住5×8个方格间距',width/2,height-17,'center',true);
+    }
+    clock.value=`${time.toFixed(1)} / 26.0 秒`;
+    slider.value=time;
+  }
+  function resize() {
+    const measured=Math.round(root.getBoundingClientRect().width);
+    if(measured<1) return;
+    width=measured;height=width<550?580:390;
+    const ratio=Math.min(2,devicePixelRatio||1);
+    canvas.width=Math.round(width*ratio);canvas.height=Math.round(height*ratio);canvas.style.height=`${height}px`;
+    ctx.setTransform(ratio,0,0,ratio,0,0);draw();
+  }
+  function save() {
+    if(window.openai?.setWidgetState) window.openai.setWidgetState({modelContent:{algorithm:'平面透视变换',stage:names[Math.max(0,previousStage)],seconds:Math.round(time*10)/10},privateContent:{seconds:time}}).catch(()=>{});
+  }
+  function stop(persist=true) {playing=false;cancelAnimationFrame(frame);play.textContent=reduced.matches?'下一段':time>=26?'重播':'播放';if(persist) save();}
+  function tick(now) {
+    if(!playing) return;
+    if(now-last>=1000/25) {
+      time=Math.min(26,time+(now-last)/1000);last=now;draw();
+      if(time>=26) {stop();return;}
+    }
+    frame=requestAnimationFrame(tick);
+  }
+  function restore(state) {
+    const value=state?.privateContent?.seconds;
+    if(typeof value==='number'&&Number.isFinite(value)) {stop(false);time=Math.max(0,Math.min(26,value));draw();}
+  }
+  play.addEventListener('click',()=>{
+    if(reduced.matches) {time=starts.find(v=>v>time+.01)??0;draw();save();return;}
+    if(playing) {stop();return;}
+    if(time>=26) time=0;
+    playing=true;play.textContent='暂停';last=performance.now();frame=requestAnimationFrame(tick);
+  });
+  slider.addEventListener('input',()=>{stop(false);time=Number(slider.value);draw();});
+  slider.addEventListener('change',save);
+  document.addEventListener('visibilitychange',()=>{if(document.hidden&&playing)stop();});
+  window.addEventListener('openai:set_globals',event=>restore(event.detail?.globals?.widgetState));
+  reduced.addEventListener('change',()=>stop(false));
+  const photo=new Image();
+  photo.onload=()=>{
+    const off=document.createElement('canvas');off.width=photo.width;off.height=photo.height;
+    const c=off.getContext('2d');c.drawImage(photo,0,0);photoPixels=c.getImageData(0,0,off.width,off.height);draw();
+  };
+  photo.onerror=()=>{stageLabel.textContent='项目样图加载失败';};
+  photo.src=sample.image;
+  palette();restore(window.openai?.widgetState);stop(false);resize();
+  requestAnimationFrame(palette);
+  new ResizeObserver(resize).observe(root);
+  new MutationObserver(palette).observe(document.documentElement,{attributes:true,attributeFilter:['class','style','data-theme']});
+  matchMedia('(prefers-color-scheme: dark)').addEventListener('change',palette);
+})();
+</script>

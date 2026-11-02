@@ -628,13 +628,27 @@
       {
         "path": "05_data/03_results/01_design/03_系统供电.png",
         "old_sha256": "b8ff69eed209b8d7963acf78b6851d3ff3e2b10d5b7c8a66f37c5817c5980d00",
-        "sha256": "be9ba27fa55c959c01c9115a5f21ad82105bb12048253e70c2eef4b5bb63f462",
+        "sha256": "1d190460620fad630bff611d72c9d347a421424973ff89caca3adcd05f00df45",
         "pixels": [
-          2000,
-          1937
+          4794,
+          4419
         ],
-        "reason": "同步电源板已付款状态，采用已人工检查完整内容的draw.io Desktop导出，避免本机大倍率导出裁切。",
-        "editable_source": "05_data/03_results/01_design/03_系统供电.drawio"
+        "reason": "按用户决定改为RK直连驱动及动力/计算两支路，draw.io与300dpi PNG已同步并人工核图；不是清理或硬件验收结果。",
+        "editable_source": "05_data/03_results/01_design/03_系统供电.drawio",
+        "revision_history": [
+          {
+            "date": "2026-10-25",
+            "sha256": "be9ba27fa55c959c01c9115a5f21ad82105bb12048253e70c2eef4b5bb63f462",
+            "pixels": [
+              2000,
+              1937
+            ],
+            "reason": "同步电源板已付款状态，采用已人工检查完整内容的draw.io Desktop导出，避免本机大倍率导出裁切。",
+            "scope": "当时导出状态，保留历史指纹；当前路径内容已由后续方案修订"
+          }
+        ],
+        "updated_date": "2026-10-30",
+        "current_metadata": "05_data/01_raw/03_procurement/compatibility_review.json#wiring_revision"
       }
     ],
     "final_generated_cleanup": [
@@ -1667,5 +1681,325 @@
       "verified_file_hashes": 223,
       "renamed_originals_bytes": "all matched"
     }
+  },
+  "procurement_refresh_20261030": {
+    "date": "2026-10-30",
+    "scope": "采购清单、方案、相机待选状态与系统连接图同步；停用资料和临时副本移入回收站",
+    "payment_orders": 4,
+    "item_lines": 7,
+    "current_list_total_cny": 1443.5,
+    "remaining_evidence_sha256_checked": 13,
+    "markdown_links_checked": 399,
+    "website_build_passed": true,
+    "hardware_tested": false
+  },
+  "cache_cleanup_20261102": {
+    "date": "2026-11-02",
+    "authorization": "用户要求清理中间缓存文件后commit和push",
+    "method": "Windows回收站，可恢复；批量永久删除被自动审批以blocked by policy拒绝后采用此方式",
+    "all_absolute_targets_verified_inside_project": true,
+    "recycled_existing_files": 4457,
+    "recycled_existing_bytes": 620964496,
+    "recycled_targets": [
+      {
+        "path": "temp/camera-intake",
+        "file_count": 24,
+        "bytes": 1353767
+      },
+      {
+        "path": "temp/camera-model",
+        "file_count": 4091,
+        "bytes": 198243867
+      },
+      {
+        "path": "temp/perspective-animation",
+        "file_count": 2,
+        "bytes": 51492
+      },
+      {
+        "path": "temp/return-power",
+        "file_count": 17,
+        "bytes": 1745352
+      },
+      {
+        "path": "temp/rk-driver-review",
+        "file_count": 24,
+        "bytes": 3922652
+      },
+      {
+        "path": "temp/battery-selection/10067272016882.html",
+        "file_count": 1,
+        "bytes": 35951
+      },
+      {
+        "path": "temp/battery-selection/10067272016882_mobile.html",
+        "file_count": 1,
+        "bytes": 281241
+      },
+      {
+        "path": "temp/battery-selection/10078720536310.html",
+        "file_count": 1,
+        "bytes": 35951
+      },
+      {
+        "path": "temp/battery-selection/10078720536310_mobile.html",
+        "file_count": 1,
+        "bytes": 279728
+      },
+      {
+        "path": "temp/battery-selection/jd_e226c_search.html",
+        "file_count": 1,
+        "bytes": 2704
+      },
+      {
+        "path": "temp/battery-selection/jd_yahboom.html",
+        "file_count": 1,
+        "bytes": 173904
+      },
+      {
+        "path": "temp/battery-selection/update-selection.mjs",
+        "file_count": 1,
+        "bytes": 8356
+      },
+      {
+        "path": "temp/battery-selection/yahboom2000.html",
+        "file_count": 1,
+        "bytes": 0
+      },
+      {
+        "path": "temp/battery-selection/yahboom_2000_main.jpg",
+        "file_count": 1,
+        "bytes": 44990
+      },
+      {
+        "path": "temp/battery-selection/yahboom_charger_main.jpg",
+        "file_count": 1,
+        "bytes": 38001
+      },
+      {
+        "path": "temp/imu-interface-review/eda-public-editor.html",
+        "file_count": 1,
+        "bytes": 539
+      },
+      {
+        "path": "temp/imu-interface-review/eda-public-loader.js",
+        "file_count": 1,
+        "bytes": 1099
+      },
+      {
+        "path": "temp/imu-interface-review/eda-public-manager.eext",
+        "file_count": 1,
+        "bytes": 3781826
+      },
+      {
+        "path": "temp/imu-interface-review/osh-project-page.js",
+        "file_count": 1,
+        "bytes": 72346
+      },
+      {
+        "path": "temp/imu-interface-review/pro-mgr.js",
+        "file_count": 1,
+        "bytes": 2238073
+      },
+      {
+        "path": "temp/imu-interface-review/project-worker.js",
+        "file_count": 1,
+        "bytes": 2368522
+      },
+      {
+        "path": "temp/imu-interface-review/tspi-design-images.json",
+        "file_count": 1,
+        "bytes": 107422
+      },
+      {
+        "path": "temp/imu-interface-review/tspi-hardware-decoded.txt",
+        "file_count": 1,
+        "bytes": 187531
+      },
+      {
+        "path": "temp/imu-interface-review/tspi-hardware.html",
+        "file_count": 1,
+        "bytes": 487686
+      },
+      {
+        "path": "temp/imu-interface-review/tspi-public-project.json",
+        "file_count": 1,
+        "bytes": 5090
+      },
+      {
+        "path": "temp/imu-interface-review/tspi-v14-io-supply.json",
+        "file_count": 1,
+        "bytes": 6
+      },
+      {
+        "path": "temp/imu-selection/dfrobot-4329.html",
+        "file_count": 1,
+        "bytes": 84354
+      },
+      {
+        "path": "temp/imu-selection/dfrobot-4330.html",
+        "file_count": 1,
+        "bytes": 84553
+      },
+      {
+        "path": "temp/motor-power/battery_reference_original.jpg",
+        "file_count": 1,
+        "bytes": 271030
+      },
+      {
+        "path": "temp/motor-power/jd_battery.html",
+        "file_count": 1,
+        "bytes": 293399
+      },
+      {
+        "path": "temp/motor-power/yahboom_power_specs.jpg",
+        "file_count": 1,
+        "bytes": 204008
+      },
+      {
+        "path": "temp/motor-uart/driver_intro.png",
+        "file_count": 1,
+        "bytes": 730267
+      },
+      {
+        "path": "temp/motor-uart/motor_usage.txt",
+        "file_count": 1,
+        "bytes": 1888
+      },
+      {
+        "path": "temp/motor-uart/pc_manual-1.png",
+        "file_count": 1,
+        "bytes": 141248
+      },
+      {
+        "path": "temp/motor-uart/pc_manual-2.png",
+        "file_count": 1,
+        "bytes": 261218
+      },
+      {
+        "path": "temp/motor-uart/UartAssist 5.0.3.exe",
+        "file_count": 1,
+        "bytes": 630272
+      },
+      {
+        "path": "temp/power-annotation/apply_current.mjs",
+        "file_count": 1,
+        "bytes": 7212
+      },
+      {
+        "path": "temp/power-annotation/diagram_dc_superseded.json",
+        "file_count": 1,
+        "bytes": 4404
+      },
+      {
+        "path": "temp/power-annotation/diagram_dc_superseded.png",
+        "file_count": 1,
+        "bytes": 1918804
+      },
+      {
+        "path": "temp/power-annotation/manufacturer_board.jpg",
+        "file_count": 1,
+        "bytes": 184779
+      },
+      {
+        "path": "temp/power-annotation/ports_dc_superseded.png",
+        "file_count": 1,
+        "bytes": 1875516
+      },
+      {
+        "path": "temp/docusaurus/.docusaurus",
+        "file_count": 30,
+        "bytes": 59521
+      },
+      {
+        "path": "temp/docusaurus/build",
+        "file_count": 207,
+        "bytes": 162831212
+      },
+      {
+        "path": "temp/docusaurus/tmp",
+        "file_count": 0,
+        "bytes": 0
+      },
+      {
+        "path": "temp/docusaurus/node_modules/.cache",
+        "file_count": 26,
+        "bytes": 235912715
+      }
+    ],
+    "protected_originals": [
+      "temp/旧硬件待删除/",
+      "temp/t5x-intake/",
+      "temp/yahboom-intake/",
+      "temp/mechanical-20261028/original_manifest.json",
+      "temp/freecad_association/",
+      "temp/freecad_migration/",
+      "尚未重复归档的唯一参考图片与I²C参考源码"
+    ],
+    "retained_local_dependencies": [
+      "temp/docusaurus/node_modules/",
+      "temp/perspective/dependencies/",
+      "temp/xiangqi_recognition/dependencies/"
+    ],
+    "retained_serial_configuration": "temp/motor-uart/UartAssist.cfg",
+    "shared_runtime_link": "临时目录内链接随父目录回收；项目外共享运行库仍在原处",
+    "checks": {
+      "formal_files_unchanged": 409,
+      "protected_files_size_checked": 22194,
+      "json_files": 23,
+      "current_hashes_checked": 135,
+      "relative_links_checked": 455,
+      "original_package_files": 22115,
+      "animation_scripts_parsed": 2,
+      "external_runtime_still_present": true,
+      "issues": [],
+      "website_build": "passed",
+      "animation_rebuild": "内容一致（统一换行符后）",
+      "python_source_syntax": "2份源码通过",
+      "perspective_offline": {
+        "checkpoints": 50,
+        "rmse_output_pixels": 6.907,
+        "max_error_output_pixels": 9.565
+      }
+    },
+    "git_text_normalization": "按现有.gitattributes统一待提交维护文本换行，并同步更新当前成果指纹；历史原件和历史指纹保持不变；生成SVG仅清理行尾空白，已同步其当前文件指纹。",
+    "verification_scope": "电脑离线示例、源码语法、文档构建、文件指纹与大小核对；没有新增CAD几何复测、RK板端或实车验收",
+    "final_verification": {
+      "current_hashes_checked": 135,
+      "relative_links_checked": 457,
+      "json_files": 23,
+      "protected_files_size_checked": 22194,
+      "website_build": "passed",
+      "offline_example": "passed",
+      "issues": []
+    },
+    "generated_during_verification_recycled": [
+      {
+        "path": "temp/docusaurus/.docusaurus",
+        "file_count": 30,
+        "bytes": 59521.0
+      },
+      {
+        "path": "temp/docusaurus/build",
+        "file_count": 207,
+        "bytes": 162838365.0
+      },
+      {
+        "path": "temp/docusaurus/tmp",
+        "file_count": 0,
+        "bytes": null
+      },
+      {
+        "path": "temp/docusaurus/node_modules/.cache",
+        "file_count": 4,
+        "bytes": 223642371.0
+      },
+      {
+        "path": "temp/cleanup-20261102",
+        "file_count": 15,
+        "bytes": 5910217.0
+      }
+    ],
+    "generated_during_verification_note": "最终网站构建产物、缓存和本次一次性核对工具；不计入既有缓存的4,457份和620,964,496字节统计。"
   }
 }

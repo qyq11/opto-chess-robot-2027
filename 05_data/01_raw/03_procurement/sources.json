@@ -1,5 +1,5 @@
 {
-  "checked_date": "2026-10-25",
+  "checked_date": "2026-10-30",
   "purchase_evidence": [
     {
       "source_type": "user_provided_order_screenshot_and_purchase_confirmation",
@@ -38,9 +38,9 @@
         "invoice_number": "26957000000217288389",
         "invoice_type": "电子发票（普通发票）",
         "order_number": "SO26102424311",
-        "total_including_tax_cny": 936.0,
-        "goods_including_tax_cny": 928.0,
-        "shipping_including_tax_cny": 8.0,
+        "total_including_tax_cny": 936,
+        "goods_including_tax_cny": 928,
+        "shipping_including_tax_cny": 8,
         "buyer_name": "上海工程技术大学",
         "buyer_tax_id": "12310000425022547M",
         "seller_name": "深圳市立创电子商务有限公司",
@@ -72,7 +72,7 @@
         {
           "order_number": "3661477012486530",
           "shop": "格氏旗舰店",
-          "paid_cny": 162.0,
+          "paid_cny": 162,
           "items": [
             {
               "jd_sku": "10051546999619",
@@ -101,7 +101,7 @@
               "jd_sku": "10098108278160",
               "variant_from_export": "亚博智能 麦克纳姆轮 万全向轮无人小车DIY底盘520 TT电机80mm轮胎联轴器 65mm尼龙款麦轮*4+3mm六角联轴器",
               "quantity": 1,
-              "actual_unit_price_cny": 109.0,
+              "actual_unit_price_cny": 109,
               "actual_unit_price_source": "2026-10-30发票：含税行金额除以数量；电机4套按199.60/4=49.90元计算。"
             },
             {
@@ -155,8 +155,8 @@
                 "quantity": 1,
                 "excluding_tax_cny": 96.46,
                 "tax_cny": 12.54,
-                "including_tax_cny": 109.0,
-                "unit_including_tax_cny": 109.0
+                "including_tax_cny": 109,
+                "unit_including_tax_cny": 109
               },
               {
                 "item": "310电机及支架",
@@ -248,7 +248,42 @@
       },
       "reconciliation": "2×40.00=80.00；运费0.00；实付80.00。936.00+162.00+363.80+80.00=1541.80。",
       "ledger": "../../../03_hardware/02_采购/01_采购台账.xlsx",
-      "purchase_list": "../../../03_hardware/01_硬件清单.md"
+      "purchase_list": "../../../03_hardware/01_硬件清单.md",
+      "invoice_status": "已取得",
+      "invoice": {
+        "source_type": "user_provided_invoice_pdf",
+        "asset": "../../../03_hardware/02_采购/09_20261030_轮趣_发票_5127831576100359305.pdf",
+        "original_filename": "上海工程技术大学_5127831576100359305.pdf",
+        "original_location": "项目根目录",
+        "sha256": "82197ec6d42dae70e68b73bc8e444da146124d25e845e045006097ee492a0935",
+        "modified": false,
+        "pages": 1,
+        "archived_date": "2026-10-30",
+        "invoice_date": "2026-10-30",
+        "invoice_number": "26442000012481893826",
+        "invoice_type": "电子发票（普通发票）",
+        "order_number": "5127831576100359305",
+        "total_including_tax_cny": 80,
+        "goods_excluding_tax_cny": 70.8,
+        "tax_cny": 9.2,
+        "buyer_name": "上海工程技术大学",
+        "buyer_tax_id": "12310000425022547M",
+        "seller_name": "轮趣科技（东莞）有限公司",
+        "seller_tax_id": "91441900MA518CH52Y",
+        "items": [
+          {
+            "name": "电子元件 加高板",
+            "model": "T5X",
+            "quantity": 2,
+            "unit_from_invoice": "个",
+            "unit_price_excluding_tax_cny": 35.3982300885,
+            "subtotal_excluding_tax_cny": 70.8,
+            "tax_rate": 0.13,
+            "tax_cny": 9.2
+          }
+        ],
+        "scope": "已核PDF整页、抬头税号、订单号、型号、数量2及价税合计80元；订单2套各含1片板，与发票2个对应。未进行税务网站验真。"
+      }
     },
     {
       "source_type": "user_provided_order_pdf_and_purchase_confirmation",
@@ -319,46 +354,87 @@
     },
     {
       "source_type": "user_provided_order_screenshot_and_purchase_confirmation",
-      "asset": "20261030_imx415_order_01.png",
-      "original_filename": "codex-clipboard-2ff56f86-92f4-44b1-923e-2741f28e871b.png",
-      "original_location": "用户本次附图",
-      "sha256": "ba16fdd19a25d2c5ddae5e37c975aa689191de6170ded92cdd3cec9fcab6d078",
+      "asset": "20261030_imx415_100deg_order_01.png",
+      "original_filename": "codex-clipboard-54efa390-afce-4c78-b829-d074ee354abd.png",
+      "sha256": "e03e947f249d7d99c4c4ca7e48fd0019a0456c272dfa48a6812efde89e0c49ae",
       "image_modified": false,
-      "shop": "摄像头生产厂家",
       "platform": "淘宝",
-      "order_number": "5127902461003012147",
-      "ordered_at": "2026-10-30T11:22:18+08:00",
-      "paid_at": "2026-10-30T11:22:21+08:00",
-      "payment_method": "支付宝支付",
-      "alipay_transaction_number": "2026103023001170211458973439",
+      "shop": "摄像头生产厂家",
+      "order_number": "5127836868022085702",
+      "ordered_at": "2026-10-30T21:28:56+08:00",
+      "paid_at": "2026-10-30T21:30:23+08:00",
       "payment_status": "paid",
+      "payment_method": "支付宝支付",
       "fulfillment_status": "待发货",
       "arrival_status": "not_confirmed",
       "hardware_tested": false,
-      "merchandise_total_cny": 178.98,
-      "freight_cny": 9.0,
+      "merchandise_total_cny": 208.18,
+      "freight_cny": 9,
+      "total_paid_cny": 217.18,
       "discount_cny": null,
-      "other_fees_cny": null,
       "tax_cny": null,
-      "total_paid_cny": 187.98,
-      "invoice_status": "未提供票据",
+      "amount_scope": "商品208.18元加运费9.00元等于实付217.18元；运费只在订单汇总计一次。截图未单列优惠、税率与其他费用。",
       "items": [
         {
-          "title_from_order": "800万像素 30P MIPI接口 IMX415摄像头 4K高清 瑞芯微rk3588s",
-          "variant_from_order": "30P-无畸变105度定焦IMX415摄像头",
+          "product_title": "800万像素IMX415摄像头模组RK3288/3399/1109开发应用MIPI接口30P",
+          "variant": "30P-IMX415配无畸变100度镜头M12",
           "quantity": 1,
           "unit": "个",
-          "actual_unit_price_cny": 178.98,
-          "merchandise_subtotal_cny": 178.98,
+          "actual_unit_price_cny": 208.18,
+          "sensor_from_order": "IMX415",
+          "stated_megapixels": 8,
+          "interface_from_order": "30针MIPI",
+          "lens_mount_from_order": "M12",
+          "stated_fov_deg": 100,
+          "fov_direction": "待核水平／垂直／对角线",
+          "distortion_claim": "无畸变，为商家选项名称，未实测",
           "product_url": null,
-          "product_id": null,
           "sku_id": null
         }
       ],
-      "reconciliation": "178.98+9.00=187.98元；运费只在订单汇总计算一次。加原累计1605.50元，本次累计1793.48元。",
-      "ledger": "../../../03_hardware/02_采购/01_采购台账.xlsx",
+      "supplier_documents": [
+        {
+          "asset": "../../../04_references/04_datasheets/02_IMX415_120度模组图纸.pdf",
+          "original_filename": "IX415摄像头 120度 仁恒 2026年10月17日.pdf",
+          "sha256": "cc3bb38c5b9803c0e60888543d51f317cca84db27e96269aa16de8bd3ea0f600",
+          "modified": false,
+          "pages": 1,
+          "archived_date": "2026-10-30",
+          "source_type": "user_supplied_seller_reference_drawing",
+          "manufacturer_on_drawing": "深圳市仁恒影像科技有限公司",
+          "revision_date_on_drawing": "2025-07-25",
+          "scope": "文件名为120度版本；图内列IMX415、32×32mm、0.5mm间距30针、2.1mm焦距，限作尺寸与引脚参考。与已购100度版本的一致性待商家确认。",
+          "license": "商家资料，未单独取得再分发许可。"
+        }
+      ],
+      "unresolved": [
+        "商品链接及SKU编号",
+        "100度是水平、垂直还是对角线视角",
+        "100度实购版本与120度参考图纸的尺寸、引脚和镜头差异",
+        "实购模组固定孔、支架与排线含件",
+        "泰山派3M接口针脚、电源、排线触点方向及镜像驱动适配",
+        "到货、板端出图与真实棋子识别效果",
+        "发票"
+      ],
       "purchase_list": "../../../03_hardware/01_硬件清单.md",
-      "technical_scope": "按已购MIPI摄像头登记；适配、安装尺寸及板端使用尚未验证，不据此改写既有模型。"
+      "ledger": "../../../03_hardware/02_采购/01_采购台账.xlsx",
+      "reimbursement_status": "发票待补；未并入原4笔订单1,443.50元报销材料包",
+      "archive_validation": {
+        "checked_date": "2026-10-30",
+        "original_screenshot_and_pdf_sha256_unchanged": true,
+        "order_amount_cny": 217.18,
+        "goods_amount_cny": 208.18,
+        "freight_cny_counted_once": 9,
+        "ledger_total_cny": 1660.68,
+        "ledger_order_count": 5,
+        "ledger_item_line_count": 8,
+        "existing_ledger_cells_and_package_parts_preserved": true,
+        "saved_workbook_reimport_and_recalculation_passed": true,
+        "formula_error_scan_passed": true,
+        "local_document_links_checked": true,
+        "docusaurus_build_passed": true,
+        "scope": "电脑资料归档、金额和文件完整性核对；新增行已预览。尚未到货、未核MIPI电气适配、未在RK采集或接真实棋子验证。"
+      }
     }
   ],
   "source_type": "user_provided_product_screenshot",
@@ -409,52 +485,35 @@
   },
   "procurement_totals": {
     "currency": "CNY",
-    "lcsc_paid": 936.0,
-    "jd_paid": 525.8,
-    "cumulative_paid": 1793.48,
-    "payment_order_count": 6,
-    "item_line_count": 9,
+    "lcsc_paid": 936,
+    "jd_paid": 363.8,
+    "cumulative_paid": 1660.68,
+    "payment_order_count": 5,
+    "item_line_count": 8,
     "parent_order_double_counted": false,
     "ledger": "../../../03_hardware/02_采购/01_采购台账.xlsx",
-    "ledger_sha256": "0e5ce8ed8e418131ecaa8bb677279224b6ad9d0cbe9e60f56ea3a42703f14083",
+    "ledger_sha256": "bd25334cf5916358a2073eccfd6d07ff5528398f1a780307c2a30af3014e60da",
     "tmall_paid": 80,
-    "taobao_paid": 251.68,
-    "updated_date": "2026-10-30"
+    "taobao_paid": 280.88,
+    "updated_date": "2026-10-30",
+    "camera_paid": 217.18
   },
   "reimbursement_review": {
     "checked_date": "2026-10-30",
     "rule_path": "D:\\Completed\\01_财务票据\\上海工程技术大学\\报销文件整理规则.md",
     "rule_sha256": "265baa9e6de9b1cf5eb6b94de3d9fc240a72acb432f679391bad49e50a6f7ff9",
     "unit_information_path": "D:\\Completed\\01_财务票据\\上海工程技术大学\\报销信息.md",
-    "package_directory": "D:\\Completed\\01_财务票据\\上海工程技术大学\\2026-10_邱宇强报光电赛材料费_待补材料",
-    "package_zip": "D:\\Completed\\01_财务票据\\上海工程技术大学\\2026-10_邱宇强报光电赛材料费_待补材料.zip",
-    "package_zip_sha256": "803ff3a6c588c92fc143547e66d9bb5eacf52e992fd52413b97585578ece5451",
-    "package_status": "仅待补3笔订单发票，未向老师上传，未申报报销",
-    "total_paid_cny": 1793.48,
-    "invoice_received_cny": 1363.5,
-    "invoice_count": 3,
-    "orders_without_local_invoice_cny": 429.98,
-    "missing_invoice_orders": [
-      {
-        "order_number": "3661477012486530",
-        "shop": "格氏旗舰店",
-        "paid_cny": 162
-      },
-      {
-        "order_number": "5127831576100359305",
-        "shop": "wheeltec旗舰店（轮趣）",
-        "paid_cny": 80
-      },
-      {
-        "order_number": "5127902461003012147",
-        "shop": "摄像头生产厂家（淘宝）",
-        "paid_cny": 187.98
-      }
-    ],
-    "remaining_materials": [
-      "电池162.00元、轮趣底板80.00元、IMX415摄像头187.98元的发票PDF，合计429.98元"
-    ],
-    "purchase_and_payment_records": "现有购买记录及付款记录已整理入Word，新增摄像头原始订单截图一并收录；不另增独立付款流水要求。",
+    "package_directory": "D:\\Completed\\01_财务票据\\上海工程技术大学\\2026-10_邱宇强报光电赛材料费_待报销",
+    "package_zip": "D:\\Completed\\01_财务票据\\上海工程技术大学\\2026-10_邱宇强报光电赛材料费_待报销.zip",
+    "package_zip_sha256": "a3a46760f2e93b88fbd56d37b920240cb77a31d13911ed66cbaf773b77595e79",
+    "package_status": "待发送老师、待报销",
+    "total_paid_cny": 1443.5,
+    "invoice_received_cny": 1443.5,
+    "invoice_count": 4,
+    "orders_without_local_invoice_cny": 0,
+    "missing_invoice_orders": [],
+    "remaining_materials": [],
+    "purchase_and_payment_records": "4笔订单、7项商品的清单与购买付款凭证。",
     "files": [
       {
         "name": "发票_亚博稳压电源板_63.70元_2026-10-30.pdf",
@@ -469,21 +528,84 @@
         "sha256": "8ef910fc1b5165d7b51d4220756609d0277fbc1b9fa638237fb506a84aecc74a"
       },
       {
-        "name": "材料费购买记录及付款记录_待补材料.docx",
-        "sha256": "68c10e841b7646d6b00a72d3d2e40a3c81b64c15cc821068cf87e89b1be342db"
+        "name": "发票_轮趣T5X底板_80.00元_2026-10-30.pdf",
+        "sha256": "82197ec6d42dae70e68b73bc8e444da146124d25e845e045006097ee492a0935"
+      },
+      {
+        "name": "材料费购买记录及付款记录.docx",
+        "sha256": "5da3cba74a7eef5da7486db2e4de1aaa21139c96462b6f3f44f0b2e816f64661"
       }
     ],
     "validation": {
       "invoice_archive_and_submission_copy_identical": true,
       "folder_has_no_subfolders": true,
       "zip_crc_and_file_hashes_passed": true,
-      "docx_pages_visually_reviewed": 6,
-      "docx_render_engine": "本机Word兼容接口导出PDF，实际进程WPS；Poppler转PNG逐页检查。",
+      "docx_pages_visually_reviewed": 5,
+      "docx_render_engine": "WPS文字导出PDF，Poppler转PNG，本次5页逐页检查通过。",
       "ledger_unchanged_values_formulas_styles_and_existing_links_checked": true,
-      "order_count": 6,
-      "item_line_count": 9,
-      "camera_freight_counted_once": true,
-      "jd_parent_order_double_counted": false
-    }
+      "order_count": 4,
+      "item_line_count": 7,
+      "jd_parent_order_double_counted": false,
+      "wheeltec_invoice_matches_order": true,
+      "website_build_passed": true,
+      "teacher_package_has_no_status_or_explanatory_document": true,
+      "ledger_rows_formulas_tables_and_links_checked": true
+    },
+    "evidence_crops": [
+      {
+        "asset": "../../03_results/05_procurement/20261030_jd_yahboom_claim_01.png",
+        "sha256": "d7b4681e28a0e9c1f2674e5aa7de33c1c1e6b0680f744071ca88a58c23e0b1c0",
+        "source_asset": "20261024_jd_order_01.png",
+        "source_sha256": "8463be84092dfd026f9a7b367bc1341b88f440a539bf18f4857bc3b10fbd6474",
+        "source_image_size_px": [
+          2317,
+          1255
+        ],
+        "crop_box_left_top_right_bottom_px": [
+          281,
+          613,
+          1570,
+          1230
+        ],
+        "method": "按用户要求对原始截图作矩形裁剪，仅保留亚博子订单；未重绘、遮改或生成订单文字、价格与付款状态。",
+        "scope": "亚博子订单购买付款截图。"
+      }
+    ],
+    "orders": [
+      {
+        "order_number": "SO26102424311",
+        "item": "泰山派主控及散热",
+        "amount_cny": 936,
+        "status": "待发送老师、待报销"
+      },
+      {
+        "order_number": "3661477000956457",
+        "item": "亚博轮组、电机及驱动",
+        "amount_cny": 363.8,
+        "status": "待发送老师、待报销"
+      },
+      {
+        "order_number": "5127831576100359305",
+        "item": "轮趣T5X底板",
+        "amount_cny": 80,
+        "status": "待发送老师、待报销"
+      },
+      {
+        "order_number": "5127385935119112530",
+        "item": "亚博电源板",
+        "amount_cny": 63.7,
+        "status": "待发送老师、待报销"
+      }
+    ],
+    "unsubmitted_orders": [],
+    "confirmed_reimbursed_orders": [],
+    "additional_orders_not_in_package": [
+      {
+        "order_number": "5127836868022085702",
+        "item": "IMX415 100度MIPI相机",
+        "amount_cny": 217.18,
+        "status": "已付款，发票待补；未并入原报销材料包"
+      }
+    ]
   }
 }

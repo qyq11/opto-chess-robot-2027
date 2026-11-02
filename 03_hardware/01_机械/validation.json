@@ -1,5 +1,5 @@
 {
-  "date": "2026-10-28",
+  "date": "2026-11-02",
   "software": "FreeCAD 1.1.4",
   "coordinate_system": "X向右，Y向前，Z向上；mm",
   "parts_defined": 26,
@@ -14,13 +14,13 @@
     -105.0,
     0.0,
     97.9,
-    128.1,
-    164.5
+    133.6,
+    161.6
   ],
   "envelope_mm": {
-    "length": 233.1,
+    "length": 238.6,
     "width": 195.8,
-    "height_above_ground": 164.5
+    "height_above_ground": 161.6
   },
   "invalid_shapes": [],
   "static_intersections": [],
@@ -31,7 +31,7 @@
     "shaft_into_hub_nominal": 11,
     "wheel_to_bracket_axial": 12
   },
-  "scope": "只检查建出的刚体；预留包络、线束、螺纹、容差、动态扫掠、载荷、实物装配未验收。轮子按Ø65×30.4旋转包络纳入外廓。 P08曲面未参与体积交叠合格判断，电子板固定和立柱承力需另查。 2026-10-28逐孔检查及支承截面结果见support_and_hole_verification；曲面、未知包络、螺钉实物及强度仍未验收。",
+  "scope": "只检查建出的刚体；预留包络、线束、螺纹、容差、动态扫掠、载荷、实物装配未验收。轮子按Ø65×30.4旋转包络纳入外廓。 P08曲面未参与体积交叠合格判断，电子板固定和立柱承力需另查。",
   "objects": [
     {
       "name": "D01_9",
@@ -1743,7 +1743,7 @@
     },
     {
       "name": "D05_581",
-      "label": "D05_相机杆_假设8x8x76.5",
+      "label": "D05_相机杆_设计8x8x76.5",
       "part_id": "D05",
       "kind": "自主设计",
       "bbox_mm": [
@@ -1771,76 +1771,160 @@
     },
     {
       "name": "D05_583",
-      "label": "D05_相机杆顶连接臂",
+      "label": "D05_相机杆连接臂_设计值",
       "part_id": "D05",
       "kind": "自主设计",
       "bbox_mm": [
         -4.0,
         94.0,
-        144.0,
+        141.6,
         4.0,
         104.0,
-        148.0
+        145.6
       ]
     },
     {
       "name": "D05_584",
-      "label": "D05_相机四孔安装板_Ø2.4设计间隙",
+      "label": "D05_IMX415安装板36x36x2_孔距28x28",
       "part_id": "D05",
       "kind": "自主设计",
       "bbox_mm": [
-        -16.5,
+        -18.0,
         104.0,
-        131.5,
-        16.5,
+        125.6,
+        18.0,
         106.0,
-        164.5
+        161.6
       ]
     },
     {
-      "name": "P11_594",
-      "label": "P11_相机PCB_已核四孔",
-      "part_id": "P11",
-      "kind": "尺寸简化",
+      "name": "D05_585",
+      "label": "D05_M2绝缘隔柱_设计长3mm",
+      "part_id": "D05",
+      "kind": "自主设计",
       "bbox_mm": [
-        -12.5,
+        -15.9,
         106.0,
-        135.5,
-        12.5,
-        107.6,
-        160.5
+        155.7,
+        -12.1,
+        109.0,
+        159.5
       ]
     },
     {
-      "name": "P11_595",
-      "label": "P11_镜头_中间台阶示意",
+      "name": "D05_586",
+      "label": "D05_M2绝缘隔柱_设计长3mm001",
+      "part_id": "D05",
+      "kind": "自主设计",
+      "bbox_mm": [
+        -15.9,
+        106.0,
+        127.7,
+        -12.1,
+        109.0,
+        131.5
+      ]
+    },
+    {
+      "name": "D05_587",
+      "label": "D05_M2绝缘隔柱_设计长3mm002",
+      "part_id": "D05",
+      "kind": "自主设计",
+      "bbox_mm": [
+        12.1,
+        106.0,
+        155.7,
+        15.9,
+        109.0,
+        159.5
+      ]
+    },
+    {
+      "name": "D05_588",
+      "label": "D05_M2绝缘隔柱_设计长3mm003",
+      "part_id": "D05",
+      "kind": "自主设计",
+      "bbox_mm": [
+        12.1,
+        106.0,
+        127.7,
+        15.9,
+        109.0,
+        131.5
+      ]
+    },
+    {
+      "name": "P11_598",
+      "label": "P11_IMX415板32x32_四角孔28x28_按参考图_分板槽省略",
       "part_id": "P11",
-      "kind": "尺寸简化",
+      "kind": "参考图尺寸简化",
+      "bbox_mm": [
+        -16.0,
+        109.0,
+        127.6,
+        16.0,
+        110.6,
+        159.6
+      ]
+    },
+    {
+      "name": "P11_599",
+      "label": "P11_M12镜座17x17_按参考图",
+      "part_id": "P11",
+      "kind": "参考图尺寸简化",
+      "bbox_mm": [
+        -8.5,
+        110.6,
+        139.5,
+        8.5,
+        115.1,
+        156.5
+      ]
+    },
+    {
+      "name": "P11_600",
+      "label": "P11_100度镜筒_仅参考包络",
+      "part_id": "P11",
+      "kind": "参考图尺寸简化",
       "bbox_mm": [
         -6.0,
-        107.6,
+        115.1,
         142.0,
         6.0,
-        112.1,
+        129.0,
         154.0
       ]
     },
     {
-      "name": "P11_596",
-      "label": "P11_镜头前段_总深22.1",
+      "name": "P11_601",
+      "label": "P11_镜头前段_参考总深24.6含板厚",
       "part_id": "P11",
-      "kind": "尺寸简化",
+      "kind": "参考图尺寸简化",
       "bbox_mm": [
-        -7.0,
-        112.1,
-        141.0,
-        7.0,
-        128.1,
-        155.0
+        -9.15,
+        129.0,
+        138.85,
+        9.15,
+        133.6,
+        157.15
       ]
     },
     {
-      "name": "D06_606",
+      "name": "P11_602",
+      "label": "P11_30针0.5间距插座_外形及位置示意",
+      "part_id": "P11",
+      "kind": "参考图尺寸简化",
+      "bbox_mm": [
+        -9.25,
+        110.6,
+        131.1,
+        9.25,
+        113.1,
+        135.1
+      ]
+    },
+    {
+      "name": "D06_612",
       "label": "D06_35mm层间柱_原孔定位",
       "part_id": "D06",
       "kind": "自主设计",
@@ -1854,7 +1938,7 @@
       ]
     },
     {
-      "name": "D06_607",
+      "name": "D06_613",
       "label": "D06_35mm层间柱_原孔定位001",
       "part_id": "D06",
       "kind": "自主设计",
@@ -1868,7 +1952,7 @@
       ]
     },
     {
-      "name": "D06_608",
+      "name": "D06_614",
       "label": "D06_35mm层间柱_原孔定位002",
       "part_id": "D06",
       "kind": "自主设计",
@@ -1882,7 +1966,7 @@
       ]
     },
     {
-      "name": "D06_609",
+      "name": "D06_615",
       "label": "D06_35mm层间柱_原孔定位003",
       "part_id": "D06",
       "kind": "自主设计",
@@ -1896,7 +1980,7 @@
       ]
     },
     {
-      "name": "D08_610",
+      "name": "D08_616",
       "label": "D08_驱动安装板下支承_3mm",
       "part_id": "D08",
       "kind": "自主设计",
@@ -1910,7 +1994,7 @@
       ]
     },
     {
-      "name": "D08_611",
+      "name": "D08_617",
       "label": "D08_驱动安装板下支承_3mm001",
       "part_id": "D08",
       "kind": "自主设计",
@@ -1924,7 +2008,7 @@
       ]
     },
     {
-      "name": "D08_612",
+      "name": "D08_618",
       "label": "D08_驱动安装板下支承_3mm002",
       "part_id": "D08",
       "kind": "自主设计",
@@ -1938,7 +2022,7 @@
       ]
     },
     {
-      "name": "D08_613",
+      "name": "D08_619",
       "label": "D08_驱动安装板下支承_3mm003",
       "part_id": "D08",
       "kind": "自主设计",
@@ -1952,7 +2036,7 @@
       ]
     },
     {
-      "name": "D08_614",
+      "name": "D08_620",
       "label": "D08_驱动PCB绝缘柱_5mm",
       "part_id": "D08",
       "kind": "自主设计",
@@ -1966,7 +2050,7 @@
       ]
     },
     {
-      "name": "D08_615",
+      "name": "D08_621",
       "label": "D08_驱动PCB绝缘柱_5mm001",
       "part_id": "D08",
       "kind": "自主设计",
@@ -1980,7 +2064,7 @@
       ]
     },
     {
-      "name": "D08_616",
+      "name": "D08_622",
       "label": "D08_驱动PCB绝缘柱_5mm002",
       "part_id": "D08",
       "kind": "自主设计",
@@ -1994,7 +2078,7 @@
       ]
     },
     {
-      "name": "D08_617",
+      "name": "D08_623",
       "label": "D08_驱动PCB绝缘柱_5mm003",
       "part_id": "D08",
       "kind": "自主设计",
@@ -2008,7 +2092,7 @@
       ]
     },
     {
-      "name": "D04_618",
+      "name": "D04_624",
       "label": "D04_推板承力连接",
       "part_id": "D04",
       "kind": "自主设计",
@@ -2022,7 +2106,7 @@
       ]
     },
     {
-      "name": "D04_619",
+      "name": "D04_625",
       "label": "D04_推板承力连接001",
       "part_id": "D04",
       "kind": "自主设计",
@@ -2040,511 +2124,643 @@
     "P08四路驱动：厂家未封闭曲面，仅作几何参考"
   ],
   "mating_interface_scope": "联轴器与轮孔、电机轴按轴线、接口尺寸和安装坐标核对；不以重合面的布尔交结果证明实物配合公差。",
-  "support_and_hole_verification": {
-    "date": "2026-10-28",
-    "scope": "Windows上的CAD文件重开、孔通道和支承几何核对；不代表已购件、强度、装配或板端运行验收。",
-    "joint_checks": [
-      {
-        "label": "层间柱_下板原孔",
-        "xy_mm": [
-          -50,
-          -85
-        ],
-        "seat_material_fraction": 1.0,
-        "screw_passage_blockage_mm3": 0.0
-      },
-      {
-        "label": "层间柱_上板原孔",
-        "xy_mm": [
-          -50,
-          -85
-        ],
-        "seat_material_fraction": 1.0,
-        "screw_passage_blockage_mm3": 0.0
-      },
-      {
-        "label": "层间柱_下板原孔",
-        "xy_mm": [
-          -50,
-          85
-        ],
-        "seat_material_fraction": 1.0,
-        "screw_passage_blockage_mm3": 0.0
-      },
-      {
-        "label": "层间柱_上板原孔",
-        "xy_mm": [
-          -50,
-          85
-        ],
-        "seat_material_fraction": 1.0,
-        "screw_passage_blockage_mm3": 0.0
-      },
-      {
-        "label": "层间柱_下板原孔",
-        "xy_mm": [
-          50,
-          -85
-        ],
-        "seat_material_fraction": 1.0,
-        "screw_passage_blockage_mm3": 0.0
-      },
-      {
-        "label": "层间柱_上板原孔",
-        "xy_mm": [
-          50,
-          -85
-        ],
-        "seat_material_fraction": 1.0,
-        "screw_passage_blockage_mm3": 0.0
-      },
-      {
-        "label": "层间柱_下板原孔",
-        "xy_mm": [
-          50,
-          85
-        ],
-        "seat_material_fraction": 1.0,
-        "screw_passage_blockage_mm3": 0.0
-      },
-      {
-        "label": "层间柱_上板原孔",
-        "xy_mm": [
-          50,
-          85
-        ],
-        "seat_material_fraction": 1.0,
-        "screw_passage_blockage_mm3": 0.0
-      },
-      {
-        "label": "电机桥板补孔",
-        "xy_mm": [
-          -32,
-          -52
-        ],
-        "seat_material_fraction": 1.0,
-        "screw_passage_blockage_mm3": 0.0
-      },
-      {
-        "label": "电机桥板补孔",
-        "xy_mm": [
-          -32,
-          52
-        ],
-        "seat_material_fraction": 1.0,
-        "screw_passage_blockage_mm3": 0.0
-      },
-      {
-        "label": "电机桥板补孔",
-        "xy_mm": [
-          32,
-          -52
-        ],
-        "seat_material_fraction": 1.0,
-        "screw_passage_blockage_mm3": 0.0
-      },
-      {
-        "label": "电机桥板补孔",
-        "xy_mm": [
-          32,
-          52
-        ],
-        "seat_material_fraction": 1.0,
-        "screw_passage_blockage_mm3": 0.0
-      },
-      {
-        "label": "托盘支脚固定",
-        "xy_mm": [
-          -18,
-          -48
-        ],
-        "seat_material_fraction": 1.0,
-        "screw_passage_blockage_mm3": 0.0
-      },
-      {
-        "label": "托盘支脚固定",
-        "xy_mm": [
-          -18,
-          48
-        ],
-        "seat_material_fraction": 1.0,
-        "screw_passage_blockage_mm3": 0.0
-      },
-      {
-        "label": "托盘支脚固定",
-        "xy_mm": [
-          18,
-          -48
-        ],
-        "seat_material_fraction": 1.0,
-        "screw_passage_blockage_mm3": 0.0
-      },
-      {
-        "label": "托盘支脚固定",
-        "xy_mm": [
-          18,
-          48
-        ],
-        "seat_material_fraction": 1.0,
-        "screw_passage_blockage_mm3": 0.0
-      },
-      {
-        "label": "相机底座固定",
-        "xy_mm": [
-          -12,
-          94
-        ],
-        "seat_material_fraction": 1.0,
-        "screw_passage_blockage_mm3": 0.0
-      },
-      {
-        "label": "相机底座固定",
-        "xy_mm": [
-          12,
-          94
-        ],
-        "seat_material_fraction": 1.0,
-        "screw_passage_blockage_mm3": 0.0
-      },
-      {
-        "label": "推板承力脚固定",
-        "xy_mm": [
-          -55,
-          90
-        ],
-        "seat_material_fraction": 1.0,
-        "screw_passage_blockage_mm3": 0.0
-      },
-      {
-        "label": "推板承力脚固定",
-        "xy_mm": [
-          -50,
-          96
-        ],
-        "seat_material_fraction": 1.0,
-        "screw_passage_blockage_mm3": 0.0
-      },
-      {
-        "label": "推板承力脚固定",
-        "xy_mm": [
-          55,
-          90
-        ],
-        "seat_material_fraction": 1.0,
-        "screw_passage_blockage_mm3": 0.0
-      },
-      {
-        "label": "推板承力脚固定",
-        "xy_mm": [
-          50,
-          96
-        ],
-        "seat_material_fraction": 1.0,
-        "screw_passage_blockage_mm3": 0.0
-      },
-      {
-        "label": "驱动安装板固定",
-        "xy_mm": [
-          -28,
-          -94
-        ],
-        "seat_material_fraction": 1.0,
-        "screw_passage_blockage_mm3": 0.0
-      },
-      {
-        "label": "驱动安装板固定",
-        "xy_mm": [
-          -12,
-          -94
-        ],
-        "seat_material_fraction": 1.0,
-        "screw_passage_blockage_mm3": 0.0
-      },
-      {
-        "label": "驱动安装板固定",
-        "xy_mm": [
-          -36,
-          -36
-        ],
-        "seat_material_fraction": 1.0,
-        "screw_passage_blockage_mm3": 0.0
-      },
-      {
-        "label": "驱动安装板固定",
-        "xy_mm": [
-          -24,
-          -36
-        ],
-        "seat_material_fraction": 1.0,
-        "screw_passage_blockage_mm3": 0.0
-      },
-      {
-        "label": "电机架桥板通道",
-        "xy_mm": [
-          -44.5,
-          62
-        ],
-        "seat_material_fraction": 0.976563,
-        "screw_passage_blockage_mm3": 0.0
-      },
-      {
-        "label": "电机架桥板通道",
-        "xy_mm": [
-          -44.5,
-          78
-        ],
-        "seat_material_fraction": 0.976563,
-        "screw_passage_blockage_mm3": 0.0
-      },
-      {
-        "label": "电机架桥板通道",
-        "xy_mm": [
-          -30.5,
-          62
-        ],
-        "seat_material_fraction": 0.976563,
-        "screw_passage_blockage_mm3": 0.0
-      },
-      {
-        "label": "电机架桥板通道",
-        "xy_mm": [
-          -30.5,
-          78
-        ],
-        "seat_material_fraction": 0.976563,
-        "screw_passage_blockage_mm3": 0.0
-      },
-      {
-        "label": "电机架桥板通道",
-        "xy_mm": [
-          30.5,
-          62
-        ],
-        "seat_material_fraction": 0.976563,
-        "screw_passage_blockage_mm3": 0.0
-      },
-      {
-        "label": "电机架桥板通道",
-        "xy_mm": [
-          30.5,
-          78
-        ],
-        "seat_material_fraction": 0.976563,
-        "screw_passage_blockage_mm3": 0.0
-      },
-      {
-        "label": "电机架桥板通道",
-        "xy_mm": [
-          44.5,
-          62
-        ],
-        "seat_material_fraction": 0.976563,
-        "screw_passage_blockage_mm3": 0.0
-      },
-      {
-        "label": "电机架桥板通道",
-        "xy_mm": [
-          44.5,
-          78
-        ],
-        "seat_material_fraction": 0.976563,
-        "screw_passage_blockage_mm3": 0.0
-      },
-      {
-        "label": "电机架桥板通道",
-        "xy_mm": [
-          -44.5,
-          -78
-        ],
-        "seat_material_fraction": 0.976563,
-        "screw_passage_blockage_mm3": 0.0
-      },
-      {
-        "label": "电机架桥板通道",
-        "xy_mm": [
-          -44.5,
-          -62
-        ],
-        "seat_material_fraction": 0.976563,
-        "screw_passage_blockage_mm3": 0.0
-      },
-      {
-        "label": "电机架桥板通道",
-        "xy_mm": [
-          -30.5,
-          -78
-        ],
-        "seat_material_fraction": 0.976563,
-        "screw_passage_blockage_mm3": 0.0
-      },
-      {
-        "label": "电机架桥板通道",
-        "xy_mm": [
-          -30.5,
-          -62
-        ],
-        "seat_material_fraction": 0.976563,
-        "screw_passage_blockage_mm3": 0.0
-      },
-      {
-        "label": "电机架桥板通道",
-        "xy_mm": [
-          30.5,
-          -78
-        ],
-        "seat_material_fraction": 0.976563,
-        "screw_passage_blockage_mm3": 0.0
-      },
-      {
-        "label": "电机架桥板通道",
-        "xy_mm": [
-          30.5,
-          -62
-        ],
-        "seat_material_fraction": 0.976563,
-        "screw_passage_blockage_mm3": 0.0
-      },
-      {
-        "label": "电机架桥板通道",
-        "xy_mm": [
-          44.5,
-          -78
-        ],
-        "seat_material_fraction": 0.976563,
-        "screw_passage_blockage_mm3": 0.0
-      },
-      {
-        "label": "电机架桥板通道",
-        "xy_mm": [
-          44.5,
-          -62
-        ],
-        "seat_material_fraction": 0.976563,
-        "screw_passage_blockage_mm3": 0.0
-      },
-      {
-        "label": "驱动PCB隔柱通道",
-        "xy_mm": [
-          -66,
-          -86.5
-        ],
-        "seat_material_fraction": 1.0,
-        "screw_passage_blockage_mm3": 0.0
-      },
-      {
-        "label": "驱动PCB隔柱通道",
-        "xy_mm": [
-          -66,
-          -37.5
-        ],
-        "seat_material_fraction": 1.0,
-        "screw_passage_blockage_mm3": 0.0
-      },
-      {
-        "label": "驱动PCB隔柱通道",
-        "xy_mm": [
-          -8,
-          -86.5
-        ],
-        "seat_material_fraction": 1.0,
-        "screw_passage_blockage_mm3": 0.0
-      },
-      {
-        "label": "驱动PCB隔柱通道",
-        "xy_mm": [
-          -8,
-          -37.5
-        ],
-        "seat_material_fraction": 1.0,
-        "screw_passage_blockage_mm3": 0.0
-      }
+  "camera_connection": {
+    "scope": "使用用户已有的30针长排线连接相机与RK；用户2026-11-02确认可以连接。模型表达安装和排线通道，尚未上板出图。",
+    "camera_board_center_mm": [
+      0,
+      109,
+      143.6
     ],
-    "retained_geometry": [
-      {
-        "part_id": "P03",
-        "objects_unchanged": 20
-      },
-      {
-        "part_id": "P04",
-        "objects_unchanged": 20
-      },
-      {
-        "part_id": "P05",
-        "objects_unchanged": 4
-      },
-      {
-        "part_id": "P06",
-        "objects_unchanged": 32
-      },
-      {
-        "part_id": "P07",
-        "objects_unchanged": 4
-      },
-      {
-        "part_id": "P09",
-        "objects_unchanged": 1
-      },
-      {
-        "part_id": "P11",
-        "objects_unchanged": 3
-      }
+    "lens_center_height_mm": 148,
+    "mount_plate_center_mm": [
+      0,
+      106,
+      143.6
     ],
-    "camera_rod_upper_plate_intersection_mm3": 0.0,
-    "driver_to_adapter_clearance_mm": 3.2284799444479972,
-    "counts": {
-      "motors": 4,
-      "brackets": 4,
-      "bridges": 2,
-      "wheels": 4
+    "ribbon_width_mm": 16,
+    "ribbon_thickness_mm": 0.2,
+    "ribbon_centerline_mm": [
+      [
+        0,
+        112,
+        133.1
+      ],
+      [
+        0,
+        118,
+        133.1
+      ],
+      [
+        0,
+        119,
+        125
+      ],
+      [
+        0,
+        115,
+        119
+      ],
+      [
+        22,
+        107,
+        116
+      ],
+      [
+        22,
+        94,
+        111
+      ],
+      [
+        22,
+        88,
+        106.9
+      ],
+      [
+        22,
+        78,
+        106.9
+      ]
+    ],
+    "rk_port_position_scope": "RK背面摄像头插座暂用主板前缘下方示意位置，准确插座坐标、型号、触点和弯曲半径待核；不作加工尺寸。",
+    "electrical_status": "用户确认现有30针长排线可连接；实际板版本、两端触点方向和板端采集待核。参考图差异不作为实物已确认不兼容的结论。",
+    "existing_cable": {
+      "source": "用户2026-11-02补充：U接口排线是可以接的，它是30针的那种长线",
+      "pins": 30,
+      "available": true,
+      "user_confirmed_connectable": true,
+      "actual_length_mm": null,
+      "actual_capture_verified": false
     },
-    "current_feature_count": 150,
+    "excluded_from_mechanical_step": true
+  },
+  "previous_support_check": {
+    "date": "2026-10-28",
+    "scope": "历史固定结构检查；本次替换相机及其安装板后，当前相机检查单独见camera_update_20261102；不将旧相机结果当作新相机通过。",
+    "result": {
+      "date": "2026-10-28",
+      "scope": "Windows上的CAD文件重开、孔通道和支承几何核对；不代表已购件、强度、装配或板端运行验收。",
+      "joint_checks": [
+        {
+          "label": "层间柱_下板原孔",
+          "xy_mm": [
+            -50,
+            -85
+          ],
+          "seat_material_fraction": 1.0,
+          "screw_passage_blockage_mm3": 0.0
+        },
+        {
+          "label": "层间柱_上板原孔",
+          "xy_mm": [
+            -50,
+            -85
+          ],
+          "seat_material_fraction": 1.0,
+          "screw_passage_blockage_mm3": 0.0
+        },
+        {
+          "label": "层间柱_下板原孔",
+          "xy_mm": [
+            -50,
+            85
+          ],
+          "seat_material_fraction": 1.0,
+          "screw_passage_blockage_mm3": 0.0
+        },
+        {
+          "label": "层间柱_上板原孔",
+          "xy_mm": [
+            -50,
+            85
+          ],
+          "seat_material_fraction": 1.0,
+          "screw_passage_blockage_mm3": 0.0
+        },
+        {
+          "label": "层间柱_下板原孔",
+          "xy_mm": [
+            50,
+            -85
+          ],
+          "seat_material_fraction": 1.0,
+          "screw_passage_blockage_mm3": 0.0
+        },
+        {
+          "label": "层间柱_上板原孔",
+          "xy_mm": [
+            50,
+            -85
+          ],
+          "seat_material_fraction": 1.0,
+          "screw_passage_blockage_mm3": 0.0
+        },
+        {
+          "label": "层间柱_下板原孔",
+          "xy_mm": [
+            50,
+            85
+          ],
+          "seat_material_fraction": 1.0,
+          "screw_passage_blockage_mm3": 0.0
+        },
+        {
+          "label": "层间柱_上板原孔",
+          "xy_mm": [
+            50,
+            85
+          ],
+          "seat_material_fraction": 1.0,
+          "screw_passage_blockage_mm3": 0.0
+        },
+        {
+          "label": "电机桥板补孔",
+          "xy_mm": [
+            -32,
+            -52
+          ],
+          "seat_material_fraction": 1.0,
+          "screw_passage_blockage_mm3": 0.0
+        },
+        {
+          "label": "电机桥板补孔",
+          "xy_mm": [
+            -32,
+            52
+          ],
+          "seat_material_fraction": 1.0,
+          "screw_passage_blockage_mm3": 0.0
+        },
+        {
+          "label": "电机桥板补孔",
+          "xy_mm": [
+            32,
+            -52
+          ],
+          "seat_material_fraction": 1.0,
+          "screw_passage_blockage_mm3": 0.0
+        },
+        {
+          "label": "电机桥板补孔",
+          "xy_mm": [
+            32,
+            52
+          ],
+          "seat_material_fraction": 1.0,
+          "screw_passage_blockage_mm3": 0.0
+        },
+        {
+          "label": "托盘支脚固定",
+          "xy_mm": [
+            -18,
+            -48
+          ],
+          "seat_material_fraction": 1.0,
+          "screw_passage_blockage_mm3": 0.0
+        },
+        {
+          "label": "托盘支脚固定",
+          "xy_mm": [
+            -18,
+            48
+          ],
+          "seat_material_fraction": 1.0,
+          "screw_passage_blockage_mm3": 0.0
+        },
+        {
+          "label": "托盘支脚固定",
+          "xy_mm": [
+            18,
+            -48
+          ],
+          "seat_material_fraction": 1.0,
+          "screw_passage_blockage_mm3": 0.0
+        },
+        {
+          "label": "托盘支脚固定",
+          "xy_mm": [
+            18,
+            48
+          ],
+          "seat_material_fraction": 1.0,
+          "screw_passage_blockage_mm3": 0.0
+        },
+        {
+          "label": "相机底座固定",
+          "xy_mm": [
+            -12,
+            94
+          ],
+          "seat_material_fraction": 1.0,
+          "screw_passage_blockage_mm3": 0.0
+        },
+        {
+          "label": "相机底座固定",
+          "xy_mm": [
+            12,
+            94
+          ],
+          "seat_material_fraction": 1.0,
+          "screw_passage_blockage_mm3": 0.0
+        },
+        {
+          "label": "推板承力脚固定",
+          "xy_mm": [
+            -55,
+            90
+          ],
+          "seat_material_fraction": 1.0,
+          "screw_passage_blockage_mm3": 0.0
+        },
+        {
+          "label": "推板承力脚固定",
+          "xy_mm": [
+            -50,
+            96
+          ],
+          "seat_material_fraction": 1.0,
+          "screw_passage_blockage_mm3": 0.0
+        },
+        {
+          "label": "推板承力脚固定",
+          "xy_mm": [
+            55,
+            90
+          ],
+          "seat_material_fraction": 1.0,
+          "screw_passage_blockage_mm3": 0.0
+        },
+        {
+          "label": "推板承力脚固定",
+          "xy_mm": [
+            50,
+            96
+          ],
+          "seat_material_fraction": 1.0,
+          "screw_passage_blockage_mm3": 0.0
+        },
+        {
+          "label": "驱动安装板固定",
+          "xy_mm": [
+            -28,
+            -94
+          ],
+          "seat_material_fraction": 1.0,
+          "screw_passage_blockage_mm3": 0.0
+        },
+        {
+          "label": "驱动安装板固定",
+          "xy_mm": [
+            -12,
+            -94
+          ],
+          "seat_material_fraction": 1.0,
+          "screw_passage_blockage_mm3": 0.0
+        },
+        {
+          "label": "驱动安装板固定",
+          "xy_mm": [
+            -36,
+            -36
+          ],
+          "seat_material_fraction": 1.0,
+          "screw_passage_blockage_mm3": 0.0
+        },
+        {
+          "label": "驱动安装板固定",
+          "xy_mm": [
+            -24,
+            -36
+          ],
+          "seat_material_fraction": 1.0,
+          "screw_passage_blockage_mm3": 0.0
+        },
+        {
+          "label": "电机架桥板通道",
+          "xy_mm": [
+            -44.5,
+            62
+          ],
+          "seat_material_fraction": 0.976563,
+          "screw_passage_blockage_mm3": 0.0
+        },
+        {
+          "label": "电机架桥板通道",
+          "xy_mm": [
+            -44.5,
+            78
+          ],
+          "seat_material_fraction": 0.976563,
+          "screw_passage_blockage_mm3": 0.0
+        },
+        {
+          "label": "电机架桥板通道",
+          "xy_mm": [
+            -30.5,
+            62
+          ],
+          "seat_material_fraction": 0.976563,
+          "screw_passage_blockage_mm3": 0.0
+        },
+        {
+          "label": "电机架桥板通道",
+          "xy_mm": [
+            -30.5,
+            78
+          ],
+          "seat_material_fraction": 0.976563,
+          "screw_passage_blockage_mm3": 0.0
+        },
+        {
+          "label": "电机架桥板通道",
+          "xy_mm": [
+            30.5,
+            62
+          ],
+          "seat_material_fraction": 0.976563,
+          "screw_passage_blockage_mm3": 0.0
+        },
+        {
+          "label": "电机架桥板通道",
+          "xy_mm": [
+            30.5,
+            78
+          ],
+          "seat_material_fraction": 0.976563,
+          "screw_passage_blockage_mm3": 0.0
+        },
+        {
+          "label": "电机架桥板通道",
+          "xy_mm": [
+            44.5,
+            62
+          ],
+          "seat_material_fraction": 0.976563,
+          "screw_passage_blockage_mm3": 0.0
+        },
+        {
+          "label": "电机架桥板通道",
+          "xy_mm": [
+            44.5,
+            78
+          ],
+          "seat_material_fraction": 0.976563,
+          "screw_passage_blockage_mm3": 0.0
+        },
+        {
+          "label": "电机架桥板通道",
+          "xy_mm": [
+            -44.5,
+            -78
+          ],
+          "seat_material_fraction": 0.976563,
+          "screw_passage_blockage_mm3": 0.0
+        },
+        {
+          "label": "电机架桥板通道",
+          "xy_mm": [
+            -44.5,
+            -62
+          ],
+          "seat_material_fraction": 0.976563,
+          "screw_passage_blockage_mm3": 0.0
+        },
+        {
+          "label": "电机架桥板通道",
+          "xy_mm": [
+            -30.5,
+            -78
+          ],
+          "seat_material_fraction": 0.976563,
+          "screw_passage_blockage_mm3": 0.0
+        },
+        {
+          "label": "电机架桥板通道",
+          "xy_mm": [
+            -30.5,
+            -62
+          ],
+          "seat_material_fraction": 0.976563,
+          "screw_passage_blockage_mm3": 0.0
+        },
+        {
+          "label": "电机架桥板通道",
+          "xy_mm": [
+            30.5,
+            -78
+          ],
+          "seat_material_fraction": 0.976563,
+          "screw_passage_blockage_mm3": 0.0
+        },
+        {
+          "label": "电机架桥板通道",
+          "xy_mm": [
+            30.5,
+            -62
+          ],
+          "seat_material_fraction": 0.976563,
+          "screw_passage_blockage_mm3": 0.0
+        },
+        {
+          "label": "电机架桥板通道",
+          "xy_mm": [
+            44.5,
+            -78
+          ],
+          "seat_material_fraction": 0.976563,
+          "screw_passage_blockage_mm3": 0.0
+        },
+        {
+          "label": "电机架桥板通道",
+          "xy_mm": [
+            44.5,
+            -62
+          ],
+          "seat_material_fraction": 0.976563,
+          "screw_passage_blockage_mm3": 0.0
+        },
+        {
+          "label": "驱动PCB隔柱通道",
+          "xy_mm": [
+            -66,
+            -86.5
+          ],
+          "seat_material_fraction": 1.0,
+          "screw_passage_blockage_mm3": 0.0
+        },
+        {
+          "label": "驱动PCB隔柱通道",
+          "xy_mm": [
+            -66,
+            -37.5
+          ],
+          "seat_material_fraction": 1.0,
+          "screw_passage_blockage_mm3": 0.0
+        },
+        {
+          "label": "驱动PCB隔柱通道",
+          "xy_mm": [
+            -8,
+            -86.5
+          ],
+          "seat_material_fraction": 1.0,
+          "screw_passage_blockage_mm3": 0.0
+        },
+        {
+          "label": "驱动PCB隔柱通道",
+          "xy_mm": [
+            -8,
+            -37.5
+          ],
+          "seat_material_fraction": 1.0,
+          "screw_passage_blockage_mm3": 0.0
+        }
+      ],
+      "retained_geometry": [
+        {
+          "part_id": "P03",
+          "objects_unchanged": 20
+        },
+        {
+          "part_id": "P04",
+          "objects_unchanged": 20
+        },
+        {
+          "part_id": "P05",
+          "objects_unchanged": 4
+        },
+        {
+          "part_id": "P06",
+          "objects_unchanged": 32
+        },
+        {
+          "part_id": "P07",
+          "objects_unchanged": 4
+        },
+        {
+          "part_id": "P09",
+          "objects_unchanged": 1
+        },
+        {
+          "part_id": "P11",
+          "objects_unchanged": 3
+        }
+      ],
+      "camera_rod_upper_plate_intersection_mm3": 0.0,
+      "driver_to_adapter_clearance_mm": 3.2284799444479972,
+      "counts": {
+        "motors": 4,
+        "brackets": 4,
+        "bridges": 2,
+        "wheels": 4
+      },
+      "current_feature_count": 150,
+      "invalid_shapes": [],
+      "step_reimports": [
+        {
+          "file": "D01.step",
+          "solids": 1,
+          "valid": true
+        },
+        {
+          "file": "D03_电控安装层.step",
+          "solids": 1,
+          "valid": true
+        },
+        {
+          "file": "D07_前后电机固定桥板.step",
+          "solids": 1,
+          "valid": true
+        },
+        {
+          "file": "D08_四路驱动安装板.step",
+          "solids": 1,
+          "valid": true
+        },
+        {
+          "file": "D02_电池托盘与绑带.step",
+          "solids": 3,
+          "valid": true
+        },
+        {
+          "file": "D05_相机杆与相机安装板.step",
+          "solids": 4,
+          "valid": true
+        }
+      ],
+      "assembly_step": {
+        "valid": true,
+        "solids": 142,
+        "faces": 5934,
+        "includes_surface_reference": true,
+        "excludes_schematic_wires": true
+      },
+      "reference_zip_check": {
+        "file": "03_hardware/01_机械/01_厂家资料/03_四路电机驱动/12_STM32串口工程.zip",
+        "crc_all_entries_passed": true,
+        "projects": [
+          "USER/USART.uvprojx"
+        ],
+        "compiled_or_flashed": false
+      }
+    }
+  },
+  "camera_update_20261102": {
+    "date": "2026-11-02",
+    "scope": "电脑CAD几何与文件检查，不是实物、板端或电气适配通过",
+    "other_features_unchanged": true,
+    "other_features_compared": 136,
+    "camera_board_bbox_mm": [
+      32.0,
+      32.0,
+      1.6
+    ],
+    "camera_board_to_mount_gap_mm": 3.0,
+    "mount_holes": [
+      {
+        "x_mm": -14,
+        "z_mm": 129.6,
+        "screw_axis_blockage_mm3": 0.0
+      },
+      {
+        "x_mm": -14,
+        "z_mm": 157.6,
+        "screw_axis_blockage_mm3": 0.0
+      },
+      {
+        "x_mm": 14,
+        "z_mm": 129.6,
+        "screw_axis_blockage_mm3": 0.0
+      },
+      {
+        "x_mm": 14,
+        "z_mm": 157.6,
+        "screw_axis_blockage_mm3": 0.0
+      }
+    ],
+    "ribbon_to_rigid_overlap_mm3": 0.0,
+    "ribbon_to_connector_intended_overlap_mm3": 3.52,
+    "ribbon_path_length_mm": 76.169,
+    "ribbon_scope": "只检查中心路线宽16mm厚0.2mm草案与已建实体的相交；没有真实端子、折弯半径或针脚映射。",
     "invalid_shapes": [],
     "step_reimports": [
       {
-        "file": "D01.step",
-        "solids": 1,
-        "valid": true
-      },
-      {
-        "file": "D03_电控安装层.step",
-        "solids": 1,
-        "valid": true
-      },
-      {
-        "file": "D07_前后电机固定桥板.step",
-        "solids": 1,
-        "valid": true
-      },
-      {
-        "file": "D08_四路驱动安装板.step",
-        "solids": 1,
-        "valid": true
-      },
-      {
-        "file": "D02_电池托盘与绑带.step",
-        "solids": 3,
-        "valid": true
+        "file": "P11_IMX415 100度M12 30针MIPI相机.step",
+        "valid": true,
+        "solids": 5
       },
       {
         "file": "D05_相机杆与相机安装板.step",
-        "solids": 4,
-        "valid": true
+        "valid": true,
+        "solids": 8
       }
     ],
     "assembly_step": {
       "valid": true,
-      "solids": 142,
-      "faces": 5934,
-      "includes_surface_reference": true,
-      "excludes_schematic_wires": true
+      "solids": 148,
+      "faces": 5967,
+      "ribbon_excluded": true
     },
-    "reference_zip_check": {
-      "file": "03_hardware/01_机械/01_厂家资料/03_四路电机驱动/12_STM32串口工程.zip",
-      "crc_all_entries_passed": true,
-      "projects": [
-        "USER/USART.uvprojx"
-      ],
-      "compiled_or_flashed": false
-    }
+    "fcstd_reopen_passed": true,
+    "cable_confirmation": "用户确认已有30针长排线可连接；本次仅更新连接说明，几何检查沿用此前范围，未做板端采集。"
   }
 }

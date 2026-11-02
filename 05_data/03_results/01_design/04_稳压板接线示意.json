@@ -1,0 +1,27 @@
+{
+  "date": "2026-10-30",
+  "title": "电池、稳压板与电机驱动接线",
+  "generation": {
+    "tool": "image_gen",
+    "prompt": "Edit image 1 (the existing Chinese wiring guide) into the final wiring illustration requested by the user. Image 2 is the original unmodified manufacturer POWER BOARD PHOTO, and image 3 is the original unmodified MOTOR DRIVER PHOTO; use them to preserve all real hardware geometry and PCB polarity labels. Mandatory changes: remove the title wording 接法修正 and all revision/change commentary; title exactly “电池、稳压板与电机驱动接线”. The motor power OUTPUT must NO LONGER use a round barrel DC plug. It MUST use the SMALL WHITE TWO-PIN PH2.0 OUTPUT SOCKET immediately to the LEFT of the power board's LOWER BLACK ROUND OUTPUT SOCKET, in the DC5V-OUT region. On original image2 (900x1012), highlight the white 2-pin socket centered around x389,y886 (bounds x359..415,y856..914), NOT the black round output socket centered x455,y876. There are TWO adjacent white 2-pin outputs between USB-C and lower round socket; select the RIGHT one nearest the lower round socket. The source polarity silkscreen for this white output has + on its RIGHT contact and − on its LEFT contact; do not change or cover those original markings. Keep the lower black round output socket physically present but unhighlighted and UNUSED, do not label it as selected. Delete the previous black barrel plug drawing completely. Show a matching WHITE TWO-PIN PLUG with red/black pigtail to the MOTOR DRIVER'S blue screw power terminal. The red lead is from the PH2.0 positive/right contact and ends at driver's positive screw; black lead from negative/left contact ends at negative screw. In actual original image3 motor driver the blue terminal is at original x827..919,y742..870; UPPER screw at x879,y782 is −, LOWER at x879,y836 is +. Keep these correct. Large callout ③ MUST point precisely to the SELECTED white two-pin output on POWER BOARD, text “③ OUT白色两针口 → 驱动电源端子” and “PH2.0-2P插头转红黑线” and “红线：OUT + → 驱动 +” and “黑线：OUT − → 驱动 −”. Put a smaller matching cable label “一端插稳压板OUT，另一端压入驱动端子”. Driver callout “电机驱动板 DC5V～12V输入” and “蓝色螺丝端子，红正黑负”. Do NOT put a circular DC socket on the driver. Preserve step① using TOP BLACK ROUND DC INPUT of power board: “① 电池 → 稳压板输入圆孔” and “DC5.5×2.5mm；先核插头尺寸和极性”. The battery circular plug is conditional match, not verified. Preserve step② at BOTTOM-LEFT USB-C output: “② Type-C输出 → RK的Power Type-C” and “5V，支持5A的短C-C线”. Blue screw terminal at TOP of power board is input only; do not wire from it to motor driver. Remove gray redundant note about that unused terminal to simplify. No imaginary hardware, no changed ports, no new screw terminals on power board output, no fabricated PCB markings. White space and large readable Chinese. Footer “厂家图片标注，接线以实物IN / OUT及正负极为准。断电接线，先测5V与极性；总输出最多5A，先单轮架空短测。” The real photos must remain faithful. The only selected OUTPUT to motor driver is the WHITE 2-PIN OUT connector; lower circular output is unused. No visible words 修正, 改版, 更新 or earlier method discussion.",
+    "editing_base": "C:/Users/52400/.codex/generated_images/01a18b9e-b9d7-7352-93dc-8c6e55b42b2c/exec-5132c167-ea3f-433c-9652-f2a06c473a46.png"
+  },
+  "references": [
+    "05_data/01_raw/04_hardware/20261030_power_board_reference_01.jpg",
+    "05_data/01_raw/03_procurement/20261025_yahboom_driver_power_kit_01.jpg"
+  ],
+  "outputs": [
+    "05_data/03_results/01_design/04_稳压板接线示意.png"
+  ],
+  "sha256": "5070ccab5cb0dd908ed15e00e57b8e38ec5582eae22d9e1e128dd4b15b670d62",
+  "verification": {
+    "checked": "人工对照未修改厂家原图：电池输入箭头指上方圆孔，RK输出指下方Type-C；驱动输出指DC5V-OUT区域、下方圆孔左侧最近的白色两针PH2.0插座。驱动蓝色端子红线指+、黑线指−。标题无修正、改版等说明。",
+    "limits": "图像编辑内容可能改绘细节，原始照片与实物丝印优先。尚未核实电池DC头、PH2.0插头线的实际极性与电流能力；未测输出电压、RK启动或电机动作。"
+  },
+  "notes": [
+    "输入圆孔是DC5.5×2.5，电池插头尺寸和极性匹配后才可直插。",
+    "电机供电从白色两针PH2.0-2P OUT口引出，红正黑负接驱动DC5V～12V蓝色端子；输出圆孔不接线。",
+    "PH2.0口是插座，需要配套插头线，不直接塞裸线。",
+    "整板5A不能推定为白色插头或线材单独允许5A；先核实际配线并做单轮架空短测。"
+  ]
+}
