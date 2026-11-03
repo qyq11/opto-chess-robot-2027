@@ -1,0 +1,24 @@
+/dts-v1/;
+/plugin/;
+
+// 将本车相机匹配到实测地址；保留原节点和端点，沿用已有图像链路。
+/ {
+    fragment@0 {
+        target-path = "/i2c@2ac70000";
+        __overlay__ {
+            #address-cells = <1>;
+            #size-cells = <0>;
+
+            // 保留已有节点名，真正的通信地址由reg决定。
+            imx415@37 {
+                reg = <0x1a>;
+                status = "okay";
+            };
+
+            // 同一接口只使用已购IMX415，停用另一型号的备用探测。
+            gc05a2@37 {
+                status = "disabled";
+            };
+        };
+    };
+};

@@ -237,6 +237,27 @@
       "license": "相机图纸为用户提供商家资料，原件不改；立创开源工程声明CC BY-NC-SA 4.0。",
       "electrical_finding": "官方图的RK 25脚为1.8V、27脚为1.2V；相机4脚为1.8V、3脚为1.2V、6脚为地。即使反序，RK25→相机6、RK27→相机4、RK28地→相机3仍不匹配。需向商家核实匹配排线/转接及实际针号，未通电。",
       "electrical_finding_scope": "此前两份参考图的对比结论；用户后续确认现有30针长排线可以连接，不能据此图纸对比标记实物已确认不兼容。板端采集尚未验证。"
+    },
+    {
+      "id": "S13",
+      "checked_date": "2026-11-03",
+      "source_type": "user_provided_local_pdf",
+      "source": "用户放在项目根目录的文件；原始外部下载来源未提供，本次未联网核实。",
+      "original_filename": "IMX415-AAQR-C_Datasheet_E19504(1)(3).pdf",
+      "original_local_path": "IMX415-AAQR-C_Datasheet_E19504(1)(3).pdf",
+      "archived_date": "2026-11-03",
+      "document_code": "E19504",
+      "pages": 101,
+      "size_bytes": 1562343,
+      "archive_bytes_modified": false,
+      "local_project_files": [
+        "04_references/04_datasheets/03_IMX415-AAQR-C_Datasheet.pdf"
+      ],
+      "hashes": {
+        "04_references/04_datasheets/03_IMX415-AAQR-C_Datasheet.pdf": "6ffedf01053f7ad89e79e9813b3b3d9e3927a7ab047c96cb4b67d844dbf642a1"
+      },
+      "license": "Sony Semiconductor Solutions Corporation版权所有，许可范围未另行核实。",
+      "scope": "IMX415-AAQR-C图像传感器芯片参数参考；不作为已购相机模组外形、30针排线定义或RK接口适配已通过的依据。"
     }
   ],
   "pc_uart_debug_import": {

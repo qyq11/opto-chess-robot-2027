@@ -1,0 +1,45 @@
+IDENTITY_BOOT
+8314b1e8ffd0321f
+2026-11-03 16:27:54
+0eb94389-f120-42ad-9042-9c21d96a1481
+IMX415_BINDING
+total 0
+lrwxrwxrwx 1 root root    0 Nov  3 16:28 4-001a -> ../../../../devices/platform/2ac70000.i2c/i2c-4/4-001a
+--w------- 1 root root 4096 Nov  3 16:28 bind
+--w------- 1 root root 4096 Nov  3 16:27 uevent
+--w------- 1 root root 4096 Nov  3 16:28 unbind
+I2C4_ACTUAL_CONFIG
+lrwxrwxrwx 1 root root 0 Nov  3 16:27 /sys/bus/i2c/devices/4-001a -> ../../../devices/platform/2ac70000.i2c/i2c-4/4-001a
+ 00 00 00 1a
+IMX415_LOG
+[    5.238390] platform csi2-dcphy0: Fixed dependency cycle(s) with /i2c@2ac70000/imx415@37
+[    5.239661] platform csi2-dphy0: Fixed dependency cycle(s) with /i2c@2ac80000/imx415@37
+[    5.241317] platform csi2-dphy3: Fixed dependency cycle(s) with /i2c@2ac90000/imx415@37
+[    5.386629] imx415 4-001a: driver version: 00.01.08
+[    5.386638] imx415 4-001a:  Get hdr mode failed! no hdr default
+[    5.386646] imx415 4-001a: detect imx415 lane 4
+[    5.386678] imx415 4-001a: Failed to get power-gpios
+[    5.386681] imx415 4-001a: could not get default pinstate
+[    5.386683] imx415 4-001a: could not get sleep pinstate
+[    5.455693] imx415 4-001a: Detected imx415 id 0000e0
+[    5.457473] imx415 5-0037: driver version: 00.01.08
+[    5.457486] imx415 5-0037:  Get hdr mode failed! no hdr default
+[    5.457499] imx415 5-0037: detect imx415 lane 4
+[    5.457548] imx415 5-0037: Failed to get power-gpios
+[    5.457556] imx415 5-0037: could not get default pinstate
+[    5.457559] imx415 5-0037: could not get sleep pinstate
+[    5.528613] imx415 5-0037: Unexpected sensor id(000000), ret(-5)
+[    5.531020] imx415 6-0037: driver version: 00.01.08
+[    5.531033] imx415 6-0037:  Get hdr mode failed! no hdr default
+[    5.531046] imx415 6-0037: detect imx415 lane 4
+[    5.531092] imx415 6-0037: Failed to get power-gpios
+[    5.531099] imx415 6-0037: could not get default pinstate
+[    5.531101] imx415 6-0037: could not get sleep pinstate
+[    5.602122] imx415 6-0037: Unexpected sensor id(000000), ret(-5)
+[    5.663540] imx415 4-001a: Consider updating driver imx415 to match on endpoints
+[    5.663547] rockchip-csi2-dphy csi2-dcphy0: dphy0 matches m00_b_imx415 4-001a:bus type 5
+[    7.587395] imx415 4-001a: set exposure(shr0) 2047 = cur_vts(2250) - val(203)
+CAPTURE_NODES
+lrwxrwxrwx 1 root root 12 Nov  3 16:27 /dev/video-camera0 -> /dev/video33
+ISP_SERVICE
+root         456       1  2 16:27 ?        00:00:00 /usr/bin/rkaiq_3A_server

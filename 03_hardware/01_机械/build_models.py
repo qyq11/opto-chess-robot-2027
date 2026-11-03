@@ -6,6 +6,8 @@ from pathlib import Path
 import json, math, hashlib
 import FreeCAD as A
 import Part
+from pusher_design import build_pusher
+from camera_mount_design import build_camera_mount, camera_pose
 
 M=Path(__file__).resolve().parent; R=M.parents[1]
 CFG=json.loads((M/'parameters.json').read_text(encoding='utf8'))
@@ -125,25 +127,13 @@ def shape_parts(id):
  elif id=='D03':
   s=Part.read(str(R/k['cad_file']))
   for x,y in L['driver_adapter_xy_mm']:s=s.cut(cyl(1.7,4,x,y,-1))
-  s=s.cut(box(-4.4,89.6,-1,8.8,8.8,4))
-  add('T5X上层板_驱动固定孔与相机杆通道',s,'carbon')
+  if not P['D05']['assumptions'].get('base_reuses_original_holes',False):
+   for x,y in L['camera_mount_upper_xy_mm']:s=s.cut(cyl(1.7,4,x,y,-1))
+  add('T5X上层板_驱动补孔_相机复用前缘原孔',s,'carbon')
  elif id=='D04':
-  dx,dy,dz=a['pusher_mm'];add('推板_自制草案',centered(dx,dy,dz),'metal')
+  for label,s in build_pusher(a,L):add(label,s,'blue')
  elif id=='D05':
-  add('相机杆_设计8x8x76.5',centered(*a['rod_mm']),'metal')
-  base=centered(*a['base_outline_mm'])
-  for x in [-12,12]:base=base.cut(cyl(1.7,4,x,0,-1))
-  add('相机杆底座_双孔固定',base,'metal')
-  plate=board(*a['mount_plate_mm'],a['mount_pitch_mm'],a['mount_clearance_holes_mm'])
-  # 安装板后开窗口，留出背面器件及两枚镜座螺钉的空间。
-  plate=plate.cut(box(-12,-6,-1,24,14,4))
-  pc=a['camera_board_center_z_mm']-a['rod_bottom_z_mm']
-  add('相机杆连接臂_设计值',box(-4,0,pc-2,8,10,4),'metal')
-  add('IMX415安装板36x36x2_孔距28x28',moved(plate,V(0,12,pc),A.Rotation(V(1,0,0),90)),'metal')
-  for x in [-14,14]:
-   for y in [-14,14]:
-    spacer=cyl(a['insulating_spacer_outer_diameter_mm']/2,a['camera_pcb_rear_gap_mm'],x,y).cut(cyl(1.1,4,x,y,-.5))
-    add('M2绝缘隔柱_设计长3mm',moved(spacer,V(0,12,pc),A.Rotation(V(1,0,0),-90)),'metal')
+  for index,(label,s) in enumerate(build_camera_mount(a)):add(label,s,'blue' if index==0 else 'orange')
  elif id=='D06':add('M3绝缘柱_螺纹简化',cyl(2.5,a['motor_bracket_spacer_height_mm']).cut(cyl(1.25,20)),'metal')
  elif id=='D07':
   s=box(-55,-20,0,110,42,2)
@@ -214,11 +204,12 @@ instance('D08','驱动安装板',V(-37,-62,L['driver_adapter_bottom_z_mm']))
 instance('P13','下位机预留',V(37,-62,108))
 instance('P14','IMU预留',V(50,0,108))
 instance('P17','分电预留',V(-45,8,73))
-instance('D04','推板',V(0,115,3))
+instance('D04','V形推铲及调高支架')
 for x in [-38,38]:instance('P15','触点预留'+str(x),V(x,108,25))
 instance('P16','激光预留',V(-52,82,108))
-instance('D05','相机支架',V(0,94,69.5))
-instance('P11','IMX415相机_镜头朝前',V(*CFG['camera_connection']['camera_board_center_mm']),A.Rotation(V(1,0,0),-90))
+instance('D05','相机打印支架_双侧调角')
+camera_t,camera_r=camera_pose(P['D05']['assumptions'])
+instance('P11','IMX415相机_示例向下20度',camera_t,camera_r)
 # Designed supports. No borrowed chassis or phantom PCB mounting holes.
 custom=group(car,'CustomSupports','D06_安装层支柱及推板连接_自制设计')
 for x,y in L['layer_column_xy_mm']:
@@ -231,12 +222,6 @@ for x in [-66,-8]:
  for y in [-86.5,-37.5]:
   s=cyl(2.5,5,x,y,111).cut(cyl(1.25,6,x,y,110.5))
   o=add(car,custom,'D08','驱动PCB绝缘柱_5mm',s,C['metal']);objects.append((o,'D08',o.Shape))
-for x in [-55,55]:
- side=1 if x>0 else -1
- s=box(x-2,104,23,4,4,46.5).fuse(box(side*54-8,84,69.5,16,24,2)).fuse(box(x-2,104,21,4,10,2))
- s=s.cut(cyl(3,4,side*50,85,69))
- for hx,hy in [(side*55,90),(side*50,96)]:s=s.cut(cyl(1.7,4,hx,hy,69))
- o=add(car,custom,'D04','推板承力连接',s,C['metal']);objects.append((o,'D04',o.Shape))
 wireg=group(car,'Harness','P12_线束路径示意_不用于加工')
 routes=[('RK供电走线草案_接口待实物',[(0,-36,114),(-38,-36,135),(-46,26,135),(-43,55,114)],1.6),('电池出线草案',[(0,-90,86),(-32,-94,90),(-40,-35,90),(-45,8,80)],2.1)]
 for label,points,rad in routes:add(car,wireg,'P12',label,pipe(points,rad),C['black'])
@@ -285,10 +270,10 @@ elif 'support_and_hole_verification' in OLD_VALIDATION:
 (M/'validation.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n',encoding='utf8')
 lib.saveAs(str(M/'02_零件库.FCStd'));car.saveAs(str(M/'03_整车布局.FCStd'))
 Part.makeCompound([o.Shape for o in solid_features]).exportStep(str(M/'04_整车布局.step'))
-inventory={'schema_version':2,'date':CFG.get('geometry_revision_date','2026-10-24'),'scope':'登记当前布局对象；2026-11-02仅修订相机、支架与连接通道，其余沿用上一版。准确采购与到货状态以购买清单为准。','purchase_list':'03_hardware/01_硬件清单.md','parameters':'03_hardware/01_机械/parameters.json','sources':'03_hardware/01_机械/01_厂家资料/sources.json','parts':CFG['parts'],'step_exports':exports,'artifacts':[],'physical_acceptance_passed':False,'cleanup_authority':'用户：按照当前硬件及相关搜索资料做模型，并把之前硬件和3D模型全部删掉；保留当前采购与订单凭证。'}
+inventory={'schema_version':2,'date':CFG.get('geometry_revision_date','2026-10-24'),'scope':'登记当前布局对象；2026-11-03改为上层板四孔固定、手动俯仰的相机打印支架。相机与推铲均为试制设计；准确采购与到货状态以购买清单为准。','purchase_list':'03_hardware/01_硬件清单.md','parameters':'03_hardware/01_机械/parameters.json','sources':'03_hardware/01_机械/01_厂家资料/sources.json','parts':CFG['parts'],'step_exports':exports,'artifacts':[],'physical_acceptance_passed':False,'cleanup_authority':'用户：按照当前硬件及相关搜索资料做模型，并把之前硬件和3D模型全部删掉；保留当前采购与订单凭证。'}
 if 'previous_revision_metadata' in OLD_INVENTORY:
  inventory['previous_revision_metadata']=OLD_INVENTORY['previous_revision_metadata']
-for path in [M/'02_零件库.FCStd',M/'03_整车布局.FCStd',M/'04_整车布局.step',M/'validation.json',M/'parameters.json',M/'build_models.py']+[R/f for f in exports]:
+for path in [M/'02_零件库.FCStd',M/'03_整车布局.FCStd',M/'04_整车布局.step',M/'validation.json',M/'parameters.json',M/'build_models.py',M/'pusher_design.py',M/'camera_mount_design.py']+[R/f for f in exports]:
  inventory['artifacts'].append({'path':str(path.relative_to(R)).replace('\\','/'),'bytes':path.stat().st_size,'sha256':hashlib.sha256(path.read_bytes()).hexdigest()})
 (M/'model_inventory.json').write_text(json.dumps(inventory,ensure_ascii=False,indent=2)+'\n',encoding='utf8')
 print(json.dumps({k:v for k,v in report.items() if k!='objects'},ensure_ascii=False,indent=2))

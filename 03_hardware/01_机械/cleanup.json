@@ -2001,5 +2001,89 @@
       }
     ],
     "generated_during_verification_note": "最终网站构建产物、缓存和本次一次性核对工具；不计入既有缓存的4,457份和620,964,496字节统计。"
+  },
+  "cache_cleanup_20261103": {
+    "date": "2026-11-03",
+    "authorization": "用户要求清理中间文件后commit和push",
+    "method": "Windows回收站，可恢复",
+    "all_absolute_targets_verified_inside_project": true,
+    "recycled_files": 415,
+    "recycled_bytes": 587916162,
+    "recycled_targets": [
+      {
+        "path": "temp/camera-mount-20261103",
+        "file_count": 30,
+        "bytes": 69713789
+      },
+      {
+        "path": "temp/pusher-20261102",
+        "file_count": 27,
+        "bytes": 62298138
+      },
+      {
+        "path": "temp/camera-preview-20261103",
+        "file_count": 31,
+        "bytes": 2310162
+      },
+      {
+        "path": "temp/docusaurus/.docusaurus",
+        "file_count": 33,
+        "bytes": 66758
+      },
+      {
+        "path": "temp/docusaurus/build",
+        "file_count": 249,
+        "bytes": 175455891
+      },
+      {
+        "path": "temp/docusaurus/tmp",
+        "file_count": 0,
+        "bytes": 0
+      },
+      {
+        "path": "temp/docusaurus/node_modules/.cache",
+        "file_count": 45,
+        "bytes": 278071424
+      }
+    ],
+    "verification_helpers_recycled": {
+      "path": "temp/cleanup-20261103",
+      "file_count": 8,
+      "bytes": 4825804
+    },
+    "protected_originals": [
+      "temp/旧硬件待删除/",
+      "temp/t5x-intake/",
+      "temp/yahboom-intake/",
+      "temp/mechanical-20261028/",
+      "temp/freecad_association/",
+      "temp/freecad_migration/"
+    ],
+    "retained_dependencies": [
+      "temp/docusaurus/node_modules/",
+      "temp/perspective/dependencies/",
+      "temp/xiangqi_recognition/dependencies/"
+    ],
+    "retained_configuration": "07_backups/01_相机地址/：两份修改前配置、两份修改后配置、插件及来源说明；原字节保留，回退范围不包括内核或系统镜像",
+    "retained_original_returns": [
+      "05_data/01_raw/04_hardware/20261103_camera_before_fix_01.txt",
+      "05_data/01_raw/04_hardware/20261103_camera_overlay_deploy_01.txt",
+      "05_data/01_raw/04_hardware/20261103_camera_driver_check_01.txt"
+    ],
+    "original_returns_scope": "分别为修正前失败、插件部署、修正后驱动识别；已逐字节核对。没有保留两轮60帧采集的原始日志或测试照片。",
+    "checks": {
+      "json_files": 29,
+      "current_hashes_checked": 178,
+      "relative_links_checked": 533,
+      "unresolved_historical_or_external_hashes": 14,
+      "issues": [],
+      "formal_files_preserved": 467,
+      "protected_files_size_checked": 22146,
+      "FCStd_archive_integrity_checked": 5,
+      "python_syntax_checked": 13,
+      "website_build": "passed"
+    },
+    "text_normalization": "维护文本统一为Git要求的换行、生成SVG仅清理行尾空白；同步当前指纹，保留历史指纹。原始终端返回和回退配置由.gitattributes保留原字节。",
+    "verification_scope": "本轮仅为文件指纹、保留原件大小、本地链接、工程压缩包完整性、Python源码语法和文档构建；未重新执行CAD几何、板端或实车测试。"
   }
 }

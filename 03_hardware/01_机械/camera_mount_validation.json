@@ -1,0 +1,364 @@
+{
+  "date": "2026-11-03",
+  "units": "mm",
+  "revision": "V1",
+  "physical_test_passed": false,
+  "scope": "两个打印件的电脑实体、网格、孔轴、原板支承及离散调角检查；未实打、未验材料强度、排线全程或真实视野。",
+  "parts": [
+    {
+      "file": "06_相机固定座.stl",
+      "valid_single_solid": true,
+      "stl_closed": true,
+      "triangles": 5224,
+      "volume_mm3": 17632.8904,
+      "stl_size_xyz_mm": [
+        72.0,
+        41.6962,
+        57.5968
+      ]
+    },
+    {
+      "file": "07_相机俯仰托架.stl",
+      "valid_single_solid": true,
+      "stl_closed": true,
+      "triangles": 8712,
+      "volume_mm3": 7077.7052,
+      "stl_size_xyz_mm": [
+        43.0,
+        40.0,
+        18.0
+      ]
+    }
+  ],
+  "tilt_checks": [
+    {
+      "angle_down_deg": 0,
+      "intersections_mm3": 0,
+      "M2_screw_axis_intersections_mm3": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "M3_lock_axes_aligned": true,
+      "lens_front_axis_center_mm": [
+        0.0,
+        133.6,
+        148.0
+      ],
+      "trial_fastener_envelope_intersections_mm3": 0,
+      "moving_to_cooler_reference_distance_mm": 18.43909
+    },
+    {
+      "angle_down_deg": 5,
+      "intersections_mm3": 0,
+      "M2_screw_axis_intersections_mm3": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "M3_lock_axes_aligned": true,
+      "lens_front_axis_center_mm": [
+        0.0,
+        133.89749,
+        146.01354
+      ],
+      "trial_fastener_envelope_intersections_mm3": 0,
+      "moving_to_cooler_reference_distance_mm": 17.00075
+    },
+    {
+      "angle_down_deg": 10,
+      "intersections_mm3": 0,
+      "M2_screw_axis_intersections_mm3": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "M3_lock_axes_aligned": true,
+      "lens_front_axis_center_mm": [
+        0.0,
+        134.02071,
+        144.00871
+      ],
+      "trial_fastener_envelope_intersections_mm3": 0,
+      "moving_to_cooler_reference_distance_mm": 15.7938
+    },
+    {
+      "angle_down_deg": 15,
+      "intersections_mm3": 0,
+      "M2_screw_axis_intersections_mm3": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "M3_lock_axes_aligned": true,
+      "lens_front_axis_center_mm": [
+        0.0,
+        133.96873,
+        142.00076
+      ],
+      "trial_fastener_envelope_intersections_mm3": 0,
+      "moving_to_cooler_reference_distance_mm": 14.88477
+    },
+    {
+      "angle_down_deg": 20,
+      "intersections_mm3": 0,
+      "M2_screw_axis_intersections_mm3": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "M3_lock_axes_aligned": true,
+      "lens_front_axis_center_mm": [
+        0.0,
+        133.74194,
+        140.00499
+      ],
+      "trial_fastener_envelope_intersections_mm3": 0,
+      "moving_to_cooler_reference_distance_mm": 14.3379
+    },
+    {
+      "angle_down_deg": 25,
+      "intersections_mm3": 0,
+      "M2_screw_axis_intersections_mm3": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "M3_lock_axes_aligned": true,
+      "lens_front_axis_center_mm": [
+        0.0,
+        133.34208,
+        138.03658
+      ],
+      "trial_fastener_envelope_intersections_mm3": 0,
+      "moving_to_cooler_reference_distance_mm": 14.19938
+    },
+    {
+      "angle_down_deg": 30,
+      "intersections_mm3": 0,
+      "M2_screw_axis_intersections_mm3": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "M3_lock_axes_aligned": true,
+      "lens_front_axis_center_mm": [
+        0.0,
+        132.77217,
+        136.11051
+      ],
+      "trial_fastener_envelope_intersections_mm3": 0,
+      "moving_to_cooler_reference_distance_mm": 14.48196
+    },
+    {
+      "angle_down_deg": 35,
+      "intersections_mm3": 0,
+      "M2_screw_axis_intersections_mm3": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "M3_lock_axes_aligned": true,
+      "lens_front_axis_center_mm": [
+        0.0,
+        132.03657,
+        134.24144
+      ],
+      "trial_fastener_envelope_intersections_mm3": 0,
+      "moving_to_cooler_reference_distance_mm": 15.14621
+    },
+    {
+      "angle_down_deg": 40,
+      "intersections_mm3": 0,
+      "M2_screw_axis_intersections_mm3": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "M3_lock_axes_aligned": true,
+      "lens_front_axis_center_mm": [
+        0.0,
+        131.14087,
+        132.4436
+      ],
+      "trial_fastener_envelope_intersections_mm3": 0,
+      "moving_to_cooler_reference_distance_mm": 15.74033
+    },
+    {
+      "angle_down_deg": 45,
+      "intersections_mm3": 0,
+      "M2_screw_axis_intersections_mm3": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "M3_lock_axes_aligned": true,
+      "lens_front_axis_center_mm": [
+        0.0,
+        130.09188,
+        130.73066
+      ],
+      "trial_fastener_envelope_intersections_mm3": 0,
+      "moving_to_cooler_reference_distance_mm": 16.31836
+    },
+    {
+      "angle_down_deg": 50,
+      "intersections_mm3": 0,
+      "M2_screw_axis_intersections_mm3": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "M3_lock_axes_aligned": true,
+      "lens_front_axis_center_mm": [
+        0.0,
+        128.8976,
+        129.11566
+      ],
+      "trial_fastener_envelope_intersections_mm3": 0,
+      "moving_to_cooler_reference_distance_mm": 17.20157
+    },
+    {
+      "angle_down_deg": 55,
+      "intersections_mm3": 0,
+      "M2_screw_axis_intersections_mm3": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "M3_lock_axes_aligned": true,
+      "lens_front_axis_center_mm": [
+        0.0,
+        127.5671,
+        127.6109
+      ],
+      "trial_fastener_envelope_intersections_mm3": 0,
+      "moving_to_cooler_reference_distance_mm": 18.34157
+    },
+    {
+      "angle_down_deg": 60,
+      "intersections_mm3": 0,
+      "M2_screw_axis_intersections_mm3": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "M3_lock_axes_aligned": true,
+      "lens_front_axis_center_mm": [
+        0.0,
+        126.11051,
+        126.22783
+      ],
+      "trial_fastener_envelope_intersections_mm3": 0,
+      "moving_to_cooler_reference_distance_mm": 19.40761
+    }
+  ],
+  "base_holes": [
+    {
+      "center_xy_mm": [
+        -23.5708,
+        99.8374
+      ],
+      "original_hole_diameter_mm": 3.2,
+      "printed_hole_diameter_mm": 3.4,
+      "bearing_ring_outer_diameter_mm": 7,
+      "bearing_ring_material_coverage": 1.0,
+      "new_drilling_required": false
+    },
+    {
+      "center_xy_mm": [
+        -14.4373,
+        99.8438
+      ],
+      "original_hole_diameter_mm": 3.2,
+      "printed_hole_diameter_mm": 3.4,
+      "bearing_ring_outer_diameter_mm": 7,
+      "bearing_ring_material_coverage": 1.0,
+      "new_drilling_required": false
+    },
+    {
+      "center_xy_mm": [
+        14.2927,
+        99.8438
+      ],
+      "original_hole_diameter_mm": 3.2,
+      "printed_hole_diameter_mm": 3.4,
+      "bearing_ring_outer_diameter_mm": 7,
+      "bearing_ring_material_coverage": 1.0,
+      "new_drilling_required": false
+    },
+    {
+      "center_xy_mm": [
+        23.4263,
+        99.8374
+      ],
+      "original_hole_diameter_mm": 3.2,
+      "printed_hole_diameter_mm": 3.4,
+      "bearing_ring_outer_diameter_mm": 7,
+      "bearing_ring_material_coverage": 1.0,
+      "new_drilling_required": false
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "03_hardware/01_机械/03_打印件/06_相机固定座.stl",
+      "bytes": 261284,
+      "sha256": "dc78752f27ddd5afcb8aac77c103808de436fc12ca41c99f6bab1f19d5813316"
+    },
+    {
+      "path": "03_hardware/01_机械/03_打印件/07_相机俯仰托架.stl",
+      "bytes": 435684,
+      "sha256": "f5c2f53b4b4ff3ff9e385ba61d8dbbd99c6baf903af7084843a80eb5d0b324aa"
+    },
+    {
+      "path": "03_hardware/01_机械/03_打印件/08_相机支架工程.FCStd",
+      "bytes": 57055,
+      "sha256": "8fea316ea4db8dcc9e394dd49bf0e674c102351e180b50f28708f109a52a985a"
+    },
+    {
+      "path": "03_hardware/01_机械/03_打印件/09_相机支架工程.step",
+      "bytes": 185785,
+      "sha256": "20af01fd57457fb46281eac2b1d1df1d344ee14c1a6a517110b996835f2460c7"
+    },
+    {
+      "path": "03_hardware/01_机械/camera_mount_design.py",
+      "bytes": 7780,
+      "sha256": "36b8c9c8277f3f4d6c6dd9238837d47dd5f848e78014dc776b8882393dcf6f27"
+    },
+    {
+      "path": "03_hardware/01_机械/export_camera_mount.py",
+      "bytes": 7680,
+      "sha256": "d598b426a5ec3d99ad41f83a5085aac07e697c222996ee618c76e534585f1c14"
+    },
+    {
+      "path": "03_hardware/01_机械/parameters.json",
+      "bytes": 31171,
+      "sha256": "58976597c75d75f923e3a26c99541d518e00e6433bbfe6a1a7c806e20420db19"
+    }
+  ],
+  "rotation_gap_mm": 0.5,
+  "sweep_scope": "每5度共13个姿态的离散检查，不是连续扫掠证明；M2及两侧沉头M3/M4采用试制紧固件包络筛查，实购物料及工具空间仍须核对。P08未封闭曲面、未定包络、线束和公差未验收。P02仅按旧散热参考外形。",
+  "nominal_tilt_down_deg": 20,
+  "camera_reference_scope": "32×32×1.6、28×28孔距沿用用户认可的商家同板参考图；100度镜头实际外形未核。",
+  "file_reopen_checks": {
+    "master_and_library": true,
+    "preview_matches_master": true,
+    "print_document_matches_parameters": true,
+    "two_STEP_solids": 2,
+    "unchanged_other_car_features": 135,
+    "unchanged_original_STEP_bytes": 22
+  }
+}

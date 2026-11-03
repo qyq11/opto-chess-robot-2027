@@ -1,0 +1,177 @@
+{
+  "date": "2026-11-02",
+  "units": "mm",
+  "revision": "V1",
+  "physical_test_passed": false,
+  "official_piece_dimensions_available": false,
+  "scope": "电脑实体、STL封闭性和几何空间检查；未切片实打、未验证强度、摩擦、动态运动或防脱效果。",
+  "parts": [
+    {
+      "file": "01_导向推铲.stl",
+      "valid": true,
+      "solid_count": 1,
+      "installed_bbox_mm": [
+        -65.0,
+        98.0,
+        2.0,
+        65.0,
+        142.0,
+        32.0
+      ],
+      "volume_mm3": 28724.129,
+      "triangles": 2648,
+      "nonmanifold_edges": 0,
+      "mesh_signed_volume_mm3": 28724.174,
+      "stl_size_xyz_mm": [
+        130.0,
+        44.0,
+        30.0
+      ]
+    },
+    {
+      "file": "02_左支架.stl",
+      "valid": true,
+      "solid_count": 1,
+      "installed_bbox_mm": [
+        -64.0,
+        84.0,
+        4.0,
+        -44.0,
+        116.0,
+        85.5
+      ],
+      "volume_mm3": 12112.099,
+      "triangles": 2408,
+      "nonmanifold_edges": 0,
+      "mesh_signed_volume_mm3": 12112.205,
+      "stl_size_xyz_mm": [
+        81.5,
+        32.0,
+        20.0
+      ]
+    },
+    {
+      "file": "03_右支架.stl",
+      "valid": true,
+      "solid_count": 1,
+      "installed_bbox_mm": [
+        44.0,
+        84.0,
+        4.0,
+        64.0,
+        116.0,
+        85.5
+      ],
+      "volume_mm3": 12112.099,
+      "triangles": 2408,
+      "nonmanifold_edges": 0,
+      "mesh_signed_volume_mm3": 12112.205,
+      "stl_size_xyz_mm": [
+        81.5,
+        32.0,
+        20.0
+      ]
+    }
+  ],
+  "virtual_disks": [
+    {
+      "diameter_mm": 30,
+      "height_mm": 15,
+      "center_xy_mm": [
+        0,
+        125.2132
+      ],
+      "seated_intersection_mm3": 0.0,
+      "contact_distance_mm": 0.0,
+      "release_0_to_80_mm_step_2_mm_max_intersection_mm3": 0.0,
+      "mouth_nominal_one_side_capture_offset_mm": 13.0,
+      "scope": "仅圆柱理想尺寸、直线后退抽查；不证明偏心自动归中、接触力、实物入口成功率或动态防脱。"
+    },
+    {
+      "diameter_mm": 40,
+      "height_mm": 15,
+      "center_xy_mm": [
+        0,
+        132.28427
+      ],
+      "seated_intersection_mm3": 0.0,
+      "contact_distance_mm": 0.0,
+      "release_0_to_80_mm_step_2_mm_max_intersection_mm3": 0.0,
+      "mouth_nominal_one_side_capture_offset_mm": 8.0,
+      "scope": "仅圆柱理想尺寸、直线后退抽查；不证明偏心自动归中、接触力、实物入口成功率或动态防脱。"
+    },
+    {
+      "diameter_mm": 50,
+      "height_mm": 15,
+      "center_xy_mm": [
+        0,
+        139.35534
+      ],
+      "seated_intersection_mm3": 0.0,
+      "contact_distance_mm": 0.0,
+      "release_0_to_80_mm_step_2_mm_max_intersection_mm3": 0.0,
+      "mouth_nominal_one_side_capture_offset_mm": 3.0,
+      "scope": "仅圆柱理想尺寸、直线后退抽查；不证明偏心自动归中、接触力、实物入口成功率或动态防脱。"
+    }
+  ],
+  "adjustment_checks": [
+    {
+      "ground_mm": 0,
+      "part_intersection_mm3": 0,
+      "scope": "仅两端和名义位置；0mm为调节极限，不作为使用建议。"
+    },
+    {
+      "ground_mm": 6,
+      "part_intersection_mm3": 0,
+      "scope": "仅两端和名义位置；0mm为调节极限，不作为使用建议。"
+    },
+    {
+      "ground_mm": 2,
+      "part_intersection_mm3": 0,
+      "scope": "仅两端和名义位置；0mm为调节极限，不作为使用建议。"
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "03_hardware/01_机械/03_打印件/01_导向推铲.stl",
+      "bytes": 132484,
+      "sha256": "90d2207a91fa635c9df4349f305cdf4fe87fdb911b3aa43cb86a0fcfea337c3b"
+    },
+    {
+      "path": "03_hardware/01_机械/03_打印件/02_左支架.stl",
+      "bytes": 120484,
+      "sha256": "2826ec2205c815e551d2a20e543cb96a7519918f96feaa16c8fb62ad609537fa"
+    },
+    {
+      "path": "03_hardware/01_机械/03_打印件/03_右支架.stl",
+      "bytes": 120484,
+      "sha256": "87215b81b382ebaee2492dd705d6890be9a57bb23bb5c6e37fe20b0ee6534d03"
+    },
+    {
+      "path": "03_hardware/01_机械/03_打印件/04_推铲打印工程.FCStd",
+      "bytes": 20011,
+      "sha256": "1a70e94cb3f745287318e42459064ba0f3a7f33690ec87b3cd0b49f6c161b2b0"
+    },
+    {
+      "path": "03_hardware/01_机械/03_打印件/05_推铲打印工程.step",
+      "bytes": 118046,
+      "sha256": "01225940eba7aab0b0c97c6b2f4fb38749c5fec1cd8ddf7f71a0fe1af9a522fd"
+    },
+    {
+      "path": "03_hardware/01_机械/pusher_design.py",
+      "bytes": 6115,
+      "sha256": "e3a24e256a214d74b5733918bbee86fe5a1af3d04ea7fe036818aabcdcb58353"
+    },
+    {
+      "path": "03_hardware/01_机械/export_pusher.py",
+      "bytes": 6536,
+      "sha256": "3fa2ae9db03f4f0a018395748d7b649d6ba65c6cc664a035cd94eb840470b5ab"
+    },
+    {
+      "path": "03_hardware/01_机械/parameters.json",
+      "bytes": 31171,
+      "sha256": "58976597c75d75f923e3a26c99541d518e00e6433bbfe6a1a7c806e20420db19"
+    }
+  ],
+  "shared_parameters_note": "2026-11-03仅更新同一参数文件的相机支架部分；D04参数与11-02相同，推铲文件保持原字节。更新共享文件指纹，不新增推铲实物或功能通过结论。"
+}

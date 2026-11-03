@@ -640,13 +640,27 @@
       },
       "assumptions": {
         "z_mm": 104.5,
-        "camera_rod_clearance_mm": [
-          8.8,
-          8.8
+        "camera_mount_reuse_original_holes_xy_mm": [
+          [
+            -23.5708,
+            99.8374
+          ],
+          [
+            -14.4373,
+            99.8438
+          ],
+          [
+            14.2927,
+            99.8438
+          ],
+          [
+            23.4263,
+            99.8374
+          ]
         ]
       },
       "pending": [
-        "两层柱改35mm净高，中心采用原孔X±50、Y±85；上层另加驱动安装板固定孔及相机杆8.8mm通孔。实际强度、公差及板卡固定待核。"
+        "相机复用前缘4个原Ø3.2mm孔，不再切旧8.8mm杆孔；原板孔距与实物待核，打印座从板底用M3螺栓固定。"
       ],
       "can_model_ourselves": false
     },
@@ -654,17 +668,53 @@
       "id": "D04",
       "name": "前推板及支架",
       "quantity": 1,
-      "purchase_status": "自制设计，未加工",
-      "model_kind": "自主设计",
+      "purchase_status": "2026-11-02改为分件打印设计，未打印、未实物验证",
+      "model_kind": "自主设计_3D打印试制",
       "source_ids": [],
       "known": {},
       "assumptions": {
-        "pusher_mm": [
-          130,
-          2,
+        "design_revision": "2026-11-02 V1",
+        "official_piece_dimensions_available": false,
+        "virtual_piece_diameters_mm": [
+          30,
+          40,
+          50
+        ],
+        "virtual_piece_height_mm": 15,
+        "included_angle_deg": 90,
+        "mouth_width_mm": 56,
+        "normal_wall_thickness_mm": 4,
+        "contact_wall_height_mm": 18,
+        "guard_thickness_mm": 6,
+        "tip_radius_mm": 2,
+        "ground_clearance_mm": 2,
+        "adjustable_ground_range_mm": [
+          0,
+          6
+        ],
+        "v_apex_y_mm": 104,
+        "tip_y_mm": 142,
+        "rear_bar_width_mm": 130,
+        "rear_bar_depth_mm": 6,
+        "mount_tab_x_start_mm": 44,
+        "mount_tab_width_mm": 20,
+        "mount_tab_depth_mm": 6,
+        "mount_tab_height_mm": 30,
+        "mount_bolt_x_mm": 54,
+        "head_hole_height_from_bottom_mm": [
+          8,
           22
         ],
-        "bottom_z_mm": 3,
+        "bolt_clearance_diameter_mm": 3.4,
+        "chassis_plate_thickness_mm": 1.5,
+        "foot_rear_y_mm": 84,
+        "foot_thickness_mm": 4,
+        "bracket_thickness_mm": 6,
+        "bracket_bottom_z_mm": 4,
+        "gusset_rear_y_mm": 94,
+        "gusset_height_mm": 12,
+        "gusset_thickness_mm": 4,
+        "column_relief_radius_mm": 3.2,
         "mount_global_xy_mm": [
           [
             -55,
@@ -682,10 +732,21 @@
             50,
             96
           ]
-        ]
+        ],
+        "material": "PETG试制，参数由打印机与耗材厂家建议确定",
+        "starting_print_settings": {
+          "nozzle_mm": 0.4,
+          "layer_mm": 0.2,
+          "perimeters": 6,
+          "infill_percent": 40
+        },
+        "scope": "全部为自主试制尺寸；30/40/50×15mm仅为虚拟测试圆片，不是官方棋子规格。0~6mm是机构可调范围，0mm不作为推荐离地值。"
       },
       "pending": [
-        "两侧连接件改向板内延伸并各用两处补孔固定；前触点占位暂移开连接件，触点准确型号和行程、推送受力待实物核对。"
+        "官方棋子直径、厚度、倒角、质量和底面材料尚未公布；实际规格超出测试值时重建前铲。",
+        "需复测底板补孔、下板离地高度、柱位和全部螺栓/垫片空间；只核CAD不代表装得上。",
+        "PETG打印翘曲、孔缩、层间强度和长孔锁紧待试打印；长孔需大垫片，螺栓不靠塑料攻牙。",
+        "直行、横移修正、缓弯、停车和后退释放均未实测；开放前口不能保证急停急转时不脱出。"
       ],
       "can_model_ourselves": true
     },
@@ -693,44 +754,104 @@
       "id": "D05",
       "name": "相机杆与相机安装板",
       "quantity": 1,
-      "purchase_status": "自制设计，未加工",
-      "model_kind": "自主设计",
+      "purchase_status": "2026-11-03相机支架试制设计，未打印、未实物验证",
+      "model_kind": "自主设计_相机3D打印试制",
       "source_ids": [
         "S12"
       ],
       "known": {},
       "assumptions": {
-        "camera_center_z_mm": 148,
-        "camera_back_y_mm": 109,
-        "mount_plate_mm": [
-          36,
-          36,
-          2
+        "revision": "2026-11-03 V1",
+        "units": "mm",
+        "nominal_tilt_down_deg": 20,
+        "tilt_range_deg": [
+          0,
+          60
         ],
-        "rod_mm": [
-          8,
-          8,
-          76.5
+        "pivot_xyz_mm": [
+          0,
+          111,
+          143.6
         ],
-        "rod_bottom_z_mm": 69.5,
-        "base_outline_mm": [
-          36,
-          14,
-          2
+        "base_min_xyz_mm": [
+          -36,
+          89,
+          106
         ],
-        "camera_board_center_z_mm": 143.6,
-        "camera_pcb_rear_gap_mm": 3,
-        "mount_pitch_mm": [
+        "base_size_mm": [
+          72,
+          23,
+          5
+        ],
+        "base_holes_xy_mm": [
+          [
+            -23.5708,
+            99.8374
+          ],
+          [
+            -14.4373,
+            99.8438
+          ],
+          [
+            14.2927,
+            99.8438
+          ],
+          [
+            23.4263,
+            99.8374
+          ]
+        ],
+        "base_hole_diameter_mm": 3.4,
+        "fork_inner_half_width_mm": 22,
+        "fork_thickness_mm": 5,
+        "sector_radius_mm": 20,
+        "pivot_hole_diameter_mm": 4.5,
+        "lock_radius_mm": 14,
+        "lock_hole_diameter_mm": 3.4,
+        "carrier_size_mm": [
+          40,
+          40,
+          4
+        ],
+        "carrier_rear_y_mm": 102,
+        "carrier_ear_inner_x_mm": 18,
+        "carrier_ear_thickness_mm": 3.5,
+        "one_side_rotation_gap_mm": 0.5,
+        "camera_board_center_zero_mm": [
+          0,
+          109,
+          143.6
+        ],
+        "zero_lens_axis_height_mm": 148,
+        "camera_mount_pitch_mm": [
           28,
           28
         ],
-        "mount_clearance_holes_mm": 2.4,
-        "insulating_spacer_outer_diameter_mm": 3.8
+        "camera_hole_diameter_mm": 2.4,
+        "pcb_rear_gap_mm": 3,
+        "spacer_outer_diameter_mm": 4.8,
+        "cable_notch_width_mm": 18,
+        "material": "PETG试制，温度与回缩等按实际耗材/打印机设置",
+        "starting_print_settings": {
+          "nozzle_mm": 0.4,
+          "layer_mm": 0.2,
+          "perimeters": 5,
+          "infill_percent": 40
+        },
+        "scope": "安装尺寸为自主试制值，采用参考图的32x32板和28x28孔距；20度仅为装配示例，不是标定结论。",
+        "base_reuses_original_holes": true,
+        "chassis_original_hole_diameter_mm": 3.2,
+        "base_nut_flat_mm": 5.8,
+        "base_nut_depth_mm": 2.6,
+        "fork_root_inner_x_mm": 28,
+        "fork_root_transition_top_mm": 131
       },
       "pending": [
-        "相机四角边框须保留；M2螺丝、螺母及垫片的实际空间另核",
-        "36×36安装面、3mm板后隔离和机位属于设计值；不是已购支架规格",
-        "杆刚度、防松、角度调节、排线弯曲与真实视野待验证"
+        "实测100度版本PCB孔位、四角边框、镜头外形和排线实际接头；参考24.6mm镜头深度尚未实测。",
+        "上层板四孔先核原孔、槽和孔边材料，再制作；PETG刚度、翘曲、公差与锁紧待实物验证。",
+        "M4转轴与M3弧槽分别夹紧，两侧需垫片与防松螺母；孔位和工具空间待试装。",
+        "调角需预留排线松弛并重新检查通道；固定手动俯仰不会自动改变视角。",
+        "实际视场方向未确认，近场盲区、推铲遮挡、识别距离与振动图像均待板端实拍。"
       ],
       "can_model_ourselves": true
     },
@@ -916,55 +1037,78 @@
     ],
     "driver_adapter_bottom_z_mm": 109,
     "driver_adapter_thickness_mm": 2,
-    "driver_pcb_z_mm": 116
+    "driver_pcb_z_mm": 116,
+    "camera_mount_upper_xy_mm": [
+      [
+        -23.5708,
+        99.8374
+      ],
+      [
+        -14.4373,
+        99.8438
+      ],
+      [
+        14.2927,
+        99.8438
+      ],
+      [
+        23.4263,
+        99.8374
+      ]
+    ]
   },
   "hardware_sync_note": "2026-10-28用户允许补孔、尽量少加转接件：新增前后电机桥板2片、驱动安装板1片；其他未定SKU仍为橙色占位。厂家原件未改写。",
-  "geometry_revision_date": "2026-11-02",
+  "geometry_revision_date": "2026-11-03",
   "camera_connection": {
-    "scope": "使用用户已有的30针长排线连接相机与RK；用户2026-11-02确认可以连接。模型表达安装和排线通道，尚未上板出图。",
+    "scope": "按用户已有30针长排线连接；2026-11-03新支架示例俯仰20度，路径仅为通道示意，实际弯曲半径和角度全程未验收。",
     "camera_board_center_mm": [
-      0,
-      109,
-      143.6
+      0.0,
+      109.12061475842819,
+      144.28404028665133
     ],
-    "lens_center_height_mm": 148,
+    "lens_center_height_mm": 140.00499229229789,
     "mount_plate_center_mm": [
-      0,
-      106,
-      143.6
+      0.0,
+      106.30153689607046,
+      145.31010071662834
     ],
     "ribbon_width_mm": 16,
     "ribbon_thickness_mm": 0.2,
     "ribbon_centerline_mm": [
       [
-        0,
-        112,
-        133.1
+        0.0,
+        108.34848111586639,
+        133.39120733842228
       ],
       [
         0,
         118,
-        133.1
+        124
       ],
       [
         0,
-        119,
-        125
-      ],
-      [
-        0,
-        115,
-        119
-      ],
-      [
-        22,
-        107,
+        116,
         116
       ],
       [
-        22,
-        94,
-        111
+        0,
+        108,
+        112
+      ],
+      [
+        0,
+        102,
+        112
+      ],
+      [
+        0,
+        95,
+        112
+      ],
+      [
+        0,
+        88,
+        112
       ],
       [
         22,
@@ -986,6 +1130,23 @@
       "user_confirmed_connectable": true,
       "actual_length_mm": null,
       "actual_capture_verified": false
-    }
+    },
+    "nominal_tilt_down_deg": 20,
+    "camera_board_center_zero_mm": [
+      0,
+      109,
+      143.6
+    ],
+    "camera_mount_pivot_mm": [
+      0,
+      111,
+      143.6
+    ],
+    "lens_front_center_mm": [
+      0.0,
+      133.7419418603945,
+      140.00499229229789
+    ],
+    "lens_height_scope": "20度示例姿态下参考镜头前端轴心高度；不是实测入瞳位置。零俯仰轴线高148mm。"
   }
 }

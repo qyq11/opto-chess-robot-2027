@@ -1,0 +1,28 @@
+{
+  "date": "2026-11-03",
+  "revision": "V1",
+  "sources": [
+    {
+      "kind": "local_manufacturer_CAD",
+      "path": "03_hardware/01_机械/01_厂家资料/01_T5X四驱/05_四驱底板.step",
+      "used_for": "前缘四个现成孔坐标及孔边材料，原件未修改"
+    },
+    {
+      "kind": "local_reference_drawing",
+      "path": "04_references/04_datasheets/02_IMX415_120度模组图纸.pdf",
+      "used_for": "用户此前认可同板参考：32x32板和28x28孔距；100度镜头外形尚未实测"
+    },
+    {
+      "kind": "manufacturer_guidance",
+      "url": "https://help.prusa3d.com/article/modeling-with-3d-printing-in-mind_164135",
+      "used_for": "打印方向、配合间隙与试打印原则，不证明本支架强度"
+    },
+    {
+      "kind": "manufacturer_guidance",
+      "url": "https://www.raspberrypi.com/documentation/accessories/camera.html",
+      "used_for": "排线避免硬折的通用操作原则，不作为本项目模组的电气兼容依据"
+    }
+  ],
+  "design_basis": "现有整车布局、IMX415参考尺寸和用户2026-11-03澄清。支架结构、全部打印尺寸、0~60度范围与20度示例为本项目试制选择。",
+  "physical_test_passed": false
+}

@@ -1,0 +1,118 @@
+SERIAL
+8314b1e8ffd0321f
+CURRENT_TIME
+2026-11-03 14:53:24 +0800
+BOOT
+2026-11-03 14:52:35
+49.14 361.50
+ba87fcbe-c57b-4283-9c87-a3ddcbb6b19e
+CAMERA_BINDINGS
+total 0
+--w------- 1 root root 4096 Nov  3 14:53 bind
+--w------- 1 root root 4096 Oct 12 15:36 uevent
+--w------- 1 root root 4096 Nov  3 14:53 unbind
+CAMERA_LOG
+[    5.223254] platform csi2-dcphy0: Fixed dependency cycle(s) with /i2c@2ac70000/imx415@37
+[    5.224882] platform csi2-dphy0: Fixed dependency cycle(s) with /i2c@2ac80000/imx415@37
+[    5.226501] platform csi2-dphy3: Fixed dependency cycle(s) with /i2c@2ac90000/imx415@37
+[    5.385187] imx415 4-0037: driver version: 00.01.08
+[    5.385194] imx415 4-0037:  Get hdr mode failed! no hdr default
+[    5.385201] imx415 4-0037: detect imx415 lane 4
+[    5.385228] imx415 4-0037: Failed to get power-gpios
+[    5.385231] imx415 4-0037: could not get default pinstate
+[    5.385232] imx415 4-0037: could not get sleep pinstate
+[    5.458201] imx415 4-0037: Unexpected sensor id(000000), ret(-5)
+[    5.462526] imx415 5-0037: driver version: 00.01.08
+[    5.462535] imx415 5-0037:  Get hdr mode failed! no hdr default
+[    5.462543] imx415 5-0037: detect imx415 lane 4
+[    5.462570] imx415 5-0037: Failed to get power-gpios
+[    5.462573] imx415 5-0037: could not get default pinstate
+[    5.462575] imx415 5-0037: could not get sleep pinstate
+[    5.533755] imx415 5-0037: Unexpected sensor id(000000), ret(-5)
+[    5.535278] imx415 6-0037: driver version: 00.01.08
+[    5.535291] imx415 6-0037:  Get hdr mode failed! no hdr default
+[    5.535305] imx415 6-0037: detect imx415 lane 4
+[    5.535351] imx415 6-0037: Failed to get power-gpios
+[    5.535359] imx415 6-0037: could not get default pinstate
+[    5.535362] imx415 6-0037: could not get sleep pinstate
+[    5.606555] imx415 6-0037: Unexpected sensor id(000000), ret(-5)
+CAMERA_ALIAS
+ls: cannot access '/dev/video-camera*': No such file or directory
+CAMERA_TOPOLOGY
+Media controller API version 6.1.99
+
+Media device information
+------------------------
+driver          rkisp-vir0
+model           rkisp0
+serial          
+bus info        platform:rkisp-vir0
+hw revision     0x0
+driver version  6.1.99
+
+Device topology
+- entity 1: rkisp-isp-subdev (4 pads, 9 links, 0 routes)
+            type V4L2 subdev subtype Unknown flags 0
+            device node name /dev/v4l-subdev9
+	pad0: Sink
+		[stream:0 fmt:SRGGB8_1X8/800x600 field:none
+		 crop.bounds:(0,0)/800x600
+		 crop:(0,0)/800x600]
+		<- "rkisp_rawrd0_m":0 []
+		<- "rkisp_rawrd2_s":0 [ENABLED]
+	pad1: Sink
+		<- "rkisp-input-params":0 [ENABLED]
+	pad2: Source
+		[stream:0 fmt:YUYV8_2X8/800x600 field:none colorspace:smpte170m quantization:full-range
+		 crop.bounds:(0,0)/800x600
+		 crop:(0,0)/800x600]
+		-> "rkisp_mainpath":0 [ENABLED]
+		-> "rkisp_selfpath":0 [ENABLED]
+		-> "rkisp_ldcpath":0 []
+		-> "rkisp_iqtool":0 [ENABLED]
+	pad3: Source
+		-> "rkisp-statistics":0 [ENABLED]
+		-> "rkisp-pdaf":0 [ENABLED]
+
+- entity 6: rkisp_mainpath (1 pad, 1 link)
+            type Node subtype V4L flags 0
+            device node name /dev/video33
+	pad0: Sink
+		<- "rkisp-isp-subdev":2 [ENABLED]
+
+- entity 12: rkisp_selfpath (1 pad, 1 link)
+             type Node subtype V4L flags 0
+             device node name /dev/video34
+	pad0: Sink
+		<- "rkisp-isp-subdev":2 [ENABLED]
+
+- entity 18: rkisp_ldcpath (1 pad, 1 link)
+             type Node subtype V4L flags 0
+             device node name /dev/video35
+	pad0: Sink
+		<- "rkisp-isp-subdev":2 []
+
+- entity 24: rkisp_iqtool (1 pad, 1 link)
+             type Node subtype V4L flags 0
+             device node name /dev/video36
+	pad0: Sink
+		<- "rkisp-isp-subdev":2 [ENABLED]
+
+- entity 30: rkisp_rawrd0_m (1 pad, 1 link)
+             type Node subtype V4L flags 0
+             device node name /dev/video37
+	pad0: Source
+		-> "rkisp-isp-subdev":0 []
+
+- entity 36: rkisp_rawrd2_s (1 pad, 1 link)
+             type Node subtype V4L flags 0
+             device node name /dev/video38
+	pad0: Source
+		-> "rkisp-isp-subdev":0 [ENABLED]
+
+- entity 42: rkisp-statistics (1 pad, 1 link)
+             type Node subtype V4L flags 0
+             device node name /dev/video39
+	pad0: Sink
+IMAGE_SERVICE
+root         464       1  0 14:52 ?        00:00:00 /usr/bin/rkaiq_3A_server

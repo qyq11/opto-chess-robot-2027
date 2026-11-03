@@ -115,6 +115,74 @@
         "observation": "当前接法从白色两针OUT口经PH2.0-2P插头转线接驱动蓝色端子，电池输入用上方圆孔，RK用Type-C；图上不保留修正字样。"
       },
       "limits": "厂家参考图片；生成标注图可能改绘细节，实物丝印优先。不是用户实物通电或带载证据。"
+    },
+    {
+      "date": "2026-11-03",
+      "source": "用户在本聊天提供的相机与RK接线原始照片",
+      "original_path": "C:\\Users\\52400\\xwechat_files\\wxid_7yopmftvc95322_6830\\temp\\RWTemp\\2026-11\\3742483682d9f5e4921a5b2968d79e58\\f94905cd69303f0d1bb5370e8d52e36f.jpg",
+      "path": "05_data/01_raw/04_hardware/20261103_camera_connection_01.jpg",
+      "sha256": "8cd3ef409cfc1c9f91ac8eb29fb3a0b56813007b765bc4156537fc3995678431",
+      "modified": false,
+      "observation": "白色软排线接到RK的MIPI摄像头接口区域，附近可见MIPI-CSI3丝印与蓝色补强片；相机呈背面，接头被遮挡。用户补充排线为原厂的。",
+      "limits": "未确认相机端触点、板端接触面、锁扣状态或排线插入深度；原厂配件的具体来源和逐针映射未核实，不由照片认定相机已识别、接法正确、模组损坏或不兼容。"
+    },
+    {
+      "date": "2026-11-03",
+      "source": "用户转发的相机商家手册截图，含原有绿色线与红色REST标注",
+      "original_path": "C:\\Users\\52400\\AppData\\Local\\Temp\\codex-clipboard-632adfd3-a40f-44cd-b43f-253c49182e26.png",
+      "path": "05_data/01_raw/04_hardware/20261103_camera_poweroff_sequence_01.png",
+      "sha256": "12d280b823f0a8188b2c2bce390260de41b7ade3103903e19e758a42349d6b30",
+      "modified": false,
+      "observation": "与项目已归档IMX415-AAQR-C芯片手册第86页Power-off sequence对应，展示三路电源关断、复位、时钟及控制引脚的相对时序。绿色线和REST字样为截图已有附加标注，原手册该行名为XCLR。",
+      "limits": "这是芯片规范图，不是本板实测波形或故障证据；不由此推断当前模组电源线路或修改板端供电值。"
+    },
+    {
+      "date": "2026-11-03",
+      "source": "用户授权在板B进行的相机控制通信地址受控检测，原始SSH返回与内核输出",
+      "path": "05_data/01_raw/04_hardware/20261103_camera_address_probe_01.txt",
+      "sha256": "7cb205baecfb1664f287562d4431f8e0ebfdd0a04258bcdbd1d841694157e18e",
+      "modified": false,
+      "board_serial": "8314b1e8ffd0321f",
+      "boot_id": "cb8ff2fd-b5b1-4fe3-9d17-7ad75fcd51f4",
+      "program": "02_programs/01_host/03_camera/diagnostics/camera_addr_probe.c",
+      "observation": "先测I2C6无有效读数，再在I2C4的7位地址0x1a成功读取寄存器0x311a得到0xe0，符合现有Rockchip驱动检查值。复位方向/物理电平及三路时钟引用已核对恢复，临时模块已卸载。",
+      "limits": "I2C5未测试；只证明控制通信及现驱动检查值相符，不证明唯一芯片型号、正式驱动绑定、MIPI传帧或照片采集。未修改持久设备树。"
+    },
+    {
+      "date": "2026-11-03",
+      "source": "板B相机排查时保存的原始终端返回",
+      "board_serial": "8314b1e8ffd0321f",
+      "path": "05_data/01_raw/04_hardware/20261103_camera_before_fix_01.txt",
+      "sha256": "faea5aa46d3aa664f178a35efd7b04c7744d85b0b7d6cf4dbd1ba2bbdbbb0a0e",
+      "bytes": 4336,
+      "stage": "14:53，地址修正前，重启后仍以0x37探测失败",
+      "modified": false,
+      "original_temporary_path": "temp/camera-preview-20261103/board_b_powercycle_recheck.txt",
+      "limits": "保留实际返回原文；不是两轮60帧采集的原始日志，也不代表连续预览或实车验收。"
+    },
+    {
+      "date": "2026-11-03",
+      "source": "板B相机排查时保存的原始终端返回",
+      "board_serial": "8314b1e8ffd0321f",
+      "path": "05_data/01_raw/04_hardware/20261103_camera_overlay_deploy_01.txt",
+      "sha256": "fcc21be0e469de37e4a28855a89419593868d1d33fd278d2ea4f47e101154608",
+      "bytes": 809,
+      "stage": "相机地址插件启用和部署结果",
+      "modified": false,
+      "original_temporary_path": "temp/camera-preview-20261103/board_b_camera_overlay_deployment.txt",
+      "limits": "保留实际返回原文；不是两轮60帧采集的原始日志，也不代表连续预览或实车验收。"
+    },
+    {
+      "date": "2026-11-03",
+      "source": "板B相机排查时保存的原始终端返回",
+      "board_serial": "8314b1e8ffd0321f",
+      "path": "05_data/01_raw/04_hardware/20261103_camera_driver_check_01.txt",
+      "sha256": "ae26e9617757ba549021cdc321b3708620889c14f6580233c22d697a0d64733d",
+      "bytes": 2515,
+      "stage": "16:27，地址修正后重启，正式驱动识别和设备节点核对",
+      "modified": false,
+      "original_temporary_path": "temp/camera-preview-20261103/board_b_camera_after_overlay.txt",
+      "limits": "保留实际返回原文；不是两轮60帧采集的原始日志，也不代表连续预览或实车验收。"
     }
   ],
   "current_power_configuration": {

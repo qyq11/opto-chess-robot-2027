@@ -1,0 +1,41 @@
+RUN_BUS_4
+MATCHES=1
+ALL_ADDRESS_RESULTS
+[  214.891174] camaddr: BEGIN bus=6 reset_direction=0 reset_raw=0 clock_hz=37125000
+[  214.915572] camaddr: READY bus=6 reset_raw=1 clock_hz=37125000
+[  214.916062] camaddr: READ bus=6 address=0x10 register=0x311a transfer_ret=-6 value=UNAVAILABLE
+[  214.916233] camaddr: READ bus=6 address=0x1a register=0x311a transfer_ret=-6 value=UNAVAILABLE
+[  214.916412] camaddr: READ bus=6 address=0x36 register=0x311a transfer_ret=-6 value=UNAVAILABLE
+[  214.916668] camaddr: READ bus=6 address=0x37 register=0x311a transfer_ret=-6 value=UNAVAILABLE
+[  214.918713] camaddr: RESTORE bus=6 ret=0 direction=0 raw=0 before_direction=0 before_raw=0
+[  214.918739] camaddr: END bus=6 setup_ret=0 restore_ret=0 matches=0
+[  214.957489] camaddr: UNLOADED bus=6
+[  226.317244] camaddr: BEGIN bus=4 reset_direction=0 reset_raw=0 clock_hz=37125000
+[  226.341431] camaddr: READY bus=4 reset_raw=1 clock_hz=37125000
+[  226.341968] camaddr: READ bus=4 address=0x10 register=0x311a transfer_ret=-6 value=UNAVAILABLE
+[  226.342680] camaddr: READ bus=4 address=0x1a register=0x311a value=0xe0 expected=0xe0 match=1
+[  226.342918] camaddr: READ bus=4 address=0x36 register=0x311a transfer_ret=-6 value=UNAVAILABLE
+[  226.343155] camaddr: READ bus=4 address=0x37 register=0x311a transfer_ret=-6 value=UNAVAILABLE
+[  226.345206] camaddr: RESTORE bus=4 ret=0 direction=0 raw=0 before_direction=0 before_raw=0
+[  226.345253] camaddr: END bus=4 setup_ret=0 restore_ret=0 matches=1
+[  226.402282] camaddr: UNLOADED bus=4
+FINAL_CLOCK_COUNTS
+/sys/kernel/debug/clk/clk_mipi_cameraout_m0 0
+0
+/sys/kernel/debug/clk/clk_mipi_cameraout_m1 0
+0
+/sys/kernel/debug/clk/clk_mipi_cameraout_m2 0
+0
+FINAL_GPIO_STATE
+pin 52 (gpio1-20): input bias pull down (1 ohms), output drive strength (8 mA), input schmitt enabled, pin output (0 level)
+pin 124 (gpio3-28): input bias pull down (1 ohms), output drive strength (8 mA), input schmitt enabled, pin output (0 level)
+pin 125 (gpio3-29): input bias pull down (1 ohms), output drive strength (8 mA), input schmitt enabled, pin output (0 level)
+pin 127 (gpio3-31): input bias disabled, output drive strength (8 mA), input schmitt enabled
+pin 128 (gpio4-0): input bias disabled, output drive strength (8 mA), input schmitt enabled
+pin 129 (gpio4-1): input bias disabled, output drive strength (8 mA), input schmitt enabled
+FINAL_MODULE_STATE
+unloaded
+FINAL_IDENTITY
+8314b1e8ffd0321f
+cb8ff2fd-b5b1-4fe3-9d17-7ad75fcd51f4
+2026-11-03 16:15:26 +0800

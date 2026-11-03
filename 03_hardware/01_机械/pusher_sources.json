@@ -1,0 +1,32 @@
+{
+  "date": "2026-11-02",
+  "revision": "V1",
+  "scope": "查阅原始研究与打印设备厂家的设计说明；未复制他人模型，全部结构尺寸为本项目试制选择。",
+  "official_piece_dimensions_available": false,
+  "piece_dimension_basis": "用户2026-11-02确认未取得棋子，官方尚未提供相关说明。30、40、50mm直径和15mm高度仅为虚拟检查样本。",
+  "sources": [
+    {
+      "title": "The Mechanics of Fine Manipulation by Pushing",
+      "author": "Kevin M. Lynch, Carnegie Mellon University",
+      "url": "https://publications.ri.cmu.edu/storage/publications/pub_files/pub2/lynch_kevin_1992_1/lynch_kevin_1992_1.pdf",
+      "used_for": "多个接触点、接触模式、力约束与准静态推送的分析思路；不能直接证明本版V形推铲可靠。",
+      "local_copy": null
+    },
+    {
+      "title": "Planning Algorithms, 13.1.3.1 Pushing a box",
+      "author": "Steven M. LaValle",
+      "url": "https://msl.cs.illinois.edu/~lavalle/planning/node663.html",
+      "used_for": "稳定推送受到转弯约束，后退会使推送接触分离；原例是凸多边形，应用于圆片机构属于本项目推断。",
+      "local_copy": null
+    },
+    {
+      "title": "Modeling with 3D printing in mind",
+      "author": "Prusa Research",
+      "url": "https://help.prusa3d.com/article/modeling-with-3d-printing-in-mind_164135",
+      "used_for": "打印方向、材料、壁厚、配合公差、封闭实体与试打印迭代；本版打印参数为项目试制起点。",
+      "local_copy": null
+    }
+  ],
+  "originality": "pusher_design.py与尺寸图为本项目生成的设计源码；未采用外部CAD或STL。未新增统一开源许可，沿用仓库权利说明。",
+  "physical_test_passed": false
+}
