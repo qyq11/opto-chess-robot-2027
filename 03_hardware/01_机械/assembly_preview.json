@@ -1,7 +1,7 @@
 {
   "date": "2026-11-03",
   "source_model": "03_hardware/01_机械/03_整车布局.FCStd",
-  "source_sha256": "446f165579bdaeda35fed4ff3143dc7fdf2bbb9dcfe9fc58a76eaa71cd67b9c4",
+  "source_sha256": "9347f23241f550508c8a326bdfe93c944e011e25c43a9dee2a51c293fe8035fa",
   "preview_model": "03_hardware/01_机械/05_推棋装配预览.FCStd",
   "virtual_piece": {
     "diameter_mm": 40,
@@ -20,8 +20,8 @@
   "artifacts": [
     {
       "path": "03_hardware/01_机械/05_推棋装配预览.FCStd",
-      "bytes": 7658824,
-      "sha256": "abb8947585e693a610648df4604819dedc852c23631f9eb39a838124c9a52916"
+      "bytes": 7658874,
+      "sha256": "9064078b353aef567de65873e606601161fd486e4874d679fd8f6c757de2ba53"
     },
     {
       "path": "05_data/03_results/04_mechanical/20261103_camera_car_iso.png",
@@ -33,5 +33,7 @@
       "bytes": 81076,
       "sha256": "121c1a0a15ebfc1051e705e5f6aae4aec59bb34b417bb5e9fcabcb496a5c303c"
     }
-  ]
+  ],
+  "source_sha256_before_display_fix": "446f165579bdaeda35fed4ff3143dc7fdf2bbb9dcfe9fc58a76eaa71cd67b9c4",
+  "source_display_fix_note": "2026-11-06源工程只补齐显示配置；原有文件包内容逐项保持原字节，几何未重建。预览工程保持原文件，本次只更新此前保存视角后的文件指纹。"
 }

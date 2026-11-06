@@ -112,10 +112,12 @@ for ground in PARAM['adjustable_ground_range_mm']+[PARAM['ground_clearance_mm']]
                                          'scope':'仅两端和名义位置；0mm为调节极限，不作为使用建议。'})
 doc.recompute()
 doc.saveAs(str(OUT/'04_推铲打印工程.FCStd'))
+from cad_display import ensure_display_state
+ensure_display_state([OUT/'04_推铲打印工程.FCStd'])
 Part.makeCompound([s for _,s in parts]).exportStep(str(OUT/'05_推铲打印工程.step'))
 
 # 保留打印文件与脚本的文件指纹，便于核对发给打印商的版本。
-for path in [OUT/f for f in files]+[OUT/'04_推铲打印工程.FCStd',OUT/'05_推铲打印工程.step',M/'pusher_design.py',M/'export_pusher.py',M/'parameters.json']:
+for path in [OUT/f for f in files]+[OUT/'04_推铲打印工程.FCStd',OUT/'05_推铲打印工程.step',M/'pusher_design.py',M/'export_pusher.py',M/'parameters.json',M/'cad_display.py']:
     report['artifacts'].append({'path':path.relative_to(R).as_posix(),
                               'bytes':path.stat().st_size,'sha256':hashlib.sha256(path.read_bytes()).hexdigest()})
 (M/'pusher_validation.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n',encoding='utf8')

@@ -1,0 +1,372 @@
+mkdir -p ../build
+gcc -I/usr/include/gstreamer-1.0 -I/usr/include/glib-2.0 -I/usr/lib/aarch64-linux-gnu/glib-2.0/include -I/usr/include/aarch64-linux-gnu -I/usr/include/orc-0.4 -I/usr/include/p11-kit-1 -I/usr/include/json-glib-1.0 -pthread -I/usr/include/libmount -I/usr/include/blkid  -std=c11 -O2 -g -Wall -Wextra -Wpedantic -pthread camera_web.c image_quality.c image_controls.c rkaiq_client.c motor_control.c -o ../build/opto-camera -lgstapp-1.0 -lgstvideo-1.0 -lgstbase-1.0 -lgstreamer-1.0 -lmicrohttpd -ljson-glib-1.0 -lgio-2.0 -lgobject-2.0 -lglib-2.0  -pthread -lm
+mkdir -p ../build
+gcc -std=c11 -O2 -g -Wall -Wextra -Wpedantic -pthread -I/usr/include/json-glib-1.0 -I/usr/include/glib-2.0 -I/usr/lib/aarch64-linux-gnu/glib-2.0/include -pthread -I/usr/include/libmount -I/usr/include/blkid  diagnostics/motor_control_check.c motor_control.c -o ../build/motor-control-check -ljson-glib-1.0 -lgio-2.0 -lgobject-2.0 -lglib-2.0  -pthread -lutil
+VIRTUAL UART ONLY: /dev/pts/0; no physical UART opened
+INPUT action=forward generation=0 speed_mm_s=default duration_ms=1000 -> HTTP 409
+INPUT action=left generation=0 speed_mm_s=default duration_ms=1000 -> HTTP 409
+INPUT action=right generation=0 speed_mm_s=default duration_ms=1000 -> HTTP 409
+INPUT action=anything generation=0 speed_mm_s=default duration_ms=1000 -> HTTP 400
+INPUT action=test_m3 generation=0 speed_mm_s=default duration_ms=1000 -> HTTP 400
+motor port=/dev/pts/0 #1 RK->DRIVER 13 bytes TEXT=$spd:0,0,0,0# HEX=24 73 70 64 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #2 RK->DRIVER 13 bytes TEXT=$pwm:0,0,0,0# HEX=24 70 77 6D 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #3 RK->DRIVER 12 bytes TEXT=$read_flash# HEX=24 72 65 61 64 5F 66 6C 61 73 68 23 
+INPUT action=query generation=0 speed_mm_s=default duration_ms=1000 -> HTTP 200
+OBSERVED RK->VIRTUAL_DRIVER: $spd:0,0,0,0#$pwm:0,0,0,0#$read_flash#
+motor port=/dev/pts/0 #4 DRIVER->RK 12 bytes TEXT=$read_flash# HEX=24 72 65 61 64 5F 66 6C 61 73 68 23 
+INPUT VIRTUAL_DRIVER->RK: real-format 150-byte configuration (simulated)
+motor port=/dev/pts/0 #5 DRIVER->RK 75 bytes TEXT=read_flash:OK!\r\nMotor_Version:1.7.3\r\nMotor_type:2\r\nDead_Zone:1600\r\nPulse_Li HEX=72 65 61 64 5F 66 6C 61 73 68 3A 4F 4B 21 0D 0A 4D 6F 74 6F 72 5F 56 65 72 73 69 6F 6E 3A 31 2E 37 2E 33 0D 0A 4D 6F 74 6F 72 5F 74 79 70 65 3A 32 0D 0A 44 65 61 64 5F 5A 6F 6E 65 3A 31 36 30 30 0D 0A 50 75 6C 73 65 5F 4C 69 
+motor port=/dev/pts/0 #6 DRIVER->RK 75 bytes TEXT=ne:13\r\nPulse_Phase:20\r\nwheel_diameter:65.000\r\nP:0.800\t I:0.060\t D:0.500\t \r\n HEX=6E 65 3A 31 33 0D 0A 50 75 6C 73 65 5F 50 68 61 73 65 3A 32 30 0D 0A 77 68 65 65 6C 5F 64 69 61 6D 65 74 65 72 3A 36 35 2E 30 30 30 0D 0A 50 3A 30 2E 38 30 30 09 20 49 3A 30 2E 30 36 30 09 20 44 3A 30 2E 35 30 30 09 20 0D 0A 
+INPUT action=forward generation=1 speed_mm_s= duration_ms=1000 -> HTTP 400
+INPUT action=forward generation=1 speed_mm_s=-20 duration_ms=1000 -> HTTP 400
+INPUT action=forward generation=1 speed_mm_s=10 duration_ms=1000 -> HTTP 400
+INPUT action=forward generation=1 speed_mm_s=310 duration_ms=1000 -> HTTP 400
+INPUT action=forward generation=1 speed_mm_s=25 duration_ms=1000 -> HTTP 400
+INPUT action=forward generation=1 speed_mm_s=60.0 duration_ms=1000 -> HTTP 400
+INPUT action=forward generation=1 speed_mm_s=nan duration_ms=1000 -> HTTP 400
+INPUT action=forward generation=1 speed_mm_s=999999999999999999999999999999 duration_ms=1000 -> HTTP 400
+INPUT action=forward generation=1 speed_mm_s=60 duration_ms= -> HTTP 400
+INPUT action=forward generation=1 speed_mm_s=60 duration_ms=0 -> HTTP 400
+INPUT action=forward generation=1 speed_mm_s=60 duration_ms=1500 -> HTTP 400
+INPUT action=forward generation=1 speed_mm_s=60 duration_ms=11000 -> HTTP 400
+INPUT action=forward generation=1 speed_mm_s=60 duration_ms=-1000 -> HTTP 400
+INPUT action=forward generation=1 speed_mm_s=60 duration_ms=2e3 -> HTTP 400
+SIMULATED DRIVER->RK heartbeat every 40ms: $MSPD:0,0,0,0#
+motor port=/dev/pts/0 #7 RK->DRIVER 14 bytes TEXT=$upload:1,0,1# HEX=24 75 70 6C 6F 61 64 3A 31 2C 30 2C 31 23 
+motor port=/dev/pts/0 #8 RK->DRIVER 17 bytes TEXT=$spd:20,20,20,20# HEX=24 73 70 64 3A 32 30 2C 32 30 2C 32 30 2C 32 30 23 
+INPUT action=forward generation=1 speed_mm_s=default duration_ms=1000 -> HTTP 200
+motor port=/dev/pts/0 #9 DRIVER->RK 14 bytes TEXT=$MSPD:0,0,0,0# HEX=24 4D 53 50 44 3A 30 2C 30 2C 30 2C 30 23 
+OBSERVED RK->VIRTUAL_DRIVER: $upload:1,0,1#$spd:20,20,20,20#
+motor port=/dev/pts/0 #10 DRIVER->RK 14 bytes TEXT=$MSPD:0,0,0,0# HEX=24 4D 53 50 44 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #11 DRIVER->RK 14 bytes TEXT=$MSPD:0,0,0,0# HEX=24 4D 53 50 44 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #12 DRIVER->RK 14 bytes TEXT=$MSPD:0,0,0,0# HEX=24 4D 53 50 44 3A 30 2C 30 2C 30 2C 30 23 
+INPUT action=forward generation=1 speed_mm_s=default duration_ms=1000 -> HTTP 409
+INPUT action=backward generation=1 speed_mm_s=default duration_ms=1000 -> HTTP 409
+INPUT action=left generation=1 speed_mm_s=default duration_ms=1000 -> HTTP 409
+INPUT action=right generation=1 speed_mm_s=default duration_ms=1000 -> HTTP 409
+motor port=/dev/pts/0 #13 DRIVER->RK 14 bytes TEXT=$MSPD:0,0,0,0# HEX=24 4D 53 50 44 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #14 DRIVER->RK 14 bytes TEXT=$MSPD:0,0,0,0# HEX=24 4D 53 50 44 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #15 RK->DRIVER 17 bytes TEXT=$spd:40,40,40,40# HEX=24 73 70 64 3A 34 30 2C 34 30 2C 34 30 2C 34 30 23 
+motor port=/dev/pts/0 #16 DRIVER->RK 14 bytes TEXT=$MSPD:0,0,0,0# HEX=24 4D 53 50 44 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #17 DRIVER->RK 14 bytes TEXT=$MSPD:0,0,0,0# HEX=24 4D 53 50 44 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #18 DRIVER->RK 14 bytes TEXT=$MSPD:0,0,0,0# HEX=24 4D 53 50 44 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #19 DRIVER->RK 14 bytes TEXT=$MSPD:0,0,0,0# HEX=24 4D 53 50 44 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #20 DRIVER->RK 14 bytes TEXT=$MSPD:0,0,0,0# HEX=24 4D 53 50 44 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #21 RK->DRIVER 17 bytes TEXT=$spd:60,60,60,60# HEX=24 73 70 64 3A 36 30 2C 36 30 2C 36 30 2C 36 30 23 
+motor port=/dev/pts/0 #22 DRIVER->RK 14 bytes TEXT=$MSPD:0,0,0,0# HEX=24 4D 53 50 44 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #23 DRIVER->RK 14 bytes TEXT=$MSPD:0,0,0,0# HEX=24 4D 53 50 44 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #24 DRIVER->RK 14 bytes TEXT=$MSPD:0,0,0,0# HEX=24 4D 53 50 44 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #25 DRIVER->RK 14 bytes TEXT=$MSPD:0,0,0,0# HEX=24 4D 53 50 44 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #26 DRIVER->RK 14 bytes TEXT=$MSPD:0,0,0,0# HEX=24 4D 53 50 44 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #27 DRIVER->RK 14 bytes TEXT=$MSPD:0,0,0,0# HEX=24 4D 53 50 44 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #28 DRIVER->RK 14 bytes TEXT=$MSPD:0,0,0,0# HEX=24 4D 53 50 44 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #29 DRIVER->RK 14 bytes TEXT=$MSPD:0,0,0,0# HEX=24 4D 53 50 44 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #30 DRIVER->RK 14 bytes TEXT=$MSPD:0,0,0,0# HEX=24 4D 53 50 44 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #31 DRIVER->RK 14 bytes TEXT=$MSPD:0,0,0,0# HEX=24 4D 53 50 44 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #32 DRIVER->RK 14 bytes TEXT=$MSPD:0,0,0,0# HEX=24 4D 53 50 44 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #33 DRIVER->RK 14 bytes TEXT=$MSPD:0,0,0,0# HEX=24 4D 53 50 44 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #34 DRIVER->RK 14 bytes TEXT=$MSPD:0,0,0,0# HEX=24 4D 53 50 44 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #35 DRIVER->RK 14 bytes TEXT=$MSPD:0,0,0,0# HEX=24 4D 53 50 44 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #36 DRIVER->RK 14 bytes TEXT=$MSPD:0,0,0,0# HEX=24 4D 53 50 44 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #37 RK->DRIVER 13 bytes TEXT=$spd:0,0,0,0# HEX=24 73 70 64 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #38 RK->DRIVER 13 bytes TEXT=$pwm:0,0,0,0# HEX=24 70 77 6D 3A 30 2C 30 2C 30 2C 30 23 
+OBSERVED RK->VIRTUAL_DRIVER: $spd:40,40,40,40#$spd:60,60,60,60#$spd:0,0,0,0#$pwm:0,0,0,0#
+OBSERVED forward->zero output interval: 1027.2 ms
+INPUT action=forward generation=1 speed_mm_s=default duration_ms=1000 -> HTTP 409
+motor port=/dev/pts/0 #39 DRIVER->RK 14 bytes TEXT=$MSPD:0,0,0,0# HEX=24 4D 53 50 44 3A 30 2C 30 2C 30 2C 30 23 
+INPUT action=left generation=1 speed_mm_s=default duration_ms=1000 -> HTTP 409
+motor port=/dev/pts/0 #40 DRIVER->RK 14 bytes TEXT=$MSPD:0,0,0,0# HEX=24 4D 53 50 44 3A 30 2C 30 2C 30 2C 30 23 
+INPUT action=right generation=1 speed_mm_s=default duration_ms=1000 -> HTTP 409
+motor port=/dev/pts/0 #41 RK->DRIVER 14 bytes TEXT=$upload:1,0,1# HEX=24 75 70 6C 6F 61 64 3A 31 2C 30 2C 31 23 
+motor port=/dev/pts/0 #42 RK->DRIVER 19 bytes TEXT=$spd:-20,20,-20,20# HEX=24 73 70 64 3A 2D 32 30 2C 32 30 2C 2D 32 30 2C 32 30 23 
+INPUT action=backward generation=3 speed_mm_s=default duration_ms=1000 -> HTTP 200
+motor port=/dev/pts/0 #43 DRIVER->RK 14 bytes TEXT=$MSPD:0,0,0,0# HEX=24 4D 53 50 44 3A 30 2C 30 2C 30 2C 30 23 
+OBSERVED RK->VIRTUAL_DRIVER: $upload:1,0,1#$spd:-20,20,-20,20#
+motor port=/dev/pts/0 #44 RK->DRIVER 13 bytes TEXT=$spd:0,0,0,0# HEX=24 73 70 64 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #45 RK->DRIVER 13 bytes TEXT=$pwm:0,0,0,0# HEX=24 70 77 6D 3A 30 2C 30 2C 30 2C 30 23 
+INPUT action=stop generation=3 speed_mm_s=default duration_ms=1000 -> HTTP 200
+OBSERVED RK->VIRTUAL_DRIVER: $spd:0,0,0,0#$pwm:0,0,0,0#
+motor port=/dev/pts/0 #46 DRIVER->RK 14 bytes TEXT=$MSPD:0,0,0,0# HEX=24 4D 53 50 44 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #47 DRIVER->RK 14 bytes TEXT=$MSPD:0,0,0,0# HEX=24 4D 53 50 44 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #48 DRIVER->RK 14 bytes TEXT=$MSPD:0,0,0,0# HEX=24 4D 53 50 44 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #49 DRIVER->RK 14 bytes TEXT=$MSPD:0,0,0,0# HEX=24 4D 53 50 44 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #50 DRIVER->RK 14 bytes TEXT=$MSPD:0,0,0,0# HEX=24 4D 53 50 44 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #51 DRIVER->RK 14 bytes TEXT=$MSPD:0,0,0,0# HEX=24 4D 53 50 44 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #52 DRIVER->RK 14 bytes TEXT=$MSPD:0,0,0,0# HEX=24 4D 53 50 44 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #53 DRIVER->RK 14 bytes TEXT=$MSPD:0,0,0,0# HEX=24 4D 53 50 44 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #54 DRIVER->RK 14 bytes TEXT=$MSPD:0,0,0,0# HEX=24 4D 53 50 44 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #55 DRIVER->RK 14 bytes TEXT=$MSPD:0,0,0,0# HEX=24 4D 53 50 44 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #56 DRIVER->RK 14 bytes TEXT=$MSPD:0,0,0,0# HEX=24 4D 53 50 44 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #57 DRIVER->RK 14 bytes TEXT=$MSPD:0,0,0,0# HEX=24 4D 53 50 44 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #58 DRIVER->RK 14 bytes TEXT=$MSPD:0,0,0,0# HEX=24 4D 53 50 44 3A 30 2C 30 2C 30 2C 30 23 
+INPUT action=left generation=5 speed_mm_s=310 duration_ms=1000 -> HTTP 400
+motor port=/dev/pts/0 #59 DRIVER->RK 14 bytes TEXT=$MSPD:0,0,0,0# HEX=24 4D 53 50 44 3A 30 2C 30 2C 30 2C 30 23 
+INPUT action=right generation=5 speed_mm_s=60 duration_ms=1500 -> HTTP 400
+motor port=/dev/pts/0 #60 RK->DRIVER 14 bytes TEXT=$upload:1,0,1# HEX=24 75 70 6C 6F 61 64 3A 31 2C 30 2C 31 23 
+motor port=/dev/pts/0 #61 RK->DRIVER 19 bytes TEXT=$spd:-20,20,20,-20# HEX=24 73 70 64 3A 2D 32 30 2C 32 30 2C 32 30 2C 2D 32 30 23 
+INPUT action=left generation=5 speed_mm_s=default duration_ms=1000 -> HTTP 200
+motor port=/dev/pts/0 #62 DRIVER->RK 14 bytes TEXT=$MSPD:0,0,0,0# HEX=24 4D 53 50 44 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #63 DRIVER->RK 14 bytes TEXT=$MSPD:0,0,0,0# HEX=24 4D 53 50 44 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #64 DRIVER->RK 14 bytes TEXT=$MSPD:0,0,0,0# HEX=24 4D 53 50 44 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #65 DRIVER->RK 14 bytes TEXT=$MSPD:0,0,0,0# HEX=24 4D 53 50 44 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #66 DRIVER->RK 14 bytes TEXT=$MSPD:0,0,0,0# HEX=24 4D 53 50 44 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #67 DRIVER->RK 14 bytes TEXT=$MSPD:0,0,0,0# HEX=24 4D 53 50 44 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #68 RK->DRIVER 19 bytes TEXT=$spd:-40,40,40,-40# HEX=24 73 70 64 3A 2D 34 30 2C 34 30 2C 34 30 2C 2D 34 30 23 
+OBSERVED RK->VIRTUAL_DRIVER: $upload:1,0,1#$spd:-20,20,20,-20#$spd:-40,40,40,-40#
+INPUT action=speed generation=6 speed_mm_s=90 duration_ms=absent -> HTTP 200
+INPUT action=right generation=7 speed_mm_s=default duration_ms=1000 -> HTTP 409
+motor port=/dev/pts/0 #69 DRIVER->RK 14 bytes TEXT=$MSPD:0,0,0,0# HEX=24 4D 53 50 44 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #70 DRIVER->RK 14 bytes TEXT=$MSPD:0,0,0,0# HEX=24 4D 53 50 44 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #71 DRIVER->RK 14 bytes TEXT=$MSPD:0,0,0,0# HEX=24 4D 53 50 44 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #72 DRIVER->RK 14 bytes TEXT=$MSPD:0,0,0,0# HEX=24 4D 53 50 44 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #73 DRIVER->RK 14 bytes TEXT=$MSPD:0,0,0,0# HEX=24 4D 53 50 44 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #74 RK->DRIVER 19 bytes TEXT=$spd:-60,60,60,-60# HEX=24 73 70 64 3A 2D 36 30 2C 36 30 2C 36 30 2C 2D 36 30 23 
+motor port=/dev/pts/0 #75 DRIVER->RK 14 bytes TEXT=$MSPD:0,0,0,0# HEX=24 4D 53 50 44 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #76 DRIVER->RK 14 bytes TEXT=$MSPD:0,0,0,0# HEX=24 4D 53 50 44 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #77 DRIVER->RK 14 bytes TEXT=$MSPD:0,0,0,0# HEX=24 4D 53 50 44 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #78 DRIVER->RK 14 bytes TEXT=$MSPD:0,0,0,0# HEX=24 4D 53 50 44 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #79 DRIVER->RK 14 bytes TEXT=$MSPD:0,0,0,0# HEX=24 4D 53 50 44 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #80 RK->DRIVER 19 bytes TEXT=$spd:-80,80,80,-80# HEX=24 73 70 64 3A 2D 38 30 2C 38 30 2C 38 30 2C 2D 38 30 23 
+motor port=/dev/pts/0 #81 DRIVER->RK 14 bytes TEXT=$MSPD:0,0,0,0# HEX=24 4D 53 50 44 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #82 DRIVER->RK 14 bytes TEXT=$MSPD:0,0,0,0# HEX=24 4D 53 50 44 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #83 DRIVER->RK 14 bytes TEXT=$MSPD:0,0,0,0# HEX=24 4D 53 50 44 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #84 DRIVER->RK 14 bytes TEXT=$MSPD:0,0,0,0# HEX=24 4D 53 50 44 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #85 DRIVER->RK 14 bytes TEXT=$MSPD:0,0,0,0# HEX=24 4D 53 50 44 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #86 RK->DRIVER 19 bytes TEXT=$spd:-90,90,90,-90# HEX=24 73 70 64 3A 2D 39 30 2C 39 30 2C 39 30 2C 2D 39 30 23 
+motor port=/dev/pts/0 #87 DRIVER->RK 14 bytes TEXT=$MSPD:0,0,0,0# HEX=24 4D 53 50 44 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #88 DRIVER->RK 14 bytes TEXT=$MSPD:0,0,0,0# HEX=24 4D 53 50 44 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #89 DRIVER->RK 14 bytes TEXT=$MSPD:0,0,0,0# HEX=24 4D 53 50 44 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #90 DRIVER->RK 14 bytes TEXT=$MSPD:0,0,0,0# HEX=24 4D 53 50 44 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #91 DRIVER->RK 14 bytes TEXT=$MSPD:0,0,0,0# HEX=24 4D 53 50 44 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #92 RK->DRIVER 13 bytes TEXT=$spd:0,0,0,0# HEX=24 73 70 64 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #93 RK->DRIVER 13 bytes TEXT=$pwm:0,0,0,0# HEX=24 70 77 6D 3A 30 2C 30 2C 30 2C 30 23 
+OBSERVED RK->VIRTUAL_DRIVER: $spd:-60,60,60,-60#$spd:-80,80,80,-80#$spd:-90,90,90,-90#$spd:0,0,0,0#$pwm:0,0,0,0#
+OBSERVED left translation signs, live speed and original stop: 1027.5 ms
+motor port=/dev/pts/0 #94 RK->DRIVER 14 bytes TEXT=$upload:1,0,1# HEX=24 75 70 6C 6F 61 64 3A 31 2C 30 2C 31 23 
+motor port=/dev/pts/0 #95 RK->DRIVER 19 bytes TEXT=$spd:20,-20,-20,20# HEX=24 73 70 64 3A 32 30 2C 2D 32 30 2C 2D 32 30 2C 32 30 23 
+INPUT action=right generation=8 speed_mm_s=default duration_ms=1000 -> HTTP 200
+motor port=/dev/pts/0 #96 DRIVER->RK 14 bytes TEXT=$MSPD:0,0,0,0# HEX=24 4D 53 50 44 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #97 DRIVER->RK 14 bytes TEXT=$MSPD:0,0,0,0# HEX=24 4D 53 50 44 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #98 DRIVER->RK 14 bytes TEXT=$MSPD:0,0,0,0# HEX=24 4D 53 50 44 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #99 DRIVER->RK 14 bytes TEXT=$MSPD:0,0,0,0# HEX=24 4D 53 50 44 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #100 DRIVER->RK 14 bytes TEXT=$MSPD:0,0,0,0# HEX=24 4D 53 50 44 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #101 RK->DRIVER 19 bytes TEXT=$spd:40,-40,-40,40# HEX=24 73 70 64 3A 34 30 2C 2D 34 30 2C 2D 34 30 2C 34 30 23 
+OBSERVED RK->VIRTUAL_DRIVER: $upload:1,0,1#$spd:20,-20,-20,20#$spd:40,-40,-40,40#
+INPUT action=speed generation=9 speed_mm_s=30 duration_ms=absent -> HTTP 200
+INPUT action=left generation=10 speed_mm_s=default duration_ms=1000 -> HTTP 409
+motor port=/dev/pts/0 #102 DRIVER->RK 14 bytes TEXT=$MSPD:0,0,0,0# HEX=24 4D 53 50 44 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #103 DRIVER->RK 14 bytes TEXT=$MSPD:0,0,0,0# HEX=24 4D 53 50 44 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #104 DRIVER->RK 14 bytes TEXT=$MSPD:0,0,0,0# HEX=24 4D 53 50 44 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #105 DRIVER->RK 14 bytes TEXT=$MSPD:0,0,0,0# HEX=24 4D 53 50 44 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #106 DRIVER->RK 14 bytes TEXT=$MSPD:0,0,0,0# HEX=24 4D 53 50 44 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #107 DRIVER->RK 14 bytes TEXT=$MSPD:0,0,0,0# HEX=24 4D 53 50 44 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #108 RK->DRIVER 19 bytes TEXT=$spd:30,-30,-30,30# HEX=24 73 70 64 3A 33 30 2C 2D 33 30 2C 2D 33 30 2C 33 30 23 
+motor port=/dev/pts/0 #109 DRIVER->RK 14 bytes TEXT=$MSPD:0,0,0,0# HEX=24 4D 53 50 44 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #110 DRIVER->RK 14 bytes TEXT=$MSPD:0,0,0,0# HEX=24 4D 53 50 44 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #111 DRIVER->RK 14 bytes TEXT=$MSPD:0,0,0,0# HEX=24 4D 53 50 44 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #112 DRIVER->RK 14 bytes TEXT=$MSPD:0,0,0,0# HEX=24 4D 53 50 44 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #113 DRIVER->RK 14 bytes TEXT=$MSPD:0,0,0,0# HEX=24 4D 53 50 44 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #114 DRIVER->RK 14 bytes TEXT=$MSPD:0,0,0,0# HEX=24 4D 53 50 44 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #115 DRIVER->RK 14 bytes TEXT=$MSPD:0,0,0,0# HEX=24 4D 53 50 44 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #116 DRIVER->RK 14 bytes TEXT=$MSPD:0,0,0,0# HEX=24 4D 53 50 44 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #117 DRIVER->RK 14 bytes TEXT=$MSPD:0,0,0,0# HEX=24 4D 53 50 44 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #118 DRIVER->RK 14 bytes TEXT=$MSPD:0,0,0,0# HEX=24 4D 53 50 44 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #119 DRIVER->RK 14 bytes TEXT=$MSPD:0,0,0,0# HEX=24 4D 53 50 44 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #120 DRIVER->RK 14 bytes TEXT=$MSPD:0,0,0,0# HEX=24 4D 53 50 44 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #121 DRIVER->RK 14 bytes TEXT=$MSPD:0,0,0,0# HEX=24 4D 53 50 44 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #122 DRIVER->RK 14 bytes TEXT=$MSPD:0,0,0,0# HEX=24 4D 53 50 44 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #123 RK->DRIVER 13 bytes TEXT=$spd:0,0,0,0# HEX=24 73 70 64 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #124 RK->DRIVER 13 bytes TEXT=$pwm:0,0,0,0# HEX=24 70 77 6D 3A 30 2C 30 2C 30 2C 30 23 
+OBSERVED RK->VIRTUAL_DRIVER: $spd:30,-30,-30,30#$spd:0,0,0,0#$pwm:0,0,0,0#
+OBSERVED right translation signs, live speed and original stop: 1029.3 ms
+motor port=/dev/pts/0 #125 RK->DRIVER 14 bytes TEXT=$upload:1,0,1# HEX=24 75 70 6C 6F 61 64 3A 31 2C 30 2C 31 23 
+motor port=/dev/pts/0 #126 RK->DRIVER 19 bytes TEXT=$spd:-20,-20,20,20# HEX=24 73 70 64 3A 2D 32 30 2C 2D 32 30 2C 32 30 2C 32 30 23 
+INPUT action=left generation=11 speed_mm_s=default duration_ms=1000 -> HTTP 200
+motor port=/dev/pts/0 #127 DRIVER->RK 14 bytes TEXT=$MSPD:0,0,0,0# HEX=24 4D 53 50 44 3A 30 2C 30 2C 30 2C 30 23 
+OBSERVED RK->VIRTUAL_DRIVER: $upload:1,0,1#$spd:-20,-20,20,20#
+motor port=/dev/pts/0 #128 RK->DRIVER 13 bytes TEXT=$spd:0,0,0,0# HEX=24 73 70 64 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #129 RK->DRIVER 13 bytes TEXT=$pwm:0,0,0,0# HEX=24 70 77 6D 3A 30 2C 30 2C 30 2C 30 23 
+INPUT action=stop generation=11 speed_mm_s=default duration_ms=1000 -> HTTP 200
+OBSERVED RK->VIRTUAL_DRIVER: $spd:0,0,0,0#$pwm:0,0,0,0#
+motor port=/dev/pts/0 #130 RK->DRIVER 14 bytes TEXT=$upload:1,0,1# HEX=24 75 70 6C 6F 61 64 3A 31 2C 30 2C 31 23 
+motor port=/dev/pts/0 #131 RK->DRIVER 19 bytes TEXT=$spd:20,20,-20,-20# HEX=24 73 70 64 3A 32 30 2C 32 30 2C 2D 32 30 2C 2D 32 30 23 
+INPUT action=right generation=13 speed_mm_s=default duration_ms=1000 -> HTTP 200
+OBSERVED RK->VIRTUAL_DRIVER: $upload:1,0,1#$spd:20,20,-20,-20#
+motor port=/dev/pts/0 #132 RK->DRIVER 13 bytes TEXT=$spd:0,0,0,0# HEX=24 73 70 64 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #133 RK->DRIVER 13 bytes TEXT=$pwm:0,0,0,0# HEX=24 70 77 6D 3A 30 2C 30 2C 30 2C 30 23 
+INPUT action=stop generation=13 speed_mm_s=default duration_ms=1000 -> HTTP 200
+OBSERVED RK->VIRTUAL_DRIVER: $spd:0,0,0,0#$pwm:0,0,0,0#
+motor port=/dev/pts/0 #134 RK->DRIVER 14 bytes TEXT=$upload:1,0,1# HEX=24 75 70 6C 6F 61 64 3A 31 2C 30 2C 31 23 
+motor port=/dev/pts/0 #135 RK->DRIVER 17 bytes TEXT=$spd:20,20,20,20# HEX=24 73 70 64 3A 32 30 2C 32 30 2C 32 30 2C 32 30 23 
+INPUT action=forward generation=15 speed_mm_s=150 duration_ms=3000 -> HTTP 200
+motor port=/dev/pts/0 #136 DRIVER->RK 14 bytes TEXT=$MSPD:0,0,0,0# HEX=24 4D 53 50 44 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #137 DRIVER->RK 14 bytes TEXT=$MSPD:0,0,0,0# HEX=24 4D 53 50 44 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #138 DRIVER->RK 14 bytes TEXT=$MSPD:0,0,0,0# HEX=24 4D 53 50 44 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #139 DRIVER->RK 14 bytes TEXT=$MSPD:0,0,0,0# HEX=24 4D 53 50 44 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #140 DRIVER->RK 14 bytes TEXT=$MSPD:0,0,0,0# HEX=24 4D 53 50 44 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #141 DRIVER->RK 14 bytes TEXT=$MSPD:0,0,0,0# HEX=24 4D 53 50 44 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #142 RK->DRIVER 17 bytes TEXT=$spd:40,40,40,40# HEX=24 73 70 64 3A 34 30 2C 34 30 2C 34 30 2C 34 30 23 
+motor port=/dev/pts/0 #143 DRIVER->RK 14 bytes TEXT=$MSPD:0,0,0,0# HEX=24 4D 53 50 44 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #144 DRIVER->RK 14 bytes TEXT=$MSPD:0,0,0,0# HEX=24 4D 53 50 44 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #145 DRIVER->RK 14 bytes TEXT=$MSPD:0,0,0,0# HEX=24 4D 53 50 44 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #146 DRIVER->RK 14 bytes TEXT=$MSPD:0,0,0,0# HEX=24 4D 53 50 44 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #147 DRIVER->RK 14 bytes TEXT=$MSPD:0,0,0,0# HEX=24 4D 53 50 44 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #148 RK->DRIVER 17 bytes TEXT=$spd:60,60,60,60# HEX=24 73 70 64 3A 36 30 2C 36 30 2C 36 30 2C 36 30 23 
+motor port=/dev/pts/0 #149 DRIVER->RK 14 bytes TEXT=$MSPD:0,0,0,0# HEX=24 4D 53 50 44 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #150 DRIVER->RK 14 bytes TEXT=$MSPD:0,0,0,0# HEX=24 4D 53 50 44 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #151 DRIVER->RK 14 bytes TEXT=$MSPD:0,0,0,0# HEX=24 4D 53 50 44 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #152 DRIVER->RK 14 bytes TEXT=$MSPD:0,0,0,0# HEX=24 4D 53 50 44 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #153 DRIVER->RK 14 bytes TEXT=$MSPD:0,0,0,0# HEX=24 4D 53 50 44 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #154 RK->DRIVER 17 bytes TEXT=$spd:80,80,80,80# HEX=24 73 70 64 3A 38 30 2C 38 30 2C 38 30 2C 38 30 23 
+motor port=/dev/pts/0 #155 DRIVER->RK 14 bytes TEXT=$MSPD:0,0,0,0# HEX=24 4D 53 50 44 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #156 DRIVER->RK 14 bytes TEXT=$MSPD:0,0,0,0# HEX=24 4D 53 50 44 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #157 DRIVER->RK 14 bytes TEXT=$MSPD:0,0,0,0# HEX=24 4D 53 50 44 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #158 DRIVER->RK 14 bytes TEXT=$MSPD:0,0,0,0# HEX=24 4D 53 50 44 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #159 DRIVER->RK 14 bytes TEXT=$MSPD:0,0,0,0# HEX=24 4D 53 50 44 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #160 RK->DRIVER 21 bytes TEXT=$spd:100,100,100,100# HEX=24 73 70 64 3A 31 30 30 2C 31 30 30 2C 31 30 30 2C 31 30 30 23 
+motor port=/dev/pts/0 #161 DRIVER->RK 14 bytes TEXT=$MSPD:0,0,0,0# HEX=24 4D 53 50 44 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #162 DRIVER->RK 14 bytes TEXT=$MSPD:0,0,0,0# HEX=24 4D 53 50 44 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #163 DRIVER->RK 14 bytes TEXT=$MSPD:0,0,0,0# HEX=24 4D 53 50 44 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #164 DRIVER->RK 14 bytes TEXT=$MSPD:0,0,0,0# HEX=24 4D 53 50 44 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #165 DRIVER->RK 14 bytes TEXT=$MSPD:0,0,0,0# HEX=24 4D 53 50 44 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #166 RK->DRIVER 21 bytes TEXT=$spd:120,120,120,120# HEX=24 73 70 64 3A 31 32 30 2C 31 32 30 2C 31 32 30 2C 31 32 30 23 
+motor port=/dev/pts/0 #167 DRIVER->RK 14 bytes TEXT=$MSPD:0,0,0,0# HEX=24 4D 53 50 44 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #168 DRIVER->RK 14 bytes TEXT=$MSPD:0,0,0,0# HEX=24 4D 53 50 44 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #169 DRIVER->RK 14 bytes TEXT=$MSPD:0,0,0,0# HEX=24 4D 53 50 44 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #170 DRIVER->RK 14 bytes TEXT=$MSPD:0,0,0,0# HEX=24 4D 53 50 44 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #171 DRIVER->RK 14 bytes TEXT=$MSPD:0,0,0,0# HEX=24 4D 53 50 44 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #172 DRIVER->RK 14 bytes TEXT=$MSPD:0,0,0,0# HEX=24 4D 53 50 44 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #173 RK->DRIVER 21 bytes TEXT=$spd:140,140,140,140# HEX=24 73 70 64 3A 31 34 30 2C 31 34 30 2C 31 34 30 2C 31 34 30 23 
+motor port=/dev/pts/0 #174 DRIVER->RK 14 bytes TEXT=$MSPD:0,0,0,0# HEX=24 4D 53 50 44 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #175 DRIVER->RK 14 bytes TEXT=$MSPD:0,0,0,0# HEX=24 4D 53 50 44 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #176 DRIVER->RK 14 bytes TEXT=$MSPD:0,0,0,0# HEX=24 4D 53 50 44 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #177 DRIVER->RK 14 bytes TEXT=$MSPD:0,0,0,0# HEX=24 4D 53 50 44 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #178 DRIVER->RK 14 bytes TEXT=$MSPD:0,0,0,0# HEX=24 4D 53 50 44 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #179 RK->DRIVER 21 bytes TEXT=$spd:150,150,150,150# HEX=24 73 70 64 3A 31 35 30 2C 31 35 30 2C 31 35 30 2C 31 35 30 23 
+motor port=/dev/pts/0 #180 DRIVER->RK 14 bytes TEXT=$MSPD:0,0,0,0# HEX=24 4D 53 50 44 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #181 DRIVER->RK 14 bytes TEXT=$MSPD:0,0,0,0# HEX=24 4D 53 50 44 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #182 DRIVER->RK 14 bytes TEXT=$MSPD:0,0,0,0# HEX=24 4D 53 50 44 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #183 DRIVER->RK 14 bytes TEXT=$MSPD:0,0,0,0# HEX=24 4D 53 50 44 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #184 DRIVER->RK 14 bytes TEXT=$MSPD:0,0,0,0# HEX=24 4D 53 50 44 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #185 DRIVER->RK 14 bytes TEXT=$MSPD:0,0,0,0# HEX=24 4D 53 50 44 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #186 DRIVER->RK 14 bytes TEXT=$MSPD:0,0,0,0# HEX=24 4D 53 50 44 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #187 DRIVER->RK 14 bytes TEXT=$MSPD:0,0,0,0# HEX=24 4D 53 50 44 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #188 DRIVER->RK 14 bytes TEXT=$MSPD:0,0,0,0# HEX=24 4D 53 50 44 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #189 DRIVER->RK 14 bytes TEXT=$MSPD:0,0,0,0# HEX=24 4D 53 50 44 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #190 DRIVER->RK 14 bytes TEXT=$MSPD:0,0,0,0# HEX=24 4D 53 50 44 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #191 DRIVER->RK 14 bytes TEXT=$MSPD:0,0,0,0# HEX=24 4D 53 50 44 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #192 DRIVER->RK 14 bytes TEXT=$MSPD:0,0,0,0# HEX=24 4D 53 50 44 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #193 DRIVER->RK 14 bytes TEXT=$MSPD:0,0,0,0# HEX=24 4D 53 50 44 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #194 DRIVER->RK 14 bytes TEXT=$MSPD:0,0,0,0# HEX=24 4D 53 50 44 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #195 DRIVER->RK 14 bytes TEXT=$MSPD:0,0,0,0# HEX=24 4D 53 50 44 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #196 DRIVER->RK 14 bytes TEXT=$MSPD:0,0,0,0# HEX=24 4D 53 50 44 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #197 DRIVER->RK 14 bytes TEXT=$MSPD:0,0,0,0# HEX=24 4D 53 50 44 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #198 DRIVER->RK 14 bytes TEXT=$MSPD:0,0,0,0# HEX=24 4D 53 50 44 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #199 DRIVER->RK 14 bytes TEXT=$MSPD:0,0,0,0# HEX=24 4D 53 50 44 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #200 DRIVER->RK 14 bytes TEXT=$MSPD:0,0,0,0# HEX=24 4D 53 50 44 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #201 DRIVER->RK 14 bytes TEXT=$MSPD:0,0,0,0# HEX=24 4D 53 50 44 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #202 DRIVER->RK 14 bytes TEXT=$MSPD:0,0,0,0# HEX=24 4D 53 50 44 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #203 DRIVER->RK 14 bytes TEXT=$MSPD:0,0,0,0# HEX=24 4D 53 50 44 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #204 DRIVER->RK 14 bytes TEXT=$MSPD:0,0,0,0# HEX=24 4D 53 50 44 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #205 DRIVER->RK 14 bytes TEXT=$MSPD:0,0,0,0# HEX=24 4D 53 50 44 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #206 DRIVER->RK 14 bytes TEXT=$MSPD:0,0,0,0# HEX=24 4D 53 50 44 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #207 DRIVER->RK 14 bytes TEXT=$MSPD:0,0,0,0# HEX=24 4D 53 50 44 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #208 DRIVER->RK 14 bytes TEXT=$MSPD:0,0,0,0# HEX=24 4D 53 50 44 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #209 DRIVER->RK 14 bytes TEXT=$MSPD:0,0,0,0# HEX=24 4D 53 50 44 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #210 DRIVER->RK 14 bytes TEXT=$MSPD:0,0,0,0# HEX=24 4D 53 50 44 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #211 DRIVER->RK 14 bytes TEXT=$MSPD:0,0,0,0# HEX=24 4D 53 50 44 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #212 DRIVER->RK 14 bytes TEXT=$MSPD:0,0,0,0# HEX=24 4D 53 50 44 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #213 DRIVER->RK 14 bytes TEXT=$MSPD:0,0,0,0# HEX=24 4D 53 50 44 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #214 DRIVER->RK 14 bytes TEXT=$MSPD:0,0,0,0# HEX=24 4D 53 50 44 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #215 DRIVER->RK 14 bytes TEXT=$MSPD:0,0,0,0# HEX=24 4D 53 50 44 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #216 DRIVER->RK 14 bytes TEXT=$MSPD:0,0,0,0# HEX=24 4D 53 50 44 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #217 DRIVER->RK 14 bytes TEXT=$MSPD:0,0,0,0# HEX=24 4D 53 50 44 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #218 RK->DRIVER 13 bytes TEXT=$spd:0,0,0,0# HEX=24 73 70 64 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #219 RK->DRIVER 13 bytes TEXT=$pwm:0,0,0,0# HEX=24 70 77 6D 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #220 DRIVER->RK 14 bytes TEXT=$MSPD:0,0,0,0# HEX=24 4D 53 50 44 3A 30 2C 30 2C 30 2C 30 23 
+OBSERVED RK->VIRTUAL_DRIVER: $upload:1,0,1#$spd:20,20,20,20#$spd:40,40,40,40#$spd:60,60,60,60#$spd:80,80,80,80#$spd:100,100,100,100#$spd:120,120,120,120#$spd:140,140,140,140#$spd:150,150,150,150#$spd:0,0,0,0#$pwm:0,0,0,0#
+OBSERVED selected 15cm/s ramp and 3s stop: 3024.6 ms
+motor port=/dev/pts/0 #221 RK->DRIVER 14 bytes TEXT=$upload:1,0,1# HEX=24 75 70 6C 6F 61 64 3A 31 2C 30 2C 31 23 
+motor port=/dev/pts/0 #222 RK->DRIVER 17 bytes TEXT=$spd:20,20,20,20# HEX=24 73 70 64 3A 32 30 2C 32 30 2C 32 30 2C 32 30 23 
+INPUT action=forward generation=17 speed_mm_s=90 duration_ms=3000 -> HTTP 200
+motor port=/dev/pts/0 #223 DRIVER->RK 14 bytes TEXT=$MSPD:0,0,0,0# HEX=24 4D 53 50 44 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #224 DRIVER->RK 14 bytes TEXT=$MSPD:0,0,0,0# HEX=24 4D 53 50 44 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #225 DRIVER->RK 14 bytes TEXT=$MSPD:0,0,0,0# HEX=24 4D 53 50 44 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #226 DRIVER->RK 14 bytes TEXT=$MSPD:0,0,0,0# HEX=24 4D 53 50 44 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #227 DRIVER->RK 14 bytes TEXT=$MSPD:0,0,0,0# HEX=24 4D 53 50 44 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #228 RK->DRIVER 17 bytes TEXT=$spd:40,40,40,40# HEX=24 73 70 64 3A 34 30 2C 34 30 2C 34 30 2C 34 30 23 
+OBSERVED RK->VIRTUAL_DRIVER: $upload:1,0,1#$spd:20,20,20,20#$spd:40,40,40,40#
+INPUT action=speed generation=18 speed_mm_s=30 duration_ms=absent -> HTTP 200
+motor port=/dev/pts/0 #229 DRIVER->RK 14 bytes TEXT=$MSPD:0,0,0,0# HEX=24 4D 53 50 44 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #230 DRIVER->RK 14 bytes TEXT=$MSPD:0,0,0,0# HEX=24 4D 53 50 44 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #231 DRIVER->RK 14 bytes TEXT=$MSPD:0,0,0,0# HEX=24 4D 53 50 44 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #232 DRIVER->RK 14 bytes TEXT=$MSPD:0,0,0,0# HEX=24 4D 53 50 44 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #233 DRIVER->RK 14 bytes TEXT=$MSPD:0,0,0,0# HEX=24 4D 53 50 44 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #234 RK->DRIVER 17 bytes TEXT=$spd:30,30,30,30# HEX=24 73 70 64 3A 33 30 2C 33 30 2C 33 30 2C 33 30 23 
+OBSERVED RK->VIRTUAL_DRIVER: $spd:30,30,30,30#
+INPUT action=speed generation=19 speed_mm_s=60 duration_ms=10000 -> HTTP 400
+motor port=/dev/pts/0 #235 DRIVER->RK 14 bytes TEXT=$MSPD:0,0,0,0# HEX=24 4D 53 50 44 3A 30 2C 30 2C 30 2C 30 23 
+INPUT action=speed generation=19 speed_mm_s=90 duration_ms=absent -> HTTP 200
+motor port=/dev/pts/0 #236 DRIVER->RK 14 bytes TEXT=$MSPD:0,0,0,0# HEX=24 4D 53 50 44 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #237 DRIVER->RK 14 bytes TEXT=$MSPD:0,0,0,0# HEX=24 4D 53 50 44 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #238 DRIVER->RK 14 bytes TEXT=$MSPD:0,0,0,0# HEX=24 4D 53 50 44 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #239 DRIVER->RK 14 bytes TEXT=$MSPD:0,0,0,0# HEX=24 4D 53 50 44 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #240 DRIVER->RK 14 bytes TEXT=$MSPD:0,0,0,0# HEX=24 4D 53 50 44 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #241 RK->DRIVER 17 bytes TEXT=$spd:50,50,50,50# HEX=24 73 70 64 3A 35 30 2C 35 30 2C 35 30 2C 35 30 23 
+motor port=/dev/pts/0 #242 DRIVER->RK 14 bytes TEXT=$MSPD:0,0,0,0# HEX=24 4D 53 50 44 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #243 DRIVER->RK 14 bytes TEXT=$MSPD:0,0,0,0# HEX=24 4D 53 50 44 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #244 DRIVER->RK 14 bytes TEXT=$MSPD:0,0,0,0# HEX=24 4D 53 50 44 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #245 DRIVER->RK 14 bytes TEXT=$MSPD:0,0,0,0# HEX=24 4D 53 50 44 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #246 DRIVER->RK 14 bytes TEXT=$MSPD:0,0,0,0# HEX=24 4D 53 50 44 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #247 RK->DRIVER 17 bytes TEXT=$spd:70,70,70,70# HEX=24 73 70 64 3A 37 30 2C 37 30 2C 37 30 2C 37 30 23 
+motor port=/dev/pts/0 #248 DRIVER->RK 14 bytes TEXT=$MSPD:0,0,0,0# HEX=24 4D 53 50 44 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #249 DRIVER->RK 14 bytes TEXT=$MSPD:0,0,0,0# HEX=24 4D 53 50 44 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #250 DRIVER->RK 14 bytes TEXT=$MSPD:0,0,0,0# HEX=24 4D 53 50 44 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #251 DRIVER->RK 14 bytes TEXT=$MSPD:0,0,0,0# HEX=24 4D 53 50 44 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #252 DRIVER->RK 14 bytes TEXT=$MSPD:0,0,0,0# HEX=24 4D 53 50 44 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #253 RK->DRIVER 17 bytes TEXT=$spd:90,90,90,90# HEX=24 73 70 64 3A 39 30 2C 39 30 2C 39 30 2C 39 30 23 
+OBSERVED RK->VIRTUAL_DRIVER: $spd:50,50,50,50#$spd:70,70,70,70#$spd:90,90,90,90#
+motor port=/dev/pts/0 #254 RK->DRIVER 13 bytes TEXT=$spd:0,0,0,0# HEX=24 73 70 64 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #255 RK->DRIVER 13 bytes TEXT=$pwm:0,0,0,0# HEX=24 70 77 6D 3A 30 2C 30 2C 30 2C 30 23 
+INPUT action=stop generation=20 speed_mm_s=default duration_ms=1000 -> HTTP 200
+OBSERVED RK->VIRTUAL_DRIVER: $spd:0,0,0,0#$pwm:0,0,0,0#
+INPUT action=speed generation=21 speed_mm_s=60 duration_ms=absent -> HTTP 409
+motor port=/dev/pts/0 #256 DRIVER->RK 14 bytes TEXT=$MSPD:0,0,0,0# HEX=24 4D 53 50 44 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #257 RK->DRIVER 14 bytes TEXT=$upload:1,0,1# HEX=24 75 70 6C 6F 61 64 3A 31 2C 30 2C 31 23 
+motor port=/dev/pts/0 #258 RK->DRIVER 17 bytes TEXT=$spd:20,20,20,20# HEX=24 73 70 64 3A 32 30 2C 32 30 2C 32 30 2C 32 30 23 
+INPUT action=forward generation=21 speed_mm_s=300 duration_ms=10000 -> HTTP 200
+OBSERVED RK->VIRTUAL_DRIVER: $upload:1,0,1#$spd:20,20,20,20#
+motor port=/dev/pts/0 #259 RK->DRIVER 13 bytes TEXT=$spd:0,0,0,0# HEX=24 73 70 64 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #260 RK->DRIVER 13 bytes TEXT=$pwm:0,0,0,0# HEX=24 70 77 6D 3A 30 2C 30 2C 30 2C 30 23 
+INPUT action=stop generation=22 speed_mm_s=default duration_ms=1000 -> HTTP 200
+OBSERVED RK->VIRTUAL_DRIVER: $spd:0,0,0,0#$pwm:0,0,0,0#
+motor port=/dev/pts/0 #261 RK->DRIVER 14 bytes TEXT=$upload:1,0,1# HEX=24 75 70 6C 6F 61 64 3A 31 2C 30 2C 31 23 
+motor port=/dev/pts/0 #262 RK->DRIVER 17 bytes TEXT=$spd:20,20,20,20# HEX=24 73 70 64 3A 32 30 2C 32 30 2C 32 30 2C 32 30 23 
+INPUT action=forward generation=23 speed_mm_s=default duration_ms=1000 -> HTTP 200
+motor port=/dev/pts/0 #263 DRIVER->RK 14 bytes TEXT=$MSPD:0,0,0,0# HEX=24 4D 53 50 44 3A 30 2C 30 2C 30 2C 30 23 
+OBSERVED RK->VIRTUAL_DRIVER: $upload:1,0,1#$spd:20,20,20,20#
+motor port=/dev/pts/0 #264 RK->DRIVER 13 bytes TEXT=$spd:0,0,0,0# HEX=24 73 70 64 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #265 RK->DRIVER 13 bytes TEXT=$pwm:0,0,0,0# HEX=24 70 77 6D 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #266 RK->DRIVER 14 bytes TEXT=$upload:0,0,0# HEX=24 75 70 6C 6F 61 64 3A 30 2C 30 2C 30 23 
+OBSERVED RK->VIRTUAL_DRIVER: $spd:0,0,0,0#$pwm:0,0,0,0#$upload:0,0,0#
+motor port=/dev/pts/0 #1 RK->DRIVER 13 bytes TEXT=$spd:0,0,0,0# HEX=24 73 70 64 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #2 RK->DRIVER 13 bytes TEXT=$pwm:0,0,0,0# HEX=24 70 77 6D 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #3 RK->DRIVER 12 bytes TEXT=$read_flash# HEX=24 72 65 61 64 5F 66 6C 61 73 68 23 
+INPUT action=query generation=0 speed_mm_s=default duration_ms=1000 -> HTTP 200
+OBSERVED RK->VIRTUAL_DRIVER: $spd:0,0,0,0#$pwm:0,0,0,0#$read_flash#
+motor port=/dev/pts/0 #4 DRIVER->RK 12 bytes TEXT=$read_flash# HEX=24 72 65 61 64 5F 66 6C 61 73 68 23 
+INPUT VIRTUAL_DRIVER->RK: real-format 150-byte configuration (simulated)
+motor port=/dev/pts/0 #5 DRIVER->RK 75 bytes TEXT=read_flash:OK!\r\nMotor_Version:1.7.3\r\nMotor_type:2\r\nDead_Zone:1600\r\nPulse_Li HEX=72 65 61 64 5F 66 6C 61 73 68 3A 4F 4B 21 0D 0A 4D 6F 74 6F 72 5F 56 65 72 73 69 6F 6E 3A 31 2E 37 2E 33 0D 0A 4D 6F 74 6F 72 5F 74 79 70 65 3A 32 0D 0A 44 65 61 64 5F 5A 6F 6E 65 3A 31 36 30 30 0D 0A 50 75 6C 73 65 5F 4C 69 
+motor port=/dev/pts/0 #6 DRIVER->RK 75 bytes TEXT=ne:13\r\nPulse_Phase:20\r\nwheel_diameter:65.000\r\nP:0.800\t I:0.060\t D:0.500\t \r\n HEX=6E 65 3A 31 33 0D 0A 50 75 6C 73 65 5F 50 68 61 73 65 3A 32 30 0D 0A 77 68 65 65 6C 5F 64 69 61 6D 65 74 65 72 3A 36 35 2E 30 30 30 0D 0A 50 3A 30 2E 38 30 30 09 20 49 3A 30 2E 30 36 30 09 20 44 3A 30 2E 35 30 30 09 20 0D 0A 
+motor port=/dev/pts/0 #7 RK->DRIVER 14 bytes TEXT=$upload:1,0,1# HEX=24 75 70 6C 6F 61 64 3A 31 2C 30 2C 31 23 
+motor port=/dev/pts/0 #8 RK->DRIVER 17 bytes TEXT=$spd:20,20,20,20# HEX=24 73 70 64 3A 32 30 2C 32 30 2C 32 30 2C 32 30 23 
+INPUT action=forward generation=1 speed_mm_s=default duration_ms=1000 -> HTTP 200
+OBSERVED RK->VIRTUAL_DRIVER: $upload:1,0,1#$spd:20,20,20,20#
+motor port=/dev/pts/0 #9 RK->DRIVER 17 bytes TEXT=$spd:40,40,40,40# HEX=24 73 70 64 3A 34 30 2C 34 30 2C 34 30 2C 34 30 23 
+motor port=/dev/pts/0 #10 RK->DRIVER 13 bytes TEXT=$spd:0,0,0,0# HEX=24 73 70 64 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #11 RK->DRIVER 13 bytes TEXT=$pwm:0,0,0,0# HEX=24 70 77 6D 3A 30 2C 30 2C 30 2C 30 23 
+OBSERVED RK->VIRTUAL_DRIVER: $spd:40,40,40,40#$spd:0,0,0,0#$pwm:0,0,0,0#
+INPUT action=forward generation=3 speed_mm_s=default duration_ms=1000 -> HTTP 409
+motor port=/dev/pts/0 #12 RK->DRIVER 14 bytes TEXT=$upload:0,0,0# HEX=24 75 70 6C 6F 61 64 3A 30 2C 30 2C 30 23 
+OBSERVED RK->VIRTUAL_DRIVER: $upload:0,0,0#
+Verified: forward/backward/left/right serial patterns and per-wheel calibration; lateral live speed and original deadlines; 2..30cm/s and 1..10s bounds; clamped speed ramp; 1s/3s deadlines; exact serial frames; invalid/stale/busy requests; missing feedback and shutdown stop. Physical movement NOT tested.

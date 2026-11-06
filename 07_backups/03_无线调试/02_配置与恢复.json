@@ -1,0 +1,26 @@
+{
+  "date": "2026-11-05",
+  "ssid": "opto-robot-b",
+  "band": "2.4GHz",
+  "password": "沿用电脑原有热点密码；密码未输出、未写入项目归档。",
+  "auto_off_when_no_clients": false,
+  "board_serial": "8314b1e8ffd0321f",
+  "board_connection": "board_b_hotspot",
+  "board_connection_uuid": "a7c9538e-c7cf-4966-948e-9a0bb305263a",
+  "autoconnect": true,
+  "autoconnect_priority": 20,
+  "address_observed": "192.168.137.16",
+  "address_note": "由电脑热点自动分配，后续以移动热点的已连接设备列表为准。",
+  "restore": "电脑原名称、频段和自动关闭状态见01_电脑热点原设置.json；密码未改变。板B原有无线连接配置保留，只新增board_b_hotspot；需要回退时停用此新增连接。",
+  "scope": "已验证无线SSH、板B重启及再次上电自动回连、仅无线下网页HTTP200与连续3帧完整JPEG；浏览器目视和长时间稳定性另验。中途离线经用户确认是已拔过电源或关机。",
+  "final_verification": {
+    "board_boot_id": "67474b47-3dc4-44dd-aa75-87f4d327b570",
+    "time": "2026-11-05T19:08:43.4210697+08:00",
+    "stream_bytes": 160430,
+    "frame_ids": [
+      2589,
+      2590,
+      2591
+    ]
+  }
+}

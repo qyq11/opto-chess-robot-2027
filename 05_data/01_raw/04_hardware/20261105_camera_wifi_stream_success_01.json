@@ -1,0 +1,16 @@
+{
+  "collected_at": "2026-11-05T19:08:43.4210697+08:00",
+  "url": "http://192.168.137.16:8080/stream.mjpg",
+  "content_type": "multipart/x-mixed-replace; boundary=frame",
+  "bytes_read": 160430,
+  "jpeg_start_markers": 3,
+  "jpeg_end_markers": 3,
+  "frame_ids": [
+    2589,
+    2590,
+    2591
+  ],
+  "passed": true,
+  "images_saved": false,
+  "scope": "实际JPEG图流字节及帧编号核对；浏览器目视和长期稳定性另验。"
+}

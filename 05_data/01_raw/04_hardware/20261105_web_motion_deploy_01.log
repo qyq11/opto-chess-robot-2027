@@ -1,0 +1,18 @@
+BOARD_SERIAL=8314b1e8ffd0321f
+74f8bbf75c0a11b9e77941091879b5efef7a26fff83c322ac6d9df55299fd159  /var/lib/opto-camera/camera.ini
+MainPID=1936
+NRestarts=0
+ActiveState=active
+439e9b568ef1b1a4d1ae57fa901ef78bfdd2f239e49da9c1e1b5f31f884016c0  /root/opto-chess-robot-2027/temp/web-motion-20261105/board_b_camera_before_motion_20261105.tar.gz
+MainPID=3072
+NRestarts=0
+ActiveState=active
+SubState=running
+74f8bbf75c0a11b9e77941091879b5efef7a26fff83c322ac6d9df55299fd159  /var/lib/opto-camera/camera.ini
+d2d4879c9141168a507352b1921d416cfc68f847a2bae619a8c022e73a79f011  /opt/opto-camera/bin/opto-camera
+b516b21806ae0907d6726a0a82227a7e6ec90a0269f561d1bd52b941a02a541c  /opt/opto-camera/web/app.css
+027a0fa5cc02102b48918e917897a9ae15f50c57e23df4030babedd3a5cb6091  /opt/opto-camera/web/app.js
+8eb069d3cc6d45b6ff091e9818591bad209463431927a3885f4d8f816f60f099  /opt/opto-camera/web/index.html
+a3ac3c52789edf96a964b13aa1804fca53f2806f0c673c39fb91f07e4d3ed9d2  /opt/opto-camera/web/motion.js
+{"state":"ready","fresh":true,"width":1280,"height":720,"capture_fps":30,"preview_fps":10,"frame_id":10,"frame_age_ms":71,"uptime_s":1,"capture_count":0,"capture_limit":12,"retention_s":1800,"stream_count":0,"reconfiguring":false,"settings_version":1,"jpeg_quality":85,"error":""}
+{"port":"/dev/ttyS4","opened":true,"ready":false,"moving":false,"querying":false,"fault":false,"speed_mm_s":50,"duration_ms":500,"generation":0,"action":"stop","error":"","events":[]}

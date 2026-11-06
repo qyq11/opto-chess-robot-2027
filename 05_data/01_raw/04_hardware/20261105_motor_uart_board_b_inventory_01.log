@@ -1,0 +1,24 @@
+BOARD_SERIAL=8314b1e8ffd0321f
+2026-10-12T15:46:09+08:00
+BOOT_ID=dd11b905-8dc6-4377-9333-f4e1e28df64d
+lo               UNKNOWN        127.0.0.1/8 ::1/128 
+dummy0           DOWN           
+can0             DOWN           
+end0             UP             192.168.100.123/24 fe80::f4ff:fbff:fe6c:79a1/64 
+wlan0            DORMANT        
+/sys/firmware/devicetree/base/serial@2ad70000
+UART_USERS
+QUERY_FILES
+494fdcbfdbc68f02ead8e412189aa2343f58b83d7805b3c556150ed98cc74d20  /root/opto-chess-robot-2027/temp/motor-uart-query-20261104_162122_24d05248/motor_query.c
+d2ed1fb8640119485818af75fc4a325431f7f0ccfc0282eaf0c11622c25ca25f  /root/opto-chess-robot-2027/temp/motor-uart-query-20261104_162122_24d05248/build/motor-query
+MainPID=0
+ActiveState=failed
+SubState=failed
+UART_COUNTERS
+serinfo:1.0 driver revision:
+3: uart:16550A mmio:0x2AD60000 irq:46 tx:0 rx:0
+4: uart:16550A mmio:0x2AD70000 irq:47 tx:0 rx:0
+6: uart:16550A mmio:0x2AD90000 irq:48 tx:73888 rx:3263 RTS|CTS|DTR
+7: uart:16550A mmio:0x2ADA0000 irq:49 tx:0 rx:0
+8: uart:16550A mmio:0x2ADB0000 irq:50 tx:0 rx:0
+9: uart:16550A mmio:0x2ADC0000 irq:51 tx:0 rx:0

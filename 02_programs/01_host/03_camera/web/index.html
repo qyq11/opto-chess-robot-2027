@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <meta name="referrer" content="same-origin">
+  <title>小车工作台 · RK</title>
+  <link rel="stylesheet" href="app.css">
+  <link rel="stylesheet" href="motion.css">
+  <script src="app.js" defer></script>
+  <script src="motion.js" defer></script>
+</head>
+<body>
+  <div class="workspace">
+    <header class="app-header">
+      <div class="brand">
+        <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 4H4v4m12-4h4v4M4 16v4h4m12-4v4h-4"/><circle cx="12" cy="12" r="4"/></svg></span>
+        <div><h1>小车工作台</h1><p class="workspace-caption">实时画面和运动控制</p></div>
+      </div>
+      <div class="header-status"><span id="connection-badge" class="status-badge" data-tone="waiting"><span class="status-dot"></span><span id="connection-label" role="status">正在连接</span></span><span class="device-label">IMX415 <span class="separator">/</span> RK3576</span></div>
+    </header>
+
+    <main>
+      <div id="notice" class="notice" hidden><span id="notice-text" role="status"></span><button id="dismiss-notice" type="button" class="icon-button" aria-label="关闭提示">×</button></div>
+      <div class="main-grid">
+        <section class="panel live-panel" aria-labelledby="live-heading">
+          <div class="panel-heading"><div class="heading-group"><h2 id="live-heading">实时画面</h2></div><span id="live-label" class="live-label">等待画面</span></div>
+          <div class="preview-stage">
+            <img id="live-preview" alt="RK相机实时画面">
+            <div id="preview-overlay" class="preview-overlay">
+              <svg class="overlay-mark" viewBox="0 0 48 48" aria-hidden="true"><path d="M16 8H8v8m24-8h8v8M8 32v8h8m24-8v8h-8"/><circle cx="24" cy="24" r="8"/></svg>
+              <h3 id="overlay-title">正在连接相机</h3>
+              <p id="overlay-detail">连接后，这里会显示当前现场画面。</p>
+            </div>
+            <div class="frame-hud" aria-hidden="true"><span id="frame-label">帧 —</span><span id="frame-age">采集帧龄 —</span></div>
+          </div>
+          <div class="capture-toolbar">
+            <div class="image-specs"><strong id="resolution-label">— × —</strong><span id="fps-label">等待采集参数</span></div>
+            <button id="capture-button" class="button button-primary" type="button" disabled><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5l1.5-2h5L16 5h4a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1z"/><circle cx="12" cy="12" r="4"/></svg><span id="capture-button-label">等待相机</span></button>
+          </div>
+          <p id="capture-hint" class="panel-footnote">拍照会取得服务接单后收到的新帧，不代表点击瞬间曝光。</p>
+        </section>
+        <section class="panel motion-panel" aria-labelledby="motion-heading">
+          <div class="motion-heading"><div><h2 id="motion-heading">小车控制</h2><p>选好参数，再开始移动</p></div><span id="motion-state" class="motion-status" role="status">正在连接</span></div>
+          <div class="motion-body">
+            <div class="motion-link"><span id="motion-link-label">正在读取串口状态</span><button id="motion-query" type="button" class="motion-link-button" disabled>读取驱动</button></div>
+            <div class="motion-parameter">
+              <div class="motion-parameter-heading"><label for="motion-speed-number">目标轮速</label><div class="motion-number"><input id="motion-speed-number" type="number" min="2" max="30" step="1" value="6" inputmode="numeric" aria-label="目标轮速，厘米每秒"><span>厘米/秒</span></div></div>
+              <input id="motion-speed" class="motion-range" type="range" min="2" max="30" step="1" value="6" aria-label="目标轮速滑杆，厘米每秒">
+              <div class="motion-scale"><span>2 · 缓慢</span><span id="motion-speed-note">先从低档位核对方向</span><span>30</span></div>
+            </div>
+            <div class="motion-parameter">
+              <div class="motion-parameter-heading"><label for="motion-duration-number">运行时间</label><div class="motion-number"><input id="motion-duration-number" type="number" min="1" max="10" step="1" value="3" inputmode="numeric" aria-label="运行时间，秒"><span>秒</span></div></div>
+              <input id="motion-duration" class="motion-range" type="range" min="1" max="10" step="1" value="3" aria-label="运行时间滑杆，秒">
+              <div class="motion-scale"><span>1秒</span><span>含缓慢起步，到时自动停</span><span>10秒</span></div>
+            </div>
+            <div class="motion-draft"><span id="motion-draft-label">本次设置</span><strong id="motion-summary">6厘米/秒，运行3秒</strong></div>
+            <label class="motion-confirm"><input id="motion-confirm" type="checkbox"><span>车轮已架空，周围无阻挡，可以试转</span></label>
+            <div class="motion-actions" role="group" aria-label="移动方向，以车头为准">
+              <button id="motion-forward" type="button" class="motion-drive" disabled><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5m-5 5 5-5 5 5"/></svg>前进</button>
+              <button id="motion-backward" type="button" class="motion-drive" disabled><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14m-5-5 5 5 5-5"/></svg>后退</button>
+              <button id="motion-left" type="button" class="motion-drive" disabled><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H5m5-5-5 5 5 5"/></svg>左移</button>
+              <button id="motion-right" type="button" class="motion-drive" disabled><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-5-5 5 5-5 5"/></svg>右移</button>
+            </div>
+            <p class="motion-direction-hint">方向以车头为准；左移、右移时车头保持朝向。</p>
+            <section class="motion-distance" aria-labelledby="motion-distance-heading">
+              <div class="motion-parameter-heading"><label id="motion-distance-heading" for="motion-distance-number">按距离前进</label><div class="motion-number"><input id="motion-distance-number" type="number" min="5" max="50" step="1" value="20" inputmode="numeric" aria-label="前进距离，厘米"><span>厘米</span></div></div>
+              <p class="motion-direction-hint">5～50厘米。轮速固定6厘米/秒，接近目标自动降速；上方时间不用于这次动作。</p>
+              <label class="motion-confirm"><input id="motion-distance-confirm" type="checkbox"><span>测试区域无阻挡，线束已固定，现场可随时停机</span></label>
+              <button id="motion-distance" type="button" class="motion-drive" disabled>前进指定距离</button>
+              <dl id="motion-distance-result" class="motion-distance-result" hidden><div><dt>目标距离</dt><dd id="motion-distance-target">—</dd></div><div><dt>轮子估计距离</dt><dd id="motion-distance-estimate">等待计数</dd></div><div><dt>当前阶段</dt><dd id="motion-distance-phase">尚未启动</dd></div></dl>
+              <p class="motion-footnote">估计来自四轮累计计数，尚未校准。实际车身位移请从同一参考点用尺子测量。</p>
+            </section>
+            <button id="motion-stop" type="button" class="motion-stop"><span class="motion-stop-square" aria-hidden="true"></span>停止输出<kbd>Esc</kbd></button>
+            <div class="motion-running" id="motion-running" hidden><div><span id="motion-running-label">正在前进</span><strong id="motion-countdown">剩余3.0秒</strong></div><progress id="motion-progress" max="100" value="0" aria-label="本次运行进度"></progress><button id="motion-apply-speed" type="button" class="motion-apply" disabled>应用当前速度</button><p id="motion-running-note">只调整速度，停止时刻保持不变。</p></div>
+            <p id="motion-message" class="motion-message" role="status">先读取驱动，再确认现场可以试转。</p>
+            <div class="motion-feedback-heading"><h3>实际轮速</h3><span id="motion-feedback-status">等待回报</span></div>
+            <div class="motion-wheels" aria-label="驱动报告的四轮实际速度，厘米每秒"><div><span>左前 M1</span><strong id="motion-wheel-1">—</strong></div><div><span>右前 M3</span><strong id="motion-wheel-3">—</strong></div><div><span>左后 M2</span><strong id="motion-wheel-2">—</strong></div><div><span>右后 M4</span><strong id="motion-wheel-4">—</strong></div></div>
+            <p class="motion-footnote">单位：厘米/秒。目标轮速与车身实际速度需实测核对。</p>
+            <details class="motion-advanced"><summary>方向校对与串口记录</summary><p class="motion-help">若某轮方向相反，停止后只改该路。方向按当前接线标注，刷新后恢复初始值。</p><div class="motion-signs"><label>左前 M1<select id="motion-m1"><option value="1">正向</option><option value="-1">反向</option></select></label><label>右前 M3<select id="motion-m3"><option value="1">正向</option><option value="-1">反向</option></select></label><label>左后 M2<select id="motion-m2"><option value="1">正向</option><option value="-1">反向</option></select></label><label>右后 M4<select id="motion-m4"><option value="1">正向</option><option value="-1">反向</option></select></label></div><p id="motion-feedback" class="motion-help">尚无采样。</p><pre id="motion-log" class="motion-log">尚无收发</pre><p class="motion-help">反馈中断会尝试归零。软件仍依赖RK和串口，写入成功不代表轮子已停；整板死机或断线时需现场停机。</p></details>
+          </div>
+        </section>
+        <section class="panel settings-panel" aria-labelledby="settings-heading">
+          <div class="panel-heading compact"><div class="heading-group"><h2 id="settings-heading">图像参数</h2></div><span id="settings-version" class="small-label">正在读取</span></div>
+          <form id="settings-form">
+            <fieldset id="settings-fields" class="settings-fields" disabled>
+              <legend class="visually-hidden">调整采集分辨率、预览帧率与JPEG压缩质量</legend>
+              <div class="settings-grid">
+                <label class="setting-field" for="setting-resolution"><span>采集分辨率</span><select id="setting-resolution" name="resolution" required><option value="">读取板端可用选项…</option></select></label>
+                <label class="setting-field" for="setting-fps"><span>预览帧率</span><select id="setting-fps" name="preview_fps" required><option value="">等待参数…</option></select></label>
+                <label class="setting-field quality-field" for="setting-quality"><span>JPEG压缩质量 <output id="quality-value" for="setting-quality">—</output></span><input id="setting-quality" name="jpeg_quality" type="range" min="50" max="98" step="1" value="90"><span class="range-labels"><span>较小文件</span><span>较少压缩</span></span></label>
+              </div>
+              <div class="settings-actions"><p>切换参数时会短暂停止预览；已有照片保留。</p><button id="apply-settings" type="submit" class="button button-secondary" disabled>应用参数</button></div>
+            </fieldset>
+          </form>
+          <p id="settings-current" class="settings-current">正在读取当前实际参数。</p>
+          <p id="settings-message" class="settings-message" role="status" hidden></p>
+          <p class="settings-explanation">JPEG质量只影响压缩与文件大小，不等于镜头对焦或光学清晰度。分辨率选项由板端提供。</p>
+        </section>
+        <section class="panel image-controls-panel" aria-labelledby="image-controls-heading">
+          <div class="panel-heading compact"><div class="heading-group"><h2 id="image-controls-heading">曝光与白平衡</h2></div><span id="image-controls-state" class="small-label">正在读取</span></div>
+          <p id="image-controls-unavailable" class="controls-unavailable" role="status">正在连接图像调节服务，确认可用能力后显示操作项。</p>
+          <div id="image-controls-content" hidden>
+            <div class="controls-columns">
+              <form id="exposure-form" class="control-group">
+                <div class="control-heading"><h3>曝光</h3><span id="exposure-converged" class="small-label"></span></div>
+                <div class="actual-exposure"><div><span>当前实际曝光</span><strong id="actual-exposure-time">—</strong></div><div><span>当前实际增益</span><strong id="actual-exposure-gain">—</strong></div></div>
+                <fieldset id="exposure-fields" class="control-fields" disabled>
+                  <legend class="visually-hidden">曝光模式与手动参数</legend>
+                  <label class="setting-field" for="exposure-mode"><span>曝光模式</span><select id="exposure-mode"><option value="auto">自动曝光</option><option value="manual">手动曝光</option></select></label>
+                  <div class="manual-fields"><label class="setting-field" for="exposure-time"><span>手动曝光时间（毫秒）</span><input id="exposure-time" type="number" step="any" inputmode="decimal" required><span id="exposure-time-range" class="input-range"></span></label><label class="setting-field" for="exposure-gain"><span>手动曝光增益（倍）</span><input id="exposure-gain" type="number" step="any" inputmode="decimal" required><span id="exposure-gain-range" class="input-range"></span></label></div>
+                  <p class="control-help">曝光更长可能增加运动模糊，增益更高可能增加噪点。自动模式不提交手动数值。</p>
+                  <button id="apply-exposure" type="submit" class="button button-secondary" disabled>应用曝光</button>
+                </fieldset>
+                <p id="exposure-message" class="control-message" role="status" hidden></p>
+              </form>
+              <form id="white-balance-form" class="control-group">
+                <div class="control-heading"><h3>白平衡</h3><span class="small-label">修正画面偏色</span></div>
+                <p id="actual-white-balance" class="actual-white-balance">等待四路增益读回。</p>
+                <fieldset id="white-balance-fields" class="control-fields" disabled>
+                  <legend class="visually-hidden">白平衡模式与四路手动增益</legend>
+                  <label class="setting-field" for="white-balance-mode"><span>白平衡模式</span><select id="white-balance-mode"><option value="auto">自动白平衡</option><option value="manual">手动白平衡</option></select></label>
+                  <div class="white-balance-gains"><label class="setting-field" for="wb-rgain"><span>红（倍）</span><input id="wb-rgain" type="number" step="any" inputmode="decimal" required></label><label class="setting-field" for="wb-grgain"><span>绿1（倍）</span><input id="wb-grgain" type="number" step="any" inputmode="decimal" required></label><label class="setting-field" for="wb-gbgain"><span>绿2（倍）</span><input id="wb-gbgain" type="number" step="any" inputmode="decimal" required></label><label class="setting-field" for="wb-bgain"><span>蓝（倍）</span><input id="wb-bgain" type="number" step="any" inputmode="decimal" required></label></div>
+                  <p id="white-balance-range" class="input-range"></p>
+                  <p class="control-help">四路倍率用于调整色偏。自动模式会自行调节，手动数值只在点击应用后生效。</p>
+                  <button id="apply-white-balance" type="submit" class="button button-secondary" disabled>应用白平衡</button>
+                </fieldset>
+                <p id="white-balance-message" class="control-message" role="status" hidden></p>
+              </form>
+            </div>
+            <p id="image-controls-readback" class="controls-readback"></p>
+            <p class="control-help">曝光和白平衡暂不保存为开机预设，设备重启后请重新设置；分辨率、预览帧率和JPEG压缩质量会保存。</p>
+          </div>
+        </section>
+
+
+          <section class="panel state-panel" aria-labelledby="state-heading">
+            <div class="panel-heading compact"><div class="heading-group"><h2 id="state-heading">采集状态</h2></div><span class="small-label">板端返回</span></div>
+            <dl class="state-list"><div><dt>相机服务</dt><dd id="service-state">正在连接</dd></div><div><dt>画面状态</dt><dd id="freshness-state">等待检查</dd></div><div><dt>服务运行</dt><dd id="uptime-label">—</dd></div><div><dt>临时照片</dt><dd id="storage-label">— / —</dd></div></dl>
+            <p id="service-error" class="service-error" hidden></p>
+          </section>
+          <section class="panel selected-panel" aria-labelledby="selected-heading">
+            <div class="panel-heading compact"><div class="heading-group"><h2 id="selected-heading">照片查看</h2></div><span id="photo-selection-label" class="small-label">尚未拍照</span></div>
+            <div id="selected-empty" class="selected-empty"><svg viewBox="0 0 40 40" aria-hidden="true"><rect x="7" y="9" width="26" height="23" rx="3"/><path d="M8 26l8-8 7 7 4-4 6 6"/><circle cx="26" cy="15" r="2"/></svg><p>留下一张现场照片</p><span>点击拍照，或从下方选择照片。</span></div>
+            <div id="selected-content" hidden>
+              <button id="open-photo" type="button" class="selected-image-button" aria-label="查看照片大图"><img id="selected-image" alt="选中的现场照片"><span>查看大图 <span aria-hidden="true">↗</span></span></button>
+              <div class="selected-details"><p id="selected-id" class="photo-id"></p><dl class="photo-metadata"><div><dt>板端接收时间</dt><dd id="selected-time"></dd></div><div><dt>图像 / 大小</dt><dd id="selected-specs"></dd></div><div><dt>采集帧号</dt><dd id="selected-frame"></dd></div></dl><p class="time-note">此时间是板端收到图像的时间，并非点击曝光时间。</p><div class="photo-actions"><a id="download-photo" class="button button-secondary" download>下载原图</a><button id="delete-photo" type="button" class="button button-quiet">删除照片</button></div>
+                <div class="quality-tools"><button id="check-quality" type="button" class="button button-secondary" disabled>检查画面</button><span>只检查选中照片，预览继续。</span></div>
+                <p id="quality-message" class="quality-message" role="status" hidden></p>
+                <section id="quality-results" class="quality-results" aria-labelledby="quality-heading" hidden>
+                  <h3 id="quality-heading">这张照片的画面统计</h3><p id="quality-binding" class="quality-binding"></p>
+                  <dl class="quality-metrics"><div><dt>平均亮度</dt><dd id="quality-mean"></dd></div><div><dt>亮度标准差</dt><dd id="quality-stddev"></dd></div><div><dt>过暗像素 ≤16</dt><dd id="quality-dark"></dd></div><div><dt>过亮像素 ≥245</dt><dd id="quality-bright"></dd></div><div class="sharpness-metric"><dt>相对清晰度</dt><dd id="quality-sharpness"></dd></div></dl>
+                  <p class="quality-note">亮度范围0～255。清晰度仅比较同场景、同分辨率，不代表对焦或识别准确率。</p>
+                </section>
+              </div>
+            </div>
+          </section>
+
+      </div>
+
+      <section class="panel gallery-panel" aria-labelledby="gallery-heading">
+        <div class="panel-heading"><div class="heading-group"><h2 id="gallery-heading">临时照片</h2><span id="gallery-count" class="count-badge">0</span></div><span class="small-label">新照片在前</span></div>
+        <div id="gallery-empty" class="gallery-empty"><span class="empty-line" aria-hidden="true"></span><p>还没有照片，画面就绪后可以拍摄。</p><span class="empty-line" aria-hidden="true"></span></div>
+        <div id="photo-gallery" class="photo-gallery" aria-label="照片列表"></div>
+        <p id="retention-note" class="gallery-footnote">照片临时保存在RK。主动下载后，才会保存到电脑。</p>
+      </section>
+      <footer class="app-footer"><span>现场画面与照片来自同一个相机采集源</span><span>预览 · 拍照 · 下载</span></footer>
+    </main>
+  </div>
+
+  <dialog id="photo-dialog" class="photo-dialog" aria-labelledby="dialog-title"><div class="dialog-heading"><div><p class="eyebrow">现场照片</p><h2 id="dialog-title">照片</h2></div><button id="close-dialog" type="button" class="icon-button" aria-label="关闭大图">×</button></div><div class="dialog-image-stage"><img id="dialog-image" alt="现场照片大图"></div><div class="dialog-footer"><span id="dialog-caption"></span><a id="dialog-download" class="button button-secondary" download>下载原图</a></div></dialog>
+  <noscript><p class="noscript">请在浏览器中启用JavaScript，才能查看实时画面和拍照。</p></noscript>
+</body>
+</html>

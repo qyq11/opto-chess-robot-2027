@@ -1,0 +1,45 @@
+BOARD_SERIAL=8314b1e8ffd0321f
+2026-11-04T16:49:30+08:00
+BOOT_ID=bf6d49fb-3e9b-4557-84db-d12331a81373
+d2ed1fb8640119485818af75fc4a325431f7f0ccfc0282eaf0c11622c25ca25f  /root/opto-chess-robot-2027/temp/motor-uart-query-20261104_162122_24d05248/build/motor-query
+开始时间（板端本地）：Wed Nov  4 16:49:30 2026
+设备：板B，实际序列号=8314b1e8ffd0321f
+实际节点：/dev/ttyS4 → /sys/firmware/devicetree/base/serial@2ad70000
+设置：115200 / 8N1 / 无流控 / 无本地回显；只发送一次。
+
+[序号1 RK→驱动，串口写入] 12字节；文本中控制字符用转义显示
+TEXT: $read_flash#
+HEX:
+0000: 24 72 65 61 64 5F 66 6C 61 73 68 23 
+以上为内核接受的发送内容，驱动是否回复以下面的RX为准。
+
+[序号1 驱动→RK，查询后] 150字节；文本中控制字符用转义显示
+TEXT: read_flash:OK!\r\n
+Motor_Version:1.7.3\r\n
+Motor_type:2\r\n
+Dead_Zone:1600\r\n
+Pulse_Line:13\r\n
+Pulse_Phase:20\r\n
+wheel_diameter:65.000\r\n
+P:0.800\t I:0.060\t D:0.500\t \r\n
+
+HEX:
+0000: 72 65 61 64 5F 66 6C 61 73 68 3A 4F 4B 21 0D 0A 
+0010: 4D 6F 74 6F 72 5F 56 65 72 73 69 6F 6E 3A 31 2E 
+0020: 37 2E 33 0D 0A 4D 6F 74 6F 72 5F 74 79 70 65 3A 
+0030: 32 0D 0A 44 65 61 64 5F 5A 6F 6E 65 3A 31 36 30 
+0040: 30 0D 0A 50 75 6C 73 65 5F 4C 69 6E 65 3A 31 33 
+0050: 0D 0A 50 75 6C 73 65 5F 50 68 61 73 65 3A 32 30 
+0060: 0D 0A 77 68 65 65 6C 5F 64 69 61 6D 65 74 65 72 
+0070: 3A 36 35 2E 30 30 30 0D 0A 50 3A 30 2E 38 30 30 
+0080: 09 20 49 3A 30 2E 30 36 30 09 20 44 3A 30 2E 35 
+0090: 30 30 09 20 0D 0A 
+
+解析结果：固件=1.7.3；类型=2；死区=1600；线数=13；减速比=20；轮径=65mm
+P=0.8；I=0.06；D=0.5
+日志：/root/opto-chess-robot-2027/temp/motor-uart-query-20261104_162122_24d05248/run-config-usb-01；退出码=0。退出0仅表示本次查询收到并解析回复。
+QUERY_EXIT=0
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  /root/opto-chess-robot-2027/temp/motor-uart-query-20261104_162122_24d05248/run-config-usb-01/before_rx.bin
+d972e08e4485ac71514a302f76c24cc990c63be996d9c7c2608d9f1db7dcd85a  /root/opto-chess-robot-2027/temp/motor-uart-query-20261104_162122_24d05248/run-config-usb-01/rx.bin
+ef7a9a0766333584c6a1c0002f204be5f0f686583de782ff54514f5296c877c5  /root/opto-chess-robot-2027/temp/motor-uart-query-20261104_162122_24d05248/run-config-usb-01/session.log
+2136c09c740b1fb2b4f1d5a7910e7228930a46ea60d511c10a8b8cf3a53fd9bd  /root/opto-chess-robot-2027/temp/motor-uart-query-20261104_162122_24d05248/run-config-usb-01/tx.bin

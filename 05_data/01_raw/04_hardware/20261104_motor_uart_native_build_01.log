@@ -1,0 +1,52 @@
+BOARD_SERIAL=8314b1e8ffd0321f
+2026-11-04T16:21:23+08:00
+ccddb46f-25cd-452c-a086-5ceb3ce36d50
+/sys/firmware/devicetree/base/serial@2ad70000
+    PID                  STARTED STAT COMMAND
+    457 Wed Nov  4 16:10:03 2026 Sl   rkaiq_3A_server
+MainPID=0
+ActiveState=failed
+SubState=failed
+BOARD_SERIAL=8314b1e8ffd0321f
+494fdcbfdbc68f02ead8e412189aa2343f58b83d7805b3c556150ed98cc74d20  motor_query.c
+b210876461c2cb7be90e0c007b87f783df7e21a6b30b4282c96f1619ee0647dc  Makefile
+gcc (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0
+mkdir -p build
+gcc  -std=c11 -O2 -g -Wall -Wextra -Wpedantic -Werror motor_query.c -o build/motor-query  -lm
+ELF Header:
+  Magic:   7f 45 4c 46 02 01 01 00 00 00 00 00 00 00 00 00 
+  Class:                             ELF64
+  Data:                              2's complement, little endian
+  Version:                           1 (current)
+  OS/ABI:                            UNIX - System V
+  ABI Version:                       0
+  Type:                              DYN (Position-Independent Executable file)
+  Machine:                           AArch64
+  Version:                           0x1
+  Entry point address:               0x2640
+  Start of program headers:          64 (bytes into file)
+  Start of section headers:          103456 (bytes into file)
+  Flags:                             0x0
+  Size of this header:               64 (bytes)
+  Size of program headers:           56 (bytes)
+  Number of program headers:         9
+  Size of section headers:           64 (bytes)
+  Number of section headers:         36
+  Section header string table index: 35
+用法：build/motor-query --port /dev/ttyS4 --query config|voltage --log-dir 新目录 [--timeout-ms 3000]
+仅用于已核接线和电平的板B：115200/8N1、无流控，一次只查询，无自动重发。
+config发送$read_flash#；voltage发送$read_vol#，不附加换行。
+须先协调串口使用；--help和参数错误均不打开UART。日志目录必须不存在。
+退出0=收到并解析有效回复；2=准备/输入错误；3=超时或无完整有效回复；4=串口/存档错误。
+用法：build/motor-query --port /dev/ttyS4 --query config|voltage --log-dir 新目录 [--timeout-ms 3000]
+仅用于已核接线和电平的板B：115200/8N1、无流控，一次只查询，无自动重发。
+config发送$read_flash#；voltage发送$read_vol#，不附加换行。
+须先协调串口使用；--help和参数错误均不打开UART。日志目录必须不存在。
+退出0=收到并解析有效回复；2=准备/输入错误；3=超时或无完整有效回复；4=串口/存档错误。
+MISSING_ARGUMENTS_EXIT=2; NO_UART_OPEN_REQUESTED
+MainPID=0
+ActiveState=failed
+SubState=failed
+QUERY_BINARY=/root/opto-chess-robot-2027/temp/motor-uart-query-20261104_162122_24d05248/build/motor-query
+源码已上传，板端编译及帮助/缺参检查已完成；尚未打开UART或发送查询。
+后续核实接线后，使用：/root/opto-chess-robot-2027/temp/motor-uart-query-20261104_162122_24d05248/build/motor-query

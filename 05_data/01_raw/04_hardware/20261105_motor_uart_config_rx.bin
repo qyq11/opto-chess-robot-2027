@@ -1,0 +1,8 @@
+read_flash:OK!
+Motor_Version:1.7.3
+Motor_type:2
+Dead_Zone:1600
+Pulse_Line:13
+Pulse_Phase:20
+wheel_diameter:65.000
+P:0.800	 I:0.060	 D:0.500	 

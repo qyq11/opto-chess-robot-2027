@@ -149,8 +149,8 @@
     },
     {
       "path": "03_hardware/01_机械/03_打印件/04_推铲打印工程.FCStd",
-      "bytes": 20011,
-      "sha256": "1a70e94cb3f745287318e42459064ba0f3a7f33690ec87b3cd0b49f6c161b2b0"
+      "bytes": 30446,
+      "sha256": "bff6d9234026d1243f70ea4e9a7991eabf8ad0c7de2b3a853ae6bf4178b9939f"
     },
     {
       "path": "03_hardware/01_机械/03_打印件/05_推铲打印工程.step",
@@ -164,14 +164,156 @@
     },
     {
       "path": "03_hardware/01_机械/export_pusher.py",
-      "bytes": 6536,
-      "sha256": "3fa2ae9db03f4f0a018395748d7b649d6ba65c6cc664a035cd94eb840470b5ab"
+      "bytes": 6658,
+      "sha256": "667d612d6353a0f0088ef61abd0fe3f345d12c6db886b129fe03a66c62d734de"
     },
     {
       "path": "03_hardware/01_机械/parameters.json",
       "bytes": 31171,
       "sha256": "58976597c75d75f923e3a26c99541d518e00e6433bbfe6a1a7c806e20420db19"
+    },
+    {
+      "path": "03_hardware/01_机械/cad_display.py",
+      "bytes": 7908,
+      "sha256": "b67647dbd4039386733b235ae9eb238c7f25633e855a9c46ee29b55fac85397c"
     }
   ],
-  "shared_parameters_note": "2026-11-03仅更新同一参数文件的相机支架部分；D04参数与11-02相同，推铲文件保持原字节。更新共享文件指纹，不新增推铲实物或功能通过结论。"
+  "shared_parameters_note": "2026-11-03仅更新同一参数文件的相机支架部分；D04参数与11-02相同，推铲文件保持原字节。更新共享文件指纹，不新增推铲实物或功能通过结论。",
+  "delivery_20261106": {
+    "date": "2026-11-06",
+    "units": "mm",
+    "scope": "只读核对现有前推铲导出与当前整车CAD，并制作转发打印包；未修改几何。",
+    "source_assembly": {
+      "path": "03_hardware/01_机械/03_整车布局.FCStd",
+      "bytes": 7738004,
+      "sha256": "9347f23241f550508c8a326bdfe93c944e011e25c43a9dee2a51c293fe8035fa"
+    },
+    "source_step": {
+      "path": "03_hardware/01_机械/03_打印件/05_推铲打印工程.step",
+      "bytes": 118046,
+      "sha256": "01225940eba7aab0b0c97c6b2f4fb38749c5fec1cd8ddf7f71a0fe1af9a522fd"
+    },
+    "stl_checks": [
+      {
+        "path": "03_hardware/01_机械/03_打印件/01_导向推铲.stl",
+        "bytes": 132484,
+        "sha256": "90d2207a91fa635c9df4349f305cdf4fe87fdb911b3aa43cb86a0fcfea337c3b",
+        "triangles": 2648,
+        "closed": true,
+        "connected_components": 1,
+        "nonmanifold_edges": 0,
+        "inconsistent_winding": false,
+        "self_intersections": false,
+        "duplicate_triangles": 0,
+        "degenerate_triangles": 0,
+        "size_xyz_mm": [
+          130.0,
+          44.0,
+          30.0
+        ],
+        "mesh_volume_relative_error": 1.517e-06,
+        "print_quantity": 1,
+        "matches_current_assembly": true,
+        "assembly_difference_volume_mm3": 0.0,
+        "matches_step": true,
+        "step_difference_volume_mm3": 0.0
+      },
+      {
+        "path": "03_hardware/01_机械/03_打印件/02_左支架.stl",
+        "bytes": 120484,
+        "sha256": "2826ec2205c815e551d2a20e543cb96a7519918f96feaa16c8fb62ad609537fa",
+        "triangles": 2408,
+        "closed": true,
+        "connected_components": 1,
+        "nonmanifold_edges": 0,
+        "inconsistent_winding": false,
+        "self_intersections": false,
+        "duplicate_triangles": 0,
+        "degenerate_triangles": 0,
+        "size_xyz_mm": [
+          81.5,
+          32.0,
+          20.0
+        ],
+        "mesh_volume_relative_error": 8.723e-06,
+        "print_quantity": 1,
+        "matches_current_assembly": true,
+        "assembly_difference_volume_mm3": 0.0,
+        "matches_step": true,
+        "step_difference_volume_mm3": 0.0
+      },
+      {
+        "path": "03_hardware/01_机械/03_打印件/03_右支架.stl",
+        "bytes": 120484,
+        "sha256": "87215b81b382ebaee2492dd705d6890be9a57bb23bb5c6e37fe20b0ee6534d03",
+        "triangles": 2408,
+        "closed": true,
+        "connected_components": 1,
+        "nonmanifold_edges": 0,
+        "inconsistent_winding": false,
+        "self_intersections": false,
+        "duplicate_triangles": 0,
+        "degenerate_triangles": 0,
+        "size_xyz_mm": [
+          81.5,
+          32.0,
+          20.0
+        ],
+        "mesh_volume_relative_error": 8.722e-06,
+        "print_quantity": 1,
+        "matches_current_assembly": true,
+        "assembly_difference_volume_mm3": 0.0,
+        "matches_step": true,
+        "step_difference_volume_mm3": 0.0
+      }
+    ],
+    "package": {
+      "path": "03_hardware/01_机械/03_打印件/10_前推铲打印包.zip",
+      "bytes": 465074,
+      "sha256": "7cbf01bddd4a6a2867139883a4d248787cb8873309387988696862998e499d61"
+    },
+    "archive_members": [
+      {
+        "name": "01_导向推铲.stl",
+        "bytes": 132484,
+        "sha256": "90d2207a91fa635c9df4349f305cdf4fe87fdb911b3aa43cb86a0fcfea337c3b"
+      },
+      {
+        "name": "02_左支架.stl",
+        "bytes": 120484,
+        "sha256": "2826ec2205c815e551d2a20e543cb96a7519918f96feaa16c8fb62ad609537fa"
+      },
+      {
+        "name": "03_右支架.stl",
+        "bytes": 120484,
+        "sha256": "87215b81b382ebaee2492dd705d6890be9a57bb23bb5c6e37fe20b0ee6534d03"
+      },
+      {
+        "name": "04_推铲装配.step",
+        "bytes": 118046,
+        "sha256": "01225940eba7aab0b0c97c6b2f4fb38749c5fec1cd8ddf7f71a0fe1af9a522fd"
+      },
+      {
+        "name": "06_装配预览.png",
+        "bytes": 78308,
+        "sha256": "4774e6e6096c54aded3aa683adf236286b5ab7f0444004412e447a9e96fbeff3"
+      },
+      {
+        "name": "07_尺寸图.png",
+        "bytes": 328372,
+        "sha256": "3c4ffe3463cb46e706b02d802b7d0840ba959886d73b3e6e2130f4be980644e9"
+      },
+      {
+        "name": "05_打印说明.txt",
+        "bytes": 2152,
+        "sha256": "a8168888ad99c6e41c5c6534ffd0bc62e0dc0ccf43bb8f2b45e8d55963d8fce4"
+      }
+    ],
+    "archive_crc_passed": true,
+    "archive_sources_byte_identical": true,
+    "slicer_preview_accepted": false,
+    "physical_print_passed": false,
+    "physical_assembly_passed": false,
+    "physical_pushing_passed": false
+  }
 }

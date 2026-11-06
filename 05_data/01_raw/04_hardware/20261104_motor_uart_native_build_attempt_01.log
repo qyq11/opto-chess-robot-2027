@@ -1,0 +1,16 @@
+BOARD_SERIAL=8314b1e8ffd0321f
+2026-11-04T16:21:03+08:00
+ccddb46f-25cd-452c-a086-5ceb3ce36d50
+/sys/firmware/devicetree/base/serial@2ad70000
+    PID                  STARTED STAT COMMAND
+    457 Wed Nov  4 16:10:03 2026 Sl   rkaiq_3A_server
+MainPID=0
+ActiveState=failed
+SubState=failed
+BOARD_SERIAL=8314b1e8ffd0321f
+494fdcbfdbc68f02ead8e412189aa2343f58b83d7805b3c556150ed98cc74d20  motor_query.c
+b210876461c2cb7be90e0c007b87f783df7e21a6b30b4282c96f1619ee0647dc  Makefile
+gcc (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0
+mkdir -p build
+gcc  -std=c11 -O2 -g -Wall -Wextra -Wpedantic -Werror motor_query.c -o build/motor-query  -lm
+bash: line 9: file: command not found

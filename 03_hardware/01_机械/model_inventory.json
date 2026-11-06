@@ -952,13 +952,13 @@
   "artifacts": [
     {
       "path": "03_hardware/01_机械/02_零件库.FCStd",
-      "bytes": 7125351,
-      "sha256": "f4bb90112671b00a4cb1a371f21b54e5f80e8c75c04d725b7126433feb7c19d2"
+      "bytes": 7282706,
+      "sha256": "6b29219c3f414588915cd151408055f3efd95994ad0b527dcbaf63adf7ad02cd"
     },
     {
       "path": "03_hardware/01_机械/03_整车布局.FCStd",
-      "bytes": 7481215,
-      "sha256": "446f165579bdaeda35fed4ff3143dc7fdf2bbb9dcfe9fc58a76eaa71cd67b9c4"
+      "bytes": 7738004,
+      "sha256": "9347f23241f550508c8a326bdfe93c944e011e25c43a9dee2a51c293fe8035fa"
     },
     {
       "path": "03_hardware/01_机械/04_整车布局.step",
@@ -977,8 +977,8 @@
     },
     {
       "path": "03_hardware/01_机械/build_models.py",
-      "bytes": 20364,
-      "sha256": "5c25ead8fa6dd42c353fde575f10a7e5af9db9b281e09d66cb9c9925444967ca"
+      "bytes": 20502,
+      "sha256": "9b3384c51c7b821937e0fcca3aa1a8481b84ec46312d5f14e5f79a676d6dce18"
     },
     {
       "path": "03_hardware/01_机械/pusher_design.py",
@@ -1112,8 +1112,8 @@
     },
     {
       "path": "03_hardware/01_机械/export_pusher.py",
-      "bytes": 6536,
-      "sha256": "3fa2ae9db03f4f0a018395748d7b649d6ba65c6cc664a035cd94eb840470b5ab"
+      "bytes": 6658,
+      "sha256": "667d612d6353a0f0088ef61abd0fe3f345d12c6db886b129fe03a66c62d734de"
     },
     {
       "path": "03_hardware/01_机械/pusher_sources.json",
@@ -1122,8 +1122,8 @@
     },
     {
       "path": "03_hardware/01_机械/pusher_validation.json",
-      "bytes": 5193,
-      "sha256": "eb9426d2e67ae7f9a54daaa520e9c8973af41b723abb4eb849fbfe2d5f2d593e"
+      "bytes": 9966,
+      "sha256": "0ed5d8dabe9bece3f15111b11bab7f8be049d8d0e8413252a1c1868f4c2ff37e"
     },
     {
       "path": "03_hardware/01_机械/03_打印件/01_导向推铲.stl",
@@ -1142,8 +1142,8 @@
     },
     {
       "path": "03_hardware/01_机械/03_打印件/04_推铲打印工程.FCStd",
-      "bytes": 20011,
-      "sha256": "1a70e94cb3f745287318e42459064ba0f3a7f33690ec87b3cd0b49f6c161b2b0"
+      "bytes": 30446,
+      "sha256": "bff6d9234026d1243f70ea4e9a7991eabf8ad0c7de2b3a853ae6bf4178b9939f"
     },
     {
       "path": "03_hardware/01_机械/03_打印件/05_推铲打印工程.step",
@@ -1182,13 +1182,13 @@
     },
     {
       "path": "03_hardware/01_机械/assembly_preview.json",
-      "bytes": 1317,
-      "sha256": "6d76a4bc04c6f56de84d22ed7c8a6285a08e2df3ed2593fd0e06ff2722499222"
+      "bytes": 1646,
+      "sha256": "6ac1d0307e642e8b1d6901c9910d10575d346b4ba089caeef578f67cc51337ed"
     },
     {
       "path": "03_hardware/01_机械/05_推棋装配预览.FCStd",
-      "bytes": 7658824,
-      "sha256": "abb8947585e693a610648df4604819dedc852c23631f9eb39a838124c9a52916"
+      "bytes": 7658874,
+      "sha256": "9064078b353aef567de65873e606601161fd486e4874d679fd8f6c757de2ba53"
     },
     {
       "path": "05_data/03_results/04_mechanical/20261102_pushing_assembly_iso.png",
@@ -1207,8 +1207,8 @@
     },
     {
       "path": "03_hardware/01_机械/export_camera_mount.py",
-      "bytes": 7680,
-      "sha256": "d598b426a5ec3d99ad41f83a5085aac07e697c222996ee618c76e534585f1c14"
+      "bytes": 7802,
+      "sha256": "33286ab50402f6b1255d5024e7230d200014c54048ef63403107fe9fd8a61bd7"
     },
     {
       "path": "03_hardware/01_机械/camera_mount_sources.json",
@@ -1217,8 +1217,8 @@
     },
     {
       "path": "03_hardware/01_机械/camera_mount_validation.json",
-      "bytes": 9431,
-      "sha256": "952c17112eef795bbc09560a5e1fd3262c93cbd1b59776be8bd2c984afd0a41f"
+      "bytes": 9602,
+      "sha256": "a2d7110551857fd064018180884bec22faf11c790b7bc1c34aa22b208cc00382"
     },
     {
       "path": "03_hardware/01_机械/03_打印件/06_相机固定座.stl",
@@ -1279,6 +1279,21 @@
       "path": "05_data/03_results/04_mechanical/draw_camera_mount.py",
       "bytes": 7634,
       "sha256": "e7faddcb5a8acace0b2248fe9fafed1a9a2619f4a2cc19f5da944159c471f0f4"
+    },
+    {
+      "path": "03_hardware/01_机械/cad_display.py",
+      "bytes": 7908,
+      "sha256": "b67647dbd4039386733b235ae9eb238c7f25633e855a9c46ee29b55fac85397c"
+    },
+    {
+      "path": "05_data/03_results/04_mechanical/20261106_cad_reopen_iso.png",
+      "bytes": 142659,
+      "sha256": "94565fe7e13beed0336c769314d555bba64c3e1b40de30ca55a77e5d54edb092"
+    },
+    {
+      "path": "03_hardware/01_机械/03_打印件/10_前推铲打印包.zip",
+      "bytes": 465074,
+      "sha256": "7cbf01bddd4a6a2867139883a4d248787cb8873309387988696862998e499d61"
     }
   ],
   "physical_acceptance_passed": false,
@@ -1804,5 +1819,56 @@
   },
   "display_preview": "03_hardware/01_机械/assembly_preview.json",
   "camera_print_validation": "03_hardware/01_机械/camera_mount_validation.json",
-  "pusher_print_validation": "03_hardware/01_机械/pusher_validation.json"
+  "pusher_print_validation": "03_hardware/01_机械/pusher_validation.json",
+  "display_fix_20261106": {
+    "scope": "仅补齐显示配置；原有几何、位置及建模属性保持原字节。本次未重新生成几何。",
+    "files": [
+      {
+        "path": "03_hardware/01_机械/02_零件库.FCStd",
+        "original_sha256": "f4bb90112671b00a4cb1a371f21b54e5f80e8c75c04d725b7126433feb7c19d2",
+        "original_entries_preserved": 80,
+        "current_sha256": "6b29219c3f414588915cd151408055f3efd95994ad0b527dcbaf63adf7ad02cd"
+      },
+      {
+        "path": "03_hardware/01_机械/03_整车布局.FCStd",
+        "original_sha256": "446f165579bdaeda35fed4ff3143dc7fdf2bbb9dcfe9fc58a76eaa71cd67b9c4",
+        "original_entries_preserved": 169,
+        "current_sha256": "9347f23241f550508c8a326bdfe93c944e011e25c43a9dee2a51c293fe8035fa"
+      },
+      {
+        "path": "03_hardware/01_机械/03_打印件/04_推铲打印工程.FCStd",
+        "original_sha256": "1a70e94cb3f745287318e42459064ba0f3a7f33690ec87b3cd0b49f6c161b2b0",
+        "original_entries_preserved": 7,
+        "current_sha256": "bff6d9234026d1243f70ea4e9a7991eabf8ad0c7de2b3a853ae6bf4178b9939f"
+      }
+    ],
+    "reopen_checks": [
+      {
+        "file": "03_hardware/01_机械/02_零件库.FCStd",
+        "shape_objects": 267,
+        "visible_shape_objects": 117,
+        "saved_colors_match": true,
+        "colored_objects": 67,
+        "visible_origins": 0
+      },
+      {
+        "file": "03_hardware/01_机械/03_打印件/04_推铲打印工程.FCStd",
+        "shape_objects": 3,
+        "visible_shape_objects": 3,
+        "saved_colors_match": true,
+        "colored_objects": 0,
+        "visible_origins": 0
+      },
+      {
+        "file": "03_hardware/01_机械/03_整车布局.FCStd",
+        "shape_objects": 590,
+        "visible_shape_objects": 260,
+        "saved_colors_match": true,
+        "colored_objects": 150,
+        "visible_origins": 0
+      }
+    ],
+    "existing_display_preserved": 5,
+    "generator_full_geometry_rebuild_run": false
+  }
 }

@@ -1,0 +1,20 @@
+{
+  "date": "2026-11-05",
+  "purpose": "新增左右平移前，已验证速度/时间选择与运行中调速的版本。",
+  "board_serial": "8314b1e8ffd0321f",
+  "ssh_host_key": "SHA256:S4ihaw0V/Z8w7v3VlJOQEFLEH3Hp6nr3KjiUTxanwPg",
+  "archive": "07_backups/04_网页运动/05_横移接入前.tar.gz",
+  "sha256": "b1c90ca2bdc9cd730c93e07a0bb06520bb3fb3993f6ca92b0b0f90aa6b180b40",
+  "bytes": 379261,
+  "before_binary_sha256": "7a38b38543101b6f696dd41d2119b57d03799e24ad8ac42631311cedcb6fe627",
+  "scope": [
+    "/opt/opto-camera/bin",
+    "/opt/opto-camera/src",
+    "/opt/opto-camera/web"
+  ],
+  "restore": "先核板B身份和轮子停止，停止opto-camera.service，将包内opt/opto-camera恢复到/opt/opto-camera，再启动该服务并等待相机初始化。相机临时照片会清空。",
+  "unaffected": "服务定义、无线网络、内核、相机地址、3A服务及驱动保存参数未改；camera.ini前后指纹一致。",
+  "current_binary_sha256": "31c3a4226066d2715ab2e3c4acfa214ce877af8f9aa0926b36845e177547aa3c",
+  "current_behavior": "前进、后退、左移、右移共用目标轮速2到30厘米/秒、时间1到10秒；默认6厘米/秒、3秒。调速保留当前方向与原截止时间。",
+  "record": "01_docs/03_records/04_20261030_底盘串口调试.md#web-motion-lateral-20261105"
+}

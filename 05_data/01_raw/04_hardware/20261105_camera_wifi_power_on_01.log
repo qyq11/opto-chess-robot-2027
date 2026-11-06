@@ -1,0 +1,13 @@
+BOARD_SERIAL=8314b1e8ffd0321f
+BOOT_ID=67474b47-3dc4-44dd-aa75-87f4d327b570
+lo               UNKNOWN        127.0.0.1/8 ::1/128 
+dummy0           DOWN           
+can0             DOWN           
+end0             DOWN           
+wlan0            UP             192.168.137.16/24 fe80::b929:3061:cc09:d2a7/64 
+MainPID=1936
+NRestarts=0
+ActiveState=active
+SubState=running
+lrwxrwxrwx 1 root root 12 Oct 12 15:36 /dev/video-camera0 -> /dev/video51
+{"state":"ready","fresh":true,"width":1280,"height":720,"capture_fps":30,"preview_fps":10,"frame_id":868,"frame_age_ms":79,"uptime_s":87,"capture_count":0,"capture_limit":12,"retention_s":1800,"stream_count":0,"reconfiguring":false,"settings_version":1,"jpeg_quality":85,"error":""}

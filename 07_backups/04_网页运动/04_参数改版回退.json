@@ -1,0 +1,20 @@
+{
+  "date": "2026-11-05",
+  "purpose": "速度、时间选择与控制区改版前的已验证慢速版本。",
+  "board_serial": "8314b1e8ffd0321f",
+  "ssh_host_key": "SHA256:S4ihaw0V/Z8w7v3VlJOQEFLEH3Hp6nr3KjiUTxanwPg",
+  "archive": "07_backups/04_网页运动/03_参数改版前.tar.gz",
+  "sha256": "bbcc4b771151915ff5ae51c57d6cdc57afd882625d2e84fd2cbd1f5b8455b355",
+  "bytes": 369771,
+  "before_binary_sha256": "a95c5bc1ca293fcfb8fd0f872d68189596908e54de8441ea48b4f200fba42079",
+  "scope": [
+    "/opt/opto-camera/bin",
+    "/opt/opto-camera/src",
+    "/opt/opto-camera/web"
+  ],
+  "restore": "先核板B身份和轮子停止，停止opto-camera.service，恢复包内原目录，再启动该服务。新增motion.css不由解包自动删除，旧程序不使用它。相机临时照片会清空。",
+  "unaffected": "服务定义、无线网络、内核、相机地址、3A服务和驱动保存参数不变；camera.ini前后指纹一致。",
+  "current_binary_sha256": "7a38b38543101b6f696dd41d2119b57d03799e24ad8ac42631311cedcb6fe627",
+  "current_behavior": "目标轮速2到30厘米/秒，默认6；运行1到10秒，默认3；运行中应用速度不重设截止时间。",
+  "record": "01_docs/03_records/04_20261030_底盘串口调试.md#web-motion-controls-20261105"
+}

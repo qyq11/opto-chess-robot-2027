@@ -1,0 +1,8 @@
+BOARD_SERIAL=8314b1e8ffd0321f
+BOOT_ID=3390445d-ac19-46d6-b23e-be67535cfc4d
+wlan0            UP             192.168.137.16/24 fe80::b929:3061:cc09:d2a7/64 
+MainPID=1835
+ActiveState=active
+SubState=running
+lrwxrwxrwx 1 root root 12 Nov  5 18:53 /dev/video-camera0 -> /dev/video51
+[    5.541555] imx415 6-001a: Detected imx415 id 0000e0

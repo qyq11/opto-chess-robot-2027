@@ -1,0 +1,41 @@
+BOARD_SERIAL=8314b1e8ffd0321f
+
+SCAN_BUS=4
+MATCHES=0
+
+SCAN_BUS=5
+MATCHES=0
+
+SCAN_BUS=6
+MATCHES=1
+
+DIAGNOSTIC_KERNEL_LOG
+[ 1305.901354] camaddr: BEGIN bus=4 reset_direction=0 reset_raw=0 clock_hz=37125000
+[ 1305.925852] camaddr: READY bus=4 reset_raw=1 clock_hz=37125000
+[ 1305.926189] camaddr: READ bus=4 address=0x10 register=0x311a transfer_ret=-6 value=UNAVAILABLE
+[ 1305.926348] camaddr: READ bus=4 address=0x1a register=0x311a transfer_ret=-6 value=UNAVAILABLE
+[ 1305.926547] camaddr: READ bus=4 address=0x36 register=0x311a transfer_ret=-6 value=UNAVAILABLE
+[ 1305.926846] camaddr: READ bus=4 address=0x37 register=0x311a transfer_ret=-6 value=UNAVAILABLE
+[ 1305.929055] camaddr: RESTORE bus=4 ret=0 direction=0 raw=0 before_direction=0 before_raw=0
+[ 1305.929107] camaddr: END bus=4 setup_ret=0 restore_ret=0 matches=0
+[ 1305.978024] camaddr: UNLOADED bus=4
+[ 1306.023883] camaddr: BEGIN bus=5 reset_direction=0 reset_raw=0 clock_hz=37125000
+[ 1306.048298] camaddr: READY bus=5 reset_raw=1 clock_hz=37125000
+[ 1306.048763] camaddr: READ bus=5 address=0x10 register=0x311a transfer_ret=-6 value=UNAVAILABLE
+[ 1306.048992] camaddr: READ bus=5 address=0x1a register=0x311a transfer_ret=-6 value=UNAVAILABLE
+[ 1306.049213] camaddr: READ bus=5 address=0x36 register=0x311a transfer_ret=-6 value=UNAVAILABLE
+[ 1306.049440] camaddr: READ bus=5 address=0x37 register=0x311a transfer_ret=-6 value=UNAVAILABLE
+[ 1306.051590] camaddr: RESTORE bus=5 ret=0 direction=0 raw=0 before_direction=0 before_raw=0
+[ 1306.051635] camaddr: END bus=5 setup_ret=0 restore_ret=0 matches=0
+[ 1306.087726] camaddr: UNLOADED bus=5
+[ 1306.131573] camaddr: BEGIN bus=6 reset_direction=0 reset_raw=0 clock_hz=37125000
+[ 1306.155833] camaddr: READY bus=6 reset_raw=1 clock_hz=37125000
+[ 1306.156375] camaddr: READ bus=6 address=0x10 register=0x311a transfer_ret=-6 value=UNAVAILABLE
+[ 1306.157096] camaddr: READ bus=6 address=0x1a register=0x311a value=0xe0 expected=0xe0 match=1
+[ 1306.157335] camaddr: READ bus=6 address=0x36 register=0x311a transfer_ret=-6 value=UNAVAILABLE
+[ 1306.157568] camaddr: READ bus=6 address=0x37 register=0x311a transfer_ret=-6 value=UNAVAILABLE
+[ 1306.159614] camaddr: RESTORE bus=6 ret=0 direction=0 raw=0 before_direction=0 before_raw=0
+[ 1306.159653] camaddr: END bus=6 setup_ret=0 restore_ret=0 matches=1
+[ 1306.218086] camaddr: UNLOADED bus=6
+
+MODULE_UNLOADED=yes

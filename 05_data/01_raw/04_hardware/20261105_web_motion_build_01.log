@@ -1,0 +1,58 @@
+mkdir -p ../build
+gcc -I/usr/include/gstreamer-1.0 -I/usr/include/glib-2.0 -I/usr/lib/aarch64-linux-gnu/glib-2.0/include -I/usr/include/aarch64-linux-gnu -I/usr/include/orc-0.4 -I/usr/include/p11-kit-1 -I/usr/include/json-glib-1.0 -pthread -I/usr/include/libmount -I/usr/include/blkid  -std=c11 -O2 -g -Wall -Wextra -Wpedantic -pthread camera_web.c image_quality.c image_controls.c rkaiq_client.c motor_control.c -o ../build/opto-camera -lgstapp-1.0 -lgstvideo-1.0 -lgstbase-1.0 -lgstreamer-1.0 -lmicrohttpd -ljson-glib-1.0 -lgio-2.0 -lgobject-2.0 -lglib-2.0  -pthread -lm
+mkdir -p ../build
+gcc -std=c11 -O2 -g -Wall -Wextra -Wpedantic -pthread -I/usr/include/glib-2.0 -I/usr/lib/aarch64-linux-gnu/glib-2.0/include  diagnostics/motor_control_check.c motor_control.c -o ../build/motor-control-check -lglib-2.0  -pthread -lutil
+VIRTUAL UART ONLY: /dev/pts/0; no physical UART opened
+INPUT action=forward generation=0 -> HTTP 409
+INPUT action=anything generation=0 -> HTTP 400
+motor port=/dev/pts/0 #1 RK->DRIVER 13 bytes TEXT=$spd:0,0,0,0# HEX=24 73 70 64 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #2 RK->DRIVER 13 bytes TEXT=$pwm:0,0,0,0# HEX=24 70 77 6D 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #3 RK->DRIVER 12 bytes TEXT=$read_flash# HEX=24 72 65 61 64 5F 66 6C 61 73 68 23 
+INPUT action=query generation=0 -> HTTP 200
+OBSERVED RK->VIRTUAL_DRIVER: $spd:0,0,0,0#$pwm:0,0,0,0#$read_flash#
+motor port=/dev/pts/0 #4 DRIVER->RK 12 bytes TEXT=$read_flash# HEX=24 72 65 61 64 5F 66 6C 61 73 68 23 
+INPUT VIRTUAL_DRIVER->RK: real-format 150-byte configuration (simulated)
+motor port=/dev/pts/0 #5 DRIVER->RK 75 bytes TEXT=read_flash:OK!\r\nMotor_Version:1.7.3\r\nMotor_type:2\r\nDead_Zone:1600\r\nPulse_Li HEX=72 65 61 64 5F 66 6C 61 73 68 3A 4F 4B 21 0D 0A 4D 6F 74 6F 72 5F 56 65 72 73 69 6F 6E 3A 31 2E 37 2E 33 0D 0A 4D 6F 74 6F 72 5F 74 79 70 65 3A 32 0D 0A 44 65 61 64 5F 5A 6F 6E 65 3A 31 36 30 30 0D 0A 50 75 6C 73 65 5F 4C 69 
+motor port=/dev/pts/0 #6 DRIVER->RK 75 bytes TEXT=ne:13\r\nPulse_Phase:20\r\nwheel_diameter:65.000\r\nP:0.800\t I:0.060\t D:0.500\t \r\n HEX=6E 65 3A 31 33 0D 0A 50 75 6C 73 65 5F 50 68 61 73 65 3A 32 30 0D 0A 77 68 65 65 6C 5F 64 69 61 6D 65 74 65 72 3A 36 35 2E 30 30 30 0D 0A 50 3A 30 2E 38 30 30 09 20 49 3A 30 2E 30 36 30 09 20 44 3A 30 2E 35 30 30 09 20 0D 0A 
+motor port=/dev/pts/0 #7 RK->DRIVER 14 bytes TEXT=$upload:1,0,1# HEX=24 75 70 6C 6F 61 64 3A 31 2C 30 2C 31 23 
+motor port=/dev/pts/0 #8 RK->DRIVER 17 bytes TEXT=$spd:50,50,50,50# HEX=24 73 70 64 3A 35 30 2C 35 30 2C 35 30 2C 35 30 23 
+INPUT action=forward generation=1 -> HTTP 200
+OBSERVED RK->VIRTUAL_DRIVER: $upload:1,0,1#$spd:50,50,50,50#
+INPUT VIRTUAL_DRIVER->RK: $MAll:0,0,0,0#$MSPD:0,0,0,0# (simulated)
+motor port=/dev/pts/0 #9 DRIVER->RK 28 bytes TEXT=$MAll:0,0,0,0#$MSPD:0,0,0,0# HEX=24 4D 41 6C 6C 3A 30 2C 30 2C 30 2C 30 23 24 4D 53 50 44 3A 30 2C 30 2C 30 2C 30 23 
+INPUT action=forward generation=1 -> HTTP 409
+INPUT action=backward generation=1 -> HTTP 409
+motor port=/dev/pts/0 #10 RK->DRIVER 13 bytes TEXT=$spd:0,0,0,0# HEX=24 73 70 64 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #11 RK->DRIVER 13 bytes TEXT=$pwm:0,0,0,0# HEX=24 70 77 6D 3A 30 2C 30 2C 30 2C 30 23 
+OBSERVED RK->VIRTUAL_DRIVER: $spd:0,0,0,0#$pwm:0,0,0,0#
+OBSERVED forward->zero output interval: 520.8 ms
+INPUT action=forward generation=1 -> HTTP 409
+motor port=/dev/pts/0 #12 RK->DRIVER 14 bytes TEXT=$upload:1,0,1# HEX=24 75 70 6C 6F 61 64 3A 31 2C 30 2C 31 23 
+motor port=/dev/pts/0 #13 RK->DRIVER 19 bytes TEXT=$spd:-50,50,-50,50# HEX=24 73 70 64 3A 2D 35 30 2C 35 30 2C 2D 35 30 2C 35 30 23 
+INPUT action=backward generation=3 -> HTTP 200
+OBSERVED RK->VIRTUAL_DRIVER: $upload:1,0,1#$spd:-50,50,-50,50#
+motor port=/dev/pts/0 #14 RK->DRIVER 13 bytes TEXT=$spd:0,0,0,0# HEX=24 73 70 64 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #15 RK->DRIVER 13 bytes TEXT=$pwm:0,0,0,0# HEX=24 70 77 6D 3A 30 2C 30 2C 30 2C 30 23 
+INPUT action=stop generation=3 -> HTTP 200
+OBSERVED RK->VIRTUAL_DRIVER: $spd:0,0,0,0#$pwm:0,0,0,0#
+motor port=/dev/pts/0 #16 RK->DRIVER 14 bytes TEXT=$upload:1,0,1# HEX=24 75 70 6C 6F 61 64 3A 31 2C 30 2C 31 23 
+motor port=/dev/pts/0 #17 RK->DRIVER 15 bytes TEXT=$pwm:0,0,300,0# HEX=24 70 77 6D 3A 30 2C 30 2C 33 30 30 2C 30 23 
+INPUT action=test_m3 generation=5 -> HTTP 200
+OBSERVED RK->VIRTUAL_DRIVER: $upload:1,0,1#$pwm:0,0,300,0#
+motor port=/dev/pts/0 #18 RK->DRIVER 13 bytes TEXT=$spd:0,0,0,0# HEX=24 73 70 64 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #19 RK->DRIVER 13 bytes TEXT=$pwm:0,0,0,0# HEX=24 70 77 6D 3A 30 2C 30 2C 30 2C 30 23 
+INPUT action=stop generation=5 -> HTTP 200
+OBSERVED RK->VIRTUAL_DRIVER: $spd:0,0,0,0#$pwm:0,0,0,0#
+motor port=/dev/pts/0 #20 RK->DRIVER 14 bytes TEXT=$upload:1,0,1# HEX=24 75 70 6C 6F 61 64 3A 31 2C 30 2C 31 23 
+motor port=/dev/pts/0 #21 RK->DRIVER 17 bytes TEXT=$spd:50,50,50,50# HEX=24 73 70 64 3A 35 30 2C 35 30 2C 35 30 2C 35 30 23 
+INPUT action=forward generation=7 -> HTTP 200
+OBSERVED RK->VIRTUAL_DRIVER: $upload:1,0,1#$spd:50,50,50,50#
+motor port=/dev/pts/0 #22 RK->DRIVER 13 bytes TEXT=$spd:0,0,0,0# HEX=24 73 70 64 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #23 RK->DRIVER 13 bytes TEXT=$pwm:0,0,0,0# HEX=24 70 77 6D 3A 30 2C 30 2C 30 2C 30 23 
+motor port=/dev/pts/0 #24 RK->DRIVER 14 bytes TEXT=$upload:0,0,0# HEX=24 75 70 6C 6F 61 64 3A 30 2C 30 2C 30 23 
+OBSERVED RK->VIRTUAL_DRIVER: $spd:0,0,0,0#$pwm:0,0,0,0#$upload:0,0,0#
+Verified: exact forward/backward/stop bytes, reply split/echo rejection, 500ms timer, busy/stale rejection, manual stop and normal shutdown. Physical movement NOT tested.
+curl: (7) Failed to connect to 127.0.0.1 port 8080 after 0 ms: Couldn't connect to server
+curl: (7) Failed to connect to 127.0.0.1 port 8080 after 0 ms: Couldn't connect to server
+curl: (7) Failed to connect to 127.0.0.1 port 8080 after 0 ms: Couldn't connect to server
+{"port":"/dev/ttyS4","opened":true,"ready":false,"moving":false,"querying":false,"fault":false,"speed_mm_s":50,"duration_ms":500,"generation":0,"action":"stop","error":"","wheel_speeds":"","feedback_samples":0,"peak_mm_s":[0.0,0.0,0.0,0.0],"events":[]}

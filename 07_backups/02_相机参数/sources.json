@@ -1,0 +1,31 @@
+{
+  "date": "2026-11-03",
+  "purpose": "板B相机网页参数控制所需服务配置及当前720p设置",
+  "board_serial": "8314b1e8ffd0321f",
+  "ssh_host_key": "SHA256:S4ihaw0V/Z8w7v3VlJOQEFLEH3Hp6nr3KjiUTxanwPg",
+  "scope": "只修改opto-camera.service与相机网页自己的参数文件；未修改rkaiq_3A启动脚本、相机地址插件、内核或其他业务",
+  "before": [
+    {
+      "file": "board_b_service_before.conf",
+      "board_path": "/etc/systemd/system/opto-camera.service",
+      "sha256": "9f327a46555bdf45c3e2dba0e40cf7eac26e1c9addcb585193ab678f54df4d88"
+    }
+  ],
+  "after": [
+    {
+      "file": "board_b_service_after.conf",
+      "board_path": "/etc/systemd/system/opto-camera.service",
+      "sha256": "b9aa88cb5295619cbd660232df2a1eb051c07dbf943315c3d2376707bad847aa"
+    },
+    {
+      "file": "board_b_camera.ini",
+      "board_path": "/var/lib/opto-camera/camera.ini",
+      "sha256": "74f8bbf75c0a11b9e77941091879b5efef7a26fff83c322ac6d9df55299fd159"
+    }
+  ],
+  "source": "../../02_programs/01_host/03_camera/config/opto-camera.service",
+  "deployed_binary_sha256": "7a128358683d146319d6c79fccbfc10b144937083ca2647a2cd03355fe2ed4c4",
+  "settings": "1280x720;preview_fps=10;jpeg_quality=85",
+  "restore_scope": "若需回退服务配置，恢复before原件到对应board_path，执行systemctl daemon-reload并只重启opto-camera；这会清空临时照片。此操作不会撤回相机I2C地址修正。曝光和白平衡为3A本次运行参数，不包含开机预设。",
+  "record": "../../01_docs/03_records/05_20261103_相机采集与电脑预览.md"
+}

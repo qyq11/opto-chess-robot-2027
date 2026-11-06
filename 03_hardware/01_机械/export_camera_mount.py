@@ -103,8 +103,10 @@ report['sweep_scope']='每5度共13个姿态的离散检查，不是连续扫掠
 report['nominal_tilt_down_deg']=a['nominal_tilt_down_deg']
 report['camera_reference_scope']='32×32×1.6、28×28孔距沿用用户认可的商家同板参考图；100度镜头实际外形未核。'
 doc.recompute();doc.saveAs(str(OUT/'08_相机支架工程.FCStd'))
+from cad_display import ensure_display_state
+ensure_display_state([OUT/'08_相机支架工程.FCStd'])
 Part.makeCompound([s for _,s in parts]).exportStep(str(OUT/'09_相机支架工程.step'))
-for path in [OUT/f for f in files]+[OUT/'08_相机支架工程.FCStd',OUT/'09_相机支架工程.step',M/'camera_mount_design.py',M/'export_camera_mount.py',M/'parameters.json']:
+for path in [OUT/f for f in files]+[OUT/'08_相机支架工程.FCStd',OUT/'09_相机支架工程.step',M/'camera_mount_design.py',M/'export_camera_mount.py',M/'parameters.json',M/'cad_display.py']:
     report['artifacts'].append({'path':path.relative_to(ROOT).as_posix(),'bytes':path.stat().st_size,
                               'sha256':hashlib.sha256(path.read_bytes()).hexdigest()})
 (M/'camera_mount_validation.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n',encoding='utf8')

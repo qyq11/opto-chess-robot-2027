@@ -1,0 +1,27 @@
+Scope: 64x48 known GRAY8 pixels -> jpegenc quality=100 -> memory JPEG -> production image_quality_analyze.
+No JPEG files, camera device access, service operations, or camera settings are used.
+CASE black0 jpeg_memory_bytes=370 dimensions=64x48 mean=0.000000000 std=0.000000000 dark=100.000000000 bright=0.000000000 sharpness=0.000000000 histogram_total=3072
+ASSERT black0 dimensions are 64x48                       PASS
+ASSERT black0 histogram totals 3072                      PASS
+ASSERT black mean is within 1 of zero                    PASS
+ASSERT black dark percentage is 100                      PASS
+ASSERT black stddev is within 1 of zero                  PASS
+ASSERT black sharpness is within 1 of zero               PASS
+CASE white255 jpeg_memory_bytes=368 dimensions=64x48 mean=255.000000000 std=0.000000000 dark=0.000000000 bright=100.000000000 sharpness=0.000000000 histogram_total=3072
+ASSERT white255 dimensions are 64x48                     PASS
+ASSERT white255 histogram totals 3072                    PASS
+ASSERT white mean is within 1 of 255                     PASS
+ASSERT white bright percentage is 100                    PASS
+CASE gray127 jpeg_memory_bytes=367 dimensions=64x48 mean=127.000000000 std=0.000000000 dark=0.000000000 bright=0.000000000 sharpness=0.000000000 histogram_total=3072
+ASSERT gray127 dimensions are 64x48                      PASS
+ASSERT gray127 histogram totals 3072                     PASS
+ASSERT gray mean is within 1 of 127                      PASS
+CASE checker4px jpeg_memory_bytes=2947 dimensions=64x48 mean=127.375000000 std=125.313045510 dark=50.000000000 bright=46.875000000 sharpness=87405.194618476 histogram_total=3072
+ASSERT checker4px dimensions are 64x48                   PASS
+ASSERT checker4px histogram totals 3072                  PASS
+COMPARE checker_sharpness=87405.194618476 uniform_max_sharpness=0.000000000
+ASSERT checker sharpness exceeds uniform maximum by 1000 PASS
+INVALID accepted=0 error_code=1 error=输入不是有效的JPEG照片
+ASSERT invalid JPEG is rejected with an error            PASS
+ASSERT invalid JPEG clears output                        PASS
+RESULT failures=0 status=PASS

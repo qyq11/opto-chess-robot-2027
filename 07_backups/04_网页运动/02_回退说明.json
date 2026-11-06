@@ -1,0 +1,19 @@
+{
+  "date": "2026-11-05",
+  "purpose": "相机网页增加运动控制前，归档本次会替换的相机程序、网页、源码和服务定义。",
+  "board_serial": "8314b1e8ffd0321f",
+  "ssh_host_key": "SHA256:S4ihaw0V/Z8w7v3VlJOQEFLEH3Hp6nr3KjiUTxanwPg",
+  "archive": "07_backups/04_网页运动/01_板B相机更新前.tar.gz",
+  "sha256": "439e9b568ef1b1a4d1ae57fa901ef78bfdd2f239e49da9c1e1b5f31f884016c0",
+  "bytes": 336113,
+  "contents": [
+    "/opt/opto-camera",
+    "/etc/systemd/system/opto-camera.service"
+  ],
+  "restore_scope": "核对板B身份并确认电机停止后，停opto-camera服务，将包内原件恢复到原路径；新添的源码或网页文件不会自动移除，但旧程序不使用。执行systemctl daemon-reload，再启动opto-camera.service。临时照片会清空。",
+  "unaffected": "不改变无线网络、内核、相机地址插件、图像处理服务、驱动固件或驱动保存参数。",
+  "camera_ini_sha256_before_and_after": "74f8bbf75c0a11b9e77941091879b5efef7a26fff83c322ac6d9df55299fd159",
+  "current_binary_sha256": "a95c5bc1ca293fcfb8fd0f872d68189596908e54de8441ea48b4f200fba42079",
+  "current_behavior": "目标轮速20→40→60毫米/秒缓升；默认2秒，可选1/2/3秒；反馈中断尝试归零。",
+  "record": "01_docs/03_records/04_20261030_底盘串口调试.md#web-motion-20261105"
+}

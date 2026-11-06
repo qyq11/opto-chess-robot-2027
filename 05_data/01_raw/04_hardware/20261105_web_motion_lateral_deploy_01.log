@@ -1,0 +1,17 @@
+MainPID=4192
+NRestarts=0
+ActiveState=active
+31c3a4226066d2715ab2e3c4acfa214ce877af8f9aa0926b36845e177547aa3c  /opt/opto-camera/bin/opto-camera
+81529d23953f69acc811d83887b36a7889d1c2253164295fc89f9f0d78ce2e51  /opt/opto-camera/src/motor_control.c
+b9feedd810414368798ee573a1f6b784398d1eb603feba36bf8bdabe8f195279  /opt/opto-camera/web/index.html
+9c93ae5977c9cbb96d78d107549df4b2a1742d0079007b10216d82f2b03fec32  /opt/opto-camera/web/motion.js
+4206c3750a943768effc83d784e91b4b919125db3403f29efef49cd5b0c4e3ec  /opt/opto-camera/web/motion.css
+74f8bbf75c0a11b9e77941091879b5efef7a26fff83c322ac6d9df55299fd159  /var/lib/opto-camera/camera.ini
+MainPID=4192
+NRestarts=0
+ActiveState=active
+served movement buttons:
+id="motion-left"
+id="motion-right"
+camera config fingerprint:
+74f8bbf75c0a11b9e77941091879b5efef7a26fff83c322ac6d9df55299fd159  /var/lib/opto-camera/camera.ini

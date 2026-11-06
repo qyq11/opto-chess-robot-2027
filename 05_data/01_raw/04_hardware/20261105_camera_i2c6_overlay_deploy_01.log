@@ -1,0 +1,33 @@
+BOARD_SERIAL=8314b1e8ffd0321f
+MERGED_DEVICE_TREE_DIFF
+--- board-before.dts	2026-11-05 18:52:26.751335353 +0800
++++ board-after.dts	2026-11-05 18:52:26.879337623 +0800
+@@ -6559,7 +6559,7 @@
+ 		imx415@37 {
+ 			status = "okay";
+ 			compatible = "sony,imx415";
+-			reg = <0x37>;
++			reg = <0x1a>;
+ 			clocks = <0x02 0x3a>;
+ 			pinctrl-0 = <0x172>;
+ 			clock-names = "xvclk";
+@@ -6587,7 +6587,7 @@
+ 		};
+ 
+ 		gc05a2@37 {
+-			status = "okay";
++			status = "disabled";
+ 			compatible = "galaxycore,gc05a2";
+ 			reg = <0x37>;
+ 			clocks = <0x02 0x3a>;
+启用: 第三组相机接口IMX415地址修正 (lckfb-imx415-i2c6-1a.dtbo)
+已启用的设备树插件：
+  ● CAN0（40针7脚接收、11脚发送） (tspi-3m-can0-m2.dtbo)
+  ● 40针排针五组串口 (tspi-3m-uart-header-five.dtbo)
+  ● IMX415相机地址修正 (lckfb-imx415-i2c4-1a.dtbo)
+  ● 第三组相机接口IMX415地址修正 (lckfb-imx415-i2c6-1a.dtbo)
+
+配置文件: /boot/overlays/.ubootenv
+b467b7b3af166acfc62fc3f52b0fbb0dcc2731ed5bc3b52afbe79a56dbe79228  /boot/overlays/lckfb-imx415-i2c6-1a.dtbo
+6b9aadd5153bc9e3ba5569857a965383911d271f670acc17bac83c3f2b8b0249  /boot/overlays/overlays.ini
+7be024db5e9988a0ded1ef2e4a2884290580d1ccf73447ba5a671c150b011ed2  /boot/overlays/.ubootenv

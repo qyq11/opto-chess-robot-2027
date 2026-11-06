@@ -1,0 +1,15 @@
+BOARD_SERIAL=8314b1e8ffd0321f
+{"port":"/dev/ttyS4","opened":true,"ready":false,"moving":false,"querying":false,"fault":false,"speed_mm_s":60,"duration_ms":2000,"generation":0,"action":"stop","error":"","wheel_speeds":"","feedback_samples":0,"peak_mm_s":[0.0,0.0,0.0,0.0],"events":[]}
+bbcc4b771151915ff5ae51c57d6cdc57afd882625d2e84fd2cbd1f5b8455b355  /root/opto-chess-robot-2027/temp/web-motion-controls-20261105/board_b_before_controls.tar.gz
+74f8bbf75c0a11b9e77941091879b5efef7a26fff83c322ac6d9df55299fd159  /var/lib/opto-camera/camera.ini
+{"port":"/dev/ttyS4","opened":true,"ready":false,"moving":false,"querying":false,"fault":false,"speed_mm_s":60,"duration_ms":3000,"generation":0,"active_speed_mm_s":0,"remaining_ms":0,"limits":{"speed_mm_s":{"min":20,"max":150,"step":10,"default":60},"duration_ms":{"min":1000,"max":10000,"step":1000,"default":3000}},"action":"stop","error":"","wheel_speeds":"","feedback_samples":0,"peak_mm_s":[0.0,0.0,0.0,0.0],"actual_mm_s":null,"feedback_age_ms":null,"events":[]}
+{"state":"ready","fresh":true,"width":1280,"height":720,"capture_fps":30,"preview_fps":10,"frame_id":11,"frame_age_ms":52,"uptime_s":2,"capture_count":0,"capture_limit":12,"retention_s":1800,"stream_count":0,"reconfiguring":false,"settings_version":1,"jpeg_quality":85,"error":""}
+e43715dbe95a8a6e6d2053a11acb3bcc349d356efc3de619ad0559a0d8a95ba4  /opt/opto-camera/bin/opto-camera
+3f74f09f2a65a4fef8aa5e7a7737e2ef1486647615e17917035c6acc29fc980c  /opt/opto-camera/src/motor_control.c
+22c326695ba4c88da220d0d932105616d167e7ed498cb530a634c256c422cad5  /opt/opto-camera/web/motion.js
+530969be7c3890632cb796ace179bfbb15b715d06387ec10e7f08609c2b2a738  /opt/opto-camera/web/motion.css
+dc4c181193a01e98eae8e1bfb3a57eb97364bf4ea5895b717ad9f59d5ba016cf  /opt/opto-camera/web/index.html
+74f8bbf75c0a11b9e77941091879b5efef7a26fff83c322ac6d9df55299fd159  /var/lib/opto-camera/camera.ini
+MainPID=2512
+NRestarts=0
+ActiveState=active

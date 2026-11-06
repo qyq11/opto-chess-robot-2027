@@ -1,0 +1,20 @@
+BOARD_SERIAL=8314b1e8ffd0321f
+NETWORK_BEFORE
+wlan0:wifi:connected:board_b_hotspot
+lo:loopback:connected (externally):lo
+p2p-dev-wlan0:wifi-p2p:disconnected:
+end0:ethernet:unavailable:
+can0:can:unmanaged:
+dummy0:dummy:unmanaged:
+Ethernet is already inactive; no change.
+WIFI_ONLY_ADDRESSES
+lo               UNKNOWN        127.0.0.1/8 ::1/128 
+dummy0           DOWN           
+can0             DOWN           
+end0             DOWN           
+wlan0            UP             192.168.137.16/24 fe80::b929:3061:cc09:d2a7/64 
+CAMERA_SERVICE
+MainPID=1835
+NRestarts=0
+ActiveState=active
+SubState=running

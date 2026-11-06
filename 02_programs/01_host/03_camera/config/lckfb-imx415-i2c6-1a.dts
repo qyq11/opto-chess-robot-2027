@@ -1,0 +1,24 @@
+/dts-v1/;
+/plugin/;
+
+// 相机换到第三组通道后，使用实测地址；原图像连接关系保持不变。
+/ {
+    fragment@0 {
+        target-path = "/i2c@2ac90000";
+        __overlay__ {
+            #address-cells = <1>;
+            #size-cells = <0>;
+
+            // 节点名沿用主板定义，实际通信地址由reg指定。
+            imx415@37 {
+                reg = <0x1a>;
+                status = "okay";
+            };
+
+            // 此接口使用IMX415，停用另一型号的备用探测。
+            gc05a2@37 {
+                status = "disabled";
+            };
+        };
+    };
+};

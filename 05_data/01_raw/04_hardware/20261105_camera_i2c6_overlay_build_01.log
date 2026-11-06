@@ -1,0 +1,60 @@
+DTC_SOURCE_LIST
+8:dtc-objs	:= dtc.o flattree.o fstree.o data.o livetree.o treesource.o \
+9-		   srcpos.o checks.o util.o
+10:dtc-objs	+= dtc-lexer.lex.o dtc-parser.tab.o
+11-
+12-# The upstream project builds libfdt as a separate library.  We are choosing to
+13-# instead directly link the libfdt object files into fdtoverlay.
+14-libfdt-objs	:= fdt.o fdt_ro.o fdt_wip.o fdt_sw.o fdt_rw.o fdt_strerror.o fdt_empty_tree.o fdt_addresses.o fdt_overlay.o
+15-libfdt		= $(addprefix libfdt/,$(libfdt-objs))
+16-fdtoverlay-objs	:= $(libfdt) fdtoverlay.o util.o
+17-
+18-# Source files need to get at the userspace version of libfdt_env.h to compile
+--
+20:HOST_EXTRACFLAGS += -DNO_YAML
+21-
+22-# Generated files need one more search path to include headers in source tree
+23-HOSTCFLAGS_dtc-lexer.lex.o := -I $(srctree)/$(src)
+24-HOSTCFLAGS_dtc-parser.tab.o := -I $(srctree)/$(src)
+25-
+26-# dependencies on generated files need to be listed explicitly
+27-$(obj)/dtc-lexer.lex.o: $(obj)/dtc-parser.tab.h
+Version: DTC 1.6.1-g0a3a9d34
+lckfb-imx415-i2c6-1a.dts:19.23-21.15: Warning (unit_address_vs_reg): /fragment@0/__overlay__/gc05a2@37: node has a unit name, but no reg or ranges property
+lckfb-imx415-i2c6-1a.dts:13.23-16.15: Warning (unique_unit_address): /fragment@0/__overlay__/imx415@37: duplicate unit-address (also used in node /fragment@0/__overlay__/gc05a2@37)
+/dts-v1/;
+
+/ {
+
+	fragment@0 {
+		target-path = "/i2c@2ac90000";
+
+		__overlay__ {
+			#address-cells = <0x01>;
+			#size-cells = <0x00>;
+
+			imx415@37 {
+				reg = <0x1a>;
+				status = "okay";
+			};
+
+			gc05a2@37 {
+				status = "disabled";
+			};
+		};
+	};
+};
+110edce2c1cd200c858a021b92ea3a5c20bac4e91499553dcb0d4885f7aab1d3  lckfb-imx415-i2c6-1a.dts
+b467b7b3af166acfc62fc3f52b0fbb0dcc2731ed5bc3b52afbe79a56dbe79228  lckfb-imx415-i2c6-1a.dtbo
+<stdout>: Warning (unit_address_vs_reg): /fragment@0/__overlay__/gc05a2@37: node has a unit name, but no reg or ranges property
+<stdout>: Warning (unique_unit_address): /fragment@0/__overlay__/imx415@37: duplicate unit-address (also used in node /fragment@0/__overlay__/gc05a2@37)
+Enable the specified overlay
+
+Usage:
+  ovtree enable <filename.dtbo> [flags]
+
+Flags:
+  -h, --help   help for enable
+
+Global Flags:
+      --lang string   language (zh/en), skips language selection in TUI

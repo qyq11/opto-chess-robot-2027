@@ -1,0 +1,12 @@
+BOARD_SERIAL=8314b1e8ffd0321f
+2026-11-04T16:20:35+08:00
+ccddb46f-25cd-452c-a086-5ceb3ce36d50
+lo               UNKNOWN        127.0.0.1/8 ::1/128 
+dummy0           DOWN           
+can0             DOWN           
+end0             UP             192.168.100.123/24 fe80::f4ff:fbff:fe6c:79a1/64 
+wlan0            UP             192.168.3.59/24 fe80::9bbe:ae83:d55b:f946/64 
+/sys/firmware/devicetree/base/serial@2ad70000
+MainPID=0
+ActiveState=failed
+SubState=failed

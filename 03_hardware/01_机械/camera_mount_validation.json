@@ -340,13 +340,18 @@
     },
     {
       "path": "03_hardware/01_机械/export_camera_mount.py",
-      "bytes": 7680,
-      "sha256": "d598b426a5ec3d99ad41f83a5085aac07e697c222996ee618c76e534585f1c14"
+      "bytes": 7802,
+      "sha256": "33286ab50402f6b1255d5024e7230d200014c54048ef63403107fe9fd8a61bd7"
     },
     {
       "path": "03_hardware/01_机械/parameters.json",
       "bytes": 31171,
       "sha256": "58976597c75d75f923e3a26c99541d518e00e6433bbfe6a1a7c806e20420db19"
+    },
+    {
+      "path": "03_hardware/01_机械/cad_display.py",
+      "bytes": 7908,
+      "sha256": "b67647dbd4039386733b235ae9eb238c7f25633e855a9c46ee29b55fac85397c"
     }
   ],
   "rotation_gap_mm": 0.5,

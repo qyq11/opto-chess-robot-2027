@@ -1,0 +1,31 @@
+BOARD_SERIAL=8314b1e8ffd0321f
+2026-11-04T16:23:22+08:00
+开始时间（板端本地）：Wed Nov  4 16:23:22 2026
+设备：板B，实际序列号=8314b1e8ffd0321f
+实际节点：/dev/ttyS4 → /sys/firmware/devicetree/base/serial@2ad70000
+设置：115200 / 8N1 / 无流控 / 无本地回显；只发送一次。
+
+[序号1 RK→驱动，串口写入] 10字节；文本中控制字符用转义显示
+TEXT: $read_vol#
+HEX:
+0000: 24 72 65 61 64 5F 76 6F 6C 23 
+以上为内核接受的发送内容，驱动是否回复以下面的RX为准。
+
+[序号1 驱动→RK，查询后] 0字节；文本中控制字符用转义显示
+TEXT: 
+HEX:
+
+3000ms接收结束，未取得完整有效的voltage回复；不能判定通信打通。
+日志：/root/opto-chess-robot-2027/temp/motor-uart-query-20261104_162122_24d05248/run-voltage-01；退出码=3。退出0仅表示本次查询收到并解析回复。
+QUERY_EXIT=3
+serinfo:1.0 driver revision:
+3: uart:16550A mmio:0x2AD60000 irq:46 tx:0 rx:0
+4: uart:16550A mmio:0x2AD70000 irq:47 tx:22 rx:0
+6: uart:16550A mmio:0x2AD90000 irq:48 tx:73888 rx:3263 RTS|CTS|DTR
+7: uart:16550A mmio:0x2ADA0000 irq:49 tx:0 rx:0
+8: uart:16550A mmio:0x2ADB0000 irq:50 tx:0 rx:0
+9: uart:16550A mmio:0x2ADC0000 irq:51 tx:0 rx:0
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  /root/opto-chess-robot-2027/temp/motor-uart-query-20261104_162122_24d05248/run-voltage-01/before_rx.bin
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  /root/opto-chess-robot-2027/temp/motor-uart-query-20261104_162122_24d05248/run-voltage-01/rx.bin
+003400b1b1698675e0b7b088d6e494aaadf1551c2367d3e57ae5a2b789255a4f  /root/opto-chess-robot-2027/temp/motor-uart-query-20261104_162122_24d05248/run-voltage-01/session.log
+0a99d2f6ac51ca27f748f1fe7a13e8b48cf469bd3133a854684f1c5c64f6b79a  /root/opto-chess-robot-2027/temp/motor-uart-query-20261104_162122_24d05248/run-voltage-01/tx.bin

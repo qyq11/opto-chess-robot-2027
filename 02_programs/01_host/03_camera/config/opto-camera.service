@@ -1,0 +1,31 @@
+[Unit]
+Description=Opto robot camera preview and capture
+After=network.target rkaiq_3A.service
+Wants=rkaiq_3A.service
+StartLimitIntervalSec=60
+StartLimitBurst=5
+
+[Service]
+Type=simple
+ExecStart=/opt/opto-camera/bin/opto-camera --port 8080 --device /dev/video-camera0 --web-dir /opt/opto-camera/web --config /var/lib/opto-camera/camera.ini --motor-port /dev/ttyS4
+Restart=on-failure
+RestartSec=3
+TimeoutStopSec=8
+Nice=10
+MemoryMax=256M
+TasksMax=64
+LimitNOFILE=128
+NoNewPrivileges=true
+# 曝光控制需要连接既有3A服务在/tmp发布的本地socket。
+PrivateTmp=false
+ProtectHome=true
+ProtectSystem=strict
+RuntimeDirectory=opto-camera
+RuntimeDirectoryMode=0700
+StateDirectory=opto-camera
+StateDirectoryMode=0700
+Environment=GST_REGISTRY=/run/opto-camera/gstreamer-registry.bin
+UMask=0077
+
+[Install]
+WantedBy=multi-user.target

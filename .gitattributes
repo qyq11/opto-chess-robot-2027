@@ -1,5 +1,4 @@
 * text=auto eol=lf
-
 *.pdf binary
 *.pptx binary
 *.xlsx binary
@@ -16,12 +15,15 @@
 *.FCStd binary
 *.dwg binary
 *.hex binary
-
 # Preserve archived manufacturer originals byte for byte, including source line endings.
 /03_hardware/01_机械/01_厂家资料/** -text
 /03_hardware/01_机械/01_厂家资料/sources.json text eol=lf
-
 # 原始终端返回保留终端输出的换行与空白；回退配置保持原字节。
 /05_data/01_raw/04_hardware/*.txt -text -whitespace
+/05_data/01_raw/04_hardware/*.log -text -whitespace
+/05_data/01_raw/04_hardware/*.bin -text -whitespace
+/05_data/01_raw/04_hardware/*.json -text -whitespace
+/05_data/01_raw/04_hardware/sources.json text eol=lf whitespace=cr-at-eol
 /07_backups/** -text whitespace=cr-at-eol
 /07_backups/**/sources.json text eol=lf
+07_backups/04_网页运动/*.tar.gz filter=lfs diff=lfs merge=lfs -text

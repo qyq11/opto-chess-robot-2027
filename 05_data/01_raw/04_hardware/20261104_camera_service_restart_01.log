@@ -1,0 +1,32 @@
+CONFIGURATION_UNCHANGED=1
+UTC=2026-11-04T02:34:03Z
+Restart=on-failure
+MainPID=2510511
+Result=success
+NRestarts=31
+ExecMainStartTimestamp=Wed 2026-11-04 10:30:56 CST
+ExecMainStartTimestampMonotonic=64982148791
+ExecMainCode=0
+ExecMainStatus=0
+Id=opto-camera.service
+ActiveState=active
+SubState=running
+FragmentPath=/etc/systemd/system/opto-camera.service
+InvocationID=3b96de9140ab429194bfbda663b0b13b
+ACTUAL_CAMERA_PID=2510511
+2510511 (opto-camera) S 1 2510511 2510511 0 -1 4194560 2008 7143 13 132 2296 209 82 33 30 10 7 0 6498209 564006912 4568 18446744073709551615 366528823296 366528890328 548885306592 0 0 0 0 4096 16386 0 0 0 17 7 0 0 0 0 0 366529017736 366529019972 366597914624 548885310998 548885311143 548885311143 548885311447 0
+Uid:	0	0	0	0
+/opt/opto-camera/bin/opto-camera
+7a128358683d146319d6c79fccbfc10b144937083ca2647a2cd03355fe2ed4c4  /proc/2510511/exe
+2026-11-04T10:30:45+08:00 localhost opto-camera[2046481]: Closing connection (application error generating response).
+2026-11-04T10:30:52+08:00 localhost opto-camera[2046481]: camera: 相机超过10秒没有新帧，服务将重新启动
+2026-11-04T10:30:53+08:00 localhost systemd[1]: opto-camera.service: Failed with result 'exit-code'.
+2026-11-04T10:30:57+08:00 localhost mpp[2510512]: mpp_info: mpp version: 331ee68f author: nyanmisaka    2024-12-11 fix[mpp]: Fix input_task_count for async enc
+2026-11-04T10:30:57+08:00 localhost mpp[2510512]: mpp_info: mpp version: 331ee68f author: nyanmisaka    2024-12-11 fix[mpp]: Fix input_task_count for async enc
+2026-11-04T10:30:57+08:00 localhost mpp[2510512]: mpp_info: mpp version: 331ee68f author: nyanmisaka    2024-12-11 fix[mpp]: Fix input_task_count for async enc
+2026-11-04T10:30:57+08:00 localhost mpp[2510512]: mpp: unable to create enc vp8 for soc rk3576 unsupported
+2026-11-04T10:30:57+08:00 localhost mpp[2510512]: mpp_info: mpp version: 331ee68f author: nyanmisaka    2024-12-11 fix[mpp]: Fix input_task_count for async enc
+2026-11-04T10:30:58+08:00 localhost opto-camera[2510511]: opto-camera port=8080 device=/dev/video-camera0 source=1280x720@30 preview=10 quality=85 session=828d71de
+READ_ONLY=1
+NO_CAMERA_START_STOP=1
+NO_PROGRAM_SIGNAL=1

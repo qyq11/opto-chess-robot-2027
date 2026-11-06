@@ -7,15 +7,77 @@
   "source": "../../02_programs/01_host/03_camera/config/lckfb-imx415-i2c4-1a.dts",
   "official_reference": "https://wiki.lckfb.com/zh-hans/tspi-3-rk3576/sys-tool/ovtree.html",
   "before": [
-    {"file": "board_b_overlays_before.ini", "board_path": "/boot/overlays/overlays.ini", "sha256": "fbda3263837bcfbe1c2b12e9111a100c47f373c6f2b33b61f0b2e89a40dcff79"},
-    {"file": "board_b_ubootenv_before.txt", "board_path": "/boot/overlays/.ubootenv", "sha256": "0a3a28657c9c3f01c60e37a0ee5dc07b09ac9abfea743dd30a2e314a684c0f44"}
+    {
+      "file": "board_b_overlays_before.ini",
+      "board_path": "/boot/overlays/overlays.ini",
+      "sha256": "fbda3263837bcfbe1c2b12e9111a100c47f373c6f2b33b61f0b2e89a40dcff79"
+    },
+    {
+      "file": "board_b_ubootenv_before.txt",
+      "board_path": "/boot/overlays/.ubootenv",
+      "sha256": "0a3a28657c9c3f01c60e37a0ee5dc07b09ac9abfea743dd30a2e314a684c0f44"
+    }
   ],
   "after": [
-    {"file": "lckfb-imx415-i2c4-1a.dtbo", "board_path": "/boot/overlays/lckfb-imx415-i2c4-1a.dtbo", "sha256": "73c8d8f627fbce399bef5e83108569e8796e79494080dd60edb769a5309e3232"},
-    {"file": "board_b_overlays_after.ini", "board_path": "/boot/overlays/overlays.ini", "sha256": "c7d84f77e18788927cdd3025eedb8a978e92a2ae3428103f98a5301011bda50a"},
-    {"file": "board_b_ubootenv_after.txt", "board_path": "/boot/overlays/.ubootenv", "sha256": "cfb938643c390db9ebe59fa3502e35fd73a2c3a70f6016f1eb0a5877a5616996"}
+    {
+      "file": "lckfb-imx415-i2c4-1a.dtbo",
+      "board_path": "/boot/overlays/lckfb-imx415-i2c4-1a.dtbo",
+      "sha256": "73c8d8f627fbce399bef5e83108569e8796e79494080dd60edb769a5309e3232"
+    },
+    {
+      "file": "board_b_overlays_after.ini",
+      "board_path": "/boot/overlays/overlays.ini",
+      "sha256": "c7d84f77e18788927cdd3025eedb8a978e92a2ae3428103f98a5301011bda50a"
+    },
+    {
+      "file": "board_b_ubootenv_after.txt",
+      "board_path": "/boot/overlays/.ubootenv",
+      "sha256": "cfb938643c390db9ebe59fa3502e35fd73a2c3a70f6016f1eb0a5877a5616996"
+    }
   ],
   "offline_verification": "合并后仅IMX415的reg由0x37改0x1a、同接口GC05A2的status改disabled；其他设备树属性一致",
   "restore_scope": "还原before两份配置到各自board_path，重启后恢复原启动插件列表；新增插件原本不存在，禁用后不再加载",
-  "record": "../../01_docs/03_records/05_20261103_相机采集与电脑预览.md"
+  "record": "../../01_docs/03_records/05_20261103_相机采集与电脑预览.md",
+  "updates": [
+    {
+      "date": "2026-11-05",
+      "reason": "用户换过相机主板接口；逐一检查I2C4、5、6后，在I2C6的0x1a读取0xe0。",
+      "source": "../../02_programs/01_host/03_camera/config/lckfb-imx415-i2c6-1a.dts",
+      "scope": "新增I2C6地址插件，保留原I2C4、CAN和UART插件；修改overlays.ini，由ovtree更新.ubootenv，随后重启板B。",
+      "files": [
+        {
+          "sha256": "c7d84f77e18788927cdd3025eedb8a978e92a2ae3428103f98a5301011bda50a",
+          "file": "board_b_overlays_20261105_before.ini",
+          "stage": "before",
+          "board_path": "/boot/overlays/overlays.ini"
+        },
+        {
+          "sha256": "cfb938643c390db9ebe59fa3502e35fd73a2c3a70f6016f1eb0a5877a5616996",
+          "file": "board_b_ubootenv_20261105_before.txt",
+          "stage": "before",
+          "board_path": "/boot/overlays/.ubootenv"
+        },
+        {
+          "sha256": "6b9aadd5153bc9e3ba5569857a965383911d271f670acc17bac83c3f2b8b0249",
+          "file": "board_b_overlays_20261105_after.ini",
+          "stage": "after",
+          "board_path": "/boot/overlays/overlays.ini"
+        },
+        {
+          "sha256": "7be024db5e9988a0ded1ef2e4a2884290580d1ccf73447ba5a671c150b011ed2",
+          "file": "board_b_ubootenv_20261105_after.txt",
+          "stage": "after",
+          "board_path": "/boot/overlays/.ubootenv"
+        },
+        {
+          "sha256": "b467b7b3af166acfc62fc3f52b0fbb0dcc2731ed5bc3b52afbe79a56dbe79228",
+          "file": "lckfb-imx415-i2c6-1a.dtbo",
+          "stage": "after",
+          "board_path": "/boot/overlays/lckfb-imx415-i2c6-1a.dtbo"
+        }
+      ],
+      "verification": "原生GCC编译诊断模块；临时扫描后恢复复位/时钟并卸载模块；合并设备树只改变I2C6的IMX415地址及同口备用GC05A2状态；重启后6-001a识别到0000e0，/dev/video-camera0指向/dev/video51。",
+      "restore": "恢复本条before两份文件到各自board_path后重启板B，可回到本次操作前的启动配置；不会恢复相机排线的物理接口位置。"
+    }
+  ]
 }

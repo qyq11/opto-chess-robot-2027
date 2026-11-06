@@ -2085,5 +2085,192 @@
     },
     "text_normalization": "维护文本统一为Git要求的换行、生成SVG仅清理行尾空白；同步当前指纹，保留历史指纹。原始终端返回和回退配置由.gitattributes保留原字节。",
     "verification_scope": "本轮仅为文件指纹、保留原件大小、本地链接、工程压缩包完整性、Python源码语法和文档构建；未重新执行CAD几何、板端或实车测试。"
+  },
+  "cache_cleanup_20261106": {
+    "date": "2026-11-06",
+    "authorization": "用户要求清理中间文件后commit和push",
+    "method": "Windows回收站，可恢复",
+    "all_absolute_targets_verified_inside_project": true,
+    "recycled_files": 504.0,
+    "recycled_bytes": 557043622.0,
+    "recycled_targets": [
+      {
+        "path": "temp/cad-display",
+        "is_directory": true,
+        "file_count": 26,
+        "bytes": 52629159
+      },
+      {
+        "path": "temp/freecad-view",
+        "is_directory": true,
+        "file_count": 1,
+        "bytes": 649
+      },
+      {
+        "path": "temp/motor-uart-build",
+        "is_directory": true,
+        "file_count": 3,
+        "bytes": 114824
+      },
+      {
+        "path": "temp/motor-uart-20261105",
+        "is_directory": true,
+        "file_count": 3,
+        "bytes": 4059
+      },
+      {
+        "path": "temp/web-motion-controls-20261105",
+        "is_directory": true,
+        "file_count": 5,
+        "bytes": 64444
+      },
+      {
+        "path": "temp/web-motion-lateral-20261105",
+        "is_directory": true,
+        "file_count": 5,
+        "bytes": 73670
+      },
+      {
+        "path": "temp/wireless-debug-20261105",
+        "is_directory": true,
+        "file_count": 18,
+        "bytes": 18359
+      },
+      {
+        "path": "temp/project-plan-20261104",
+        "is_directory": true,
+        "file_count": 1,
+        "bytes": 7695
+      },
+      {
+        "path": "temp/pusher-print-delivery",
+        "is_directory": true,
+        "file_count": 2,
+        "bytes": 11757
+      },
+      {
+        "path": "temp/docusaurus/.docusaurus",
+        "is_directory": true,
+        "file_count": 33,
+        "bytes": 66832
+      },
+      {
+        "path": "temp/docusaurus/build",
+        "is_directory": true,
+        "file_count": 347,
+        "bytes": 182992368
+      },
+      {
+        "path": "temp/docusaurus/tmp",
+        "is_directory": true,
+        "file_count": 0,
+        "bytes": 0
+      },
+      {
+        "path": "temp/docusaurus/node_modules/.cache",
+        "is_directory": true,
+        "file_count": 52,
+        "bytes": 313117852
+      },
+      {
+        "path": "temp/camera-web-20261103/web-720p-controls.png",
+        "is_directory": false,
+        "file_count": 1,
+        "bytes": 148296
+      },
+      {
+        "path": "temp/camera-web-20261103/web-720p-preview.png",
+        "is_directory": false,
+        "file_count": 1,
+        "bytes": 84563
+      },
+      {
+        "path": "temp/camera-web-20261103/monitor_720p_result.json",
+        "is_directory": false,
+        "file_count": 1,
+        "bytes": 29151
+      },
+      {
+        "path": "temp/camera-web-20261103/quality_verify_run.log",
+        "is_directory": false,
+        "file_count": 1,
+        "bytes": 2190
+      },
+      {
+        "path": "temp/web-motion-20261105/docs-build-final.log",
+        "is_directory": false,
+        "file_count": 1,
+        "bytes": 416
+      },
+      {
+        "path": "temp/web-motion-20261105/docs-build.log",
+        "is_directory": false,
+        "file_count": 1,
+        "bytes": 3491
+      },
+      {
+        "path": "03_hardware/01_机械/05_推棋装配预览.20261103-142959.FCBak",
+        "is_directory": false,
+        "file_count": 1,
+        "bytes": 7658824.0
+      },
+      {
+        "path": "03_hardware/01_机械/__pycache__",
+        "is_directory": true,
+        "file_count": 1,
+        "bytes": 15023.0
+      }
+    ],
+    "verification_helpers_recycled": {
+      "path": "temp/cleanup-20261106",
+      "file_count": 9,
+      "bytes": 4882586
+    },
+    "protected_originals": [
+      "temp/旧硬件待删除/",
+      "temp/t5x-intake/",
+      "temp/yahboom-intake/",
+      "temp/mechanical-20261028/",
+      "temp/freecad_association/",
+      "temp/freecad_migration/"
+    ],
+    "retained_unfinished_work": [
+      "temp/camera-stall-20261104/：未应用、未上板的候选补丁",
+      "temp/distance-motion-20261105/：待RK验证的交叉编译产物、日志与配套头文件"
+    ],
+    "retained_other_evidence": [
+      "temp/camera-web-20261103/中未归档接口返回",
+      "temp/web-motion-20261105/中唯一真实收发、部署与状态日志",
+      "temp/camera-open-20261106/可复用热点脚本",
+      "其他未确认可替代的参考资料"
+    ],
+    "retained_dependencies": [
+      "temp/docusaurus/node_modules/",
+      "temp/perspective/dependencies/",
+      "temp/xiangqi_recognition/dependencies/"
+    ],
+    "archived_original_returns": [
+      "05_data/01_raw/04_hardware/20261103_camera_720p_monitor_01.json",
+      "05_data/01_raw/04_hardware/20261103_camera_quality_check_01.log"
+    ],
+    "archived_returns_scope": "逐字节保存已有720p五分钟监测和18项已知输入检查原始输出；本轮没有重跑相机或算法。",
+    "checks": {
+      "json_files": 49,
+      "current_hashes_checked": 258,
+      "relative_links_checked": 720,
+      "unresolved_historical_or_external_hashes": 15,
+      "issues": [],
+      "formal_files_preserved": 579,
+      "protected_files_size_checked": 22560,
+      "zip_archive_integrity_checked": 7,
+      "tar_gz_archives_read": 3,
+      "python_syntax_checked": 14,
+      "javascript_syntax_checked": 2,
+      "powershell_syntax_checked": 2,
+      "website_build": "passed"
+    },
+    "git_storage": "原始硬件.log/.bin/.json与终端返回保持原字节；维护文本换行按Git规则统一并更新当前文件指纹；历史指纹保留。三份网页运动回退.tar.gz按既有规则使用Git LFS。",
+    "verification_scope": "电脑文件完整性、链接、压缩包、源码语法和文档构建；未重新编译、部署、连接板卡、发送电机命令或新增实车验收结论。",
+    "cad_backup_verified_against_git_history": true
   }
 }

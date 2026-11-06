@@ -8,6 +8,7 @@ import FreeCAD as A
 import Part
 from pusher_design import build_pusher
 from camera_mount_design import build_camera_mount, camera_pose
+from cad_display import ensure_display_state
 
 M=Path(__file__).resolve().parent; R=M.parents[1]
 CFG=json.loads((M/'parameters.json').read_text(encoding='utf8'))
@@ -269,11 +270,12 @@ elif 'support_and_hole_verification' in OLD_VALIDATION:
  report['previous_support_check']={'date':OLD_VALIDATION['date'],'scope':'此前固定结构的历史检查；不作为本次重建后的验收结果。','result':OLD_VALIDATION['support_and_hole_verification']}
 (M/'validation.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n',encoding='utf8')
 lib.saveAs(str(M/'02_零件库.FCStd'));car.saveAs(str(M/'03_整车布局.FCStd'))
+ensure_display_state([M/'02_零件库.FCStd', M/'03_整车布局.FCStd'])
 Part.makeCompound([o.Shape for o in solid_features]).exportStep(str(M/'04_整车布局.step'))
 inventory={'schema_version':2,'date':CFG.get('geometry_revision_date','2026-10-24'),'scope':'登记当前布局对象；2026-11-03改为上层板四孔固定、手动俯仰的相机打印支架。相机与推铲均为试制设计；准确采购与到货状态以购买清单为准。','purchase_list':'03_hardware/01_硬件清单.md','parameters':'03_hardware/01_机械/parameters.json','sources':'03_hardware/01_机械/01_厂家资料/sources.json','parts':CFG['parts'],'step_exports':exports,'artifacts':[],'physical_acceptance_passed':False,'cleanup_authority':'用户：按照当前硬件及相关搜索资料做模型，并把之前硬件和3D模型全部删掉；保留当前采购与订单凭证。'}
 if 'previous_revision_metadata' in OLD_INVENTORY:
  inventory['previous_revision_metadata']=OLD_INVENTORY['previous_revision_metadata']
-for path in [M/'02_零件库.FCStd',M/'03_整车布局.FCStd',M/'04_整车布局.step',M/'validation.json',M/'parameters.json',M/'build_models.py',M/'pusher_design.py',M/'camera_mount_design.py']+[R/f for f in exports]:
+for path in [M/'02_零件库.FCStd',M/'03_整车布局.FCStd',M/'04_整车布局.step',M/'validation.json',M/'parameters.json',M/'build_models.py',M/'pusher_design.py',M/'camera_mount_design.py',M/'cad_display.py']+[R/f for f in exports]:
  inventory['artifacts'].append({'path':str(path.relative_to(R)).replace('\\','/'),'bytes':path.stat().st_size,'sha256':hashlib.sha256(path.read_bytes()).hexdigest()})
 (M/'model_inventory.json').write_text(json.dumps(inventory,ensure_ascii=False,indent=2)+'\n',encoding='utf8')
 print(json.dumps({k:v for k,v in report.items() if k!='objects'},ensure_ascii=False,indent=2))

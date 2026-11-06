@@ -1,0 +1,14 @@
+BOARD_SERIAL=8314b1e8ffd0321f
+2026-11-04T16:22:29+08:00
+serinfo:1.0 driver revision:
+3: uart:16550A mmio:0x2AD60000 irq:46 tx:0 rx:0
+4: uart:16550A mmio:0x2AD70000 irq:47 tx:12 rx:0
+6: uart:16550A mmio:0x2AD90000 irq:48 tx:73888 rx:3263 RTS|CTS|DTR
+7: uart:16550A mmio:0x2ADA0000 irq:49 tx:0 rx:0
+8: uart:16550A mmio:0x2ADB0000 irq:50 tx:0 rx:0
+9: uart:16550A mmio:0x2ADC0000 irq:51 tx:0 rx:0
+pin 88 (gpio2-24): 2ad70000.serial (GPIO UNCLAIMED) function uart4 group uart4m0-xfer
+pin 89 (gpio2-25): 2ad70000.serial (GPIO UNCLAIMED) function uart4 group uart4m0-xfer
+okay
+PINCTRL_HANDLES= 8b010000
+CMDLINE=storagemedia=emmc androidboot.storagemedia=emmc androidboot.mode=normal  androidboot.verifiedbootstate=orange rw rootwait earlycon=uart8250,mmio32,0x2ad40000 console=ttyFIQ0 root=PARTUUID=614e0000-0000 rcupdate.rcu_expedited=1 rcu_nocbs=all #q-10/30/2026 androidboot.fwver=ddr-v1.09-2f85f4b2d4,bl31-v1.14,bl32-v1.05,uboot-3fcd713

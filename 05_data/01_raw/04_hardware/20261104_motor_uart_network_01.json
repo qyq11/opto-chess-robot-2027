@@ -1,0 +1,139 @@
+{
+  "collected_at": "2026-11-04T16:27:59.4312660+08:00",
+  "source": "Windows只读网口、地址、路由及邻居快照；未修改配置",
+  "adapters": [
+    {
+      "Name": "以太网",
+      "InterfaceDescription": "Realtek PCIe GbE Family Controller",
+      "ifIndex": 9,
+      "Status": "Up",
+      "MacAddress": "D8-53-BC-34-C2-2C"
+    },
+    {
+      "Name": "以太网 2",
+      "InterfaceDescription": "Realtek USB GbE Family Controller",
+      "ifIndex": 7,
+      "Status": "Up",
+      "MacAddress": "00-E0-4C-68-00-ED"
+    }
+  ],
+  "addresses": [
+    {
+      "InterfaceAlias": "以太网 2",
+      "InterfaceIndex": 7,
+      "AddressFamily": 23,
+      "IPAddress": "fe80::af15:65c2:4191:9f04%7",
+      "PrefixLength": 64,
+      "AddressState": 4
+    },
+    {
+      "InterfaceAlias": "以太网",
+      "InterfaceIndex": 9,
+      "AddressFamily": 23,
+      "IPAddress": "fe80::bd4e:c650:fd32:6242%9",
+      "PrefixLength": 64,
+      "AddressState": 4
+    },
+    {
+      "InterfaceAlias": "以太网 2",
+      "InterfaceIndex": 7,
+      "AddressFamily": 2,
+      "IPAddress": "169.254.232.74",
+      "PrefixLength": 16,
+      "AddressState": 4
+    },
+    {
+      "InterfaceAlias": "以太网",
+      "InterfaceIndex": 9,
+      "AddressFamily": 2,
+      "IPAddress": "192.168.100.200",
+      "PrefixLength": 24,
+      "AddressState": 4
+    }
+  ],
+  "routes": [
+    {
+      "ifIndex": 7,
+      "DestinationPrefix": "255.255.255.255/32",
+      "NextHop": "0.0.0.0",
+      "RouteMetric": 256
+    },
+    {
+      "ifIndex": 9,
+      "DestinationPrefix": "255.255.255.255/32",
+      "NextHop": "0.0.0.0",
+      "RouteMetric": 256
+    },
+    {
+      "ifIndex": 7,
+      "DestinationPrefix": "224.0.0.0/4",
+      "NextHop": "0.0.0.0",
+      "RouteMetric": 256
+    },
+    {
+      "ifIndex": 9,
+      "DestinationPrefix": "224.0.0.0/4",
+      "NextHop": "0.0.0.0",
+      "RouteMetric": 256
+    },
+    {
+      "ifIndex": 9,
+      "DestinationPrefix": "192.168.100.255/32",
+      "NextHop": "0.0.0.0",
+      "RouteMetric": 256
+    },
+    {
+      "ifIndex": 9,
+      "DestinationPrefix": "192.168.100.200/32",
+      "NextHop": "0.0.0.0",
+      "RouteMetric": 256
+    },
+    {
+      "ifIndex": 9,
+      "DestinationPrefix": "192.168.100.0/24",
+      "NextHop": "0.0.0.0",
+      "RouteMetric": 256
+    },
+    {
+      "ifIndex": 7,
+      "DestinationPrefix": "169.254.255.255/32",
+      "NextHop": "0.0.0.0",
+      "RouteMetric": 256
+    },
+    {
+      "ifIndex": 7,
+      "DestinationPrefix": "169.254.232.74/32",
+      "NextHop": "0.0.0.0",
+      "RouteMetric": 256
+    },
+    {
+      "ifIndex": 7,
+      "DestinationPrefix": "169.254.0.0/16",
+      "NextHop": "0.0.0.0",
+      "RouteMetric": 256
+    }
+  ],
+  "peers": [
+    {
+      "InterfaceAlias": "以太网 2",
+      "ifIndex": 7,
+      "IPAddress": "fe80::f4ff:fbff:fe6c:79a1",
+      "LinkLayerAddress": "F6-FF-FB-6C-79-A1",
+      "State": 4
+    },
+    {
+      "InterfaceAlias": "以太网",
+      "ifIndex": 9,
+      "IPAddress": "fe80::f4ff:fbff:fe6c:79a1",
+      "LinkLayerAddress": "00-00-00-00-00-00",
+      "State": 0
+    },
+    {
+      "InterfaceAlias": "以太网",
+      "ifIndex": 9,
+      "IPAddress": "192.168.100.123",
+      "LinkLayerAddress": "3E-C3-C5-4E-C4-22",
+      "State": 4
+    }
+  ]
+}

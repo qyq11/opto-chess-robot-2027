@@ -1,0 +1,11 @@
+99f5b5e3ca2ebf23c7e953e059e461a3fdb2d945dbd8229a94350e32a5e8ee8d  camera_addr_probe.c
+make: Entering directory '/usr/src/linux-headers-6.1-rockchip'
+warning: the compiler differs from the one used to build the kernel
+  The kernel was built by: aarch64-none-linux-gnu-gcc (GNU Toolchain for the A-profile Architecture 10.3-2021.07 (arm-10.29)) 10.3.1 20210621
+  You are using:           gcc (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0
+  CC [M]  /root/opto-chess-robot-2027/temp/camera-port-scan-20261105/camera_addr_probe.o
+  MODPOST /root/opto-chess-robot-2027/temp/camera-port-scan-20261105/Module.symvers
+  CC [M]  /root/opto-chess-robot-2027/temp/camera-port-scan-20261105/camera_addr_probe.mod.o
+  LD [M]  /root/opto-chess-robot-2027/temp/camera-port-scan-20261105/camera_addr_probe.ko
+make: Leaving directory '/usr/src/linux-headers-6.1-rockchip'
+6.1.99-rt36-tspi SMP preempt_rt mod_unload aarch64

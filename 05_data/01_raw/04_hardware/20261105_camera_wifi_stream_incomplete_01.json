@@ -1,0 +1,11 @@
+{
+  "collected_at": "2026-11-05T18:58:06.7926121+08:00",
+  "url": "http://192.168.137.16:8080/stream.mjpg",
+  "content_type": "multipart/x-mixed-replace; boundary=frame",
+  "bytes_read": 0,
+  "jpeg_start_markers": 0,
+  "jpeg_end_markers": 0,
+  "images_saved": false,
+  "direct_connection": true,
+  "scope": "只核对实际图流字节，不代替浏览器目视确认。"
+}
