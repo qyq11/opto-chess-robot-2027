@@ -1294,6 +1294,11 @@
       "path": "03_hardware/01_机械/03_打印件/10_前推铲打印包.zip",
       "bytes": 465074,
       "sha256": "7cbf01bddd4a6a2867139883a4d248787cb8873309387988696862998e499d61"
+    },
+    {
+      "path": "03_hardware/01_机械/06_碳纤维板导出包.zip",
+      "bytes": 2239176,
+      "sha256": "af30945ece3f1f5541eac271f636fa606007bde161321ddb875923d0cc084f76"
     }
   ],
   "physical_acceptance_passed": false,
@@ -1870,5 +1875,94 @@
     ],
     "existing_display_preserved": 5,
     "generator_full_geometry_rebuild_run": false
+  },
+  "carbon_plate_export_20261112": {
+    "date": "2026-11-12",
+    "source": {
+      "path": "03_hardware/01_机械/03_整车布局.FCStd",
+      "bytes": 7738004,
+      "sha256": "9347f23241f550508c8a326bdfe93c944e011e25c43a9dee2a51c293fe8035fa"
+    },
+    "package": {
+      "path": "03_hardware/01_机械/06_碳纤维板导出包.zip",
+      "bytes": 2239176,
+      "sha256": "af30945ece3f1f5541eac271f636fa606007bde161321ddb875923d0cc084f76"
+    },
+    "boards": [
+      {
+        "board": "下层底板",
+        "cad_object": "D01_9",
+        "step_source": {
+          "path": "03_hardware/01_机械/02_零件STEP/D01.step",
+          "bytes": 483152,
+          "sha256": "da767a733a87267ec04f739e2bcf5e078d70e58741e0c13e741ffcd2f5325930"
+        },
+        "size_xyz_mm": [
+          147.0,
+          210.0,
+          1.5
+        ],
+        "installed_bottom_z_mm": 68.0,
+        "top_internal_holes_and_slots": 158,
+        "step_difference_volume_mm3": 0.0,
+        "triangles": 68708,
+        "closed_components": 1,
+        "self_intersections": false,
+        "mesh_volume_relative_error": 5.7246e-05
+      },
+      {
+        "board": "上层安装板",
+        "cad_object": "D03_459",
+        "step_source": {
+          "path": "03_hardware/01_机械/02_零件STEP/D03_电控安装层.step",
+          "bytes": 466763,
+          "sha256": "1de39ca5c9db7f5abecf956de7a3f9d41f468b1f97d72f4a53df4fdb59b1189e"
+        },
+        "size_xyz_mm": [
+          147.0,
+          210.0,
+          1.5
+        ],
+        "installed_bottom_z_mm": 104.5,
+        "top_internal_holes_and_slots": 148,
+        "step_difference_volume_mm3": 0.0,
+        "triangles": 64468,
+        "closed_components": 1,
+        "self_intersections": false,
+        "mesh_volume_relative_error": 5.3356e-05
+      }
+    ],
+    "members": [
+      {
+        "name": "01_下层底板.step",
+        "bytes": 483152,
+        "sha256": "da767a733a87267ec04f739e2bcf5e078d70e58741e0c13e741ffcd2f5325930"
+      },
+      {
+        "name": "01_下层底板.stl",
+        "bytes": 3435484,
+        "sha256": "95f2a068ded343694d66bb16e0a5cf5a12a11e756b325ebb685ea1dd9e282f4a"
+      },
+      {
+        "name": "02_上层安装板.step",
+        "bytes": 466763,
+        "sha256": "1de39ca5c9db7f5abecf956de7a3f9d41f468b1f97d72f4a53df4fdb59b1189e"
+      },
+      {
+        "name": "02_上层安装板.stl",
+        "bytes": 3223484,
+        "sha256": "0d2186c85ab3d6bb9e946d1c89fe4a48287e38462ea75cc2c00fba6d367d8845"
+      },
+      {
+        "name": "03_使用说明.txt",
+        "bytes": 1093,
+        "sha256": "5fbb2e1e0e89b0a3597576e7223dee55166d8ba2009dbbb37072baef2449ce72"
+      },
+      {
+        "name": "04_板件俯视图.png",
+        "bytes": 267290,
+        "sha256": "fa3896b7e46ef7dafbb5f587a1076da37ebac5914284f91a897af5b59c750dcd"
+      }
+    ]
   }
 }
